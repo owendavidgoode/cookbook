@@ -1,0 +1,38 @@
+type,fact
+gsc,"The interpolation calculator drives 83.7% of all Google search traffic to the blog — over 538,000 clicks in 16 months from variations of 'interpolation calculator'."
+gsc,The blog reaches 244 countries. Romania has a mysteriously high 9.98% click-through rate — double the global average.
+gsc,"Top 10 search queries account for 76.8% of traffic, but the remaining 900+ queries still drive 63,000+ clicks — a classic long-tail distribution."
+gsc,"'Butcher tableau' brings 1,303 clicks — evidence that numerical methods practitioners find deep technical content."
+gsc,'Cosmic ray bit flip' drives 421 searches — the intersection of hardware engineering and probability theory has an audience.
+gsc,"India is the #2 traffic source after the US, with 123,434 clicks — roughly 1 click per 11,000 people in India found this blog."
+gsc,The ASCII table post has 4.78 million impressions but only 0.76% CTR — it ranks but doesn't compel clicks against Wikipedia.
+gsc,Standalone tools (.html pages) drive 98% of traffic; the blog posts themselves drive 59% — the tools are the traffic engine.
+gsc,"'Dungeons, Dragons, and Numbers' went viral on Google Discover with 3,282 clicks and 53,563 impressions — the power of pop culture math."
+gsc,"Google Discover traffic is extremely spiky: some days get 0 clicks, others get 370+ — algorithmic promotion is feast or famine."
+gsc,'TV tuned to a dead channel' got a 5.04% CTR on Discover — literary references in tech titles outperform.
+tone,"86.4% of posts contain first-person pronouns (I, me, my) — this is a personal voice blog, not a textbook."
+tone,"Only 424 posts are 'highly personal' (3+ personal markers, ≤1 technical). 429 are 'highly technical'. Most blend both voices."
+tone,249 posts have questions in their titles (4.8%). 'Why' questions: 34. 'How' questions: 54. 'What' questions: 54.
+tone,"The blog uses 'because' 3,003 times — explanatory writing is the core style."
+crypto,"2019 was the crypto explosion year: 45 posts touching crypto topics, up from 9 in 2018."
+crypto,2025 has already surpassed all previous years with 52 crypto-related posts in 11 months.
+crypto,'Elliptic curve' appears in 66 posts — more than 'bitcoin' (49) — the math matters more than the currency.
+crypto,"Monero gets 13 posts, Ethereum gets 12 — the blog covers privacy coins as deeply as mainstream crypto."
+crypto,"'Hash' appears in 68 posts spanning cryptography, data structures, and algorithms — a true crosscutting concept."
+crypto,"The blog has covered Bitcoin for 7 years (since Aug 2018), but never mentioned 'NFT' — selective technical focus."
+stats,Zipf's law slope is -0.427 (should be ≈-1 for natural language). The blog's technical vocabulary creates a flatter distribution.
+stats,"Heaps' law in action: 1.6M words yield only 28,615 unique words (1.74% unique) — highly focused technical vocabulary."
+stats,Average sentence length: 16.9 words (σ=10.4). Academic writing averages 20-25. This is intentionally accessible.
+stats,"71% of posts contain code. 8.1% are code-heavy (3+ blocks). Programming is integral, not incidental."
+stats,45% of posts contain internal links to other posts. Max internal links in one post: 18 — a deeply cross-referenced corpus.
+stats,"'Function' is the #4 most common content word (4,419 uses). 'Number' is #3 (4,445). 'Example' is #7 (3,781)."
+stats,Average syllables per word: 1.46 (academic writing ≈1.7). Deliberately avoiding jargon-heavy prose.
+stats,Tuesday posts outnumber Sunday 2.15:1 — χ² = 371.6 proves non-uniform distribution (p < 0.001).
+stats,"Word count skewness: 1.18. Kurtosis: 2.43. The distribution matches academic papers, not casual blogging."
+stats,"Longest streak: 26 consecutive days (Nov 13 - Dec 8, 2022). Maximum gap: only 12 days."
+stats,Peak posting hour: 7:00 AM with 683 posts. Early bird mathematician.
+stats,2019 and 2020 both had exactly 288 posts. The pandemic had zero measurable effect on output.
+stats,2014 was the valley: only 147 posts (-43.5% YoY). 2023 was the peak: 395 posts.
+stats,"π appears 1,324 times. φ (golden ratio): 890. θ: 855. One in five posts speaks Greek."
+stats,'Transformer' (ML architecture) appears in exactly ONE post — notable absence given AI coverage.
+stats,'Bayesian' spans 17 years (115 posts). 'Neural network' spans 9 years (10 posts). Foundational vs trendy.

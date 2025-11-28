@@ -1,0 +1,366 @@
+id,type,fact,source_link,date,slug
+1,stats,"Tuesday posts outnumber Sunday posts 2.15:1 — a statistically significant weekday bias (χ² = 371.6, p < 0.001).",https://www.johndcook.com/blog/,,
+2,stats,"The blog's word count distribution has skewness 1.18 and excess kurtosis 2.43 — matching academic paper patterns, not casual blogging.",https://www.johndcook.com/blog/,,
+3,stats,"Longest consecutive posting streak: 26 days (Nov 13 - Dec 8, 2022). Maximum gap between posts: only 12 days.",https://www.johndcook.com/blog/,,
+4,stats,Peak posting hour is 7:00 AM with 683 posts — evidence of an early-bird mathematician.,https://www.johndcook.com/blog/,,
+5,stats,The pandemic had zero measurable effect on output: 2019 and 2020 both had exactly 288 posts.,https://www.johndcook.com/blog/,,
+6,stats,"2014 was the 'valley year' with only 147 posts — a 43.5% drop from 2013, the largest year-over-year decline in blog history.",https://www.johndcook.com/blog/,,
+7,stats,"Greek letter π appears 1,324 times across the blog. φ (golden ratio): 890 times. θ: 855 times.",https://www.johndcook.com/blog/,,
+8,stats,20.5% of all posts contain at least one Greek mathematical symbol — one in five posts speaks the language of mathematics.,https://www.johndcook.com/blog/,,
+9,stats,Python appears in 731 posts (14% of all content) — the most consistent programming language across 17 years of blogging.,https://www.johndcook.com/blog/,,
+10,stats,"'Transformer' (the ML architecture) appears in exactly ONE post (Oct 2, 2021) — a notable absence given extensive AI coverage.",https://www.johndcook.com/blog/2021/10/02/calculating-without-electricity/,,
+11,stats,"The busiest week ever: October 20-27, 2022 with 19 posts in 7 days — nearly 3 posts per day.",https://www.johndcook.com/blog/,,
+12,stats,"'GDPR' appeared in only 9 posts, all between Jan 2018 and Sep 2019 — a regulatory flash-in-the-pan.",https://www.johndcook.com/blog/,,
+13,stats,"Median post length is 293 words, but mean is 331 — the 38-word gap reveals a long tail of deep-dive essays.",https://www.johndcook.com/blog/,,
+14,stats,"'Bayesian' has appeared consistently for 17 years (115 posts), while 'neural network' has only 10 posts in 9 years.",https://www.johndcook.com/blog/,,
+15,stats,"Bitcoin coverage began Aug 14, 2018 and grew to 49 posts — roughly one crypto post every 7 weeks since.",https://www.johndcook.com/blog/2018/08/14/bitcoin-elliptic-curves/,,
+16,otd,"A November 22 highlight: ""Two kinds of generalization"" (2010).",https://www.johndcook.com/blog/2010/11/22/two-kinds-of-generalization/,2010-11-22T08:00:58,two-kinds-of-generalization
+17,otd,"A November 12 highlight: ""Big data and privacy"" (2018).",https://www.johndcook.com/blog/2018/11/12/big-data-and-privacy/,2018-11-12T11:55:27,big-data-and-privacy
+18,otd,"A November 15 highlight: ""Random number generation posts"" (2017).",https://www.johndcook.com/blog/2017/11/15/random-number-generation-posts/,2017-11-15T09:32:20,random-number-generation-posts
+19,otd,"A November 9 highlight: ""Accelerated learning"" (2010).",https://www.johndcook.com/blog/2010/11/09/accelerated-learning/,2010-11-09T07:56:49,accelerated-learning
+20,otd,"A November 25 highlight: ""Artemis lunar orbit"" (2022).",https://www.johndcook.com/blog/2022/11/25/artemis-lunar-orbit/,2022-11-25T09:09:35,artemis-lunar-orbit
+21,otd,"A November 5 highlight: ""Four patterns in Windows keyboard shortcuts"" (2009).",https://www.johndcook.com/blog/2009/11/05/patterns-windows-keyboard-shortcuts/,2009-11-05T05:17:58,patterns-windows-keyboard-shortcuts
+22,otd,"A November 10 highlight: ""Help wanted"" (2014).",https://www.johndcook.com/blog/2014/11/10/help-wanted/,2014-11-10T10:04:24,help-wanted
+23,otd,"A October 8 highlight: ""Ramanujan pi approximation"" (2012).",https://www.johndcook.com/blog/2012/10/08/ramanujan-pi-approximation/,2012-10-08T06:00:24,ramanujan-pi-approximation
+24,otd,"A October 11 highlight: ""Collecting versus understanding"" (2011).",https://www.johndcook.com/blog/2011/10/11/collecting-versus-understanding/,2011-10-11T06:48:23,collecting-versus-understanding
+25,otd,"A October 25 highlight: ""Gibbs’ method of determining an orbit"" (2022).",https://www.johndcook.com/blog/2022/10/25/gibbsian-method/,2022-10-25T14:02:47,gibbsian-method
+26,otd,"A October 30 highlight: ""Positive polynomials revisited"" (2023).",https://www.johndcook.com/blog/2023/10/30/artin-theorem/,2023-10-30T20:17:45,artin-theorem
+27,otd,"A October 7 highlight: ""Sometimes it’s right under your nose"" (2008).",https://www.johndcook.com/blog/2008/10/07/sometimes-its-right-under-your-nose/,2008-10-07T20:00:41,sometimes-its-right-under-your-nose
+28,otd,"A October 18 highlight: ""Chinese character frequency and entropy"" (2019).",https://www.johndcook.com/blog/2019/10/18/chinese-character-entropy/,2019-10-18T07:39:48,chinese-character-entropy
+29,otd,"A October 12 highlight: ""Clearing up the confusion around Jacobi functions"" (2018).",https://www.johndcook.com/blog/2018/10/12/jacobi-function-nomenclature/,2018-10-12T14:45:56,jacobi-function-nomenclature
+30,otd,"A September 17 highlight: ""Business literature"" (2010).",https://www.johndcook.com/blog/2010/09/17/business-literature/,2010-09-17T06:38:35,business-literature
+31,otd,"A September 13 highlight: ""A strange sort of product rule"" (2018).",https://www.johndcook.com/blog/2018/09/13/scalar-vector-product-rule/,2018-09-13T10:54:20,scalar-vector-product-rule
+32,otd,"A September 5 highlight: ""Power method and Fibonacci numbers"" (2015).",https://www.johndcook.com/blog/2015/09/05/power-method-and-fibonacci-numbers/,2015-09-05T09:40:23,power-method-and-fibonacci-numbers
+33,otd,"A September 4 highlight: ""Proofs and programs"" (2016).",https://www.johndcook.com/blog/2016/09/04/proofs-and-programs/,2016-09-04T08:30:57,proofs-and-programs
+34,otd,"A September 10 highlight: ""Visualizing category concept dependencies"" (2013).",https://www.johndcook.com/blog/2013/09/10/visualizing-category-concept-dependencies/,2013-09-10T19:34:36,visualizing-category-concept-dependencies
+35,otd,"A September 6 highlight: ""Checksum polynomials"" (2023).",https://www.johndcook.com/blog/2023/09/06/checksum-polynomials/,2023-09-06T10:40:14,checksum-polynomials
+36,otd,"A September 3 highlight: ""Optimal rational approximation"" (2024).",https://www.johndcook.com/blog/2024/09/03/optimal-rational-approximation/,2024-09-03T07:33:28,optimal-rational-approximation
+37,otd,"A August 28 highlight: ""Empirical formula for the shape of an egg"" (2021).",https://www.johndcook.com/blog/2021/08/28/empirical-egg-formula/,2021-08-28T12:24:49,empirical-egg-formula
+38,otd,"A August 15 highlight: ""Converting very long strings to integers in Python"" (2025).",https://www.johndcook.com/blog/2025/08/15/very-long-string-to-int/,2025-08-15T13:45:06,very-long-string-to-int
+39,otd,"A August 17 highlight: ""Memorizing four-digit numbers"" (2023).",https://www.johndcook.com/blog/2023/08/17/memorizing-four-digit-numbers/,2023-08-17T10:27:47,memorizing-four-digit-numbers
+40,otd,"A August 5 highlight: ""Like putting a coke machine in a monastery"" (2011).",https://www.johndcook.com/blog/2011/08/05/like-putting-a-coke-machine-in-a-monastery/,2011-08-05T07:20:10,like-putting-a-coke-machine-in-a-monastery
+41,otd,"A August 29 highlight: ""A strange take on the harmonic series"" (2024).",https://www.johndcook.com/blog/2024/08/29/strange-harmonic-series/,2024-08-29T07:11:24,strange-harmonic-series
+42,otd,"A August 10 highlight: ""Markov chains don’t converge"" (2011).",https://www.johndcook.com/blog/2011/08/10/markov-chains-dont-converge/,2011-08-10T08:23:09,markov-chains-dont-converge
+43,otd,"A August 13 highlight: ""Math’s base 32 versus Linux’s base 32"" (2024).",https://www.johndcook.com/blog/2024/08/13/base-32/,2024-08-13T10:27:00,base-32
+44,otd,"A July 21 highlight: ""Three properties of real-world graphs"" (2013).",https://www.johndcook.com/blog/2013/07/21/three-properties-of-real-world-graphs/,2013-07-21T15:41:34,three-properties-of-real-world-graphs
+45,otd,"A July 19 highlight: ""Numerators of harmonic numbers"" (2015).",https://www.johndcook.com/blog/2015/07/19/numerators-of-harmonic-numbers/,2015-07-19T23:08:35,numerators-of-harmonic-numbers
+46,otd,"A July 31 highlight: ""Finding tangent circles"" (2025).",https://www.johndcook.com/blog/2025/07/31/finding-tangent-circles/,2025-07-31T11:12:39,finding-tangent-circles
+47,otd,"A July 15 highlight: ""Ancient understanding of tides"" (2012).",https://www.johndcook.com/blog/2012/07/15/ancient-understanding-of-tides/,2012-07-15T10:47:11,ancient-understanding-of-tides
+48,otd,"A July 17 highlight: ""Integral approximation trick"" (2019).",https://www.johndcook.com/blog/2019/07/17/integral-approximation-trick/,2019-07-17T07:49:18,integral-approximation-trick
+49,otd,"A July 30 highlight: ""Complex AGM"" (2022).",https://www.johndcook.com/blog/2022/07/30/complex-agm/,2022-07-30T08:44:30,complex-agm
+50,otd,"A July 11 highlight: ""Software albatross"" (2012).",https://www.johndcook.com/blog/2012/07/11/software-albatross/,2012-07-11T07:00:49,software-albatross
+51,otd,"A June 26 highlight: ""Circles and lines under a Möbius transformation"" (2022).",https://www.johndcook.com/blog/2022/06/26/mobius-transformation-circles/,2022-06-26T09:06:49,mobius-transformation-circles
+52,otd,"A June 2 highlight: ""Humbled by a debugging book"" (2012).",https://www.johndcook.com/blog/2012/06/02/windows-debugging/,2012-06-02T07:00:07,windows-debugging
+53,otd,"A June 22 highlight: ""Prime factors, phone numbers, and the normal distribution"" (2016).",https://www.johndcook.com/blog/2016/06/22/prime-factors-phone-numbers-and-the-normal-distribution/,2016-06-22T06:00:45,prime-factors-phone-numbers-and-the-normal-distribution
+54,otd,"A June 25 highlight: ""Sample size calculation"" (2020).",https://www.johndcook.com/blog/2020/06/25/sample-size-calculation/,2020-06-25T11:31:07,sample-size-calculation
+55,otd,"A June 9 highlight: ""Comparing the Unix and PowerShell pipelines"" (2009).",https://www.johndcook.com/blog/2009/06/09/comparing-the-unix-and-powershell-pipelines/,2009-06-09T06:40:24,comparing-the-unix-and-powershell-pipelines
+56,otd,"A June 15 highlight: ""Books you’d like to have read"" (2018).",https://www.johndcook.com/blog/2018/06/15/books/,2018-06-15T22:03:23,books
+57,otd,"A June 29 highlight: ""Zooming in on a fractalish plot"" (2025).",https://www.johndcook.com/blog/2025/06/29/zooming-in-on-a-fractalish-plot/,2025-06-29T06:33:57,zooming-in-on-a-fractalish-plot
+58,otd,"A May 12 highlight: ""Logarithm approximation curiosity"" (2024).",https://www.johndcook.com/blog/2024/05/12/logarithm-approximation-error/,2024-05-12T07:03:38,logarithm-approximation-error
+59,otd,"A May 13 highlight: ""Alternative exp and log notation"" (2025).",https://www.johndcook.com/blog/2025/05/13/alternative-exp-and-log-notation/,2025-05-13T14:34:01,alternative-exp-and-log-notation
+60,otd,"A May 11 highlight: ""Special solutions to the eight queens problem"" (2025).",https://www.johndcook.com/blog/2025/05/11/eight-queens-symmetry/,2025-05-11T11:52:54,eight-queens-symmetry
+61,otd,"A May 4 highlight: ""Rules for computing happiness"" (2009).",https://www.johndcook.com/blog/2009/05/04/rules-for-computing-happiness/,2009-05-04T09:10:17,rules-for-computing-happiness
+62,otd,"A May 29 highlight: ""Haskell is to math as Perl is to English?"" (2014).",https://www.johndcook.com/blog/2014/05/29/superficial-vs-deep-similarity/,2014-05-29T10:30:19,superficial-vs-deep-similarity
+63,otd,"A May 22 highlight: ""Category theory without categories"" (2023).",https://www.johndcook.com/blog/2023/05/22/category-theory-without-categories/,2023-05-22T15:45:51,category-theory-without-categories
+64,otd,"A May 26 highlight: ""Why exponential sums are interesting"" (2021).",https://www.johndcook.com/blog/2021/05/26/why-exponential-sums/,2021-05-26T08:18:19,why-exponential-sums
+65,otd,"A April 7 highlight: ""Tricky code"" (2008).",https://www.johndcook.com/blog/2008/04/07/tricky-code/,2008-04-07T17:51:35,tricky-code
+66,otd,"A April 27 highlight: ""Transpose and Adjoint"" (2025).",https://www.johndcook.com/blog/2025/04/27/transpose-vs-adjoint/,2025-04-27T11:03:53,transpose-vs-adjoint
+67,otd,"A April 24 highlight: ""Moore-Penrose pseudoinverse is not an adjoint"" (2018).",https://www.johndcook.com/blog/2018/04/24/moore-penrose-pseudoinverse-is-not-an-adjoint/,2018-04-24T20:53:25,moore-penrose-pseudoinverse-is-not-an-adjoint
+68,otd,"A April 15 highlight: ""Personal organization software"" (2011).",https://www.johndcook.com/blog/2011/04/15/personal-organization-software/,2011-04-15T06:36:36,personal-organization-software
+69,otd,"A April 25 highlight: ""The cult of average"" (2012).",https://www.johndcook.com/blog/2012/04/25/cult-of-average/,2012-04-25T05:45:48,cult-of-average
+70,otd,"A April 30 highlight: ""Analogy between Fibonacci and Chebyshev"" (2020).",https://www.johndcook.com/blog/2020/04/30/fibonacci-chebyshev/,2020-04-30T21:38:57,fibonacci-chebyshev
+71,otd,"A April 12 highlight: ""Spaceship operator in Python"" (2021).",https://www.johndcook.com/blog/2021/04/12/spaceship-operator/,2021-04-12T10:36:20,spaceship-operator
+72,otd,"A March 16 highlight: ""Grokking the James Bond chord"" (2025).",https://www.johndcook.com/blog/2025/03/16/grokking-james-bond/,2025-03-16T18:43:08,grokking-james-bond
+73,otd,"A March 11 highlight: ""How loud is the evidence?"" (2008).",https://www.johndcook.com/blog/2008/03/11/how-loud-is-the-evidence/,2008-03-11T05:21:52,how-loud-is-the-evidence
+74,otd,"A March 30 highlight: ""How is portable AM radio possible?"" (2022).",https://www.johndcook.com/blog/2022/03/30/portable-am-radio/,2022-03-30T11:20:14,portable-am-radio
+75,otd,"A March 9 highlight: ""Practical consequences of tokenization details"" (2025).",https://www.johndcook.com/blog/2025/03/09/practical-tokenization/,2025-03-09T08:48:54,practical-tokenization
+76,otd,"A March 17 highlight: ""Mathematical arbitrage"" (2015).",https://www.johndcook.com/blog/2015/03/17/mathematical-arbitrage/,2015-03-17T08:00:18,mathematical-arbitrage
+77,otd,"A March 22 highlight: ""Categorical products"" (2016).",https://www.johndcook.com/blog/2016/03/22/categorical-products/,2016-03-22T06:38:10,categorical-products
+78,otd,"A March 1 highlight: ""Numerically integrating periodic functions"" (2017).",https://www.johndcook.com/blog/2017/03/01/numerically-integrating-periodic-functions/,2017-03-01T08:40:35,numerically-integrating-periodic-functions
+79,otd,"A February 21 highlight: ""Popcount: counting 1’s in a bit stream"" (2020).",https://www.johndcook.com/blog/2020/02/21/popcount/,2020-02-21T08:29:07,popcount
+80,otd,"A February 4 highlight: ""Discrete harmonic functions"" (2016).",https://www.johndcook.com/blog/2016/02/04/discrete-harmonic-functions/,2016-02-04T07:00:57,discrete-harmonic-functions
+81,otd,"A February 9 highlight: ""Programming language popularity"" (2012).",https://www.johndcook.com/blog/2012/02/09/programming-langauge-popularity/,2012-02-09T05:26:31,programming-langauge-popularity
+82,otd,"A February 3 highlight: ""Connecting the FFT and quadratic reciprocity"" (2024).",https://www.johndcook.com/blog/2024/02/03/fft-reciprocity/,2024-02-03T13:59:27,fft-reciprocity
+83,otd,"A February 17 highlight: ""Imaginary gold"" (2014).",https://www.johndcook.com/blog/2014/02/17/imaginary-gold/,2014-02-17T08:16:10,imaginary-gold
+84,otd,"A February 28 highlight: ""What to make ""u"" in integration by parts"" (2008).",https://www.johndcook.com/blog/2008/02/28/what-to-make-u-in-integration-by-parts/,2008-02-28T18:58:20,what-to-make-u-in-integration-by-parts
+85,otd,"A February 18 highlight: ""The hard part in becoming a command line wizard"" (2019).",https://www.johndcook.com/blog/2019/02/18/command-line-wizard/,2019-02-18T10:39:57,command-line-wizard
+86,otd,"A January 26 highlight: ""Remove algorithmic filters from what you read"" (2023).",https://www.johndcook.com/blog/2023/01/26/unfiltered/,2023-01-26T09:17:33,unfiltered
+87,otd,"A January 2 highlight: ""Carnival of Mathematics 235"" (2025).",https://www.johndcook.com/blog/2025/01/02/carnival-of-mathematics-235/,2025-01-02T05:51:50,carnival-of-mathematics-235
+88,otd,"A January 27 highlight: ""Bad takes on chaos theory"" (2024).",https://www.johndcook.com/blog/2024/01/27/butterflies-dont-work-that-way/,2024-01-27T10:42:00,butterflies-dont-work-that-way
+89,otd,"A January 29 highlight: ""Python / Emacs setup"" (2013).",https://www.johndcook.com/blog/2013/01/29/python-emacs-setup/,2013-01-29T13:33:53,python-emacs-setup
+90,otd,"A January 9 highlight: ""Monthly highlights"" (2017).",https://www.johndcook.com/blog/2017/01/09/monthly-highlights/,2017-01-09T08:53:12,monthly-highlights
+91,otd,"A January 25 highlight: ""Salting and stretching a password"" (2019).",https://www.johndcook.com/blog/2019/01/25/salt-and-stretching/,2019-01-25T07:23:36,salt-and-stretching
+92,otd,"A January 16 highlight: ""Unstructured data is an oxymoron"" (2019).",https://www.johndcook.com/blog/2019/01/16/unstructured-data-is-an-oxymoron/,2019-01-16T09:27:41,unstructured-data-is-an-oxymoron
+93,otd,"A December 30 highlight: ""Advantages of everything-is-text"" (2011).",https://www.johndcook.com/blog/2011/12/30/advantages-of-everything-is-text/,2011-12-30T09:10:29,advantages-of-everything-is-text
+94,otd,"A December 16 highlight: ""Faint praise for Expression Web"" (2008).",https://www.johndcook.com/blog/2008/12/16/faint-praise-for-expression-web/,2008-12-16T21:03:50,faint-praise-for-expression-web
+95,otd,"A December 12 highlight: ""Elephant lifespans in captivity"" (2008).",https://www.johndcook.com/blog/2008/12/12/elephant-lifespans-in-captivity/,2008-12-12T22:59:55,elephant-lifespans-in-captivity
+96,otd,"A December 18 highlight: ""Retooling"" (2015).",https://www.johndcook.com/blog/2015/12/18/retooling/,2015-12-18T08:18:35,retooling
+97,otd,"A December 29 highlight: ""Sinc approximation to Bessel function"" (2022).",https://www.johndcook.com/blog/2022/12/29/sinc-bessel/,2022-12-29T05:55:05,sinc-bessel
+98,otd,"A December 21 highlight: ""A generalization of sine and cosine"" (2020).",https://www.johndcook.com/blog/2020/12/21/generalization-sine-cosine/,2020-12-21T07:27:11,generalization-sine-cosine
+99,otd,"A December 14 highlight: ""Shells, quoting, and one-liners"" (2020).",https://www.johndcook.com/blog/2020/12/14/shells-quoting-and-one-liners/,2020-12-14T07:00:31,shells-quoting-and-one-liners
+100,quirk,"""Pitch of a big wine bottle"" - where math meets music (2021).",https://www.johndcook.com/blog/2021/02/08/pitch-of-a-big-wine-bottle/,2021-02-08T09:23:48,pitch-of-a-big-wine-bottle
+101,quirk,"""Helmholtz resonator revisited"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/07/20/helmholtz-resonator/,2022-07-20T19:09:01,helmholtz-resonator
+102,quirk,"""More ways of splitting the octave"" - where math meets music (2023).",https://www.johndcook.com/blog/2023/10/10/octave-means/,2023-10-10T21:53:02,octave-means
+103,quirk,"""Saxophone with short bell"" - where math meets music (2019).",https://www.johndcook.com/blog/2019/01/22/saxophone-with-short-bell/,2019-01-22T11:26:32,saxophone-with-short-bell
+104,quirk,"""Overtones and Barbershop Quartets"" - where math meets music (2025).",https://www.johndcook.com/blog/2025/04/24/overtones-and-barbershop-quartets/,2025-04-24T13:10:26,overtones-and-barbershop-quartets
+105,quirk,"""Quartal melody: Star Trek fanfare"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/05/03/quartal-melody-star-trek-fanfare/,2022-05-03T09:49:19,quartal-melody-star-trek-fanfare
+106,quirk,"""Python and the Tell-Tale Heart"" - where math meets music (2020).",https://www.johndcook.com/blog/2020/02/17/python-heartbeat/,2020-02-17T20:53:12,python-heartbeat
+107,quirk,"""Lee distance: codes and music"" - where math meets music (2020).",https://www.johndcook.com/blog/2020/03/29/lee-distance-codes-and-music/,2020-03-29T13:47:38,lee-distance-codes-and-music
+108,quirk,"""Multiple Frequency Shift Keying"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/03/22/multiple-frequency-shift-keying/,2022-03-22T09:51:00,multiple-frequency-shift-keying
+109,quirk,"""Complexity below the surface"" - where math meets music (2021).",https://www.johndcook.com/blog/2021/06/26/complexity-below-the-surface/,2021-06-26T08:16:57,complexity-below-the-surface
+110,quirk,"""The Clausen function"" - where math meets music (2024).",https://www.johndcook.com/blog/2024/07/01/the-clausen-function/,2024-07-01T07:26:20,the-clausen-function
+111,quirk,"""Updated pitch calculator"" - where math meets music (2020).",https://www.johndcook.com/blog/2020/01/29/updated-pitch-calculator/,2020-01-29T09:18:43,updated-pitch-calculator
+112,quirk,"""Perfect fifths, octaves, and an ergodic map"" - where math meets music (2021).",https://www.johndcook.com/blog/2021/06/02/perfect-fifths-octaves/,2021-06-02T07:43:19,perfect-fifths-octaves
+113,quirk,"""Dial tone and busy signal"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/03/22/dial-tone-and-busy-signal/,2022-03-22T04:23:56,dial-tone-and-busy-signal
+114,quirk,"""Equipentatonic scale"" - where math meets music (2025).",https://www.johndcook.com/blog/2025/04/24/equipentatonic-scale/,2025-04-24T08:49:49,equipentatonic-scale
+115,quirk,"""Saxophone ranges"" - where math meets music (2021).",https://www.johndcook.com/blog/2021/02/26/saxophone-ranges/,2021-02-26T07:00:06,saxophone-ranges
+116,quirk,"""Morse code in musical notation"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/02/25/morse-code-in-musical-notation/,2022-02-25T18:16:43,morse-code-in-musical-notation
+117,quirk,"""The Very Model of a Professor Statistical"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/10/05/professor-statistical/,2022-10-05T21:23:34,professor-statistical
+118,quirk,"""All possible scales"" - where math meets music (2018).",https://www.johndcook.com/blog/2018/11/26/all-possible-scales/,2018-11-26T09:19:15,all-possible-scales
+119,quirk,"""The acoustics of Hagia Sophia"" - where math meets music (2018).",https://www.johndcook.com/blog/2018/11/09/the-acoustics-of-hagia-sophia/,2018-11-09T10:20:05,the-acoustics-of-hagia-sophia
+120,quirk,"""O Come, O Come, Emmanuel: condensing seven hymns into one"" - where math meets music (2021).",https://www.johndcook.com/blog/2021/12/24/o-come-o-come-emmanuel/,2021-12-24T10:09:46,o-come-o-come-emmanuel
+121,quirk,"""YYZ and Morse code"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/08/14/yyz/,2022-08-14T18:26:33,yyz
+122,quirk,"""Tritone"" - where math meets music (2023).",https://www.johndcook.com/blog/2023/10/10/tritone/,2023-10-10T08:42:14,tritone
+123,quirk,"""The Real Book"" - where math meets music (2024).",https://www.johndcook.com/blog/2024/02/28/the-real-book/,2024-02-28T09:18:57,the-real-book
+124,quirk,"""Phone tones in musical notation"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/03/14/phone-tones-in-musical-notation/,2022-03-14T10:43:45,phone-tones-in-musical-notation
+125,quirk,"""Recamán’s sequence"" - where math meets music (2025).",https://www.johndcook.com/blog/2025/05/05/recamans-sequence/,2025-05-05T20:10:53,recamans-sequence
+126,quirk,"""Dividing an octave into 14 pieces"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/03/16/14-note-scale/,2022-03-16T14:07:11,14-note-scale
+127,quirk,"""The Crown and The Planets"" - where math meets music (2020).",https://www.johndcook.com/blog/2020/12/09/thaxted/,2020-12-09T09:15:30,thaxted
+128,quirk,"""Mathematics and piano tuning"" - where math meets music (2022).",https://www.johndcook.com/blog/2022/04/04/mathemacs-and-piano-tuning/,2022-04-04T18:19:24,mathemacs-and-piano-tuning
+129,quirk,"""Why are regular expressions difficult?"" - exploring the why, from 2019.",https://www.johndcook.com/blog/2019/06/19/why-regex/,2019-06-19T14:13:34,why-regex
+130,quirk,"""Why is Kullback-Leibler divergence not a distance?"" - exploring the why, from 2017.",https://www.johndcook.com/blog/2017/11/08/why-is-kullback-leibler-divergence-not-a-distance/,2017-11-08T09:10:06,why-is-kullback-leibler-divergence-not-a-distance
+131,quirk,"""How blocks are chained in a blockchain"" - a how-to from 2025.",https://www.johndcook.com/blog/2025/10/27/blockchain/,2025-10-27T10:54:15,blockchain
+132,quirk,"""How well does a spline fit a function?"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/02/18/spline-fit/,2023-02-18T08:25:41,spline-fit
+133,quirk,"""How you define center matters a lot"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/09/09/triangle-subdivision/,2023-09-09T19:43:44,triangle-subdivision
+134,quirk,"""How many ways can you triangulate a regular polygon?"" - a how-to from 2025.",https://www.johndcook.com/blog/2025/04/16/triangulate-polygon/,2025-04-16T10:39:24,triangulate-polygon
+135,quirk,"""How rare is it to encounter a rare word?"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/07/23/rare-words/,2023-07-23T16:01:09,rare-words
+136,quirk,"""How likely is a random variable to be far from its center?"" - a how-to from 2024.",https://www.johndcook.com/blog/2024/02/06/chevyshev-variations/,2024-02-06T08:33:55,chevyshev-variations
+137,quirk,"""Why do medical tests always have error rates?"" - exploring the why, from 2024.",https://www.johndcook.com/blog/2024/07/22/why-error-rates/,2024-07-22T08:27:18,why-error-rates
+138,quirk,"""How much metadata is in a photo?"" - a how-to from 2024.",https://www.johndcook.com/blog/2024/02/13/photo-metadata/,2024-02-13T09:44:47,photo-metadata
+139,quirk,"""How stealth addresses work in Monero"" - a how-to from 2025.",https://www.johndcook.com/blog/2025/11/24/monero-stealth-addresses/,2025-11-24T11:06:51,monero-stealth-addresses
+140,quirk,"""Why are CUDA kernels hard to optimize?"" - exploring the why, from 2025.",https://www.johndcook.com/blog/2025/08/27/why-are-cuda-kernels-hard-to-optimize/,2025-08-27T18:00:15,why-are-cuda-kernels-hard-to-optimize
+141,quirk,"""How Mr. Bidder calculated logarithms"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/02/26/bidders-logarithms/,2023-02-26T14:00:26,bidders-logarithms
+142,quirk,"""Why don’t you simply use XeTeX?"" - exploring the why, from 2017.",https://www.johndcook.com/blog/2017/09/17/why-dont-you-simply-use-xetex/,2017-09-17T14:59:55,why-dont-you-simply-use-xetex
+143,quirk,"""How often do the hands of a clock line up?"" - a how-to from 2025.",https://www.johndcook.com/blog/2025/05/28/clock-hands/,2025-05-28T08:46:06,clock-hands
+144,quirk,"""Why eliminate trusted third parties?"" - exploring the why, from 2025.",https://www.johndcook.com/blog/2025/01/15/peer-to-peer/,2025-01-15T11:42:15,peer-to-peer
+145,quirk,"""Why not statistics"" - exploring the why, from 2015.",https://www.johndcook.com/blog/2015/04/09/shaky-philosophical-underpinnings/,2015-04-09T11:03:40,shaky-philosophical-underpinnings
+146,quirk,"""How faithful can a map be?"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/05/10/map-distortion/,2023-05-10T09:02:04,map-distortion
+147,quirk,"""Why is the word problem hard?"" - exploring the why, from 2021.",https://www.johndcook.com/blog/2021/09/14/why-is-the-word-problem-hard/,2021-09-14T10:00:52,why-is-the-word-problem-hard
+148,quirk,"""Why does FM sound better than AM?"" - exploring the why, from 2024.",https://www.johndcook.com/blog/2024/10/13/why-does-fm-sound-better-than-am/,2024-10-13T16:12:55,why-does-fm-sound-better-than-am
+149,quirk,"""Why and how Bitcoin uses Merkle trees"" - exploring the why, from 2025.",https://www.johndcook.com/blog/2025/10/28/bitcoin-merkle-trees/,2025-10-28T09:00:00,bitcoin-merkle-trees
+150,quirk,"""Why HIPAA matters even if you’re not a “covered entity”"" - exploring the why, from 2020.",https://www.johndcook.com/blog/2020/02/17/hipaa-covered-entity/,2020-02-17T10:05:37,hipaa-covered-entity
+151,quirk,"""How much will a cable sag? A simple approximation"" - a how-to from 2024.",https://www.johndcook.com/blog/2024/03/09/catenary-sag-approx/,2024-03-09T17:15:14,catenary-sag-approx
+152,quirk,"""How to memorize Unicode codepoints"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/05/01/memorize-unicode/,2023-05-01T11:18:09,memorize-unicode
+153,quirk,"""How quantum computing would affect Bitcoin"" - a how-to from 2025.",https://www.johndcook.com/blog/2025/08/30/quantum-bitcoin/,2025-08-30T06:21:25,quantum-bitcoin
+154,quirk,"""How to Organize Technical Research?"" - a how-to from 2024.",https://www.johndcook.com/blog/2024/03/09/how-to-organize-technical-research/,2024-03-09T07:02:48,how-to-organize-technical-research
+155,quirk,"""Why target ads at pregnant women"" - exploring the why, from 2022.",https://www.johndcook.com/blog/2022/05/02/pregnant/,2022-05-02T11:13:18,pregnant
+156,quirk,"""How to depress a general polynomial"" - a how-to from 2022.",https://www.johndcook.com/blog/2022/11/19/depress-general-polynomial/,2022-11-19T12:41:21,depress-general-polynomial
+157,quirk,"""Why can’t grep find negative numbers?"" - exploring the why, from 2019.",https://www.johndcook.com/blog/2019/12/07/grep-negative-numbers/,2019-12-07T06:35:46,grep-negative-numbers
+158,quirk,"""How to mark a language in HTML"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/07/12/language-abbreviation/,2023-07-12T10:33:54,language-abbreviation
+159,quirk,"""Why a slide rule works"" - exploring the why, from 2022.",https://www.johndcook.com/blog/2022/04/10/why-a-slide-rule-works/,2022-04-10T15:49:00,why-a-slide-rule-works
+160,quirk,"""Why “a caret, euro, trademark” â€™ in a file?"" - exploring the why, from 2024.",https://www.johndcook.com/blog/2024/01/11/a-caret-euro-trademark/,2024-01-11T20:18:16,a-caret-euro-trademark
+161,quirk,"""Why determinants with columns of ones?"" - exploring the why, from 2022.",https://www.johndcook.com/blog/2022/12/10/determinants-ones/,2022-12-10T18:49:00,determinants-ones
+162,quirk,"""How to turn an unkeyed hash into a keyed hash"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/04/04/keyed-hash/,2023-04-04T06:30:49,keyed-hash
+163,quirk,"""Why do LLMs have emergent properties?"" - exploring the why, from 2025.",https://www.johndcook.com/blog/2025/05/08/why-do-llms-have-emergent-properties/,2025-05-08T11:50:13,why-do-llms-have-emergent-properties
+164,quirk,"""How an LLM might leak medical data"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/07/23/ai-leak-medical-data/,2023-07-23T12:58:09,ai-leak-medical-data
+165,quirk,"""How hard is constraint programming?"" - a how-to from 2024.",https://www.johndcook.com/blog/2024/10/31/how-hard-is-constraint-programming/,2024-10-31T06:52:13,how-hard-is-constraint-programming
+166,quirk,"""Why doesn’t grep work?"" - exploring the why, from 2019.",https://www.johndcook.com/blog/2019/12/05/why-doesnt-grep-work/,2019-12-05T09:06:59,why-doesnt-grep-work
+167,quirk,"""Why isn’t everything normally distributed?"" - exploring the why, from 2015.",https://www.johndcook.com/blog/2015/03/09/why-isnt-everything-normally-distributed/,2015-03-09T14:05:42,why-isnt-everything-normally-distributed
+168,quirk,"""Why is an empty sum 0 and an empty product 1?"" - exploring the why, from 2015.",https://www.johndcook.com/blog/2015/04/14/empty-sum-product/,2015-04-14T07:00:21,empty-sum-product
+169,quirk,"""Why do linear prediction confidence regions flare out?"" - exploring the why, from 2017.",https://www.johndcook.com/blog/2017/06/25/why-do-linear-prediction-confidence-regions-flare-out/,2017-06-25T20:57:09,why-do-linear-prediction-confidence-regions-flare-out
+170,quirk,"""How Mathematica Draws a Dragonfly"" - a how-to from 2025.",https://www.johndcook.com/blog/2025/05/28/dragonfly/,2025-05-28T08:47:48,dragonfly
+171,quirk,"""How to memorize a Bitcoin address"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/11/13/memorize-bitcoin/,2023-11-13T08:52:33,memorize-bitcoin
+172,quirk,"""How Mr. Benjamin squares numbers"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/03/01/square-numbers/,2023-03-01T06:54:47,square-numbers
+173,quirk,"""How large is a Maidenhead field?"" - a how-to from 2023.",https://www.johndcook.com/blog/2023/02/21/maidenhead-field-area/,2023-02-21T08:10:28,maidenhead-field-area
+174,density,"The #1 longest post is ""Interview with Sir Michael Atiyah"" with 1,926 words, published September 24, 2013.",https://www.johndcook.com/blog/2013/09/24/interview-with-sir-michael-atiyah/,2013-09-24T05:34:44,interview-with-sir-michael-atiyah
+175,density,"The #2 longest post is ""Applied topology and Dante: an interview with Robert Ghrist"" with 1,814 words, published September 13, 2010.",https://www.johndcook.com/blog/2010/09/13/applied-topology-and-dante-an-interview-with-robert-ghrist/,2010-09-13T07:30:00,applied-topology-and-dante-an-interview-with-robert-ghrist
+176,density,"The #3 longest post is ""Hallucinations of AI Science Models"" with 1,710 words, published March 26, 2024.",https://www.johndcook.com/blog/2024/03/26/hallucinations-of-ai-science-models/,2024-03-26T10:35:48,hallucinations-of-ai-science-models
+177,density,"One of the shortest posts is ""Poetic software"" with just 15 words (2013).",https://www.johndcook.com/blog/2013/05/31/poetic-software/,2013-05-31T08:50:33,poetic-software
+178,density,"One of the shortest posts is ""Carnival of Mathematics #43 posted"" with just 15 words (2008).",https://www.johndcook.com/blog/2008/11/07/carnival-of-mathematics-43-posted/,2008-11-07T13:01:38,carnival-of-mathematics-43-posted
+179,density,"One of the shortest posts is ""My interview in SIAM News"" with just 18 words (2022).",https://www.johndcook.com/blog/2022/06/01/siam-news/,2022-06-01T13:58:13,siam-news
+180,density,"One of the shortest posts is ""Fortune cookie"" with just 16 words (2010).",https://www.johndcook.com/blog/2010/07/12/fortune-cookie/,2010-07-12T12:05:32,fortune-cookie
+181,density,"One of the shortest posts is ""Routine statistics"" with just 14 words (2010).",https://www.johndcook.com/blog/2010/04/21/routine-statistics/,2010-04-21T05:25:22,routine-statistics
+182,density,"One of the shortest posts is ""Machine learning"" with just 14 words (2008).",https://www.johndcook.com/blog/2008/12/03/machine-learning/,2008-12-03T08:30:02,machine-learning
+183,density,"One of the shortest posts is ""Getting started with SciPy (Scientific Python)"" with just 12 words (2009).",https://www.johndcook.com/blog/2009/07/23/getting-started-with-scipy-scientific-python/,2009-07-23T08:09:36,getting-started-with-scipy-scientific-python
+184,density,"One of the shortest posts is ""Designing a stop sign"" with just 13 words (2008).",https://www.johndcook.com/blog/2008/09/22/designing-a-stop-sign/,2008-09-22T16:10:33,designing-a-stop-sign
+185,density,"One of the shortest posts is ""Simple interpolation"" with just 11 words (2008).",https://www.johndcook.com/blog/2008/09/11/simple-interpolation/,2008-09-11T16:18:42,simple-interpolation
+186,density,"One of the shortest posts is ""10 rules for creative thinking"" with just 17 words (2008).",https://www.johndcook.com/blog/2008/01/31/10-rules-for-creative-thinking/,2008-01-31T20:29:00,10-rules-for-creative-thinking
+187,density,"One of the shortest posts is ""Management mythology"" with just 18 words (2009).",https://www.johndcook.com/blog/2009/05/06/management-mythology/,2009-05-06T06:42:47,management-mythology
+188,density,"One of the shortest posts is ""Hidden curriculum"" with just 16 words (2010).",https://www.johndcook.com/blog/2010/06/08/hidden-curriculum/,2010-06-08T10:47:46,hidden-curriculum
+189,density,"One of the shortest posts is ""Writing ASP.NET pages in PowerShell"" with just 15 words (2008).",https://www.johndcook.com/blog/2008/07/17/writing-aspnet-pages-in-powershell/,2008-07-17T09:28:35,writing-aspnet-pages-in-powershell
+190,density,"One of the shortest posts is ""Technology hype curve"" with just 12 words (2012).",https://www.johndcook.com/blog/2012/06/13/technology-hype-curve/,2012-06-13T10:25:25,technology-hype-curve
+191,density,"One of the shortest posts is ""PowerShell eBook update"" with just 16 words (2009).",https://www.johndcook.com/blog/2009/05/09/powershell-ebook-update/,2009-05-09T06:12:01,powershell-ebook-update
+192,density,"One of the shortest posts is ""Programmer problem solving sequence"" with just 16 words (2010).",https://www.johndcook.com/blog/2010/10/22/programmer-problem-solving-sequence/,2010-10-22T06:55:59,programmer-problem-solving-sequence
+193,density,"One of the shortest posts is ""Oil on a parking lot"" with just 15 words (2015).",https://www.johndcook.com/blog/2015/03/03/oil-on-a-parking-lot/,2015-03-03T14:06:55,oil-on-a-parking-lot
+194,density,"One of the shortest posts is ""Promising cancer research"" with just 15 words (2011).",https://www.johndcook.com/blog/2011/10/30/promising-cancer-research/,2011-10-30T19:34:41,promising-cancer-research
+195,density,"One of the shortest posts is ""Soccer match between German and Greek philosophers"" with just 17 words (2009).",https://www.johndcook.com/blog/2009/03/03/german-greek-philosophers-soccer/,2009-03-03T05:01:04,german-greek-philosophers-soccer
+196,density,"One of the shortest posts is ""51st Carnival of Mathematics posted"" with just 13 words (2009).",https://www.johndcook.com/blog/2009/04/24/51st-carnival-of-mathematics-posted/,2009-04-24T10:05:40,51st-carnival-of-mathematics-posted
+197,density,"The #20 longest post is ""Interview with Sacha Chua"" with 1,243 words, published March 19, 2013.",https://www.johndcook.com/blog/2013/03/19/interview-with-sacha-chua/,2013-03-19T06:00:27,interview-with-sacha-chua
+198,density,"The #6 longest post is ""Interview with author Cliff Pickover"" with 1,594 words, published August 30, 2009.",https://www.johndcook.com/blog/2009/08/30/interview-with-author-cliff-pickover/,2009-08-30T14:29:09,interview-with-author-cliff-pickover
+199,density,"""Activation functions and Iverson brackets"" includes 12 images, one of the most visual posts on the blog.",https://www.johndcook.com/blog/2023/07/01/activation-functions/,2023-07-01T17:06:18,activation-functions
+200,density,"""Fourier-Bessel series and Gibbs phenomena"" includes 12 images, one of the most visual posts on the blog.",https://www.johndcook.com/blog/2017/11/04/fourier-bessel-series-and-gibbs-phenomena/,2017-11-04T15:18:58,fourier-bessel-series-and-gibbs-phenomena
+201,density,"""Stiff differential equations"" includes 16 images, one of the most visual posts on the blog.",https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/,2020-02-02T14:25:21,stiff-differential-equations
+202,density,"""Extending harmonic numbers"" includes 11 images, one of the most visual posts on the blog.",https://www.johndcook.com/blog/2023/07/25/extending-harmonic-numbers/,2023-07-25T09:58:51,extending-harmonic-numbers
+203,density,"""Generating functions for polynomial sequences"" includes 12 images, one of the most visual posts on the blog.",https://www.johndcook.com/blog/2022/06/11/polynomial-sequence-gf/,2022-06-11T11:05:45,polynomial-sequence-gf
+204,constant,"""Analog of Heron’s formula on a sphere"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/11/08/heron-on-a-sphere/,2025-11-08T19:47:51,heron-on-a-sphere
+205,constant,"""Mentally compute logs base 2"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/10/29/estimating-log-base-2/,2025-10-29T09:24:45,estimating-log-base-2
+206,constant,"""Spacing the circles on the Smith chart"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/10/25/smith-chart-spacing/,2025-10-25T09:47:00,smith-chart-spacing
+207,constant,"""Generating random points in Colorado"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/10/22/generating-random-points-in-colorado/,2025-10-22T07:08:22,generating-random-points-in-colorado
+208,constant,"""Random spherical coordinates"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/10/22/random-spherical-coordinates/,2025-10-22T07:06:16,random-spherical-coordinates
+209,constant,"""Differential equation on a doughnut"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/10/08/diffeq-donut/,2025-10-08T19:27:24,diffeq-donut
+210,constant,"""Inverting series that are flat at zero"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/09/21/mollweide-for-high-latitudes/,2025-09-21T14:49:30,mollweide-for-high-latitudes
+211,constant,"""Mollweide map projection and Newton’s method"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/09/21/mollweide-newton/,2025-09-21T08:00:42,mollweide-newton
+212,constant,"""Mental math posts"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/09/17/mental-math-posts/,2025-09-17T13:57:28,mental-math-posts
+213,constant,"""Area of the unit disk after a Möbius transformation"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/09/15/area-mobius-transformation/,2025-09-15T07:11:46,area-mobius-transformation
+214,constant,"""Area of unit disk under a univalent function"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/09/12/conformal-image-area/,2025-09-12T05:59:40,conformal-image-area
+215,constant,"""A mental random number generator"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/09/10/mental-rng/,2025-09-10T06:55:53,mental-rng
+216,constant,"""Mandelbrot points of every period"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/09/05/mandelbrot-bulbs/,2025-09-05T16:51:33,mandelbrot-bulbs
+217,constant,"""An integral theorem of Gauss"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/08/31/an-integral-theorem-of-gauss/,2025-08-31T07:36:34,an-integral-theorem-of-gauss
+218,constant,"""Variations on Knuth’s Twindragon"" (2025) discusses the constant π.",https://www.johndcook.com/blog/2025/08/25/variations-on-knuths-twindragon/,2025-08-25T12:42:03,variations-on-knuths-twindragon
+219,span,"'Hipaa' spans the blog from 2016 to 2025: first in ""Sparsely populated zip codes"", most recently in ""Deleting vs Replacing Names"".",https://www.johndcook.com/blog/2016/06/29/sparsely-populated-zip-codes/,2016-06-29T21:26:40,sparsely-populated-zip-codes
+220,span,"'Python' spans the blog from 2008 to 2025: first in ""Three-hour-a-week language"", most recently in ""Equal things that don’t look equal"".",https://www.johndcook.com/blog/2008/01/31/three-hour-a-week-language/,2008-01-31T07:29:56,three-hour-a-week-language
+221,span,"'Riemann' spans the blog from 2012 to 2025: first in ""Equivalent form of the Riemann hypothesis"", most recently in ""Brownian motion and Riemann zeta"".",https://www.johndcook.com/blog/2012/11/28/equivalent-riemann-hypothesis/,2012-11-28T10:49:26,equivalent-riemann-hypothesis
+222,span,"'Fibonacci' spans the blog from 2008 to 2025: first in ""Honeybee genealogy"", most recently in ""Pythagorean triples"".",https://www.johndcook.com/blog/2008/02/15/honeybee-geneology/,2008-02-15T05:17:46,honeybee-geneology
+223,span,"'Privacy' spans the blog from 2009 to 2025: first in ""Privacy"", most recently in ""How stealth addresses work in Monero"".",https://www.johndcook.com/blog/2009/06/30/privacy/,2009-06-30T20:10:32,privacy
+224,span,"'Crypto' spans the blog from 2014 to 2025: first in ""Mental crypto footnotes"", most recently in ""How stealth addresses work in Monero"".",https://www.johndcook.com/blog/2014/09/25/mental-crypto/,2014-09-25T09:15:19,mental-crypto
+225,span,"'Api' spans the blog from 2008 to 2025: first in ""Regular expressions in C++ TR1"", most recently in ""Why and how Bitcoin uses Merkle trees"".",https://www.johndcook.com/blog/2008/05/07/regular-expressions-in-c-tr1/,2008-05-07T15:46:35,regular-expressions-in-c-tr1
+226,span,"'Elliptic Curve' spans the blog from 2012 to 2025: first in ""Second-generation public-key cryptography"", most recently in ""How stealth addresses work in Monero"".",https://www.johndcook.com/blog/2012/08/13/second-generation-public-key-cryptography/,2012-08-13T04:02:46,second-generation-public-key-cryptography
+227,span,"'Diffie-Hellman' spans the blog from 2017 to 2025: first in ""Safe primes, Sylow theorems, and Cryptography"", most recently in ""How stealth addresses work in Monero"".",https://www.johndcook.com/blog/2017/01/12/safe-primes-sylow-theorems-and-cryptography/,2017-01-12T06:08:21,safe-primes-sylow-theorems-and-cryptography
+228,span,"'Bayesian' spans the blog from 2008 to 2025: first in ""Musicians, drunks, and Oliver Cromwell"", most recently in ""You can’t have everything you want: beta edition"".",https://www.johndcook.com/blog/2008/01/12/musicians-drunks-and-oliver-cromwell/,2008-01-12T13:35:07,musicians-drunks-and-oliver-cromwell
+229,span,"'Laplace' spans the blog from 2009 to 2025: first in ""Log concave functions"", most recently in ""Eigenvalues of the Laplacian on a square"".",https://www.johndcook.com/blog/2009/01/09/log-concave-functions/,2009-01-09T22:00:52,log-concave-functions
+230,span,"'Monte Carlo' spans the blog from 2008 to 2025: first in ""Random number generator controversy"", most recently in ""Weighting an average to minimize variance"".",https://www.johndcook.com/blog/2008/04/12/random-number-generator-controversy/,2008-04-12T08:30:03,random-number-generator-controversy
+231,span,"'Unicode' spans the blog from 2008 to 2025: first in ""Why Unicode is subtle"", most recently in ""New symbols in Unicode 17"".",https://www.johndcook.com/blog/2008/04/05/why-unicode-is-subtle/,2008-04-05T15:57:17,why-unicode-is-subtle
+232,links,Link-happy: “RSS feeds for Twitter accounts” packs 18 links (Apr 25 2015).,https://www.johndcook.com/blog/2015/04/25/rss-twitter/,,
+233,links,Link-happy: “Book review queue” packs 18 links (Jul 16 2011).,https://www.johndcook.com/blog/2011/07/16/book-review-queue/,,
+234,links,Link-happy: “50th Carnival of Mathematics” packs 18 links (Feb 27 2009).,https://www.johndcook.com/blog/2009/02/27/50th-carnival-of-mathematics/,,
+235,first,"The first mention of 'FDA' on the blog was on June 19, 2008 in ""Bugs in food and software"".",https://www.johndcook.com/blog/2008/06/19/bugs-in-food-and-software/,2008-06-19T08:20:29,bugs-in-food-and-software
+236,gsc,"The interpolation calculator drives 83.7% of all Google search traffic to the blog — over 538,000 clicks in 16 months from variations of 'interpolation calculator'.",https://www.johndcook.com/blog/,,
+237,gsc,The blog reaches 244 countries. Romania has a mysteriously high 9.98% click-through rate — double the global average.,https://www.johndcook.com/blog/,,
+238,gsc,"Top 10 search queries account for 76.8% of traffic, but the remaining 900+ queries still drive 63,000+ clicks — a classic long-tail distribution.",https://www.johndcook.com/blog/,,
+239,gsc,"'Butcher tableau' brings 1,303 clicks — evidence that numerical methods practitioners find deep technical content.",https://www.johndcook.com/blog/,,
+240,gsc,'Cosmic ray bit flip' drives 421 searches — the intersection of hardware engineering and probability theory has an audience.,https://www.johndcook.com/blog/,,
+241,gsc,"India is the #2 traffic source after the US, with 123,434 clicks — roughly 1 click per 11,000 people in India found this blog.",https://www.johndcook.com/blog/,,
+242,gsc,The ASCII table post has 4.78 million impressions but only 0.76% CTR — it ranks but doesn't compel clicks against Wikipedia.,https://www.johndcook.com/blog/,,
+243,gsc,Standalone tools (.html pages) drive 98% of traffic; the blog posts themselves drive 59% — the tools are the traffic engine.,https://www.johndcook.com/blog/,,
+244,gsc,"'Dungeons, Dragons, and Numbers' went viral on Google Discover with 3,282 clicks and 53,563 impressions — the power of pop culture math.",https://www.johndcook.com/blog/,,
+245,gsc,"Google Discover traffic is extremely spiky: some days get 0 clicks, others get 370+ — algorithmic promotion is feast or famine.",https://www.johndcook.com/blog/,,
+246,gsc,'TV tuned to a dead channel' got a 5.04% CTR on Discover — literary references in tech titles outperform.,https://www.johndcook.com/blog/,,
+247,tone,"86.4% of posts contain first-person pronouns (I, me, my) — this is a personal voice blog, not a textbook.",https://www.johndcook.com/blog/,,
+248,tone,"Only 424 posts are 'highly personal' (3+ personal markers, ≤1 technical). 429 are 'highly technical'. Most blend both voices.",https://www.johndcook.com/blog/,,
+249,tone,249 posts have questions in their titles (4.8%). 'Why' questions: 34. 'How' questions: 54. 'What' questions: 54.,https://www.johndcook.com/blog/,,
+250,tone,"The blog uses 'because' 3,003 times — explanatory writing is the core style.",https://www.johndcook.com/blog/,,
+251,crypto,"2019 was the crypto explosion year: 45 posts touching crypto topics, up from 9 in 2018.",https://www.johndcook.com/blog/,,
+252,crypto,2025 has already surpassed all previous years with 52 crypto-related posts in 11 months.,https://www.johndcook.com/blog/,,
+253,crypto,'Elliptic curve' appears in 66 posts — more than 'bitcoin' (49) — the math matters more than the currency.,https://www.johndcook.com/blog/,,
+254,crypto,"Monero gets 13 posts, Ethereum gets 12 — the blog covers privacy coins as deeply as mainstream crypto.",https://www.johndcook.com/blog/,,
+255,crypto,"'Hash' appears in 68 posts spanning cryptography, data structures, and algorithms — a true crosscutting concept.",https://www.johndcook.com/blog/,,
+256,crypto,"The blog has covered Bitcoin for 7 years (since Aug 2018), but never mentioned 'NFT' — selective technical focus.",https://www.johndcook.com/blog/,,
+257,stats,Zipf's law slope is -0.427 (should be ≈-1 for natural language). The blog's technical vocabulary creates a flatter distribution.,https://www.johndcook.com/blog/,,
+258,stats,"Heaps' law in action: 1.6M words yield only 28,615 unique words (1.74% unique) — highly focused technical vocabulary.",https://www.johndcook.com/blog/,,
+259,stats,Average sentence length: 16.9 words (σ=10.4). Academic writing averages 20-25. This is intentionally accessible.,https://www.johndcook.com/blog/,,
+260,stats,"71% of posts contain code. 8.1% are code-heavy (3+ blocks). Programming is integral, not incidental.",https://www.johndcook.com/blog/,,
+261,stats,45% of posts contain internal links to other posts. Max internal links in one post: 18 — a deeply cross-referenced corpus.,https://www.johndcook.com/blog/,,
+262,stats,"'Function' is the #4 most common content word (4,419 uses). 'Number' is #3 (4,445). 'Example' is #7 (3,781).",https://www.johndcook.com/blog/,,
+263,stats,Average syllables per word: 1.46 (academic writing ≈1.7). Deliberately avoiding jargon-heavy prose.,https://www.johndcook.com/blog/,,
+264,stats,Tuesday posts outnumber Sunday 2.15:1 — χ² = 371.6 proves non-uniform distribution (p < 0.001).,https://www.johndcook.com/blog/,,
+265,stats,"Word count skewness: 1.18. Kurtosis: 2.43. The distribution matches academic papers, not casual blogging.",https://www.johndcook.com/blog/,,
+266,stats,"Longest streak: 26 consecutive days (Nov 13 - Dec 8, 2022). Maximum gap: only 12 days.",https://www.johndcook.com/blog/,,
+267,stats,Peak posting hour: 7:00 AM with 683 posts. Early bird mathematician.,https://www.johndcook.com/blog/,,
+268,stats,2019 and 2020 both had exactly 288 posts. The pandemic had zero measurable effect on output.,https://www.johndcook.com/blog/,,
+269,stats,2014 was the valley: only 147 posts (-43.5% YoY). 2023 was the peak: 395 posts.,https://www.johndcook.com/blog/,,
+270,stats,"π appears 1,324 times. φ (golden ratio): 890. θ: 855. One in five posts speaks Greek.",https://www.johndcook.com/blog/,,
+271,stats,'Transformer' (ML architecture) appears in exactly ONE post — notable absence given AI coverage.,https://www.johndcook.com/blog/,,
+272,stats,'Bayesian' spans 17 years (115 posts). 'Neural network' spans 9 years (10 posts). Foundational vs trendy.,https://www.johndcook.com/blog/,,
+273,stats,"Day-to-day posting autocorrelation: 0.130 — when John blogs one day, he's slightly more likely to blog the next.",https://www.johndcook.com/blog/,,
+274,stats,"Oct is the most productive month (480 posts), May the least (394) — a seasonal variation of 1.2x.",https://www.johndcook.com/blog/,,
+275,stats,Average post title: 30.8 characters (σ=11.5). Shortest: 4 chars. Longest: 81 chars.,https://www.johndcook.com/blog/,,
+276,stats,Category distribution follows approximate Zipf's law: top 10 categories have rank×frequency CV of 0.25 (perfect Zipf = 0).,https://www.johndcook.com/blog/,,
+277,stats,"Tag usage entropy: 6.25 bits (normalized: 78.35%) — tags are used with moderate uniformity, not dominated by few.",https://www.johndcook.com/blog/,,
+278,stats,'Algorithms' posts average 790 words — the most verbose category. 'PowerShell' averages only 194 words.,https://www.johndcook.com/blog/,,
+279,tone,"Punctuation personality: 5,139 question marks, 1,614 exclamations, 56,238 semicolons — inquisitive but not excitable.",https://www.johndcook.com/blog/,,
+280,tone,Question-to-exclamation ratio: 3.2:1 — the blog asks 3x more questions than it makes emphatic statements.,https://www.johndcook.com/blog/,,
+281,stats,Link density has increased 32% from 2008 to 2025 — the blog has become more interconnected.,https://www.johndcook.com/blog/,,
+282,stats,"Detected code patterns: JavaScript (1065 posts), LaTeX (783), Mathematica (782).",https://www.johndcook.com/blog/,,
+283,stats,"Weekday posts (4,212) outnumber weekend posts (1,021) 1.7:1 on a per-day basis — blogging is work, not weekend hobby.",https://www.johndcook.com/blog/,,
+284,stats,"Mathematical Unicode density: 7,108 symbols used. Top 5: π(1324), φ(890), θ(855), ×(779), √(579).",https://www.johndcook.com/blog/,,
+285,stats,Flesch-Kincaid grade level: 7.8 — written for roughly 8th grade reading level (typical science blogs: 12-14).,https://www.johndcook.com/blog/,,
+286,stats,"Most-linked external domains: amzn.to(1006), twitter.com(355), en.wikipedia.org(272), x.com(204), web.archive.org(182).",https://www.johndcook.com/blog/,,
+287,stats,"Vocabulary evolution: 4,158 words appear in 2025 that never appeared in 2008 — the lexicon grows with the times.",https://www.johndcook.com/blog/,,
+288,rarity,Only one post mentions “bleichenbacher”: “RSA encryption in practice” on Aug 05 2023.,https://www.johndcook.com/blog/2023/08/05/rsa-oaep/,,
+289,rarity,"The word 'pickle' appears in only one blog post: ""Dump a pickle file to a readable text file"" on August 16, 2022.",https://www.johndcook.com/blog/2022/08/16/python-pickle/,2022-08-16T13:40:17,python-pickle
+290,rarity,"The word 'Julia set' appears in only one blog post: ""Everywhere chaotic map on the sphere"" on October 19, 2021.",https://www.johndcook.com/blog/2021/10/19/latte-on-sphere/,2021-10-19T09:01:55,latte-on-sphere
+291,rarity,"The tag 'Julia' was used exactly twice: ""Julia for Python programmers"" and ""Julia random number generation"".",https://www.johndcook.com/blog/2015/09/15/julia-for-python-programmers/,,
+292,rarity,"The term 'elephant' appears in exactly 8 posts, spanning from 2008 to 2023.",https://www.johndcook.com/blog/2023/02/02/lagrange-multiplier/,,
+293,rarity,"The term 'Bach' appears in exactly 8 posts, spanning from 2009 to 2023.",https://www.johndcook.com/blog/2023/01/14/foreshadowing-page-rank/,,
+294,rarity,"The term 'pizza' appears in only 2 posts across the entire blog: ""Detecting fraud with the GRIM test"" (2023), ""Roman numeral puzzle"" (2012).",https://www.johndcook.com/blog/2023/10/10/grim-test/,2023-10-10T09:51:10,grim-test
+295,rarity,"The term 'Mozart' appears in exactly 5 posts, spanning from 2008 to 2024.",https://www.johndcook.com/blog/2024/11/05/copernicus/,,
+296,rarity,"The term 'neural network' appears in exactly 10 posts, spanning from 2016 to 2025.",https://www.johndcook.com/blog/2025/01/16/can-ai-models-reason-is-data-all-you-need-2/,,
+297,rarity,"The term 'tokenization' appears in only 2 posts across the entire blog: ""Unicode, Tolkien, and Privacy"" (2025), ""Practical consequences of tokenization details"" (2025).",https://www.johndcook.com/blog/2025/03/09/tengwar/,2025-03-09T15:26:17,tengwar
+298,rarity,"The term 'dynamic programming' appears in only 2 posts across the entire blog: ""Julia random number generation"" (2012), ""Dynamic typing and anti-lock brakes"" (2010).",https://www.johndcook.com/blog/2012/02/22/julia-random-number-generation/,2012-02-22T21:48:00,julia-random-number-generation
+299,rarity,"The term 'dinosaur' appears in only 2 posts across the entire blog: ""Chaotic versus random"" (2012), ""A third of dinosaur species never existed?"" (2009).",https://www.johndcook.com/blog/2012/04/24/chaos-vs-randomness/,2012-04-24T06:00:52,chaos-vs-randomness
+300,rarity,"The unusual word 'ambidextrously' appears in only one post: ""Unique letter patterns in words"" (2024).",https://www.johndcook.com/blog/2024/03/09/normalized-cryptograms/,2024-03-09T10:01:57,normalized-cryptograms
+301,rarity,"The unusual word 'abacus' appears in only one post: ""Slide rules"" (2011).",https://www.johndcook.com/blog/2011/04/11/sliderules/,2011-04-11T11:24:52,sliderules
+302,rarity,Only one post mentions “hydroxychloroquine”: “Simple clinical trial of four COVID-19 treatments” on Mar 23 2020.,https://www.johndcook.com/blog/2020/03/23/multi-arm-covid-trial/,,
+303,rarity,"The word 'backpropagation' appears in only one blog post: ""Non-associative multiplication"" on February 01, 2022.",https://www.johndcook.com/blog/2022/02/01/non-associative/,2022-02-01T07:31:38,non-associative
+304,rarity,Only one post mentions “discouragement”: “Team dynamics and encouragement” on Sep 02 2017.,https://www.johndcook.com/blog/2017/09/02/team-dynamics-and-encouragement/,,
+305,rarity,"The term 'Kruskal' appears in only 2 posts across the entire blog: ""Linear KdV dispersion"" (2025), ""Golden Carnival of Mathematics"" (2011).",https://www.johndcook.com/blog/2025/04/04/linear-kdv-dispersion/,2025-04-04T08:56:36,linear-kdv-dispersion
+306,rarity,"The term 'tea' appears in exactly 7 posts, spanning from 2008 to 2025.",https://www.johndcook.com/blog/2025/10/05/memorizing-a-list-of-seed-words/,,
+307,rarity,"The term 'pancake' appears in only 3 posts across the entire blog: ""Real-time analytics"" (2020), ""Curvature of an ellipsoid"" (2019), ""Flattest US states"" (2018).",https://www.johndcook.com/blog/2020/10/19/real-time-analytics/,2020-10-19T08:50:18,real-time-analytics
+308,rarity,"The term 'GDPR' appears in exactly 9 posts, spanning from 2018 to 2019.",https://www.johndcook.com/blog/2019/09/25/right-to-be-forgotten/,,
+309,rarity,"The term 'FDA' appears in only 2 posts across the entire blog: ""National Drug Code (NDC)"" (2019), ""Bugs in food and software"" (2008).",https://www.johndcook.com/blog/2019/09/03/ndc-national-drug-code/,2019-09-03T14:53:29,ndc-national-drug-code
+310,rarity,Only one post mentions “discriminative”: “Predicting height from genes” on Aug 25 2010.,https://www.johndcook.com/blog/2010/08/25/predicting-height-using-genes/,,
+311,rarity,Only one post mentions “differentiated”: “Soft maximum” on Jan 13 2010.,https://www.johndcook.com/blog/2010/01/13/soft-maximum/,,
+312,rarity,Only one post mentions “epidemiologist”: “Exponential growth vs logistic growth” on Apr 09 2020.,https://www.johndcook.com/blog/2020/04/09/exponential-logistic-growth/,,
+313,rarity,"The word 'freelance' appears in only one blog post: ""Transaction costs"" on November 15, 2009.",https://www.johndcook.com/blog/2009/11/15/transaction-costs/,2009-11-15T17:33:45,transaction-costs
+314,rarity,Only one post mentions “factorialpower”: “Rising and falling powers” on Nov 09 2021.,https://www.johndcook.com/blog/2021/11/09/rising-and-falling-powers/,,
+315,rarity,Only one post mentions “insignificance”: “What was the most important event of the 19th century?” on May 30 2011.,https://www.johndcook.com/blog/2011/05/30/feynman-maxwell-equations/,,
+316,rarity,"The tag 'Clojure' was used exactly once, in ""Interview with Clojure author"" (2010).",https://www.johndcook.com/blog/2010/03/08/interview-with-clojure-author/,2010-03-08T11:04:40,interview-with-clojure-author
+317,rarity,Only one post mentions “electrostatics”: “Solving Laplace&#8217;s equation on a disk” on Nov 22 2022.,https://www.johndcook.com/blog/2022/11/22/dirichlet/,,
+318,rarity,"The tag 'Numerica' was used exactly once, in ""Floating point oddity"" (2019).",https://www.johndcook.com/blog/2019/11/11/floating-point-oddity/,2019-11-11T17:16:04,floating-point-oddity
+319,rarity,Only one post mentions “libphonenumber”: “Hashing phone numbers” on Apr 19 2021.,https://www.johndcook.com/blog/2021/04/19/hashing-phone-numbers/,,
+320,rarity,"The tag 'Etymology' was used exactly once, in ""Two meanings of “argument”"" (2010).",https://www.johndcook.com/blog/2010/04/19/two-meanings-of-argument/,2010-04-19T09:06:23,two-meanings-of-argument
+321,rarity,Only one post mentions “geometrization”: “Magical learning” on Jun 16 2018.,https://www.johndcook.com/blog/2018/06/16/magical-learning/,,
+322,rarity,Only one post mentions “improvisations”: “Random improvisation subjects” on Feb 23 2010.,https://www.johndcook.com/blog/2010/02/23/random-improvisation-subjects/,,
+323,rarity,"The tag 'computer languages' was used exactly once, in ""Choosing a Computer Language for a Project"" (2024).",https://www.johndcook.com/blog/2024/04/23/choosing-a-computer-language-for-a-project/,2024-04-23T19:19:22,choosing-a-computer-language-for-a-project
+324,rarity,Only one post mentions “harmonicnumber”: “Pushing numerical integration software to its limits” on Jun 12 2023.,https://www.johndcook.com/blog/2023/06/12/stressing-numerical-integration/,,
+325,rarity,"The tag 'editors' was used exactly once, in ""What’s the Best Code Editor?"" (2024).",https://www.johndcook.com/blog/2024/03/01/whats-the-best-code-editor/,2024-03-01T18:29:33,whats-the-best-code-editor
+326,rarity,Only one post mentions “indistractable”: “Where has all the productivity gone?” on Jul 31 2021.,https://www.johndcook.com/blog/2021/07/31/where-has-productivity-gone/,,
+327,rarity,Only one post mentions “hookrightarrow”: “Unicode arrows: math versus emoji” on Dec 05 2022.,https://www.johndcook.com/blog/2022/12/05/math-versus-emoji/,,
+328,rarity,Only one post mentions “embellishments”: “Complex floor and a surprising pattern” on Aug 03 2021.,https://www.johndcook.com/blog/2021/08/03/complex-floor/,,
+329,rarity,"The tag 'scientific publications' was used exactly once, in ""Scientific papers: innovation … or imitation?"" (2025).",https://www.johndcook.com/blog/2025/06/05/scientific-papers-innovation-or-imitation/,2025-06-05T12:30:49,scientific-papers-innovation-or-imitation
+330,rarity,Only one post mentions “experimentally”: “Catalog engineering and reverse engineering” on Jun 05 2009.,https://www.johndcook.com/blog/2009/06/05/reverse-engineer/,,
+331,rarity,"The tag 'parallel software' was used exactly once, in ""Experiences with Nvidia"" (2025).",https://www.johndcook.com/blog/2025/07/09/experiences-with-nvidia/,2025-07-09T11:44:26,experiences-with-nvidia
+332,rarity,Only one post mentions “exponentiating”: “Simpler version of Stirling&#8217;s approximation” on Jun 10 2011.,https://www.johndcook.com/blog/2011/06/10/stirling-approximation/,,
+333,rarity,"Only one post mentions “constructivist”: “From the world, to the world” on Jul 01 2011.",https://www.johndcook.com/blog/2011/07/01/from-the-world-to-the-world/,,
+334,rarity,"The unusual word 'onomatopoeia' appears in only one post: ""Queueing theory and regular expressions"" (2019).",https://www.johndcook.com/blog/2019/10/14/queueing-regexp/,2019-10-14T06:24:59,queueing-regexp
+335,rarity,"The word 'finite volume' appears in only one blog post: ""The bucket that can’t hold enough paint to paint itself"" on June 11, 2020.",https://www.johndcook.com/blog/2020/06/11/gabriels-horn/,2020-06-11T11:17:42,gabriels-horn
+336,rarity,"The tag 'Agile' was used exactly once, in ""Database-first or object model-first software development"" (2008).",https://www.johndcook.com/blog/2008/04/18/database-first-or-object-model-first-software-development/,2008-04-18T05:30:18,database-first-or-object-model-first-software-development
+337,rarity,Only one post mentions “anthropologist”: “Amistics” on Aug 21 2016.,https://www.johndcook.com/blog/2016/08/21/amistics/,,
+338,rarity,Only one post mentions “inefficiencies”: “Occupancy problem distribution” on May 25 2023.,https://www.johndcook.com/blog/2023/05/25/occupancy-problem-distribution/,,
+339,rarity,Only one post mentions “groundbreaking”: “NYT Book of Mathematics” on May 13 2013.,https://www.johndcook.com/blog/2013/05/13/nyt-book-of-mathematics/,,
+340,rarity,"The unusual word 'crypt' appears in only one post: ""Why use hash puzzles for proof-of-work?"" (2025).",https://www.johndcook.com/blog/2025/06/22/why-hash-puzzles/,2025-06-22T12:31:01,why-hash-puzzles
+341,rarity,Only one post mentions “circumscribing”: “Limit of a doodle” on Jun 27 2024.,https://www.johndcook.com/blog/2024/06/27/polygon-circumscribing-constant/,,
+342,rarity,"The tag 'coding agents' was used exactly once, in ""Experiences with GPT-5-Codex"" (2025).",https://www.johndcook.com/blog/2025/10/16/experiences-with-gpt-5-codex/,2025-10-16T13:47:04,experiences-with-gpt-5-codex
+343,rarity,"The word 'survival analysis' appears in only one blog post: ""Weibull distribution and Benford’s law"" on May 02, 2017.",https://www.johndcook.com/blog/2017/05/02/weibull-distribution-and-benfords-law/,2017-05-02T07:00:35,weibull-distribution-and-benfords-law
+344,rarity,Only one post mentions “downloadstring”: “How to grep Twitter” on Mar 12 2009.,https://www.johndcook.com/blog/2009/03/12/grep-twitter-regex/,,
+345,rarity,"The tag 'Leadership' was used exactly once, in ""Followship"" (2011).",https://www.johndcook.com/blog/2011/12/21/followship/,2011-12-21T08:46:26,followship
+346,rarity,"The tag 'Convergence' was used exactly once, in ""Three math diagrams"" (2008).",https://www.johndcook.com/blog/2008/10/24/three-math-diagrams/,2008-10-24T03:40:41,three-math-diagrams
+347,rarity,"The word 'entanglement' appears in only one blog post: ""Apple and multi-platform apps"" on May 03, 2010.",https://www.johndcook.com/blog/2010/05/03/apple-multiplatform-apps/,2010-05-03T13:15:26,apple-multiplatform-apps
+348,rarity,Only one post mentions “attributeerror”: “Using SciPy with IronPython” on May 21 2012.,https://www.johndcook.com/blog/2012/05/21/using-scipy-with-ironpython/,,
+349,rarity,"The word 'sigmoid' appears in only one blog post: ""Swish, mish, and serf"" on August 06, 2023.",https://www.johndcook.com/blog/2023/08/06/swish-mish-and-serf/,2023-08-06T11:50:23,swish-mish-and-serf
+350,rarity,Only one post mentions “mathematischen”: “Banned math book” on Jul 22 2020.,https://www.johndcook.com/blog/2020/07/22/banned-math-book/,,
+351,rarity,Only one post mentions “antihistamines”: “Antihubrisines” on Jul 03 2013.,https://www.johndcook.com/blog/2013/07/03/antihubrisines/,,
+352,rarity,Only one post mentions “acknowledgement”: “Internet privacy as seen from 1975” on May 18 2019.,https://www.johndcook.com/blog/2019/05/18/shockwave-rider/,,
+353,rarity,Only one post mentions “environmentalists”: “Wine and politics” on Sep 27 2008.,https://www.johndcook.com/blog/2008/09/27/wine-and-politics/,,
+354,rarity,Only one post mentions “alexkontorovich”: “Near zeros of zeta” on Nov 29 2019.,https://www.johndcook.com/blog/2019/11/29/near-zeros-of-zeta/,,
+355,rarity,Only one post mentions “snowdecahedrons”: “Platonic solids” on May 05 2011.,https://www.johndcook.com/blog/2011/05/05/platonic-solids/,,
+356,hn,"johndcook.com has been submitted to Hacker News 1,266 times over 17 years — roughly one submission every 5 days since 2009.",https://news.ycombinator.com/,,
+357,hn,"Total Hacker News impact: 25,486 upvotes and 10,757 comments across all submissions — an average of 20 points per story.",https://news.ycombinator.com/,,
+358,hn,"4 posts exceeded 500 points on HN (likely #1): 'Organizing complexity' (742), 'Software reuse' (667), '987654321/123456789' (637), 'Rule of succession' (575).",https://news.ycombinator.com/,,
+359,hn,'Organizing complexity is the most important skill in software development' — the blog's #1 HN hit with 742 points and 276 comments.,https://news.ycombinator.com/,,
+360,hn,ColinWright has submitted 112 johndcook posts to HN — a super-fan who discovered the blog in 2009 and never stopped sharing.,https://news.ycombinator.com/,,
+361,hn,"John himself has submitted only 2 of his own posts to HN. The other 1,264 submissions came from readers.",https://news.ycombinator.com/,,
+362,hn,"'Pretending OOP Never Happened' sparked the most debate: 339 comments on HN, the most-discussed johndcook post ever.",https://news.ycombinator.com/,,
+363,hn,72 johndcook posts have exceeded 100 points on HN. 20 exceeded 200 points. The blog is a consistent HN front-page performer.,https://news.ycombinator.com/,,
+364,hn,2011 was peak HN attention: 65 submissions that year alone. 2025 is on track to match it with 56 submissions so far.,https://news.ycombinator.com/,,
+365,hn,"The median johndcook HN submission gets 4 points — but the distribution is extremely long-tailed, with outliers at 742.",https://news.ycombinator.com/,,

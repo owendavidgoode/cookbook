@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>John D. Cook</title>
+	<atom:link href="https://www.johndcook.com/blog/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.johndcook.com/blog</link>
+	<description>Applied Mathematics Consulting</description>
+	<lastBuildDate>Fri, 28 Nov 2025 01:29:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.8.3</generator>
+
+<image>
+	<url>https://www.johndcook.com/wp-content/uploads/2020/01/cropped-favicon_512-32x32.png</url>
+	<title>John D. Cook</title>
+	<link>https://www.johndcook.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Equal things that don&#8217;t look equal</title>
+		<link>https://www.johndcook.com/blog/2025/11/27/hyperbolic-metric-formulas/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/27/hyperbolic-metric-formulas/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Thu, 27 Nov 2025 13:14:40 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246710</guid>
+
+					<description><![CDATA[<p>The previous post described a metric for the Poincaré upper half plane. The development is geometrical rather than analytical. There are also analytical formulas for the metric, at least four that I&#8217;ve seen. It&#8217;s not at all obvious that the four equations are equivalent, or that any of them matches the expression in the previous [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/27/hyperbolic-metric-formulas/">Equal things that don’t look equal</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The <a href="https://www.johndcook.com/blog/2025/11/26/hyperbolic-metric/">previous post</a> described a metric for the Poincaré upper half plane. The development is geometrical rather than analytical. There are also analytical formulas for the metric, at least four that I&#8217;ve seen.</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/hypmetric4.svg" alt="\begin{align*} d(z_1, z_2) &amp;= 2\, \text{arcsinh}\left( \frac{|z_1 - z_2|}{2\, \sqrt{\Im z_1\, \Im z_2}} \right) \\ &amp;= \text{arccosh}\left(1 + \frac{|z_1 - z_2|^2}{ 2\, \Im z_1 \, \Im z_2} \right) \\ &amp;= 2 \, \text{arctanh}\left| \frac{z_1 - z_2}{z_1 - \overline{z}_2}\right| \\ &amp;= 2\, \log\left( \frac{|z_2 - z_1| + |z_2 - \overline{z}_1|}{2\, \sqrt{\Im z_1\, \Im z_2}} \right) \\ \end{align*} " width="312" height="237" /></p>
+<p>It&#8217;s not at all obvious that the four equations are equivalent, or that any of them matches the expression in the previous post.</p>
+<p>There are equations for expressing arcsinh, arccosh, and arctanh in terms of logarithms and square roots. See the bottom of <a href="https://www.johndcook.com/blog/2021/01/05/bootstrapping-math-library/">this post</a>. You could use these identities to show that the metric expressions are equal, but I don&#8217;t know of a cleaner way to do this than lots of tedious algebra.</p>
+<p>Before diving into the calculations, you might want some assurance that you&#8217;re trying to prove the right thing. Here&#8217;s some Python code that generates random pairs of complex numbers and shows that the four expressions give he same distance.</p>
+<pre>import numpy as np
+
+def d1(z1, z2):
+    return 2*np.arcsinh( abs(z1 - z2) / (2*(z1.imag * z2.imag)**0.5) )
+def d2(z1, z2):
+    return np.arccosh(1 + abs(z1 - z2)**2 / (2*z1.imag * z2.imag) )
+def d3(z1, z2):
+    return 2*np.arctanh( abs( (z1 - z2)/(z1 - np.conjugate(z2)) ) )
+def d4(z1, z2):
+    return 2*np.log( (abs(z2 - z1) + abs(z2 - np.conjugate(z1)))/(2*np.sqrt(z1.imag * z2.imag)) )
+
+np.random.seed(20251127)
+for n in range(100):
+    z1 = np.random.random() + 1j*np.random.random()
+    z2 = np.random.random() + 1j*np.random.random()
+    assert( abs(d1(z1, z2) - d2(z1, z2)) &lt; 1e-13 )
+    assert( abs(d2(z1, z2) - d3(z1, z2)) &lt; 1e-13 )
+    assert( abs(d3(z1, z2) - d4(z1, z2)) &lt; 1e-13 )
+</pre>
+<p>Perhaps you&#8217;re convinced that the four expressions are equal, but why should any of them be equivalent to the definition in the previous post?</p>
+<p>The previous post pointed out that the metric is invariant under Möbius transformations. We can apply such a transformation to move any pair of complex numbers to the imaginary axis. There you can see that the cross ratio reduces to the ratio of the two numbers.</p>
+<p>More generally, if two complex numbers have the same real part, the distance between them is the log of the ratio of their imaginary parts. That is, if</p>
+<p><img decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/hypmetric5.svg" alt="\begin{align*} z_1 &amp;= x + iy_1 \\ z_2 &amp;= x + iy_2 \end{align*} " width="94" height="46" /><br />
+then</p>
+<p><img decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/hypmetric6.svg" alt="d(z_1, z_2) = \log \frac{y_2}{y_1}" width="140" height="40" /></p>
+<p>if <em>x</em>, <em>y</em><sub>1</sub>, and <em>y</em><sub>2</sub> are real and <em>y</em><sub>2</sub> &gt; <em>y</em><sub>1</sub> &gt; 0.</p>
+<p>Here&#8217;s a little Python code that empirically shows that this gives the same distance as one of the expressions above.</p>
+<pre>def d5(z1, z2):
+    assert(z1.real == z1.real)
+    return abs( np.log( z1.imag / z2.imag ) )
+
+for n in range(100):
+    x = np.random.random()
+    z1 = x + 1j*np.random.random()
+    z2 = x + 1j*np.random.random()
+    assert( abs(d1(z1, z2) - d5(z1, z2)) &lt; 1e-13 )
+</pre>
+<p>So now we have five expressions for the metric, all of which look different. You could slug out a proof that they&#8217;re equivalent, or get a CAS like Mathematica to show they&#8217;re equivalent, but it would be more interesting to find an elegant equivalence proof.</p>
+<p><strong>Update</strong>: Although the four expressions at the top of the post are analytically equal, they are not all equally accurate for numerical evaluation. I did a little testing and found the arctahn method to be the least accurate and the rest roughly equally accurate.</p>The post <a href="https://www.johndcook.com/blog/2025/11/27/hyperbolic-metric-formulas/">Equal things that don’t look equal</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/27/hyperbolic-metric-formulas/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Hyperbolic metric</title>
+		<link>https://www.johndcook.com/blog/2025/11/26/hyperbolic-metric/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/26/hyperbolic-metric/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Wed, 26 Nov 2025 18:28:14 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Complex analysis]]></category>
+		<category><![CDATA[Geometry]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246709</guid>
+
+					<description><![CDATA[<p>One common model of the hyperbolic plane is the Poincaré upper half plane ℍ. This is the set of points in the complex plane with positive imaginary part. Straight lines are either vertical, a set of points with constant imaginary part, or arcs of circles centered on the real axis. The real axis is not [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/26/hyperbolic-metric/">Hyperbolic metric</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>One common model of the hyperbolic plane is the Poincaré upper half plane ℍ. This is the set of points in the complex plane with positive imaginary part. Straight lines are either vertical, a set of points with constant imaginary part, or arcs of circles centered on the real axis. The real axis is not part of ℍ. From the perspective of hyperbolic geometry these are ideal parts, infinitely far away, and not part of the plane itself.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/hypmetric.png" width="400" height="225" /></p>
+<p>We can define a metric on ℍ as follows. To find the distance between two points <em>u</em> and <em>v</em>, draw a line between the two points, and let <em>a</em> and <em>b</em> be the ideal points at the end of the line. By a line we mean a line as defined in the geometry of ℍ, what we would see from our Euclidean perspective as a half circle or a vertical line. Then the distance between <em>u</em> and <em>v</em> is defined as the absolute value of the log of the <a href="https://www.johndcook.com/blog/2025/11/01/cross-ratio/">cross ratio</a> (<em>u</em>, <em>v</em>; <em>a</em>, <em>b</em>).</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/hypmetric3.svg" alt="d(u, v) = |\log (u, v; a, b) | = \left| \log \frac{|a - u|\,|b - v|}{|a - v|\,|b - u|} \right|" width="368" height="48" /><br />
+Cross ratios are unchanged by Möbius transformations, and so Möbius transformations are isometries.</p>
+<p>Another common model of hyperbolic geometry is the Poincaré disk. We can use the same metric on the Poincaré disk because the Möbius transformation</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/hypmetric2.svg" alt="z \mapsto \frac{z - i}{z + i}" width="80" height="39" /></p>
+<p>maps the upper half plane to the unit disk. This is very similar to how the <a href="https://www.johndcook.com/blog/2025/10/23/smith-chart/">Smith chart</a> is created by mapping a grid in the right half plane to the unit disk.</p>
+<p><strong>Update</strong>: See the <a href="https://www.johndcook.com/blog/2025/11/27/hyperbolic-metric-formulas/">next post</a> for four analytic expressions for the metric, direct formulas involving <em>u</em> and <em>v</em> but not the ideal points <em>a</em> and <em>b</em>.</p>The post <a href="https://www.johndcook.com/blog/2025/11/26/hyperbolic-metric/">Hyperbolic metric</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/26/hyperbolic-metric/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>TV tuned to a dead channel</title>
+		<link>https://www.johndcook.com/blog/2025/11/24/tv-tuned-to-a-dead-channel/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/24/tv-tuned-to-a-dead-channel/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Tue, 25 Nov 2025 01:25:29 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246706</guid>
+
+					<description><![CDATA[<p>The opening line of William Gibson&#8217;s novel Neuromancer is famous: The sky above the port was the color of a television, tuned to a dead channel. When I read this line, I knew immediately what he meant, and thought it was a brilliant line. Later I learned that younger readers didn&#8217;t know what he was [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/24/tv-tuned-to-a-dead-channel/">TV tuned to a dead channel</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The opening line of William Gibson&#8217;s novel <em>Neuromancer</em> is famous:</p>
+<blockquote><p>The sky above the port was the color of a television, tuned to a dead channel.</p></blockquote>
+<p>When I read this line, I knew immediately what he meant, and thought it was a brilliant line. Later I learned that younger readers didn&#8217;t know what he was saying.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/tv_static.jpg" alt="TV tuned to a dead channel circa 1960" width="600" height="600" /></p>
+<p>My mind went to an old black-and-white television, one that received analog broadcasts, and that displayed &#8220;snow&#8221; when tuned to a channel that had no broadcast signal. Someone whose earliest memories of television are based on digital color broadcast might imagine the sky above the port was solid blue rather than crackly gray.</p>
+<p>Gibson discusses how his book has aged in a preface to a recent edition. He says that science fiction that is too prescient would be received poorly.</p>
+<blockquote><p>Imagine a novel from the sixties whose author had somehow fully envisioned cellular telephony circa 2004, and had worked it, exactly as we know it today, into the fabric of her imaginary future. Such a book would have seemed highly peculiar in the sixties … in ways that would quickly overwhelm the narrative.</p></blockquote>
+<p>He then goes on to say</p>
+<blockquote><p>I suspect that <em>Neuromancer</em> owes much of its shelf life to my almost perfect ignorance of the technology I was extrapolating from. … Where I made things up from whole cloth, the colors remain bright.</p></blockquote>
+<p>I find it odd that many judge a work of science fiction by what it &#8220;got right.&#8221; I don&#8217;t read science fiction as a forecast;  read it to enjoy a story. I don&#8217;t need a book to be prescient, but until reading Gibson&#8217;s remarks it hadn&#8217;t occurred to me that fiction that is too prescient might not be enjoyable fiction, at least for its first readers.</p>The post <a href="https://www.johndcook.com/blog/2025/11/24/tv-tuned-to-a-dead-channel/">TV tuned to a dead channel</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/24/tv-tuned-to-a-dead-channel/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How stealth addresses work in Monero</title>
+		<link>https://www.johndcook.com/blog/2025/11/24/monero-stealth-addresses/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/24/monero-stealth-addresses/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Mon, 24 Nov 2025 17:06:51 +0000</pubDate>
+				<category><![CDATA[Computing]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246703</guid>
+
+					<description><![CDATA[<p>Suppose Alice runs a confidential restaurant. Alice doesn&#8217;t want there to be any record of who visited her restaurant but does want to get paid for her food. She accepts Monero, and instead of a cash register there are two QR codes on display, one corresponding to her public view key A and the other corresponding [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/24/monero-stealth-addresses/">How stealth addresses work in Monero</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" class="alignnone size-medium" src="https://www.johndcook.com/alice_monero.jpg" width="100%" /></p>
+<p>Suppose Alice runs a confidential restaurant. Alice doesn&#8217;t want there to be any record of who visited her restaurant but does want to get paid for her food. She accepts Monero, and instead of a cash register there are two QR codes on display, one corresponding to her <strong>public view key</strong> <em>A</em> and the other corresponding to her <strong>public spend key</strong> <em>S</em>.</p>
+<h2>How Bob buys his burger</h2>
+<p>A customer Bob walks into the restaurant and orders a burger and fries. When Bob pays Alice, here&#8217;s what&#8217;s going on under the hood.</p>
+<p>Bob is using software that generates a random integer <em>r</em> and multiplies it by a point <em>G</em> on an elliptic curve, specifically ed25519, obtaining the point</p>
+<p style="padding-left: 40px;"><em>R</em> = <em>rG</em></p>
+<p>on the curve. The software also multiplies Alice&#8217;s view key <em>A</em>, a point on the same elliptic curve, by <em>r</em>, then runs a hash function <em>H</em> on the produce <em>rA</em> that returns an integer <em>k</em>.</p>
+<p style="padding-left: 40px;"><em>k</em> = <em>H</em>(<em>rA</em>).</p>
+<p>Finally, Bob&#8217;s software computes the point</p>
+<p style="padding-left: 40px;"><em>P</em> = <em>k</em><em>G</em> + <em>S</em></p>
+<p>and sends Alice&#8217;s cash register, i.e. her crypto wallet, the pair of points (<em>P</em>, <em>R</em>). The point <em>P</em> is a <strong>stealth address</strong>, an address that will only be used this one time and cannot be linked to Alice or Bob [1]. The point <em>R</em> is additional information that helps Alice receive her money.</p>
+<h2>How Alice gets paid</h2>
+<p>Alice and Bob share a secret: both know <em>k</em>. How&#8217;s that?</p>
+<p>Alice&#8217;s public view key <em>A</em> is the product of her private view key <em>a</em> and the group generator <em>G</em> [2]. So when Bob computes <em>rA</em>, he&#8217;s computing <em>r</em>(<em>aG</em>). Alice&#8217;s software can multiply the point <em>R</em> by <em>a</em> to obtain <em>a</em>(<em>rG</em>).</p>
+<p style="padding-left: 40px;"><em>rA</em> = <em>r</em>(<em>aG</em>) = <em>a</em>(<em>rG</em>) = <em>aR.</em></p>
+<p>Both Alice and Bob can hash this point—which Alice thinks of as <em>aR</em> and Bob thinks of as <em>rA</em>—to obtain <em>k</em>. This is <a href="https://www.johndcook.com/blog/2025/11/17/three-party-diffie-hellman/">ECDH</a>: elliptic curve Diffie-Hellman key exchange.</p>
+<p>Next, Alice&#8217;s software scans the blockchain for payments to</p>
+<p style="padding-left: 40px;"><em>P</em> = <em>k</em><em>G</em> + <em>S.</em></p>
+<p>Note that <em>P</em> is on the blockchain, but only Alice and Bob know how to factor <em>P</em> into <em>kG</em> + <em>S</em> because only Alice and Bob know <em>k</em>. And only Alice can spend the money because only she knows the private key <em>s</em> corresponding to the public spend key <em>S</em> where</p>
+<p style="padding-left: 40px;"><em>S</em> = <em>sG.</em></p>
+<p>She knows</p>
+<p style="padding-left: 40px;"><em>P</em> = <em>kG</em> + <em>sG</em> = (<em>k</em> + <em>s</em>)<em>G</em></p>
+<p>and so she has the private key (<em>k</em> + <em>s</em>) corresponding to <em>P</em>.</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/09/25/silent-payments/">Bitcoin silent payments</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/09/16/monero-seed-words/">Monero seed words</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/data-privacy/">Data privacy consulting</a></li>
+</ul>
+<p>[1] Bob sends money to the address <em>P</em>, so there could be some connection between Bob and <em>P</em> on the Monero blockchain. However, due to another feature of Monero, namely ring signatures, someone analyzing the blockchain could only determine that Bob is one of 16 people who may have sent money to the address <em>P</em>, and there&#8217;s no way to know who received the money. That is, there is no way, using only information on the blockchain, who received the money. A private investigator who saw Bob walk into Alice&#8217;s restaurant would have additional information outside the blockchain.</p>
+<p>[2] The key assumption of elliptic curve cryptography is that it&#8217;s computationally infeasible to &#8220;divide&#8221; on an elliptic curve, i.e. to recover <em>a</em> from knowledge of <em>G</em> and <em>aG</em>. You could recover <em>a</em> by brute force if the group were small, but the elliptic curve ed25519 has on the order of 2<sup>255</sup> points, and <em>a</em> is some integer chosen randomly between 1 and the size of the curve.</p>The post <a href="https://www.johndcook.com/blog/2025/11/24/monero-stealth-addresses/">How stealth addresses work in Monero</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/24/monero-stealth-addresses/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Weddle integration rule</title>
+		<link>https://www.johndcook.com/blog/2025/11/20/weddle-integration-rule/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/20/weddle-integration-rule/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Thu, 20 Nov 2025 19:42:10 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Integration]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246696</guid>
+
+					<description><![CDATA[<p>I was reading about Shackleton&#8217;s incredible expedition to Antarctica, and the Weddell Sea features prominently. That name sounded familiar, and I was trying to remember where I&#8217;d heard of Weddell in math. I figured out that it wasn&#8217;t Weddell exactly but Weddle I was thinking of. The Weddell Sea is named after James Weddell (1787&#8211;1834). [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/20/weddle-integration-rule/">Weddle integration rule</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>I was reading about Shackleton&#8217;s incredible expedition to Antarctica, and the Weddell Sea features prominently. That name sounded familiar, and I was trying to remember where I&#8217;d heard of Weddell in math. I figured out that it wasn&#8217;t Weddell exactly but Weddle I was thinking of.</p>
+<p>The Weddell Sea is named after James Weddell (1787&ndash;1834). Weddle&#8217;s integration rule is named after Thomas Weddle (1817&ndash;1853).</p>
+<p>I wrote about Weddle&#8217;s integration rule <a href="https://www.johndcook.com/blog/2023/08/25/quadrature-impossibility/">a couple years ago</a>. Weddle&#8217;s rule, also known as Bode&#8217;s rule, is as follows.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/bodes_rule.svg" alt="\begin{align*} \int_{x_0}^{x_6} f(x)\, dx = \frac{h}{140}&amp;\Big(41 f(x_0) + 216f(x_1) + 27 f(x_2) +272 f(x_3) \\ &amp;+ 27 f(x_4) + 216 f(x_5) + 41 f(x_6) \Big) \\ &amp;-\frac{9 f^{(8)}(\xi) h^9}{1400} \end{align} " width="474" height="128" style="background-color:white" /></p>
+<p>Let&#8217;s try this on integrating sin(<em>x</em>) from 1 to 2.</p>
+<p>If we divide the interval [1, 2] into 6 subintervals, <em>h</em> = 1/6. The 8th derivative of sin(<em>x</em>) is also sin(<em>x</em>), so it is bounded by 1. So we would expect the absolute value of the error to be bounded by</p>
+<p style="padding-left: 40px;">9 / (6<sup>9</sup> × 1400).</p>
+<p>Let&#8217;s see what happens in practice.</p>
+<pre>import numpy as np
+
+x = np.linspace(1, 2, 7)
+h = (2 - 1)/6
+weights = (h/140)*np.array([41, 216, 27, 272, 27, 216, 41])
+approx = np.dot(weights, np.sin(x))
+exact = np.cos(1) - np.cos(2)
+print("Error:          ", abs(approx - exact) )
+print("Expected error: ", 9/(1400*6**9))
+</pre>
+<p>Here&#8217;s the output:</p>
+<pre>Error:           6.321198009473505e-10
+Expected error:  6.379009079626363e-10
+</pre>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/06/12/stressing-numerical-integration/">Pushing numerical integration software to its limits</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2020/06/29/approximating-rapidly-divergent-integrals/">Approximating rapidly diverging integrals</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2015/04/01/integration-by-darts/">Integration by darts</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/20/weddle-integration-rule/">Weddle integration rule</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/20/weddle-integration-rule/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Solving H_n = 100</title>
+		<link>https://www.johndcook.com/blog/2025/11/20/solving-h_n-100/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/20/solving-h_n-100/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Thu, 20 Nov 2025 19:10:10 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Mathematica]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246695</guid>
+
+					<description><![CDATA[<p>The previous post includes code for solving the equation Hn = m i.e. finding the value of n for which the nth harmonic number is the closest to m. It works well for small values of m. It works for large m in the sense that the solution is very close to m, but it&#8217;s not necessarily the best solution. For [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/20/solving-h_n-100/">Solving H_n = 100</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The <a href="https://www.johndcook.com/blog/2025/11/19/closest-harmonic-number-to-an-integer/">previous post</a> includes code for solving the equation</p>
+<p style="padding-left: 40px;"><em>H</em><sub><em>n</em></sub> = <em>m</em></p>
+<p>i.e. finding the value of <em>n</em> for which the <em>n</em>th harmonic number is the closest to <em>m</em>. It works well for small values of <em>m</em>. It works for large <em>m</em> in the sense that the solution is very close to <em>m</em>, but it&#8217;s not necessarily the best solution.</p>
+<p>For example, set <em>m</em> = 100. The code returns</p>
+<p style="padding-left: 40px;"><em>n</em> = 15092688622113830917200248731913020965388288</p>
+<p>and indeed for that value of <em>n</em>,</p>
+<p style="padding-left: 40px;"><em>H</em><sub><em>n</em></sub> − 100 ≈ 3 × 10<sup>−15</sup></p>
+<p>and that&#8217;s as much as we could hope for with <a href="https://www.johndcook.com/blog/2009/04/06/anatomy-of-a-floating-point-number/">IEEE 754 floats</a>.</p>
+<p>The approximation</p>
+<p style="padding-left: 40px;"><em>n</em> = exp(<em>m</em> −γ)</p>
+<p>is very good for large values of <em>m</em>. Using Mathematica we can find the exact value of <em>n</em>.</p>
+<pre>f[n_] := Log[n] + EulerGamma + 1/(2 n) - 1/(12 n^2)
+n = Floor[Exp[100 - EulerGamma]];
+N[f[n], 50]
+100.00000000000000000000000000000000000000000000900
+N[f[n - 1], 50]
+99.999999999999999999999999999999999999999999942747
+</pre>
+<p>So</p>
+<p style="padding-left: 40px;"><em>n</em> = 15092688622113788323693563264538101449859497</p>
+<p>A similar process can find the solution to</p>
+<p style="padding-left: 40px;"><em>H</em><sub><em>n</em></sub> = 1000</p>
+<p>is</p>
+<p style="padding-left: 40px;"><em>n</em> = 110611511026604935641074705584421138393028001852577373936470952377218354575172401275457597579044729873152469512963401398362087144972181770571895264066114088968182356842977823764462179821981744448731785408629116321919957856034605877855212667092287520105386027668843119590555646814038787297694678647529533718769401069269427475868793531944696435696745559289326610132208504257721469829210704462876574915362273129090049477919400226313586033</p>
+<p>For this calculation you&#8217;ll need to increase the precision from 50 digits to something like 500 digits, something more than 435 because <em>n</em> is a 435-digit number.</p>
+<p>In case you&#8217;re wondering whether my function for computing harmonic numbers is accurate enough, it&#8217;s actually overkill, with error <em>O</em>(1/120<em>n</em><sup>4</sup>).</p>The post <a href="https://www.johndcook.com/blog/2025/11/20/solving-h_n-100/">Solving H_n = 100</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/20/solving-h_n-100/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Closest harmonic number to an integer</title>
+		<link>https://www.johndcook.com/blog/2025/11/19/closest-harmonic-number-to-an-integer/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/19/closest-harmonic-number-to-an-integer/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Thu, 20 Nov 2025 01:03:10 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246694</guid>
+
+					<description><![CDATA[<p>I mentioned in the previous post that the harmonic numbers Hn are never integers for n &#62; 1. In the spirit of that post, I&#8217;d like to find the value of n such that Hn is closest to a given integer m. We have two problems to solve. First, how do we accurately and efficiently [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/19/closest-harmonic-number-to-an-integer/">Closest harmonic number to an integer</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>I mentioned in the previous post that the harmonic numbers <em>H</em><sub><em>n</em></sub> are never integers for <em>n</em> &gt; 1. In the spirit of that post, I&#8217;d like to find the value of <em>n</em> such that <em>H</em><sub><em>n</em></sub> is closest to a given integer <em>m</em>.</p>
+<p>We have two problems to solve. First, how do we accurately and efficiently compute harmonic numbers? For small <em>n</em> we can directly implement the definition. For large <em>n</em>, the direct approach would be slow and would accumulate floating point error. But in that case we could use the asymptotic approximation</p>
+<p><img decoding="async" class="aligncenter" src="https://www.johndcook.com/harmonic_approx.svg" alt="H_n \approx \log n + \gamma + \frac{1}{2n} - \frac{1}{12n^2}" /></p>
+<p>from <a href="https://www.johndcook.com/blog/2017/04/18/computing-harmonic-numbers/">this post</a>. As is often the case, the direct approach gets worse as <em>n</em> increases, but the asymptotic approximation gets better as <em>n</em> increases. Here γ is the Euler-Mascheroni constant.</p>
+<p>The second problem to solve is how to find the value of <em>n</em> so that <em>H</em><sub><em>n</em></sub> comes closest to <em>m</em> without trying too many possible values of <em>n</em>? We can discard the higher order terms above and see that <em>n</em> is roughly exp(<em>m</em> − γ).</p>
+<p>Here&#8217;s the code.</p>
+<pre>import numpy as np
+
+gamma = 0.57721566490153286
+
+def H(n):
+    if n &lt; 1000:
+        return sum([1/k for k in range(1, n+1)])
+    else:
+        n = float(n)
+        return np.log(n) + gamma + 1/(2*n) - 1/(12*n**3)
+    
+# return n such that H_n is closest harmonic number to m
+def nearest_harmonic_number(m):
+    
+    if m == 1:
+        return 1
+
+    guess = int(np.exp(m - gamma))    
+    if H(guess) &lt; m:
+        i = guess
+        while H(guess) &lt; m: guess += 1 j = guess else: j = guess while H(guess) &gt; m:
+            guess -= 1
+        i = guess
+        
+    x = np.array([abs(H(k) - m) for k in range(i, j+1)])
+    return i + np.argmin(x)
+</pre>
+<p>We can use this, for example, to find the closest harmonic number to 10.</p>
+<pre>&gt;&gt;&gt; nearest_harmonic_number(10)
+12366
+&gt;&gt;&gt; H(12366)
+9.99996214846655
+</pre>
+<p>I wrote the code with integer values of <em>m</em> in mind, but the code works fine with real numbers. For example, we could find the harmonic number closest to √20.</p>
+<pre>&gt;&gt;&gt; nearest_harmonic_number(20**0.5)
+49
+&gt;&gt;&gt; H(49)**2
+20.063280462918804
+</pre>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2022/05/24/harmonic-e/">Harmonic <em>e</em></a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2024/08/29/strange-harmonic-series/">A strange take on the harmonic series</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/06/08/euler-mascheroni/">Computing γ</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/19/closest-harmonic-number-to-an-integer/">Closest harmonic number to an integer</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/19/closest-harmonic-number-to-an-integer/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Closest consecutive reciprocal sum to an integer</title>
+		<link>https://www.johndcook.com/blog/2025/11/19/closest-consecutive-reciprocal-sum-to-an-integer/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/19/closest-consecutive-reciprocal-sum-to-an-integer/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Wed, 19 Nov 2025 23:48:52 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Number theory]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246693</guid>
+
+					<description><![CDATA[<p>József Kürschák proved in 1908 that the function is never an integer for 0 &#60; m &#60; n. In particular, the harmonic numbers are never integers for n &#62; 1. The function f(m, n) can get arbitrarily close to any integer value by taking m and n large enough, but it can never exactly equal an integer. [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/19/closest-consecutive-reciprocal-sum-to-an-integer/">Closest consecutive reciprocal sum to an integer</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>József Kürschák proved in 1908 that the function</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/kurschak1.svg" alt="f(m, n) = \sum_{k = m}^n \frac{1}{k}" width="125" height="54" /></p>
+<p>is never an integer for 0 &lt; <em>m</em> &lt; <em>n</em>. In particular, the harmonic numbers</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/kurschak2.svg" alt="H_n = f(1, n)" width="99" height="18" /></p>
+<p>are never integers for <em>n</em> &gt; 1.</p>
+<p>The function <em>f</em>(<em>m</em>, <em>n</em>) can get arbitrarily close to any integer value by taking <em>m</em> and <em>n</em> large enough, but it can never exactly equal an integer.</p>
+<p>For this post, I&#8217;d like to look at how close  <em>f</em>(<em>m</em>, <em>n</em>) comes to an integer value when 0 &lt; <em>m</em> &lt; <em>n</em> ≤ <em>N</em> for some large <em>N</em>, say <em>N</em> = 100,000.</p>
+<h2>Computation strategy</h2>
+<p>The most naive way to approach this would be to compute <em>f</em>(<em>m</em>, <em>n</em>) for all <em>m</em> and <em>n</em> and keep track of which values were closest to integers. This would be wasteful since it would recompute the same terms over and over. Instead, we could take advantage of the fact that</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/kurschak3.svg" alt="f(m, n + 1) = f(m, n) + \frac{1}{n+1}" width="235" height="40" /></p>
+<p>Instead of working with <em>f</em>(<em>m</em>, <em>n</em>), it will be convenient to work with just its fractional part</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/kurschak4.svg" alt="g(m, n) = f(m, n) - \lfloor f(m, n) \rfloor" width="240" height="18" /></p>
+<p>because it won&#8217;t hurt to throw away the integer parts as we go. The values of <em>m</em> and <em>n</em> minimizing <em>g</em>(<em>m</em>, <em>n</em>) will be the values for which <em>f</em>(<em>m</em>, <em>n</em>) comes closest to an integer from above. The values of <em>m</em> and <em>n</em> maximizing <em>g</em>(<em>m</em>, <em>n</em>) will be the values for which <em>f</em>(<em>m</em>, <em>n</em>) comes closest to an integer from below.</p>
+<p>We could calculate a matrix with all values of <em>g</em>(<em>m</em>, <em>n</em>), but this would take <em>O</em>(<em>N</em>²) memory. Instead, for each <em>n</em> we will calculate <em>g</em>(<em>m</em>, <em>n</em>), save the maximum and minimum values, then overwrite that memory with <em>g</em>(<em>m</em>, <em>n</em> + 1). This approach will only take <em>O</em>(<em>N</em>) memory.</p>
+<h2>Floating point error</h2>
+<p>When we compute <em>f</em>(<em>m</em>, <em>n</em>) for large values of <em>n</em>, can we rely on floating point arithmetic?</p>
+<p>If <em>N</em> = 100,000, <em>f</em>(<em>m</em>, <em>n</em>) &lt; 16 = 2<sup>4</sup>. A floating point fraction has 53 bits, so we&#8217;d expect each addition to be correct to within an error of 2<sup>−49</sup> and so we&#8217;d expect our total error to be less than 2<sup>−49</sup> <em>N</em>.</p>
+<h2>Python code</h2>
+<p>The following code computes the values of <em>g</em>(<em>m</em>, <em>n</em>) closest to 0 and 1.</p>
+<pre>import numpy as np
+
+N = 100_000
+f_m = np.zeros(N+1) # working memory
+
+# best values of m for each n
+min_fm = np.zeros(N+1)
+max_fm = np.zeros(N+1)
+
+n = 2
+f_m[1] = 1.5
+
+for n in range(3, N+1):
+    f_m[n-1] = 1/(n-1)
+    f_m[1:n] += 1/n
+    f_m[1:n] -= np.floor(f_m[1:n])
+    min_fm[n] = np.min(f_m[1:n])
+    max_fm[n] = np.max(f_m[1:n])    
+
+print(min(min_fm[3:]))
+print(max(max_fm))
+</pre>
+<p>This reports a minimum value of 5.2841953035454026e-11 and a maximum value of 0.9999999996613634. The minimum value is closer to 0 than our (pessimistic) error estimate, though the maximum value is further from 1 than our error estimate.</p>
+<p>Modifying the code a bit shows that the minimum occurs at (27134, 73756), and this the input to <em>g</em> that is within our error estimate. So we can be confident that it is the minimum, though we can&#8217;t be confident of its value. So next we turn to Mathematica to find the <em>exact</em> value of <em>g</em>(27133, 73756) as a rational number, a fraction with 32024 digits in the numerator and denominator, and convert it to a floating point number. The result agrees with our estimate in magnitude and to four significant figures.</p>
+<p>So in summary</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/kurschak5.svg" alt="\sum_{k = 27134}^{73756} \frac{1}{k} \approx 1" width="105" height="58" /></p>
+<p>with an error on the order of 10<sup>−11</sup>, and this is the closest value of <em>f</em>(<em>m</em>, <em>n</em>) to an integer, for 0 &lt; <em>m</em> &lt; <em>n</em> ≤ 100,000.</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2017/04/18/computing-harmonic-numbers/">Accurately computing harmonic numbers</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/07/25/extending-harmonic-numbers/">Extending harmonic numbers</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2015/07/19/numerators-of-harmonic-numbers/">Numerators of harmonic numbers</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/19/closest-consecutive-reciprocal-sum-to-an-integer/">Closest consecutive reciprocal sum to an integer</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/19/closest-consecutive-reciprocal-sum-to-an-integer/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Pythagorean triples</title>
+		<link>https://www.johndcook.com/blog/2025/11/18/pythagorean-triples-2/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/18/pythagorean-triples-2/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Tue, 18 Nov 2025 13:13:35 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246680</guid>
+
+					<description><![CDATA[<p>Five posts on Pythagorean triangles and Pythagorean triples Primitive Pythagorean triangles with the same area Sparse binary Pythagorean triples Matrix Pythagorean triples Approximation by Pythagorean triangles Fibonacci meets Pythagoras</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/18/pythagorean-triples-2/">Pythagorean triples</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Five posts on Pythagorean triangles and Pythagorean triples</p>
+<ol>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/07/30/pythagorean-triangles/">Primitive Pythagorean triangles with the same area</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/02/11/binary-triples/">Sparse binary Pythagorean triples</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2016/01/16/matrix-pythagorean-triples/">Matrix Pythagorean triples</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2010/10/22/approximations-with-pythagorean-triangles/">Approximation by Pythagorean triangles</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2018/07/13/fibonacci-meets-pythagoras/">Fibonacci meets Pythagoras</a></li>
+</ol>The post <a href="https://www.johndcook.com/blog/2025/11/18/pythagorean-triples-2/">Pythagorean triples</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/18/pythagorean-triples-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>RSA as a pairing</title>
+		<link>https://www.johndcook.com/blog/2025/11/18/rsa-as-a-pairing/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/18/rsa-as-a-pairing/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Tue, 18 Nov 2025 08:22:52 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Cryptography]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246689</guid>
+
+					<description><![CDATA[<p>The last couple posts have been about group pairings, specifically Tate pairings as they&#8217;re used in cryptography. This post will show that RSA encryption can be seen as a special case of pairing-based cryptography. The idea comes from Ben Lynn&#8217;s 2007 dissertation. Lynn is the &#8220;L&#8221; in BLS signatures—one of the topics in his dissertations—and [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/18/rsa-as-a-pairing/">RSA as a pairing</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The <a href="https://www.johndcook.com/blog/2025/11/17/three-party-diffie-hellman/">last</a> <a href="https://www.johndcook.com/blog/2025/11/16/elliptic-curve-pairings/">couple</a> posts have been about group pairings, specifically Tate pairings as they&#8217;re used in cryptography. This post will show that RSA encryption can be seen as a special case of pairing-based cryptography.</p>
+<p>The idea comes from Ben Lynn&#8217;s 2007 dissertation. Lynn is the &#8220;L&#8221; in BLS signatures—one of the topics in his dissertations—and in BLS elliptic curves.</p>
+<p>A pairing is a bilinear mapping from two groups to a third group</p>
+<p style="padding-left: 40px;"><em>e</em>: <em>G</em><sub>1</sub> × <em>G</em><sub>2</sub> → <em>G</em><sub>T</sub>.</p>
+<p>Here bilinear means that if <em>P</em> is an element of <em>G</em><sub>1</sub> and <em>Q</em> is an element of <em>G</em><sub>2</sub>, and <em>a</em> and <em>b</em> are nonnegative integers, then</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>aP</em>, <em>bQ</em>) = <em>e</em>(<i>P</i>, <em>Q</em>)<sup><em>ab</em></sup>.</p>
+<p>There are more criteria for a pairing to be useful in cryptography, but we won&#8217;t need those for this post.</p>
+<p>Ben Lynn&#8217;s dissertation mentions that exponentiation is a special case of pairing if you let <em>G</em><sub>1</sub> and <em>G</em><sub>T</sub> be the multiplicative group of the integers mod <em>r</em> and let <em>G</em><sub>2</sub> be the additive group of integers mod (<em>r</em> − 1). Then you can define a pairing by</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>g</em>, <em>a</em>) = <em>g</em><sup><em>a</em></sup>.</p>
+<p>Typically you can&#8217;t just write down a simple expression for a pairing, but in this case you can.</p>
+<p>RSA encryption corresponds to <em>r</em> = <em>pq</em> where <em>p</em> and <em>q</em> are large primes. The product <em>pq</em> is made public but the factorization into <em>p</em> and <em>q</em> is held secret. A message [1] is encrypted by exponentiation mod <em>n</em> where the exponent is the public key. In Lynn&#8217;s notation, the message is <em>g</em> and the public key is <em>a</em>.</p>
+<p>The security of RSA encryption depends on the fact that you can&#8217;t recover <em>g</em> from <em>g</em><sup><em>a</em></sup> mod <em>n</em> unless you know a trapdoor, the factorization of <em>n</em> [2]. This is true of pairings more generally: it is not practical to recover the inputs to a pairing from the output unless you know a trapdoor.</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/10/06/a-quiet-change-to-rsa/">A quiet change to RSA</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2014/09/25/the-great-reformulation/">My interview with John Tate</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/cryptography/">More posts on cryptography</a></li>
+</ul>
+<p>[1] In practice, RSA isn&#8217;t used to encrypt entire messages. Instead, it is used to encrypt a key for a symmetric encryption algorithm such as AES, and that key is used to encrypt the message. This is done for efficiency.</p>
+<p>[2] Or, more specifically, a private key that can easily be computed if you know the factorization of <em>n</em>. It&#8217;s conceivable that breaking RSA encryption is easier than factoring, but so far that does not appear to be the case.</p>The post <a href="https://www.johndcook.com/blog/2025/11/18/rsa-as-a-pairing/">RSA as a pairing</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/18/rsa-as-a-pairing/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Three-party Diffie-Hellman in one shot</title>
+		<link>https://www.johndcook.com/blog/2025/11/17/three-party-diffie-hellman/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/17/three-party-diffie-hellman/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Mon, 17 Nov 2025 16:51:24 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Cryptography]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246686</guid>
+
+					<description><![CDATA[<p>Elliptic curve Diffie-Hellman Given a point P on an elliptic curve E, and a random number a, aP means to add P to itself a times, using the addition on E. The point aP can be computed efficiently, even if a is a very large number [1]. However, if E has a large number of points, and [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/17/three-party-diffie-hellman/">Three-party Diffie-Hellman in one shot</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<h2>Elliptic curve Diffie-Hellman</h2>
+<p>Given a point <em>P</em> on an elliptic curve <em>E</em>, and a random number <em>a</em>, <em>aP</em> means to add <em>P</em> to itself <em>a</em> times, using the addition on <em>E</em>. The point <em>aP</em> can be computed efficiently, even if <em>a</em> is a very large number [1]. However, if <em>E</em> has a large number of points, and if <em>a</em> is chosen at random from a large range, then it is not practical to compute <em>a</em> given <em>P</em> and <em>aP</em>.</p>
+<p>This is the elliptic curve version of the discrete logarithm problem, and its presumed difficulty is the basis of the security of Diffie-Hellman key exchange.</p>
+<h2>Two-party Diffie-Hellman</h2>
+<p>With two-party Diffie-Hellman key exchange, two parties, Alice and Bob, generate random private keys <em>a</em> and <em>b</em> respectively. They agree on a point <em>P</em> on an elliptic curve <em>E</em>. Alice computes <em>aP</em> and sends it to Bob. Simultaneously Bob computes <em>bP</em> and sends it to Alice. Then Alice can compute</p>
+<p style="padding-left: 40px;"><em>a</em>(<em>bP</em>) = (<em>ab</em>)<em>P</em></p>
+<p>and Bob can compute</p>
+<p style="padding-left: 40px;"><em>b</em>(<em>aP</em>) = (<em>ba</em>)<em>P</em> = (<em>ab</em>)<em>P</em>.</p>
+<p>Then both Alice and Bob know a shared secret, the point (<em>ab</em>)<em>P</em> on <em>E</em>, but neither party has revealed a private key.</p>
+<h2>Three-party Diffie-Hellman</h2>
+<p>You could extend the approach above to three parties, say adding Carol, but this would require extra communication: Alice could send (<em>ab</em>)<em>P</em> to Carol, which she could multiply by her private key <em>c</em> to obtain <em>abcP</em>. Similarly, everyone else could arrive at <em>abcP</em>. Each person has to do a computation, send and receive a message, do another computation, and send an receive another message.</p>
+<p>Joux [2] came up with a way to do Diffie-Hellman key exchange with three people and only one round of sending and receiving messages. The set up uses a pairing <em>e</em>( , ) of two elliptic curve subgroups, <em>G</em><sub>1</sub> and <em>G</em><sub>2</sub>, as in the <a href="https://www.johndcook.com/blog/2025/11/16/elliptic-curve-pairings/">previous post</a>. Fix generators <em>P</em> ∈ <em>G</em><sub>1</sub> and <em>Q</em> ∈ <em>G</em><sub>2</sub>. Each party multiplies <em>P</em> and <em>Q</em> by their private key and sends the results to the other two parties.</p>
+<p>Alice receives <em>bP</em> from Bob and <em>cQ</em> from Carol. This is enough for her to compute</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>bP</em>, <em>cQ</em>)<sup><em>a</em></sup> = <em>e</em>(<em>P</em>, <em>Q</em>)<sup><em>abc</em></sup>.</p>
+<p>Similarly, Bob receives <em>aP</em> from Alice and <em>cQ</em> from Carol, enabling him to compute</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>aP</em>, <em>cQ</em>)<sup><em>b</em></sup> = <em>e</em>(<em>P</em>, <em>Q</em>)<sup><em>abc</em></sup>.</p>
+<p>And finally, Carol receives <em>aP</em> from Alice and <em>bQ</em> from Bob, enabling her to compute</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>aP</em>, <em>bQ</em>)<sup><em>c</em></sup> = <em>e</em>(<em>P</em>, <em>Q</em>)<sup><em>abc</em></sup>.</p>
+<p>So all three parties can compute the shared secret <em>e</em>(<em>P</em>, <em>Q</em>)<sup><em>abc</em></sup>. but no party knows the other parties&#8217; private keys.</p>
+<h2>Footnotes</h2>
+<p>[1] If you want to multiply a point by 2<sup>100</sup>, for example, you don&#8217;t carry out 2<sup>100</sup> additions; you carry out 100 doublings. Of course not every positive integer is a power of 2, but every positive integer is the <em>sum</em> of powers of 2, i.e. it can be written in binary. So as you&#8217;re doing your doublings, sum the terms that correspond to 1s in the binary representation of the number you&#8217;re multiplying by.</p>
+<p>[2] Antoine Joux. A One Round Protocol for Tripartite Diffie–Hellman. Journal of Cryptology (2004) 17: 263–276.</p>The post <a href="https://www.johndcook.com/blog/2025/11/17/three-party-diffie-hellman/">Three-party Diffie-Hellman in one shot</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/17/three-party-diffie-hellman/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Elliptic curve pairings in cryptography</title>
+		<link>https://www.johndcook.com/blog/2025/11/16/elliptic-curve-pairings/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/16/elliptic-curve-pairings/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Sun, 16 Nov 2025 20:27:09 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Elliptic curves]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246685</guid>
+
+					<description><![CDATA[<p>Pairings can mean a variety of related things in group theory, but for our purposes a pairing is a bilinear mapping from two groups to a third group. e: G1 × G2 → GT Typically the group operation on G1 and G2 is written addititvely and the group operation on GT is written multiplicatively. In [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/16/elliptic-curve-pairings/">Elliptic curve pairings in cryptography</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Pairings can mean a variety of related things in group theory, but for our purposes a pairing is a bilinear mapping from two groups to a third group.</p>
+<p style="padding-left: 40px;"><em>e</em>: <em>G</em><sub>1</sub> × <em>G</em><sub>2</sub> → <em>G</em><sub>T</sub></p>
+<p>Typically the group operation on <em>G</em><sub>1</sub> and <em>G</em><sub>2</sub> is written addititvely and the group operation on <em>G</em><sub>T</sub> is written multiplicatively. In fact, <em>G</em><sub>T</sub> will always be the multiplicative group of a finite field, i.e. <em>G</em><sub>T</sub> consists of the non-zero elements of a finite field under multiplication. (The &#8220;T&#8221; stands for &#8220;target.&#8221;)</p>
+<p>Here bilinear [1] means that if <em>P</em> is an element of <em>G</em><sub>1</sub> and <em>Q</em> is an element of <em>G</em><sub>2</sub>, and <em>a</em> and <em>b</em> are nonnegative integers,</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>aP</em>, <em>bQ</em>) = <em>e</em>(<i>P</i>, <em>Q</em>)<sup><em>ab</em></sup>.</p>
+<p>There are a few provisos …</p>
+<p><a href="https://youtu.be/l7YexQXPeZo?t=78"><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/buckley.jpg" alt="Robin Williams imitating William F. Buckley" width="480" height="291" /></a></p>
+<p>First, the pairing must be non-degenerate, i.e. <em>e</em>(<em>P</em>, <em>Q</em>) ≠ 1 for some <em>P</em> and <em>Q</em>.</p>
+<p>Second, the pairing must be efficiently computable.</p>
+<p>Third, the embedding degree must not be &#8220;too high.&#8221; This means that if <em>G</em><sub>T</sub> is the multiplicative group of a field with <em>p</em><sup><em>k</em></sup> elements, <em>k</em> is not too big. We will look at two examples in which <em>k</em> = 12.</p>
+<p>The second and third provisos are important even though they&#8217;re not stated rigorously.</p>
+<p>Cryptography often speaks of pairing elliptic curves, but in fact it uses pairings of prime-order <strong>subgroups</strong> of the additive groups of elliptic curves. Because the subgroups have prime order, they are cyclic, and so the pairing is determined by its value on a generator from each subgroup.</p>
+<h2>Example: BN254</h2>
+<p>The <a href="https://www.johndcook.com/blog/2025/11/16/finite-field-i/">previous post</a> briefly mentioned a pairing between two elliptic curves, BN254 and alt_bn128, that is used in Ethereum and was used in Zcash in the original Sprout shielded protocol.</p>
+<p>The elliptic curve BN254 is defined over the field <em>F<sub>p</sub></em>, the integers mod <em>p</em>, where</p>
+<p style="padding-left: 40px;"><em>p</em> = 21888242871839275222246405745257275088696311157297823662689037894645226208583.</p>
+<p>and the elliptic curve alt_bn128 is defined over the field <em>F<sub>p</sub></em>[<em>i</em>], i.e. the field <em>F<sub>p</sub></em>, with an imaginary element <em>i</em> adjoined.</p>
+<p>Both elliptic curves have a subgroup of order</p>
+<p style="padding-left: 40px;"><em>r</em> = 21888242871839275222246405745257275088548364400416034343698204186575808495617,</p>
+<p>which is prime. So in the pairing the groups <em>G</em><sub>1</sub> and <em>G</em><sub>2</sub> are isomorphic to the integers mod <em>r</em>. The target group <em>G</em><sub>T</sub> has order <em>p</em><em>12</em> − 1 and so the embedding degree <em>k</em> equals 12, and so the embedding degree is &#8220;not too high.&#8221;</p>
+<h2>Example: BLS12-381</h2>
+<p>Another example also comes from Ethereum and Zcash. Ethereum uses BN254 in smart contracts, but it uses BLS12-381 in its consensus layer. Zcash switched from BN254 to BLS12-381 in the Sapling release.</p>
+<p>BLS12-381 is defined over a prime order field with on the order of 2<sup>381</sup> elements and has embedding order 12, hence 12-381. The BLS stands for Paulo Barreto, Ben Lynn, and Michael Scott. Elliptic curve names often look mysterious, but they&#8217;re actually pretty descriptive. I discuss BLS12-381 in more detail <a href="https://www.johndcook.com/blog/2025/10/13/ethereum-bls12-381/">here</a>. As in the example above, BLS12-381 is defined over a field <em>F</em><sub><em>p</em></sub> and is paired with a curve over <em>F</em><sub><em>p</em></sub>[<em>i</em>], i.e. the same field with an imaginary element adjoined. The equation for BLS12-381 is</p>
+<p style="padding-left: 40px;"><em>y</em>² = <em>x</em>³ + 4</p>
+<p>and the equation for the curve it is paired with is</p>
+<p style="padding-left: 40px;"><em>y</em>² = <em>x</em>³ + 4(1 + <em>i</em>)</p>
+<p>As before the target group is the multiplicative group of a finite field of order <em>p</em><sup>12</sup>.</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/08/04/pairing-unfriendly-curves/">Pairing-unfriendly curves</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/10/08/zcash-price-doubled/">Zcash price soars</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/crypto/">Blockchains and cryptocurrency</a></li>
+</ul>
+<p>[1] You&#8217;ll also see bilinearity defined by</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>P</em> + <em>Q</em>, <em>R</em>) = <em>e</em>(<em>P</em>, <em>R</em>) <em>e</em>(<em>Q</em>, <em>R</em>)</p>
+<p>and</p>
+<p style="padding-left: 40px;"><em>e</em>(<em>P</em>, <em>R</em> + <em>S</em>) = <em>e</em>(<em>P</em>, <em>R</em>) <em>e</em>(<em>P</em>, <em>S</em>).</p>
+<p>These definitions are equivalent. To see that the definition here implies the definition at the top, write out <em>aP</em> as <em>P</em> + <em>P</em> + … + <em>P</em> etc.</p>
+<p>Since we&#8217;re working in subgroups of prime order, there is a generator for each subgroup. Write out each element as a multiple of a generator, then the definition at the top implies the definition here.</p>The post <a href="https://www.johndcook.com/blog/2025/11/16/elliptic-curve-pairings/">Elliptic curve pairings in cryptography</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/16/elliptic-curve-pairings/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Adding an imaginary unit to a finite field</title>
+		<link>https://www.johndcook.com/blog/2025/11/16/finite-field-i/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/16/finite-field-i/#respond</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Sun, 16 Nov 2025 19:13:04 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[Elliptic curves]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246684</guid>
+
+					<description><![CDATA[<p>Let p be a prime number. Then the integers mod p form a finite field. The number of elements in a finite field must be a power of a prime, i.e. the order q = pn for some n. When n &#62; 1, we can take the elements of our field to be polynomials of [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/16/finite-field-i/">Adding an imaginary unit to a finite field</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Let <em>p</em> be a prime number. Then the integers mod <em>p</em> form a finite field.</p>
+<p>The number of elements in a finite field must be a power of a prime, i.e. the order <em>q</em> = <em>p</em><sup><em>n</em></sup> for some <em>n</em>. When <em>n</em> &gt; 1, we can take the elements of our field to be polynomials of degree <em>n</em> − 1 with coefficients in the integers mod <em>p</em>.</p>
+<p>Addition works just as you&#8217;d expect addition to work, adding coefficients mod <em>p</em>, but multiplication is a little more complicated. You multiply field elements by multiplying their polynomial representatives, but then you divide by an irreducible polynomial and take the remainder.</p>
+<p>When <em>n</em> = 2, for some <em>p</em> you can define the field by adding an imaginary unit.</p>
+<h2>When you can and cannot adjoin an <em>i</em></h2>
+<p>For some finite fields of order <em>p</em>, you can construct a field of order <em>p</em>² by joining an element <em>i</em> to the field, very much the way you form the complex numbers from the real numbers. For example, you can create a field with 49 elements by taking pairs of (<em>a</em>, <em>b</em>) of integers mod 7 and multiplying them as if they were <em>a</em> + <em>bi</em>. So</p>
+<p style="padding-left: 40px;">(<em>a</em>, <em>b</em>) * (<em>c</em>, <em>d</em>) = (<em>ac</em> − <em>bd</em>, <em>ad</em> + <em>bc</em>).</p>
+<p>This is equivalent to choosing the polynomial <em>x</em>² + 1 as your irreducible polynomial and following every polynomial multiplication by taking the remainder modulo <em>x</em>² + 1.</p>
+<p>This works for a field with 49 elements, but not for a field of 25 elements. That&#8217;s because over the integers mod 5 the polynomial <em>x</em>² + 1 already has a root. Two of them in fact: <em>x</em> = 2 or <em>x</em> = 3. So you could say that mod 5, <em>i</em> = 2. Or <em>i</em> = 3 if you prefer. You can still form a field of 25 elements by taking pairs of elements from a field of 5 elements, but you have to choose a different polynomial as your irreducible polynomial because <em>x</em>² + 1 is <strong>not</strong> irreducible because</p>
+<p style="padding-left: 40px;"><em>x</em>² + 1 = (<em>x</em> − 2)(<em>x</em> + 2)</p>
+<p>when working over the integers mod 5. You could use</p>
+<p style="padding-left: 40px;"><em>x</em>² + <em>x</em> + 1</p>
+<p>as your irreducible polynomial. To prove that this polynomial is irreducible mod 5, plug in the numbers 0, 1, 2, 3, and 4 and confirm that none of them make the polynomial equal 0.</p>
+<p>In general, you can create a field of order <em>p</em>² by adjoining an element <em>i</em> if and only if <em>p</em> = 3 mod 4.</p>
+<p>Next we&#8217;ll look at an example of making a very large finite field even larger by adding an imaginary element.</p>
+<h2>Example from Ethereum</h2>
+<p>The Ethereum virtual machine has support for a pairing—more on that in a future post—of two elliptic curves, <strong>BN254</strong> and <strong>alt_bn128</strong>. The BN254 curve is defined by</p>
+<p style="padding-left: 40px;"><em>y</em>² = <em>x</em>³ + 3</p>
+<p>over the field <em>F<sub>p</sub></em>, the integers mod <em>p</em>, where</p>
+<p style="padding-left: 40px;"><em>p</em> = 21888242871839275222246405745257275088696311157297823662689037894645226208583.</p>
+<p>The curve alt_bn128 is defined by</p>
+<p style="padding-left: 40px;"><em>y</em>² = <em>x</em>³ + 3/(9 + <em>i</em>)</p>
+<p>over the field <em>F<sub>p</sub></em>[<em>i</em>], i.e. the field <em>F<sub>p</sub></em>, with an element <em>i</em> adjoined. Note the that last two digits of <em>p</em> are 83, and so <em>p</em> is congruent to 3 mod 4.</p>
+<h2>Special point on curve</h2>
+<p>The Ethereum documentation (EIP-197) singles out a particular point (<em>x</em>, <em>y</em>) on alt_bn128:</p>
+<p style="padding-left: 40px;"><em>x</em> = <em>a</em> + <em>bi</em><br />
+<em>y<em> = <em>c</em> + <em>di</em></em></em></p>
+<p>where</p>
+<p style="padding-left: 40px;"><em>a</em> = 10857046999023057135944570762232829481370756359578518086990519993285655852781<br />
+<em>b</em> = 11559732032986387107991004021392285783925812861821192530917403151452391805634<br />
+<em>c</em> = 8495653923123431417604973247489272438418190587263600148770280649306958101930<br />
+<em>d</em> = 4082367875863433681332203403145435568316851327593401208105741076214120093531.</p>
+<p>We will show that this point is on the curve as an exercise in working in the field <em>F<sub>p</sub></em>[<em>i</em>]. We&#8217;ll write Python code from scratch, not using any libraries, so all the details will be explicit.</p>
+<pre>def add(pair0, pair1, p):
+    a, b = pair0
+    c, d = pair1
+    return ((a + c) % p, (b + d) % p)
+
+def mult(pair0, pair1, p):
+    a, b = pair0
+    c, d = pair1
+    return ((a*c - b*d) % p, (b*c + a*d) % p)
+
+p = 21888242871839275222246405745257275088696311157297823662689037894645226208583
+a = 10857046999023057135944570762232829481370756359578518086990519993285655852781
+b = 11559732032986387107991004021392285783925812861821192530917403151452391805634
+c = 8495653923123431417604973247489272438418190587263600148770280649306958101930
+d = 4082367875863433681332203403145435568316851327593401208105741076214120093531
+
+# Find (e, f) such that (e, f)*(9, 1) = (1, 0).
+# 9e - f = 1
+# e + 9f = 0
+# Multiply first equation by 9 and add.
+e = (9*pow(82, -1, p)) % p
+f = (-e*pow(9, -1, p)) % p
+prod = mult((e, f), (9, 1), p)
+assert(prod[0] == 1 and prod[1] == 0)
+
+y2 = mult((c, d), (c, d), p)
+x3 = mult((a, b), mult((a, b), (a, b), p), p)
+rhs = add(x3, mult((3, 0), (e, f), p), p)
+
+assert(y2[0] == rhs[0])
+assert(y2[1] == rhs[1])
+</pre>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/finite-fields/">Finite fields</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/10/13/ethereum-bls12-381/">Elliptic curve in Ethereum&#8217;s consensus layer</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/08/11/misleading-plots-of-elliptic-curves/">Misleading plots of elliptic curves</a></li>
+</ul>
+<pre></pre>The post <a href="https://www.johndcook.com/blog/2025/11/16/finite-field-i/">Adding an imaginary unit to a finite field</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/16/finite-field-i/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Four generalizations of the Pythagorean theorem</title>
+		<link>https://www.johndcook.com/blog/2025/11/13/pythagorean-generalizations/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/13/pythagorean-generalizations/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Thu, 13 Nov 2025 15:25:33 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Geometry]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246677</guid>
+
+					<description><![CDATA[<p>Here are four theorems that generalize the Pythagorean theorem. Follow the links for more details regarding each equation. 1. Theorem by Apollonius for general triangles. 2. Edsgar Dijkstra&#8217;s extension of the Pythagorean theorem for general triangles. 3. A generalization of the Pythagorean theorem to tetrahedra. 4. A unified Pythagorean theorem that covers spherical, plane, and [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/13/pythagorean-generalizations/">Four generalizations of the Pythagorean theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Here are four theorems that generalize the Pythagorean theorem. Follow the links for more details regarding each equation.</p>
+<p>1. Theorem by <a href="https://www.johndcook.com/blog/2025/10/30/apollonius-theorem/">Apollonius</a> for general triangles.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/pv1.svg" alt="a^2 + b^2 = 2(m^2 + h^2)" width="166" height="22" /></p>
+<p>2. <a href="https://www.johndcook.com/blog/2022/07/06/dijkstra-extends-pythagoras/">Edsgar Dijkstra&#8217;s extension</a> of the Pythagorean theorem for general triangles.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/pv2.svg" alt="\text{sgn}(\alpha + \beta - \gamma) = \text{sgn}(a^2 + b^2 - c^2)" width="278" height="22" /></p>
+<p>3. A generalization of the Pythagorean theorem to <a href="https://www.johndcook.com/blog/2025/11/03/de-gua/">tetrahedra</a>.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/pv3.svg" alt="V_0^2 = \sum_{i=1}^n V_i^2" width="96" height="54" /></p>
+<p>4. A <a href="https://www.johndcook.com/blog/2022/08/27/unified-pythagorean-theorem/">unified Pythagorean theorem</a> that covers <a href="https://www.johndcook.com/blog/2022/08/23/pythagoras-on-a-sphere/">spherical</a>, plane, and <a href="https://www.johndcook.com/blog/2021/11/28/triangles-on-a-pseudosphere/">hyperbolic</a> geometry.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/pv5.svg" alt="A(c) = A(a) + A(b) - \kappa \frac{A(a) \, A(b)}{2\pi}" width="274" height="41" /></p>The post <a href="https://www.johndcook.com/blog/2025/11/13/pythagorean-generalizations/">Four generalizations of the Pythagorean theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/13/pythagorean-generalizations/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Elementary symmetric polynomials and optimization</title>
+		<link>https://www.johndcook.com/blog/2025/11/12/elementary-symmetric-polynomials/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Wed, 12 Nov 2025 14:55:40 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Optimization]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246679</guid>
+
+					<description><![CDATA[<p>The mth elementary symmetric polynomial of degree n is the sum of all terms containing a product of m variables. So, for example, These polynomials came up in the previous post. The problem was choosing weights to minimize the variance of a weighted sum of random variables can be solved using elementary symmetric polynomials. To state the [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/12/elementary-symmetric-polynomials/">Elementary symmetric polynomials and optimization</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The <em>m</em>th elementary symmetric polynomial of degree <em>n</em></p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar8.svg" alt="e_m(x_1, x_2, \ldots, x_n)" width="136" height="18" /></p>
+<p>is the sum of all terms containing a product of <em>m</em> variables. So, for example,</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar9.svg" alt="\begin{align*} e_1(w, x, y, z) &amp;= w + x + y + z \\ e_2(w, x, y, z) &amp;= wx + wy + wz + xy + xz + yz \\ e_3(w, x, y, z) &amp;= xyz + wyz + wxz + wxy \\ e_4(w, x, y, z) &amp;= wxyz \end{align*}" width="356" height="106" /><br />
+These polynomials came up in the <a href="https://www.johndcook.com/blog/2025/11/12/minimum-variance/">previous post</a>. The problem was choosing weights to minimize the variance of a weighted sum of random variables can be solved using elementary symmetric polynomials.</p>
+<p>To state the optimization problem more generally, suppose you want to minimize</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar10.svg" alt="t_1^2 x_1 + t_2^2x_2 + \cdots + t_n^2 x_n" width="183" height="24" /></p>
+<p>where the <em>t</em><sub><em>i</em></sub> and <em>x</em><sub><em>i</em></sub> are positive and the <em>t</em><sub><em>i</em></sub> sum to 1. You can use Lagrange multipliers to show that the solution is</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar11.svg" alt="t_i = \frac{e_n(x_1, x_2, \cdots, x_n)}{x_i \,e_{n-1}(x_1, x_2, \cdots, x_n)}" width="210" height="45" /></p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/01/13/proof-of-optimization/">Proof of optimization</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/07/16/symmetric-statistics/">Symmetric funcions and U-statistics</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/06/21/minimize-squared-relative-error/">Minimize squared relative error</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2020/05/18/inverse-optimization/">Inverse optimization</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/11/08/dp-sgd/">Differentially private stochastic gradient descent</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/12/elementary-symmetric-polynomials/">Elementary symmetric polynomials and optimization</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Weighting an average to minimize variance</title>
+		<link>https://www.johndcook.com/blog/2025/11/12/minimum-variance/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Wed, 12 Nov 2025 13:02:54 +0000</pubDate>
+				<category><![CDATA[Statistics]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Probability and Statistics]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246676</guid>
+
+					<description><![CDATA[<p>Suppose you have $100 to invest in two independent assets, A and B, and you want to minimize volatility. Suppose A is more volatile than B. Then putting all your money on A would be the worst thing to do, but putting all your money on B would not be the best thing to do. The optimal allocation would be [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/12/minimum-variance/">Weighting an average to minimize variance</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Suppose you have $100 to invest in two independent assets, <em>A</em> and <em>B</em>, and you want to minimize volatility. Suppose <em>A</em> is more volatile than <em>B</em>. Then putting all your money on <em>A</em> would be the worst thing to do, but putting all your money on <em>B</em> would not be the best thing to do.</p>
+<p>The optimal allocation would be some mix of <em>A</em> and <em>B</em>, with more (but not all) going to <em>B</em>. We will formalize this problem and determine the optimal allocation, then generalize the problem to more assets.</p>
+<h2>Two variables</h2>
+<p>Let <em>X</em> and <em>Y</em> be two independent random variables with finite variance and assume at least one of <em>X</em> and <em>Y</em> is not constant. We want to find <em>t</em> that minimizes</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar1.svg" alt="\text{Var}[tX + (1-t)Y]" width="153" height="18" /></p>
+<p>subject to the constraint 0 ≤ <em>t</em> ≤ 1. Because <em>X</em> and <em>Y</em> are independent,</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar2.svg" alt="\text{Var}[tX + (1-t)Y] = t^2 \text{Var}[X] + (1-t)^2 \text{Var}[Y]" width="391" height="22" /></p>
+<p>Taking the derivative with respect to <em>t</em> and setting it to zero shows that</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar3.svg" alt="t = \frac{\text{Var}[Y]}{\text{Var}[X] + \text{Var}[Y]}" width="169" height="45" /></p>
+<p>So the smaller the variance on <em>Y</em>, the less we allocate to <em>X</em>. If <em>Y</em> is constant, we allocate nothing to <em>X</em> and go all in on <em>Y</em>.  If <em>X</em> and <em>Y</em> have equal variance, we allocate an equal amount to each. If <em>X</em> has twice the variance of <em>Y</em>, we allocate 1/3 to <em>X</em> and 2/3 to <em>Y</em>.</p>
+<h2>Multiple variables</h2>
+<p>Now suppose we have <em>n</em> independent random variables <em>X</em><sub><em>i</em></sub> for <em>i</em> running from 1 to <em>n</em>, and at least one of the variables is not constant. Then we want to minimize</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar4.svg" alt="\text{Var}\left[ \sum_{i=1}^n t_i X_i \right] = \sum_{i=1}^n t_i^2 \text{Var}[X_i] " width="239" height="59" /></p>
+<p>subject to the constraint</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar5.svg" alt="\sum_{i=1}^n t_i = 1" width="74" height="54" /></p>
+<p>and all <em>t</em><sub><em>i</em></sub> non-negative. We can solve this optimization problem with <a href="https://www.johndcook.com/blog/2016/09/27/one-of-my-favorite-proofs-lagrange-multipliers/">Lagrange multipliers</a> and find that</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar6.svg" alt="t_i \text{Var}[X_i] = t_j \text{Var}[X_j]" width="173" height="19" /></p>
+<p>for all 1 ≤ <em>i</em>, <em>j</em> ≤ <em>n</em>. These (<em>n</em> − 1) equations along with the constraint that all the <em>t</em><sub><em>i</em></sub> sum to 1 give us a system of equations whose solution is</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/minvar7x.svg" alt="t_i = \frac{\prod_{j \ne i} \text{Var}[X_j]}{\sum_{i = 1}^n \prod_{j \ne i} \text{Var}[X_j]}" width="183" height="51" /></p>
+<p>Incidentally, the denominator has a name: the (<em>n</em> − 1)st elementary symmetric polynomial in <em>n</em> variables. More on this in the <a href="https://www.johndcook.com/blog/2025/11/12/elementary-symmetric-polynomials/">next post</a>.</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/07/16/symmetric-statistics/">Symmetric funcions and U-statistics</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/09/29/platonic-solids-and-integration/">Regular solids and Monte Carlo integration</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2023/02/02/lagrange-multiplier/">Lagrange multiplier set up. Now what?</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/12/minimum-variance/">Weighting an average to minimize variance</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Brownian motion and Riemann zeta</title>
+		<link>https://www.johndcook.com/blog/2025/11/10/brownian-zeta/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Mon, 10 Nov 2025 19:14:08 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246675</guid>
+
+					<description><![CDATA[<p>Excellent video by Almost Sure: What does Riemann Zeta have to do with Brownian Motion? Connects several things that I&#8217;ve written about here including Brownian motion, the Riemann zeta function, and the Kolmogorov-Smirnov test.</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/10/brownian-zeta/">Brownian motion and Riemann zeta</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Excellent <a href="https://youtu.be/YTQKbgxbtiw">video</a> by Almost Sure: What does Riemann Zeta have to do with Brownian Motion?</p>
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/YTQKbgxbtiw?si=NNk5LoFX8Yq7sLYd" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Connects several things that I&#8217;ve written about here including <a href="https://www.johndcook.com/blog/2021/07/10/interpolating-brownian-motion/">Brownian</a> <a href="https://www.johndcook.com/blog/2021/07/11/fractal-brownian-motion/">motion</a>, the <a href="https://www.johndcook.com/blog/2024/10/25/mellin-transform-and-riemann-zeta/">Riemann</a> <a href="https://www.johndcook.com/blog/2018/08/23/riemann-zeta-zeros/">zeta</a> <a href="https://www.johndcook.com/blog/2022/06/24/zeta-at-even-numbers/">function</a>, and the <a href="https://www.johndcook.com/blog/2019/09/18/kstest-shapiro/">Kolmogorov-Smirnov</a> test.</p>The post <a href="https://www.johndcook.com/blog/2025/11/10/brownian-zeta/">Brownian motion and Riemann zeta</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Rolling correlation</title>
+		<link>https://www.johndcook.com/blog/2025/11/09/rolling-correlation/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/09/rolling-correlation/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Sun, 09 Nov 2025 18:54:29 +0000</pubDate>
+				<category><![CDATA[Business]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246672</guid>
+
+					<description><![CDATA[<p>Suppose you have data on the closing prices of two stocks over 1,000 days and you want to look at the correlation between the two asset prices over time in rolling 30 day windows. It seems that the rolling correlation is periodic. peaking about every 50 days. But this is an artifact of the rolling [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/09/rolling-correlation/">Rolling correlation</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Suppose you have data on the closing prices of two stocks over 1,000 days and you want to look at the correlation between the two asset prices over time in rolling 30 day windows.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/rolling_correlation1.png" width="600" height="300" /></p>
+<p>It seems that the rolling correlation is periodic. peaking about every 50 days.</p>
+<p>But this is an artifact of the rolling window, not a feature of the data. I created the two simulated stock time series by creating random walks. The price of the stock each day is the price the previous day plus a sample from a normal random variable with mean zero and variance 1.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/rolling_correlation2.png" width="600" height="300" /></p>
+<pre>
+import numpy as np
+from scipy.stats import norm
+
+n = 1000
+x = np.cumsum(norm.rvs(size=n))
+y = np.cumsum(norm.rvs(size=n))    
+</pre>
+<p>If you use a wider window, say 60 days, you&#8217;ll still see a periodic pattern in the rolling correlation, though with lower frequency.</p>
+<h2>Related posts</h2>
+<ul>
+<li class='link'><a href='https://www.johndcook.com/blog/2021/07/11/fractal-brownian-motion/'>The fractal nature of Brownian motion</a></li>
+<li class='link'><a href='https://www.johndcook.com/blog/2021/07/10/interpolating-brownian-motion/'>Interpolating Brownian motion</a></li>
+<li class='link'><a href='https://www.johndcook.com/blog/forecasting/'>Time series analysis and forecasting</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/09/rolling-correlation/">Rolling correlation</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/09/rolling-correlation/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Analog of Heron&#8217;s formula on a sphere</title>
+		<link>https://www.johndcook.com/blog/2025/11/08/heron-on-a-sphere/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Sun, 09 Nov 2025 01:47:51 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Geometry]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246670</guid>
+
+					<description><![CDATA[<p>The area of a triangle can be computed directly from the lengths of its sides via Heron&#8217;s formula. Here s is the semiperimeter, s = (a + b + c)/2. Is there an analogous formula for spherical triangles? It&#8217;s not obvious there should be, but there is a formula by Simon Antoine Jean L&#8217;Huilier (1750–1840). Here we denote area [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/08/heron-on-a-sphere/">Analog of Heron’s formula on a sphere</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The area of a triangle can be computed directly from the lengths of its sides via Heron&#8217;s formula.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/heron2.svg" alt="A = \sqrt{s(s-a)(s-b)(s-c)}" width="222" height="24" /></p>
+<p>Here <em>s</em> is the semiperimeter, <em>s</em> = (<em>a</em> + <em>b</em> + <em>c</em>)/2.</p>
+<p>Is there an analogous formula for spherical triangles? It&#8217;s not obvious there should be, but there is a formula by Simon Antoine Jean L&#8217;Huilier (1750–1840).</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/lhuilier.svg" alt="\tan^2 \frac{S}{4} = \tan \frac{s}{2} \tan \frac{s-a}{2} \tan \frac{s-b}{2} \tan \frac{s-c}{2}" width="333" height="41" /></p>
+<p>Here we denote area by <em>S</em> for surface area, rather than <em>A</em> because in the context of spherical trigonometry <em>A</em> usually denotes the angle opposite side <em>a</em>. The same convention applies in plane trigonometry, but the potential for confusion is greater in L&#8217;Huilier&#8217;s formula since the area appears inside a tangent function.</p>
+<p>Now tan θ ≈ θ for small θ, and so L&#8217;Huilier&#8217;s formula reduces to Heron&#8217;s formula for small triangles.</p>
+<p>Imagine the Earth as a sphere of radius 1 and take a spherical triangle with one vertex at the north pole and two vertices on the equator 90° longitude apart. Then <em>a</em> = <em>b</em> = <em>c</em> = π/2 and <em>s</em> = 3π/4. Such a triangle takes of 1/8 of the Earth&#8217;s surface area of 4π, so the area <em>S</em> is π/2. You can verify that L&#8217;Huilier&#8217;s formula gives the correct area.</p>
+<p>It&#8217;s not a proof, but it&#8217;s a good sanity check that L&#8217;Huilier&#8217;s formula is correct for small triangles and for at least one big triangle.</p>The post <a href="https://www.johndcook.com/blog/2025/11/08/heron-on-a-sphere/">Analog of Heron’s formula on a sphere</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How much is a gigawatt?</title>
+		<link>https://www.johndcook.com/blog/2025/11/07/how-much-is-a-gigawatt/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/07/how-much-is-a-gigawatt/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Fri, 07 Nov 2025 14:01:03 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246668</guid>
+
+					<description><![CDATA[<p>There&#8217;s increasing talk of gigawatt data centers. Currently the largest data center, Switch&#8217;s Citadel Campus in Nevada, uses 850 megawatts of power. OpenAI&#8217;s Stargate data center, under construction, is supposed to use 1.2 gigawatts. Gigawatt An average French nuclear reactor produces about a gigawatt of power. If the US were allowed build nuclear reactors, we [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/07/how-much-is-a-gigawatt/">How much is a gigawatt?</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>There&#8217;s increasing talk of gigawatt data centers. Currently the largest data center, Switch&#8217;s Citadel Campus in Nevada, uses 850 megawatts of power. OpenAI&#8217;s Stargate data center, under construction, is supposed to use 1.2 gigawatts.</p>
+<h2>Gigawatt</h2>
+<p>An average <strong>French nuclear reactor</strong> produces about a gigawatt of power. If the US were allowed build nuclear reactors, we could simply build one reactor for every gigantic data center. Unfortunately, the Nuclear Regulatory Commission essentially prohibits the construction of profitable nuclear reactors.</p>
+<p>An American home uses about 1200 watts of power, so a gigawatt of electricity could power 800,000 homes. So roughly, <strong>a gigawatt is a megahome</strong>.</p>
+<h2>Gigawatt-year</h2>
+<p>A gigawatt is a unit of power, not energy. Energy is power over some time period.</p>
+<p>A gigwatt-year is about 3 × 10<sup>16</sup> joules, or 30 petajoules.</p>
+<p>A SpaceX Starship launch releases 50 terajoules of energy, so a gigawatt-year is <strong>60 Starship launches</strong>.</p>
+<p>A couple months ago I wrote about illustrating <a href="https://www.johndcook.com/blog/2025/09/02/cryptographic-strength/">crypographic strength</a> in terms of the amount of energy needed to break it, and how much water that much energy would boil. Let&#8217;s do something similar for a gigawatt-year.</p>
+<p>It takes about 300 kilojoules of energy to boil a liter of water [1], so 30 petajoules would boil 100 billion liters of water. So a gigawatt-year of energy would be enough to <strong>boil Coniston Water</strong>, the third largest lake in England.</p>
+<p>If you could convert a kilogram of matter to energy according to <em>E</em> = <em>mc</em>², this would release 90 petajoules. So a gigawatt-year is the energy in about <strong>300 grams of matter</strong>.</p>
+<p>&nbsp;</p>
+<p>[1] In detail, boiling a liter of water is defined as increases the temperature from 20° C to 100° C at sea level.</p>
+<p>&nbsp;</p>The post <a href="https://www.johndcook.com/blog/2025/11/07/how-much-is-a-gigawatt/">How much is a gigawatt?</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/07/how-much-is-a-gigawatt/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Japanese polygon theorem</title>
+		<link>https://www.johndcook.com/blog/2025/11/05/japanese-polygon-theorem/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/05/japanese-polygon-theorem/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Wed, 05 Nov 2025 11:45:50 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Geometry]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246664</guid>
+
+					<description><![CDATA[<p>Here&#8217;s an interesting theorem that leads to some aesthetically pleasing images. It&#8217;s known as the Japanese cyclic polygon theorem. For all triangulations of a cyclic polygon, the sum of inradii of the triangles is constant. Conversely, if the sum of inradii is independent of the triangulation, then the polygon is cyclic. The image above shows [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/05/japanese-polygon-theorem/">Japanese polygon theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/japanesepolygon4.png" width="600" height="324" /></p>
+<p>Here&#8217;s an interesting theorem that leads to some aesthetically pleasing images. It&#8217;s known as the Japanese cyclic polygon theorem.</p>
+<p style="padding-left: 40px;">For all triangulations of a cyclic polygon, the sum of inradii of the triangles is constant. Conversely, if the sum of inradii is independent of the triangulation, then the polygon is cyclic.</p>
+<p>The image above shows two triangulations of an irregular hexagon. By the end of the post we&#8217;ll see the code that created these images, and we&#8217;ll see one more triangulations. And we&#8217;ll see that the sum of the radii of the circles is the same in each image.</p>
+<h2>Glossary</h2>
+<p>In case any of the terms in the theorem above are unfamiliar, here&#8217;s a quick glossary.</p>
+<p>A <strong>triangulation</strong> of a polygon is a way to divide the polygon into triangles, with the restriction that the triangle vertices come from the polygon vertices.</p>
+<p>A polygon is <strong>cyclic</strong> if there exists a circle that passes through all of its vertices. Incidentally, if a polygon has <em>n</em> + 2 sides, the number of possible triangulations is the <em>n</em>th Catalan number. More on that <a href="https://www.johndcook.com/blog/2025/04/16/triangulate-polygon/">here</a>.</p>
+<p>The <strong>inradius</strong> of a triangle is the radius of the largest circle that fits inside the triangle. More on inner and outer radii <a href="https://www.johndcook.com/blog/2023/07/15/perimeter-radius-sides/">here</a>.</p>
+<h2>Equations for inradius and incenter</h2>
+<p>We&#8217;d like to illustrate the theorem by drawing some images and by adding up the inradii. This means we need to be able to find the inradius and the incenter.</p>
+<p>The <strong>inradius</strong> of a triangle equals its area divided by its semiperimeter. The area we can find using <a href="https://www.johndcook.com/blog/2025/02/26/perimeter-area/">Heron&#8217;s formula</a>. The semiperimeter is half the perimeter.</p>
+<p>The <strong>incenter</strong> is the weighted sum of the vertices, weighted by the lengths of the opposite sides, and normalized. If the vertices are <em>A</em>, <em>B</em>, and <em>C</em>, then the incenter is</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/incenter.svg" alt="\frac{aA + bB + cC}{a + b + c}" width="106" height="41" /></p>
+<p>where <em>A</em> is the vertex opposite side <em>a</em>, <em>B</em> is the vertex opposite side <em>b</em>, and <em>C</em> is the vertex opposite side <em>c</em>.</p>
+<h2>Python code</h2>
+<p>The following Python code will draw a triangle with its incircle. Calling this function for each triangle in the triangulation will create the illustrations we&#8217;re after.</p>
+<pre>from numpy import *
+import matplotlib.pyplot as plt
+
+def draw_triangle_with_incircle(A, B, C):
+    a = linalg.norm(B - C)
+    b = linalg.norm(A - C)
+    c = linalg.norm(A - B)
+    s = (a + b + c)/2
+    r = sqrt(s*(s-a)*(s-b)*(s-c))/s
+    center = (a*A + b*B + c*C)/(a + b + c)
+    plt.plot([A[0], B[0]], [A[1], B[1]], color="C0")
+    plt.plot([B[0], C[0]], [B[1], C[1]], color="C0")
+    plt.plot([A[0], C[0]], [A[1], C[1]], color="C0")
+    t = linspace(0, 2*pi)
+    plt.plot(r*cos(t) + center[0], r*sin(t) + center[1], color="C2")
+    return r
+</pre>
+<p>Next, we pick six points not quite evenly spaced around a circle.</p>
+<pre>angle = [0, 50, 110, 160, 220, 315] # degrees
+p = [array([cos(deg2rad(angle[i])), sin(deg2rad(angle[i]))]) for i in range(6)]
+</pre>
+<p>Now we draw three different triangulations of the hexagon defined by the points above. We also print the sum of the inradii to verify that each sum is the same.</p>
+<pre>def draw_polygon(triangles):
+    rsum = 0
+    for t in triangles:
+        rsum += draw_triangle_with_incircle(p[t[0]], p[t[1]], p[t[2]])        
+    print(rsum)
+    plt.axis("off")
+    plt.gca().set_aspect("equal")
+    plt.show()
+
+draw_polygon([[0,1,2], [0,2,3], [0,3,4], [0,4,5]])
+draw_polygon([[0,1,2], [2,3,4], [4,5,0], [0,2,4]])
+draw_polygon([[0,1,2], [0,2,3], [0,3,5], [3,4,5]])
+</pre>
+<p>This produces the two images at the top of the post the one below. All the inradii sum are 1.1441361217691244 with a little variation in the last decimal place.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/japanesepolygon3.png" width="480" height="360" /></p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/04/16/triangulate-polygon/">How many ways can you triangulate a polygon?</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2018/04/03/planets-and-platonic-solids/">Planets and Platonic Solids</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2022/09/12/japanese-prefectures/">Graphing Japanese Prefectures</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/05/japanese-polygon-theorem/">Japanese polygon theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/05/japanese-polygon-theorem/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Tetrahedral analog of the Pythagorean theorem</title>
+		<link>https://www.johndcook.com/blog/2025/11/03/de-gua/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Mon, 03 Nov 2025 16:12:02 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Geometry]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246663</guid>
+
+					<description><![CDATA[<p>A tetrahedron has four triangular faces. Suppose three of those faces come together like the corner of a cube, each perpendicular to the other. Let A1, A2, and A3 be the areas of the three triangles that meet at this corner and let A0 be the area of remaining face, the one opposite the right [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/03/de-gua/">Tetrahedral analog of the Pythagorean theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>A tetrahedron has four triangular faces. Suppose three of those faces come together like the corner of a cube, each perpendicular to the other. Let <em>A</em><sub>1</sub>, <em>A</em><sub>2</sub>, and <em>A</em><sub>3</sub> be the areas of the three triangles that meet at this corner and let <em>A</em><sub>0</sub> be the area of remaining face, the one opposite the right corner.</p>
+<p>De Gua&#8217;s theorem, published in 1783, says</p>
+<p style="padding-left: 40px;"><em>A</em><sub>0</sub>² = <em>A</em><sub>1</sub>² + <em>A</em><sub>2</sub>² + <em>A</em><sub>3</sub>².</p>
+<p>We will illustrate De Gua&#8217;s theorem using Python.</p>
+<pre>from numpy import *
+
+def area(p1, p2, p3):
+    return 0.5*abs(linalg.norm(cross(p1 - p3, p2 - p3)))
+
+p0 = array([ 0, 0,  0])
+p1 = array([11, 0,  0])
+p2 = array([ 0, 3,  0])
+p3 = array([ 0, 0, 25])
+
+A0 = area(p1, p2, p3)
+A1 = area(p0, p2, p3)
+A2 = area(p0, p1, p3)
+A3 = area(p0, p1, p2)
+
+print(A0**2 - A1**2 - A2**2 - A3**2)
+</pre>
+<p>This prints 0, as expected.</p>
+<h2>Higher dimensions</h2>
+<p>A natural question is whether De Gua&#8217;s theorem generalizes to higher dimensions, and indeed it does.</p>
+<p>Suppose you have a 4-simplex where one corner fits in the corner of a hypercube. The 4-simplex has 5 vertices. If you leave out any vertex, the remaining 4 points determine a tetrahedron. Let <em>V</em><sub>0</sub> be the volume of the tetrahedron formed by leaving out the vertex at the corner of the hypercube, and let <em>V</em><sub>1</sub>, <em>V</em><sub>2</sub>, <em>V</em><sub>3</sub>, and <em>V</em><sub>4</sub> be the volumes of the tetrahedra formed by dropping out each of the other vertices. Then</p>
+<p style="padding-left: 40px;"><em>V</em><sub>0</sub>² = <em>V</em><sub>1</sub>² + <em>V</em><sub>2</sub>² + <em>V</em><sub>3</sub>² + <em>V</em><sub>4</sub>².</p>
+<p>You can extend the theorem to even higher dimensions analogously.</p>
+<p>Let&#8217;s illustrate the theorem for the 4-simplex in Python. The volume of a tetrahedron can be computed as</p>
+<p style="padding-left: 40px;"><em>V</em> = det(<em>G</em>)<sup>1/2</sup>/6</p>
+<p>where <em>G</em> is the <a href="https://www.johndcook.com/blog/2023/07/09/gram-matrix/">Gram matrix</a> computed in the code below.</p>
+<pre>def volume(p1, p2, p3, p4):
+    u = p1 - p4
+    v = p2 - p4
+    w = p3 - p4
+
+    # construct the Gram matrix
+    G = array( [
+            [dot(u, u), dot(u, v), dot(u, w)],
+            [dot(v, u), dot(v, v), dot(v, w)],
+            [dot(w, u), dot(w, v), dot(w, w)] ])
+
+    return sqrt(linalg.det(G))/6
+
+p0 = array([ 0, 0,  0, 0])
+p1 = array([11, 0,  0, 0])
+p2 = array([ 0, 3,  0, 0])
+p3 = array([ 0, 0, 25, 0])
+p4 = array([ 0, 0,  0, 7])
+
+V0 = volume(p1, p2, p3, p4)
+V1 = volume(p0, p2, p3, p4)
+V2 = volume(p0, p1, p3, p4)
+V3 = volume(p0, p1, p2, p4)
+V4 = volume(p0, p1, p2, p3)
+
+print(V0**2 - V1**2 - V2**2 - V3**2 - V4**2)
+</pre>
+<p>This prints -9.458744898438454e-11. The result is 0, modulo the limitations of floating point arithmetic.</p>
+<h2>Numerical analysis</h2>
+<p>Floating point arithmetic is generally accurate to 15 decimal places. Why is the numerical error above relatively large? The loss of precision is the usual suspect: subtracting nearly equal numbers. We have</p>
+<pre>V0 = 130978.7777777778</pre>
+<p>and</p>
+<pre>V1**2 + V2**2 + V3**2 + V4**2 = 130978.7777777779</pre>
+<p>Both results are correct to 16 decimal places, but when we subtract them we lose all precision.</p>The post <a href="https://www.johndcook.com/blog/2025/11/03/de-gua/">Tetrahedral analog of the Pythagorean theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The anti-Smith chart</title>
+		<link>https://www.johndcook.com/blog/2025/11/02/anti-smith-chart/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Sun, 02 Nov 2025 22:12:53 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Complex analysis]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246662</guid>
+
+					<description><![CDATA[<p>As I&#8217;ve written about several times lately, the Smith chart is the image of a rectangular grid in the right half-plane under the function f(z) = (z − 1)/(z + 1). What would the image of a grid in the left half-plane look like? For starters, since f maps the right half-plane to the interior of the unit [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/02/anti-smith-chart/">The anti-Smith chart</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>As I&#8217;ve written about <a href="https://www.johndcook.com/blog/2025/10/23/smith-chart/">several</a> <a href="https://www.johndcook.com/blog/2025/10/25/smith-chart-spacing/">times</a> <a href="https://www.johndcook.com/blog/2025/11/02/impedance-and-trianglular-numbers/">lately</a>, the Smith chart is the image of a rectangular grid in the right half-plane under the function</p>
+<p style="padding-left: 40px;"><em>f</em>(<em>z</em>) = (<em>z</em> − 1)/(<em>z</em> + 1).</p>
+<p>What would the image of a grid in the <strong>left</strong> half-plane look like?</p>
+<p>For starters, since <em>f</em> maps the right half-plane to the interior of the unit circle, it must map the left-half plane to the <strong>exterior</strong> of the unit circle.</p>
+<p>As we said before, the function <em>f</em> is a Möbius transformation, and so it takes generalized circles, i.e. either a circle or a line, to generalized circles. So the grid lines in the left half-plane are either mapped to lines or circles. Which is it?</p>
+<p>The function <em>f</em> has a singularity at −1 and so the image of any line (or circle) through <em>z</em> = −1 is unbounded, i.e. a line, not a circle. Any line not passing through −1 has a bounded image, which must be a circle.</p>
+<p>The line Re(<em>z</em>) = −1 in the <em>z</em> plane is mapped to the line Re(<em>w</em>) = 1 in the <em>w</em> plane. Otherwise a vertical line crossing the real axis at <em>x</em> is mapped to a circle passing through <em>w</em> = (<em>x </em>− 1)/(<em>x</em> + 1). The circle also passes through <em>w</em> = 1 because <em>f</em>(∞) = 1. The circle is symmetric about the real axis, and so this is enough information to uniquely determine the circle.</p>
+<p>Note that (<em>x </em>− 1)/(<em>x</em> + 1) &gt; 1 when <em>x</em> &lt; −1 and so vertical lines with real part less than −1 are mapped to circles to the right of <em>w</em> = 1. When −1 &lt; <em>x</em> &lt; 0, vertical lines are mapped to circles to the left of <em>w</em> = 1.</p>
+<p>The images of horizontal lines we&#8217;ve looked at before. These are all circles passing through <em>w</em> = 1 and tangent to the circles that are images of vertical lines. But this time instead of taking the portion of the circles inside the unit circle, we take the portion outside the unit circle.</p>
+<p>And without further ado, we present the anti-Smith chart, the image of a grid in the <strong>left</strong> half plane.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/smithchart14.png" width="640" height="480" /></p>
+<p>&nbsp;</p>The post <a href="https://www.johndcook.com/blog/2025/11/02/anti-smith-chart/">The anti-Smith chart</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Impedance and Triangular Numbers</title>
+		<link>https://www.johndcook.com/blog/2025/11/02/impedance-and-trianglular-numbers/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Sun, 02 Nov 2025 13:10:50 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246651</guid>
+
+					<description><![CDATA[<p>A few days ago I wrote two posts about how to create a Smith chart, a graphical device used for impedance calculations. Then someone emailed me to point out the connection between the Smith chart and triangular numbers. The Smith chart is the image of a rectangular grid in the right half-plane under the function [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/02/impedance-and-trianglular-numbers/">Impedance and Triangular Numbers</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>A few days ago I wrote <a href="https://www.johndcook.com/blog/2025/10/23/smith-chart/">two</a> <a href="https://www.johndcook.com/blog/2025/10/25/smith-chart-spacing/">posts</a> about how to create a Smith chart, a graphical device used for impedance calculations. Then someone emailed me to point out the connection between the Smith chart and triangular numbers.</p>
+<p>The Smith chart is the image of a rectangular grid in the right half-plane under the function</p>
+<p style="padding-left: 40px;"><em>f</em>(<em>z</em>) = (<em>z</em> − 1)/(<em>z</em> + 1).</p>
+<p>If you subtract the values of <em>f</em> at consecutive integers, you get the reciprocal of a triangular number.</p>
+<p style="padding-left: 40px;"><em>f</em>(<em>n</em>) − <em>f</em>(<em>n</em> − 1) = 2/(<em>n</em>(<em>n</em> + 1)) = 1 / <em>T</em><sub><em>n</em></sub></p>
+<p>Or to put it another way,</p>
+<p style="padding-left: 40px;"><em>f</em>(<em>n</em>) − <em>f</em>(<em>n</em> − 1) = 1 / (1 + 2 + 3 + … + <em>n</em>).</p>
+<p>In the first post on the Smith chart we showed that the function <em>f</em> maps vertical lines</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" src="https://www.johndcook.com/smithchart0.png" width="480" height="360" /></p>
+<p>in the <em>z</em> plane to circles in the <em>w</em> plane all touching at <em>w</em> = 1.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" src="https://www.johndcook.com/smithchart1.png" width="480" height="360" /></p>
+<p>The circles are symmetric about the real axis and the diameter runs from <em>f</em>(<em>n</em>) to 1. The separation between the circles on the left side is thus</p>
+<p style="padding-left: 40px;"><em>f</em>(<em>n</em>) − <em>f</em>(<em>n</em> − 1) = 1 / <em>T</em><sub><em>n</em></sub>.</p>
+<p>Number the circles starting from the outermost as 0, 1, 2, …. Then the maximum distance between circle <em>n</em> and circle <em>n</em> − 1 is 1 / <em>T</em><sub><em>n</em></sub>. You can see in the graph above that the distance between circle 0 and circle 1 is 1. It&#8217;s a little harder to see that the distance between circle 1 and circle 2 is 1/3. It looks like the distance between circles 2 and 3 is about half of that between circles 1 and 2, so it would be 1/6.</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/special-numbers/">Special numbers</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2021/02/26/smith-transform/">Applications of (1−z)/(1+z)</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2024/09/26/mobius/">Ramanujan ellipse approximation</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/11/02/impedance-and-trianglular-numbers/">Impedance and Triangular Numbers</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Cross ratio</title>
+		<link>https://www.johndcook.com/blog/2025/11/01/cross-ratio/</link>
+					<comments>https://www.johndcook.com/blog/2025/11/01/cross-ratio/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Sat, 01 Nov 2025 14:28:24 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Complex analysis]]></category>
+		<category><![CDATA[Geometry]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246659</guid>
+
+					<description><![CDATA[<p>The cross ratio of four points A, B, C, D is defined by where XY denotes the length of the line segment from X to Y. The idea of a cross ratio goes back at least as far as Pappus of Alexandria (c. 290 – c. 350 AD). Numerous theorems from geometry are stated in terms of the cross ratio. For example, the cross [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/11/01/cross-ratio/">Cross ratio</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The cross ratio of four points <em>A</em>, <em>B</em>, <em>C</em>, <em>D</em> is defined by</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/crossratio1.svg" alt="(A, B; C, D) = \frac{AC \cdot BD}{BC \cdot AD}" width="182" height="40" /></p>
+<p>where <em>XY</em> denotes the length of the line segment from <em>X</em> to <em>Y</em>.</p>
+<p>The idea of a cross ratio goes back at least as far as Pappus of Alexandria (c. 290 – c. 350 AD). Numerous theorems from geometry are stated in terms of the cross ratio. For example, the cross ratio of four points is unchanged under a projective transformation.</p>
+<h2>Complex numbers</h2>
+<p>The cross ratio of four (extended [1]) complex numbers is defined by</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/crossratio2.svg" alt="(z_1, z_2; z_3, z_4) = \frac{(z_3 - z_1)(z_4 - z_2)}{(z_3 - z_2)(z_4 - z_1)}" width="274" height="45" /></p>
+<p>The absolute value of the complex cross ratio is the cross ratio of the four numbers as points in a plane.</p>
+<p>The cross ratio is invariant under Möbius transformations, i.e. if <em>T</em> is any Möbius transformation, then</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/crossratio3.svg" alt="(T(z_1), T(z_2); T(z_3), T(z_4)) = (z_1, z_2; z_3, z_4)" width="348" height="18" /></p>
+<p>This is connected to the invariance of the cross ratio in geometry: Möbius transformations are projective transformations on a complex projective line. (More on that <a href="https://www.johndcook.com/blog/2023/09/22/fractional-linear-and-linear/">here</a>.)</p>
+<p>If we fix the first three arguments but leave the last argument variable, then</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/crossratio4.svg" alt="T(z) = (z_1, z_2; z_3, z) = \frac{(z_3 - z_1)(z - z_2)}{(z_3 - z_2)(z - z_1)}" width="321" height="45" /></p>
+<p>is the unique Möbius transformation mapping <em>z</em><sub>1</sub>, <em>z</em><sub>2</sub>, and <em>z</em><sub>3</sub> to ∞, 0, and 1 respectively.</p>
+<h2>The anharmonic group</h2>
+<p>Suppose (<em>a</em>, <em>b</em>; <em>c</em>, <em>d</em>) = λ ≠ 1. Then there are 4! = 24 permutations of the arguments and 6 corresponding cross ratios:</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/crossratio5.svg" alt="\lambda, \frac{1}{\lambda}, 1 - \lambda, \frac{1}{1 - \lambda}, \frac{\lambda - 1}{\lambda}, \frac{\lambda}{\lambda - 1} " width="239" height="41" /></p>
+<p>Viewed as functions of λ, these six functions form a group, generated by</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/crossratio6.svg" alt="\begin{align*} f(\lambda) &amp;= \frac{1}{\lambda} \\ g(\lambda) &amp;= 1 - \lambda \end{align*} " width="101" height="69" /></p>
+<p>This group is called the anharmonic group. Four numbers are said to be in harmonic relation if their cross ratio is 1, so the requirement that λ ≠ 1 says that the four numbers are anharmonic.</p>
+<p>The six elements of the group can be written as</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/crossratio7.svg" alt="\begin{align*} f(\lambda) &amp;= \frac{1}{\lambda} \\ g(\lambda) &amp;= 1 - \lambda \\ f(f(\lambda)) &amp;= g(g(\lambda) = z \\ f(g(\lambda)) &amp;= \frac{1}{\lambda - 1} \\ g(f(\lambda)) &amp;= \frac{\lambda - 1}{\lambda} \\ f(g(f(\lambda))) &amp;= g(f(g(\lambda))) = \frac{\lambda}{\lambda - 1} \end{align*}" width="268" height="245" /></p>
+<h2>Hypergeometric transformations</h2>
+<p>When I was looking at the six possible cross ratios for permutations of the arguments, I thought about where I&#8217;d seen them before: the linear transformation formulas for hypergeometric functions. These are, for example, equations 15.3.3 through 15.3.9 in <a href="https://amzn.to/2l0Kasl">A&amp;S</a>. They relate the hypergeometric function <em>F</em>(<em>a</em>, <em>b</em>; <em>c</em>; <em>z</em>) to similar functions where the argument <em>z</em> is replaced with one of the elements of the anharmonic group.</p>
+<p>I&#8217;ve written about these transformations before <a href="https://www.johndcook.com/blog/2024/04/16/hypergeometric-large-negative-z/">here</a>. For example,</p>
+<p><img decoding="async" class="aligncenter" src="https://www.johndcook.com/hypergeom_bigneg1.svg" alt="F(a, b; c; z) = (1-z)^{-a} F\left(a, c-b; c; \frac{z}{z-1} \right)" /></p>
+<p>There are deep relationships between hypergeometric functions and projective geometry, so I assume there&#8217;s an elegant explanation for the similarity between the transformation formulas and the anharmonic group, though I can&#8217;t say right now what it is.</p>
+<h2>Related posts</h2>
+<ul>
+<li class='link'><a href='https://www.johndcook.com/blog/2022/04/25/projective-duality/'>Projective duality</a></li>
+<li class='link'><a href='https://www.johndcook.com/blog/2022/04/25/finite-projective-planes/'>Finite projective planes</a></li>
+<li class='link'><a href='https://www.johndcook.com/blog/2025/09/15/area-mobius-transformation/'>Area of the unit disk after a Möbius transformation</a></li>
+</ul>
+<p>[1] For completeness we need to include a point at infinity. If one of the <em>z</em> equals ∞ then the terms involving ∞ are dropped from the definition of the cross ratio.</p>The post <a href="https://www.johndcook.com/blog/2025/11/01/cross-ratio/">Cross ratio</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/11/01/cross-ratio/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Text case changes the size of QR codes</title>
+		<link>https://www.johndcook.com/blog/2025/10/31/smaller-qr-codes/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Fri, 31 Oct 2025 15:44:10 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Coding theory]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246656</guid>
+
+					<description><![CDATA[<p>Let&#8217;s make a QR code out of a sentence two ways: mixed case and upper case. We&#8217;ll use Python with the qrcode library. &#62;&#62;&#62; import qrcode &#62;&#62;&#62; s = "The quick brown fox jumps over the lazy dog." &#62;&#62;&#62; qrcode.make(s).save("mixed.png") &#62;&#62;&#62; qrcode.make(s.upper()).save("upper.png") Here are the mixed case and upper case QR codes. The QR code [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/10/31/smaller-qr-codes/">Text case changes the size of QR codes</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Let&#8217;s make a QR code out of a sentence two ways: mixed case and upper case. We&#8217;ll use Python with the <code>qrcode</code> library.</p>
+<pre>&gt;&gt;&gt; import qrcode
+&gt;&gt;&gt; s = "The quick brown fox jumps over the lazy dog."
+&gt;&gt;&gt; qrcode.make(s).save("mixed.png")
+&gt;&gt;&gt; qrcode.make(s.upper()).save("upper.png")
+</pre>
+<p>Here are the mixed case and upper case QR codes.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/qr_mixed_upper.png" width="400" height="225" /></p>
+<p>The QR code creation algorithm interprets the mixed case sentence as binary data but it interprets the upper case sentence as alphanumeric data.</p>
+<p>Alphanumeric data, in the context of QR codes, comes from the following alphabet of 45 characters:</p>
+<pre>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ $%*+-./:</pre>
+<p>Since 45² = 2025 &lt; 2048 = 2<sup>11</sup> two alphanumeric characters can be encoded in 11 bits. If text contains a single character outside this alphabet, such as a lower case letter, then the text is encoded as ISO/IEC 8859-1 using 8 bits per character.</p>
+<p>Switching from mixed-case text to upper case text reduces the bits per character from 8 to 5.5, and so we should expect the resulting QR code to require about 30% fewer pixels. In the example above we go from a 33 × 33 grid down to a 29 × 29 grid, from 1089 pixels to 841.</p>
+<h2>Application to Bitcoin addressess</h2>
+<p><a href="https://www.johndcook.com/blog/2025/09/09/bech32-encoding/">Bech32 encoding</a> uses an alphabet of 32 characters while <a href="https://www.johndcook.com/blog/2025/07/23/base58-base85/">Base58 encoding</a> uses an alphabet of 58 characters, and so the former needs about 17% more characters to represent the same data. But Bech32 uses a monocase alphabet, and base 58 does not, and so Bech32 encoding requires fewer QR code pixels to represent the same data as Base58 encoding.</p>
+<p>(Bech32 encoding uses a <em>lower case</em> alphabet, but the letters are converted to upper case before creating QR codes.)</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/2018/12/28/base-32-and-base-64-encoding/">Base 32 and Base 64 encoding</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2020/04/07/two-meanings-of-qr-code/">Two meanings of QR code</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2025/08/28/dithered-qr-codes/">Dithered QR codes</a></li>
+</ul>The post <a href="https://www.johndcook.com/blog/2025/10/31/smaller-qr-codes/">Text case changes the size of QR codes</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>An ancient generalization of the Pythagorean theorem</title>
+		<link>https://www.johndcook.com/blog/2025/10/30/apollonius-theorem/</link>
+					<comments>https://www.johndcook.com/blog/2025/10/30/apollonius-theorem/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Thu, 30 Oct 2025 13:02:19 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Geometry]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246652</guid>
+
+					<description><![CDATA[<p>Apollonius of Perga (c. 262 BC – c. 190 BC) discovered a theorem that generalizes the Pythagorean theorem but isn&#8217;t nearly as well known. Let ABC be a general triangle, and let D be the midpoint of the segment AB. Let a be the length of the side opposite A and b the length of the side [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/10/30/apollonius-theorem/">An ancient generalization of the Pythagorean theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>Apollonius of Perga (c. 262 BC – c. 190 BC) discovered a theorem that generalizes the Pythagorean theorem but isn&#8217;t nearly as well known.</p>
+<p>Let ABC be a general triangle, and let D be the midpoint of the segment AB. Let <em>a</em> be the length of the side opposite A and <em>b</em> the length of the side opposite B. Let <em>m</em> be the length of AD and <em>h</em> the length of the mediant, the line CD.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/apollonius3.png" width="480" height="360" /></p>
+<p>Apollonius&#8217;s theorem says</p>
+<p style="padding-left: 40px;"><em>a</em>² + <em>b</em>² = 2(<em>m</em>² + <em>h</em>²).</p>
+<p>To see that this is a generalization of the Pythagorean theorem, apply Apollonius&#8217; theorem to an isosceles triangle. Now <em>a</em> = <em>b</em> and ACD is a right triangle.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/apollonius4.png" width="480" height="360" /></p>
+<p>Apollonius&#8217; theorem says</p>
+<p style="padding-left: 40px;">2<em>b</em>² = 2<em>m</em>² + 2<em>h</em>²</p>
+<p>which is the Pythagorean theorem applied to ACD with each term doubled.</p>The post <a href="https://www.johndcook.com/blog/2025/10/30/apollonius-theorem/">An ancient generalization of the Pythagorean theorem</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/10/30/apollonius-theorem/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mentally compute logs base 2</title>
+		<link>https://www.johndcook.com/blog/2025/10/29/estimating-log-base-2/</link>
+					<comments>https://www.johndcook.com/blog/2025/10/29/estimating-log-base-2/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Wed, 29 Oct 2025 14:24:45 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Mental math]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246650</guid>
+
+					<description><![CDATA[<p>The previous post required computing After writing the post, I thought about how you would mentally approximate log2 5. The most crude approximation would round 5 down to 4 and use log2 4 = 2 to approximate log2 5. That would be good enough for an order of magnitude guess, but we can do much better [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/10/29/estimating-log-base-2/">Mentally compute logs base 2</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The previous post required computing</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/log2eq1.svg" alt="\frac{128}{\log_2 5}" width="47" height="45" /></p>
+<p>After writing the post, I thought about how you would mentally approximate log<sub>2</sub> 5. The most crude approximation would round 5 down to 4 and use log<sub>2</sub> 4 = 2 to approximate log<sub>2</sub> 5. That would be good enough for an order of magnitude guess, but we can do much better without too much more work.</p>
+<h2>Simple approximation</h2>
+<p>I&#8217;ve written <a href="https://www.johndcook.com/blog/mental-functions/">before</a> about the approximation</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/log2eq3.svg" alt="\log_2 x \approx 3\frac{x - 1}{x + 1}" width="125" height="40" /></p>
+<p>for <em>x</em> between 1/√2 and √2. We can write 5 as 4 (5/4) and so</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/log2eq5.svg" alt="\begin{align*} \log_2 5 &amp;= \log_2 4 (5/4) \\ &amp;= \log_2 4 + \log_2 (5/4) \\ &amp;\approx 2 + 3\frac{5/4 - 1}{5/4 + 1} \\ &amp;= 2 + 3 \frac{1/4}{9/4} \\ &amp;= 7/3 \end{align*}" width="215" height="181" /></p>
+<p>How accurate is this? The exact value of log<sub>2</sub> 5 is 2.3219…. Approximating this number by 7/3 is much better than approximating it by just 2, reducing the relative error from 16% down to 0.5%.</p>
+<h2>Origin story</h2>
+<p>Where did the approximation</p>
+<p><img loading="lazy" decoding="async" class="aligncenter" style="background-color: white;" src="https://www.johndcook.com/log2eq3.svg" alt="\log_2 x \approx 3\frac{x - 1}{x + 1}" width="125" height="40" /></p>
+<p>come from?</p>
+<p>I don&#8217;t remember where I found it. I wouldn&#8217;t be surprised if it was from something Ron Doerfler wrote. But how might someone have derived it?</p>
+<p>You&#8217;d like an approximation that works on the interval from 1/√2 to √2 because you can always multiply or divide by a power of 2 to reduce the problem to this interval. Rational approximations are the usual way to approximate functions over an interval [1], and for mental calculation you&#8217;d want to use the lowest order possible, i.e. degree 1 in the numerator and denominator.</p>
+<p>Here&#8217;s how we could ask Mathematica to find a rational approximation for us [2].</p>
+<pre>Simplify[
+    N[
+        ResourceFunction["EconomizedRationalApproximation"][
+            Log[2, x], { x, {1/Sqrt[2], Sqrt[2]}, 1, 1}]]]
+</pre>
+<p>This returns</p>
+<pre>(2.97035 <em>x</em> − 2.97155) / (1.04593 + <em>x</em>)</pre>
+<p>which we round off to</p>
+<pre>(3 <em>x</em> − 3) / (1 + <em>x</em>).</pre>
+<p>The <code>N</code> function turns a symbolic result into one with floating point numbers. Without this call we get a complicated expression involving square roots and logs of rational numbers.</p>
+<p>The <code>Simplify</code> function returns an algebraically equivalent but simpler expression for its argument. In our case the function finishes the calculation by removing some parentheses.</p>
+<h2>Related posts</h2>
+<ul>
+<li class="link"><a href="https://www.johndcook.com/blog/mental-functions/">Mentally computing common functions</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2024/08/31/mentally-multiply-by-pi/">Mentally multiply by π</a></li>
+<li class="link"><a href="https://www.johndcook.com/blog/2022/02/27/100-digits-worth-memorizing/">Numbers worth remembering</a></li>
+</ul>
+<p>[1] Power series approximations are easier to compute, but power series approximations don&#8217;t give the best accuracy over an interval. Power series are excellent at the point where they&#8217;re centered, but degrade as you move away from the center. Rational approximations spread the error more uniformly.</p>
+<p>[2] I first tried using Mathematica&#8217;s <code>MiniMaxApproximation</code> function, but it ran into numerical problems, so I switched to <code>EconomizedRationalApproximation</code>.</p>The post <a href="https://www.johndcook.com/blog/2025/10/29/estimating-log-base-2/">Mentally compute logs base 2</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/10/29/estimating-log-base-2/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Physical Keys and Encryption Keys</title>
+		<link>https://www.johndcook.com/blog/2025/10/29/physical-keys-encryption-keys/</link>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Wed, 29 Oct 2025 11:50:56 +0000</pubDate>
+				<category><![CDATA[Computing]]></category>
+		<category><![CDATA[Cryptography]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246649</guid>
+
+					<description><![CDATA[<p>A physical key, such as a house key, is a piece of metal with cuts of differing depths. Typically there may be around 6 cuts, with five different possible depths for each cut. This allows 56 = 15,625 possible keys. Encryption keys, such as AES keys, are a string of bits, often 128 bits, for [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/10/29/physical-keys-encryption-keys/">Physical Keys and Encryption Keys</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>A physical key, such as a house key, is a piece of metal with cuts of differing depths. Typically there may be around 6 cuts, with five different possible depths for each cut. This allows 5<sup>6</sup> = 15,625 possible keys.</p>
+<p>Encryption keys, such as AES keys, are a string of bits, often 128 bits, for a total of 2<sup>128</sup> possible keys.</p>
+<p>How long would a physical key have to be to have the same level of security as an encryption key? We&#8217;d need to solve</p>
+<p style="padding-left: 40px;">5<sup><em>n</em></sup> = 2<sup>128</sup></p>
+<p>which means</p>
+<p style="padding-left: 40px;"><em>n</em> = 128 / log<sub>2</sub>5 = 55.12.</p>
+<p>So we&#8217;d need a key with around 55 notches.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-medium" src="https://www.johndcook.com/long_key.png" alt="metal key with 55 notches" width="500" height="125" /></p>
+<p>This only takes into account combinatorial possibilities, not the difficulty of attacking a physical key or a binary key. There are incomparably more possibilities for binary keys, but encryption attacks can be automated and carried out remotely (unless a computer is air gapped). A physical lock can only be attacked in person. It takes a lock picker orders of magnitude more time to try a key than a password cracking program. On the other hand, locks aren&#8217;t picked by trying thousands of keys.</p>
+<p><b>Related post</b>: <a href="https://www.johndcook.com/blog/2025/09/02/cryptographic-strength/">Measuring cryptographic strength in liters of boiling water</a></p>The post <a href="https://www.johndcook.com/blog/2025/10/29/physical-keys-encryption-keys/">Physical Keys and Encryption Keys</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Freshman&#8217;s dream</title>
+		<link>https://www.johndcook.com/blog/2025/10/28/freshmans-dream/</link>
+					<comments>https://www.johndcook.com/blog/2025/10/28/freshmans-dream/#comments</comments>
+		
+		<dc:creator><![CDATA[John]]></dc:creator>
+		<pubDate>Tue, 28 Oct 2025 15:21:55 +0000</pubDate>
+				<category><![CDATA[Math]]></category>
+		<category><![CDATA[Number theory]]></category>
+		<guid isPermaLink="false">https://www.johndcook.com/blog/?p=246647</guid>
+
+					<description><![CDATA[<p>The &#8220;Freshman&#8217;s dream&#8221; is the statement (x + y)p = xp + yp It&#8217;s not true in general, but it is true mod p if p is a prime. It&#8217;s a cute result, but it&#8217;s also useful in applications, such as finite field computations in cryptography. Here&#8217;s a demonstration of the Freshman&#8217;s dream in Python. &#62;&#62;&#62; p = [&#8230;]</p>
+The post <a href="https://www.johndcook.com/blog/2025/10/28/freshmans-dream/">Freshman’s dream</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></description>
+										<content:encoded><![CDATA[<p>The &#8220;Freshman&#8217;s dream&#8221; is the statement</p>
+<p style="padding-left: 40px;">(<em>x</em> + <em>y</em>)<sup><em>p</em></sup> = <em>x</em><sup><em>p</em></sup> + <em>y</em><sup><em>p</em></sup></p>
+<p>It&#8217;s not true in general, but it <em>is</em> true mod <em>p</em> if <i>p</i> is a prime. It&#8217;s a cute result, but it&#8217;s also useful in applications, such as finite field computations in cryptography.</p>
+<p>Here&#8217;s a demonstration of the Freshman&#8217;s dream in Python.</p>
+<pre>&gt;&gt;&gt; p = 5
+&gt;&gt;&gt; [((x + y)**p - x**p - y**p) % p for x in range(p) for y in range(p)]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+</pre>
+<p>Here&#8217;s an example using a prime too large for verify the results by looking at the output.</p>
+<pre>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; p = 103
+&gt;&gt;&gt; v = [((x + y)**p - x**p - y**p) % p for x in range(p) for y in range(p)]
+&gt;&gt;&gt; np.all( np.array(v) == 0 )
+True
+</pre>
+<p>You can use the same code to show that the Freshman&#8217;s dream is not true in general if <em>p</em> is not a prime, and it&#8217;s not true in general if <em>p</em> is a prime but the exponent is less than <em>p</em>.</p>The post <a href="https://www.johndcook.com/blog/2025/10/28/freshmans-dream/">Freshman’s dream</a> first appeared on <a href="https://www.johndcook.com/blog">John D. Cook</a>.]]></content:encoded>
+					
+					<wfw:commentRss>https://www.johndcook.com/blog/2025/10/28/freshmans-dream/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

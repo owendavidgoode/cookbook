@@ -1,0 +1,1428 @@
+[
+  {
+    "id": 260,
+    "count": 16,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/ai/",
+    "name": "AI",
+    "slug": "ai",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/260",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=260"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 233,
+    "count": 15,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/algorithms/",
+    "name": "Algorithms",
+    "slug": "algorithms",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/233",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=233"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 261,
+    "count": 13,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/artificial-intelligence/",
+    "name": "Artificial Intelligence",
+    "slug": "artificial-intelligence",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/261",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=261"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "count": 0,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/blogroll/",
+    "name": "Blogroll",
+    "slug": "blogroll",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/2",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=2"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "count": 206,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/business/",
+    "name": "Business",
+    "slug": "business",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/3",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=3"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "count": 55,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/clinical-trials/",
+    "name": "Clinical trials",
+    "slug": "clinical-trials",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/4",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=4"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 301,
+    "count": 1,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/computational-complexity/",
+    "name": "Computational Complexity",
+    "slug": "computational-complexity",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/301",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=301"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "count": 520,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/computing/",
+    "name": "Computing",
+    "slug": "computing",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/5",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=5"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "count": 161,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/creativity/",
+    "name": "Creativity",
+    "slug": "creativity",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/6",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 270,
+    "count": 3,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/data/",
+    "name": "Data",
+    "slug": "data",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/270",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=270"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 258,
+    "count": 1,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/games/",
+    "name": "Games",
+    "slug": "games",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/258",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=258"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 222,
+    "count": 30,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/geography/",
+    "name": "Geography",
+    "slug": "geography",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/222",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=222"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "count": 43,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/graphics/",
+    "name": "Graphics",
+    "slug": "graphics",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/7",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=7"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 272,
+    "count": 5,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/high-performance-computing/",
+    "name": "High Performance Computing",
+    "slug": "high-performance-computing",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/272",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=272"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 173,
+    "count": 0,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/julia/",
+    "name": "Julia",
+    "slug": "julia",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/173",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=173"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "count": 0,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/links/",
+    "name": "Links",
+    "slug": "links",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/8",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=8"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 157,
+    "count": 24,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/machine-learning/",
+    "name": "Machine learning",
+    "slug": "machine-learning",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/157",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=157"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "count": 2378,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/math/",
+    "name": "Math",
+    "slug": "math",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/9",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=9"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "count": 85,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/music/",
+    "name": "Music",
+    "slug": "music",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/10",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=10"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "count": 0,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/other/",
+    "name": "Other",
+    "slug": "other",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/11",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=11"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 248,
+    "count": 4,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/parallel-computing/",
+    "name": "Parallel computing",
+    "slug": "parallel-computing",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/248",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=248"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 276,
+    "count": 3,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/performance-engineering/",
+    "name": "Performance engineering",
+    "slug": "performance-engineering",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/276",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=276"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "count": 0,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/personal/",
+    "name": "Personal",
+    "slug": "personal",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/12",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=12"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "count": 47,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/powershell/",
+    "name": "PowerShell",
+    "slug": "powershell",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/13",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=13"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 238,
+    "count": 9,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/productivity/",
+    "name": "Productivity",
+    "slug": "productivity",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/238",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=238"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "count": 177,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/python/",
+    "name": "Python",
+    "slug": "python",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/14",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=14"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "count": 231,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/science/",
+    "name": "Science",
+    "slug": "science",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/15",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=15"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "count": 446,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/software-development/",
+    "name": "Software development",
+    "slug": "software-development",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/16",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=16"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "count": 418,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/statistics/",
+    "name": "Statistics",
+    "slug": "statistics",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/17",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=17"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "count": 50,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/typography/",
+    "name": "Typography",
+    "slug": "typography",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/18",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=18"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "count": 996,
+    "description": "",
+    "link": "https://www.johndcook.com/blog/category/uncategorized/",
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories/1",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.johndcook.com/blog/wp-json/wp/v2/posts?categories=1"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

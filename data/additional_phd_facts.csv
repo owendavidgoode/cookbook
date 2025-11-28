@@ -1,0 +1,16 @@
+type,fact
+stats,"Day-to-day posting autocorrelation: 0.130 — when John blogs one day, he's slightly more likely to blog the next."
+stats,"Oct is the most productive month (480 posts), May the least (394) — a seasonal variation of 1.2x."
+stats,Average post title: 30.8 characters (σ=11.5). Shortest: 4 chars. Longest: 81 chars.
+stats,Category distribution follows approximate Zipf's law: top 10 categories have rank×frequency CV of 0.25 (perfect Zipf = 0).
+stats,"Tag usage entropy: 6.25 bits (normalized: 78.35%) — tags are used with moderate uniformity, not dominated by few."
+stats,'233' posts average 790 words — the most verbose category. '13' averages only 194 words.
+tone,"Punctuation personality: 5,139 question marks, 1,614 exclamations, 56,238 semicolons — inquisitive but not excitable."
+tone,Question-to-exclamation ratio: 3.2:1 — the blog asks 3x more questions than it makes emphatic statements.
+stats,Link density has increased 32% from 2008 to 2025 — the blog has become more interconnected.
+stats,"Detected code patterns: JavaScript (1065 posts), LaTeX (783), Mathematica (782)."
+stats,"Weekday posts (4,212) outnumber weekend posts (1,021) 1.7:1 on a per-day basis — blogging is work, not weekend hobby."
+stats,"Mathematical Unicode density: 7,108 symbols used. Top 5: π(1324), φ(890), θ(855), ×(779), √(579)."
+stats,Flesch-Kincaid grade level: 7.8 — written for roughly 8th grade reading level (typical science blogs: 12-14).
+stats,"Most-linked external domains: amzn.to(1006), twitter.com(355), en.wikipedia.org(272), x.com(204), web.archive.org(182)."
+stats,"Vocabulary evolution: 4,158 words appear in 2025 that never appeared in 2008 — the lexicon grows with the times."

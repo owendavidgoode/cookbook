@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "text": "Male honeybees have only a mother (born from unfertilized eggs), while females have both parents. Count ancestors at each generation and you get the Fibonacci sequence: 1, 1, 2, 3, 5, 8...",
+    "source_url": "https://www.johndcook.com/blog/2008/02/15/honeybee-geneology/",
+    "source_slug": "honeybee-geneology"
+  },
+  {
+    "id": 2,
+    "text": "Chebyshev's name has been transliterated so many ways (Chebyshev, Chebychev, Tchebycheff, Tschebyscheff...) that his polynomials are denoted T_n(x) based on one of the older spellings.",
+    "source_url": "https://www.johndcook.com/blog/2008/02/09/chebyshev-polynomials/",
+    "source_slug": "chebyshev-polynomials"
+  }
+]

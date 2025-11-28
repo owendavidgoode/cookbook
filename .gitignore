@@ -1,0 +1,13 @@
+# Deploy key (NEVER commit)
+.ssh/
+
+# Environment/secrets
+.env
+secrets.json
+
+# Python
+__pycache__/
+*.pyc
+
+# State tracking (optional - could commit this)
+# state.json

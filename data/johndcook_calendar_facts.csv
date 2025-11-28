@@ -1,0 +1,366 @@
+day,type,fact,source_link
+1,year,"2008: 410 posts (~84,446 words, avg 205 words each).",
+2,year,"2009: 366 posts (~93,597 words, avg 255 words each).",
+3,year,"2010: 284 posts (~76,186 words, avg 268 words each).",
+4,year,"2011: 317 posts (~70,508 words, avg 222 words each).",
+5,year,"2012: 357 posts (~77,133 words, avg 216 words each).",
+6,year,"2013: 260 posts (~59,789 words, avg 229 words each).",
+7,year,"2014: 147 posts (~27,607 words, avg 187 words each).",
+8,year,"2015: 168 posts (~49,277 words, avg 293 words each).",
+9,year,"2016: 209 posts (~80,767 words, avg 386 words each).",
+10,year,"2017: 184 posts (~70,425 words, avg 382 words each).",
+11,year,"2018: 266 posts (~125,938 words, avg 473 words each).",
+12,year,"2019: 288 posts (~128,358 words, avg 445 words each).",
+13,year,"2020: 288 posts (~129,913 words, avg 451 words each).",
+14,year,"2021: 341 posts (~153,769 words, avg 450 words each).",
+15,year,"2022: 362 posts (~172,317 words, avg 476 words each).",
+16,year,"2023: 395 posts (~171,900 words, avg 435 words each).",
+17,year,"2024: 248 posts (~101,848 words, avg 410 words each).",
+18,year,"2025: 343 posts (~149,422 words, avg 435 words each).",
+19,year,Busiest year: 2008 with 410 posts.,
+20,year,Quietest year: 2014 with 147 posts.,
+21,length,"Short & sharp: “Music recommendations” in Apr 28, 2009 packs 5 words.",https://www.johndcook.com/blog/2009/04/28/music-recommendations/
+22,length,"Short & sharp: “Test post” in Mar 26, 2013 packs 7 words.",https://www.johndcook.com/blog/2013/03/26/test-post/
+23,length,"Short & sharp: “Synchronizing metronomes” in Sep 07, 2011 packs 7 words.",https://www.johndcook.com/blog/2011/09/07/synchronizing-metronomes/
+24,length,"Short & sharp: “New prime number record” in Jan 19, 2016 packs 9 words.",https://www.johndcook.com/blog/2016/01/19/new-prime-number-record/
+25,length,"Short & sharp: “PowerShell A-Z series completed” in Feb 10, 2009 packs 9 words.",https://www.johndcook.com/blog/2009/02/10/powershell-a-z-series-completed/
+26,length,"Short & sharp: “Introduction to computer virtualization” in Jan 07, 2009 packs 10 words.",https://www.johndcook.com/blog/2009/01/07/introduction-to-computer-virtualization/
+27,length,"Short & sharp: “Simple interpolation” in Sep 11, 2008 packs 11 words.",https://www.johndcook.com/blog/2008/09/11/simple-interpolation/
+28,length,"Short & sharp: “Technology hype curve” in Jun 13, 2012 packs 12 words.",https://www.johndcook.com/blog/2012/06/13/technology-hype-curve/
+29,length,"Short & sharp: “Getting started with SciPy (Scientific Python)” in Jul 23, 2009 packs 12 words.",https://www.johndcook.com/blog/2009/07/23/getting-started-with-scipy-scientific-python/
+30,length,"Short & sharp: “51st Carnival of Mathematics posted” in Apr 24, 2009 packs 13 words.",https://www.johndcook.com/blog/2009/04/24/51st-carnival-of-mathematics-posted/
+31,length,"Deep dive: “Interview with Sir Michael Atiyah” (Sep 24, 2013) runs 1926 words.",https://www.johndcook.com/blog/2013/09/24/interview-with-sir-michael-atiyah/
+32,length,"Deep dive: “Applied topology and Dante: an interview with Robert Ghrist” (Sep 13, 2010) runs 1814 words.",https://www.johndcook.com/blog/2010/09/13/applied-topology-and-dante-an-interview-with-robert-ghrist/
+33,length,"Deep dive: “Hallucinations of AI Science Models” (Mar 26, 2024) runs 1710 words.",https://www.johndcook.com/blog/2024/03/26/hallucinations-of-ai-science-models/
+34,length,"Deep dive: “Field of order 9” (Sep 21, 2022) runs 1695 words.",https://www.johndcook.com/blog/2022/09/21/field-of-order-9/
+35,length,"Deep dive: “Writing down an unwritten language” (Feb 24, 2014) runs 1601 words.",https://www.johndcook.com/blog/2014/02/24/creating-a-writing-system/
+36,length,"Deep dive: “Interview with author Cliff Pickover” (Aug 30, 2009) runs 1594 words.",https://www.johndcook.com/blog/2009/08/30/interview-with-author-cliff-pickover/
+37,length,"Deep dive: “Anatomy of a posit number” (Apr 11, 2018) runs 1575 words.",https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/
+38,length,"Deep dive: “Solving for Möbius transformation coefficients” (Mar 28, 2021) runs 1456 words.",https://www.johndcook.com/blog/2021/03/28/mobius-coefficients/
+39,length,"Deep dive: “Two-sample t-test and robustness” (May 11, 2018) runs 1429 words.",https://www.johndcook.com/blog/2018/05/11/two-sample-t-test/
+40,length,"Deep dive: “Probability that a number is prime” (Oct 06, 2010) runs 1390 words.",https://www.johndcook.com/blog/2010/10/06/probability-a-number-is-prime/
+41,length,Typical post: median 312 words vs average 348.,
+42,length,"Total payload: 1,823,200 words across 5233 posts.",
+43,category,"Category “Math” shows up 2378 times, averaging 425 words per post.",
+44,category,"Category “Uncategorized” shows up 996 times, averaging 241 words per post.",
+45,category,"Category “Computing” shows up 520 times, averaging 418 words per post.",
+46,category,"Category “Software development” shows up 446 times, averaging 298 words per post.",
+47,category,"Category “Statistics” shows up 418 times, averaging 345 words per post.",
+48,category,"Category “Science” shows up 231 times, averaging 282 words per post.",
+49,category,"Category “Business” shows up 206 times, averaging 266 words per post.",
+50,category,"Category “Python” shows up 177 times, averaging 388 words per post.",
+51,category,"Category “Creativity” shows up 161 times, averaging 205 words per post.",
+52,category,"Category “Music” shows up 85 times, averaging 310 words per post.",
+53,category,"Category “Clinical trials” shows up 55 times, averaging 309 words per post.",
+54,category,"Category “Typography” shows up 50 times, averaging 296 words per post.",
+55,tag,"Tag “Probability and Statistics”: 554 posts, avg 380 words.",
+56,tag,"Tag “Math”: 498 posts, avg 343 words.",
+57,tag,"Tag “Programming”: 342 posts, avg 281 words.",
+58,tag,"Tag “Number theory”: 288 posts, avg 441 words.",
+59,tag,"Tag “Python”: 207 posts, avg 418 words.",
+60,tag,"Tag “Books”: 153 posts, avg 232 words.",
+61,tag,"Tag “Special functions”: 140 posts, avg 461 words.",
+62,tag,"Tag “Differential equations”: 134 posts, avg 454 words.",
+63,tag,"Tag “Cryptography”: 128 posts, avg 533 words.",
+64,tag,"Tag “Creativity”: 127 posts, avg 187 words.",
+65,tag,"Tag “Productivity”: 123 posts, avg 299 words.",
+66,tag,"Tag “Science”: 123 posts, avg 220 words.",
+67,tag,"Tag “Geometry”: 110 posts, avg 431 words.",
+68,tag,"Tag “Privacy”: 104 posts, avg 427 words.",
+69,tag,"Tag “Bayesian”: 100 posts, avg 382 words.",
+70,tag,"Tag “Complex analysis”: 92 posts, avg 449 words.",
+71,tag,"Tag “SciPy”: 80 posts, avg 450 words.",
+72,tag,"Tag “Numerical analysis”: 77 posts, avg 583 words.",
+73,tag,"Tag “Mathematica”: 74 posts, avg 452 words.",
+74,tag,"Tag “Unicode”: 72 posts, avg 392 words.",
+75,weekday,Busiest weekday: Tuesday with 1003 posts; quietest: Sunday with 466.,
+76,weekday,Thursdays host 823 posts on the blog.,
+77,weekday,Wednesdays host 938 posts on the blog.,
+78,weekday,Mondays host 887 posts on the blog.,
+79,weekday,Tuesdays host 1003 posts on the blog.,
+80,weekday,Sundays host 466 posts on the blog.,
+81,weekday,Saturdays host 555 posts on the blog.,
+82,weekday,Fridays host 561 posts on the blog.,
+83,month,October 2022 was busy with 53 posts.,
+84,month,November 2022 was busy with 51 posts.,
+85,month,July 2023 was busy with 50 posts.,
+86,month,August 2025 was busy with 46 posts.,
+87,month,May 2025 was busy with 46 posts.,
+88,gap,"Longest pause: 11 days between “Making change” (Jul 09, 2014) and “Bringing bash and PowerShell a little closer together” (Jul 21, 2014).",https://www.johndcook.com/blog/2014/07/09/making-change/
+89,on-this-day,"On Jan 01: “Turning the Golay problem sideways” (864 words, 2022).",https://www.johndcook.com/blog/2022/01/01/turning-the-golay-problem-sideways/
+90,on-this-day,"On Jan 02: “Unicode Steganography” (699 words, 2025).",https://www.johndcook.com/blog/2025/01/02/unicode-stegonography/
+91,on-this-day,"On Jan 03: “Pratt Primality Certificates” (927 words, 2023).",https://www.johndcook.com/blog/2023/01/03/pratt-certificate/
+92,on-this-day,"On Jan 04: “Cover time of a graph: cliques, chains, and lollipops” (587 words, 2017).",https://www.johndcook.com/blog/2017/01/04/cover-time-of-a-graph-cliques-chains-and-lollipops/
+93,on-this-day,"On Jan 05: “Bootstrapping a minimal math library” (569 words, 2021).",https://www.johndcook.com/blog/2021/01/05/bootstrapping-math-library/
+94,on-this-day,"On Jan 06: “Quaternion square roots” (735 words, 2021).",https://www.johndcook.com/blog/2021/01/06/quaternion-square-roots/
+95,on-this-day,"On Jan 07: “Can AI models reason like a human?” (815 words, 2025).",https://www.johndcook.com/blog/2025/01/07/can-ai-models-reason-like-a-human/
+96,on-this-day,"On Jan 08: “Various kinds of pseudoprimes” (615 words, 2020).",https://www.johndcook.com/blog/2020/01/08/euler-pseudoprimes/
+97,on-this-day,"On Jan 09: “Beatty&#8217;s theorem” (714 words, 2022).",https://www.johndcook.com/blog/2022/01/09/beattys-theorem/
+98,on-this-day,"On Jan 10: “Probability of secure hash collisions” (972 words, 2017).",https://www.johndcook.com/blog/2017/01/10/probability-of-secure-hash-collisions/
+99,on-this-day,"On Jan 11: “Logistic bifurcation diagram in detail” (852 words, 2020).",https://www.johndcook.com/blog/2020/01/11/logistic-bifurcation-diagram/
+100,on-this-day,"On Jan 12: “Safe primes, Sylow theorems, and Cryptography” (581 words, 2017).",https://www.johndcook.com/blog/2017/01/12/safe-primes-sylow-theorems-and-cryptography/
+101,on-this-day,"On Jan 13: “Elliptic curve primality certificates” (758 words, 2023).",https://www.johndcook.com/blog/2023/01/13/ecpp/
+102,on-this-day,"On Jan 14: “Discrete Taylor series” (575 words, 2025).",https://www.johndcook.com/blog/2025/01/14/discrete-taylor-series/
+103,on-this-day,"On Jan 15: “Literate programming and statistics” (645 words, 2008).",https://www.johndcook.com/blog/2008/01/15/literate-programming-and-statistics/
+104,on-this-day,"On Jan 16: “Dimensional analysis for gamma function values” (621 words, 2025).",https://www.johndcook.com/blog/2025/01/16/gamma-dimensional-analysis/
+105,on-this-day,"On Jan 17: “Stable and unstable recurrence relations” (820 words, 2020).",https://www.johndcook.com/blog/2020/01/17/stable-recurrence-relations/
+106,on-this-day,"On Jan 18: “An unexpected triangle” (556 words, 2025).",https://www.johndcook.com/blog/2025/01/18/sonine/
+107,on-this-day,"On Jan 19: “GDPR and the right to be forgotten” (738 words, 2018).",https://www.johndcook.com/blog/2018/01/19/gdpr-and-the-right-to-be-forgotten/
+108,on-this-day,"On Jan 20: “Glasser&#8217;s function” (658 words, 2022).",https://www.johndcook.com/blog/2022/01/20/glassers-function/
+109,on-this-day,"On Jan 21: “Modal Logic and Science Fiction” (586 words, 2022).",https://www.johndcook.com/blog/2022/01/21/modal-logic-and-sf/
+110,on-this-day,"On Jan 22: “Modal axioms and rules for interplanetary travel” (908 words, 2022).",https://www.johndcook.com/blog/2022/01/22/modal-axiom-cube/
+111,on-this-day,"On Jan 23: “Probability distributions and object oriented programming” (947 words, 2009).",https://www.johndcook.com/blog/2009/01/23/probability-distributions-and-object-oriented-programming/
+112,on-this-day,"On Jan 24: “Dual axioms in modal logic” (660 words, 2022).",https://www.johndcook.com/blog/2022/01/24/dual-axioms-in-modal-logic/
+113,on-this-day,"On Jan 25: “Permutations at the command line” (824 words, 2022).",https://www.johndcook.com/blog/2022/01/25/permutations-and-tr/
+114,on-this-day,"On Jan 26: “A general theory of sub-things” (813 words, 2022).",https://www.johndcook.com/blog/2022/01/26/a-general-theory-of-sub-things/
+115,on-this-day,"On Jan 27: “Next areas of math to be applied” (694 words, 2016).",https://www.johndcook.com/blog/2016/01/27/next-areas-of-math-to-be-applied/
+116,on-this-day,"On Jan 28: “Mental math trick and deeper issues” (532 words, 2022).",https://www.johndcook.com/blog/2022/01/28/kilometers-to-miles/
+117,on-this-day,"On Jan 29: “Regex to match SWIFT-BIC codes” (717 words, 2024).",https://www.johndcook.com/blog/2024/01/29/swift/
+118,on-this-day,"On Jan 30: “Python triple quote strings and regular expressions” (867 words, 2021).",https://www.johndcook.com/blog/2021/01/30/python-triple-quote-regex/
+119,on-this-day,"On Jan 31: “Parameters and percentiles” (559 words, 2010).",https://www.johndcook.com/blog/2010/01/31/parameters-from-percentiles/
+120,on-this-day,"On Feb 01: “Non-associative multiplication” (1028 words, 2022).",https://www.johndcook.com/blog/2022/02/01/non-associative/
+121,on-this-day,"On Feb 02: “Stiff differential equations” (1066 words, 2020).",https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/
+122,on-this-day,"On Feb 03: “Fibonacci numbers and hyperbolic sine” (1114 words, 2021).",https://www.johndcook.com/blog/2021/02/03/askey-fibonacci/
+123,on-this-day,"On Feb 04: “A closer look at zero spacing” (930 words, 2022).",https://www.johndcook.com/blog/2022/02/04/zero-spacing/
+124,on-this-day,"On Feb 05: “Data-driven charity” (1132 words, 2017).",https://www.johndcook.com/blog/2017/02/05/data-driven-charity/
+125,on-this-day,"On Feb 06: “Is Low Precision Arithmetic Safe?” (897 words, 2024).",https://www.johndcook.com/blog/2024/02/06/is-low-precision-arithmetic-safe/
+126,on-this-day,"On Feb 07: “Self-orthogonal vectors and coding” (641 words, 2022).",https://www.johndcook.com/blog/2022/02/07/self-orthogonal-vectors-and-coding/
+127,on-this-day,"On Feb 08: “Why Food for the Hungry runs Ubuntu” (868 words, 2011).",https://www.johndcook.com/blog/2011/02/08/why-food-for-the-hungry-runs-ubuntu/
+128,on-this-day,"On Feb 09: “Running Python and R inside Emacs” (474 words, 2012).",https://www.johndcook.com/blog/2012/02/09/python-org-mode/
+129,on-this-day,"On Feb 10: “Maximum principle and approximating boundary value problems” (796 words, 2016).",https://www.johndcook.com/blog/2016/02/10/maximum-principle-and-approximating-boundary-value-problems/
+130,on-this-day,"On Feb 11: “Trig functions across programming languages” (1203 words, 2021).",https://www.johndcook.com/blog/2021/02/11/trig-across-languages/
+131,on-this-day,"On Feb 12: “A Bayesian approach to pricing” (834 words, 2022).",https://www.johndcook.com/blog/2022/02/12/bayesian-pricing/
+132,on-this-day,"On Feb 13: “Runge-Kutta methods and Butcher tableau” (1010 words, 2020).",https://www.johndcook.com/blog/2020/02/13/runge-kutta-methods/
+133,on-this-day,"On Feb 14: “Entropy extractor used in μRNG” (572 words, 2019).",https://www.johndcook.com/blog/2019/02/14/entropy-extractor/
+134,on-this-day,"On Feb 15: “Lobatto integration” (1045 words, 2020).",https://www.johndcook.com/blog/2020/02/15/gauss-lobatto-quadrature/
+135,on-this-day,"On Feb 16: “Bell polynomials: partial, ordinary, and exponential” (717 words, 2018).",https://www.johndcook.com/blog/2018/02/16/bell-polynomials/
+136,on-this-day,"On Feb 17: “Analyzing an FM signal” (702 words, 2016).",https://www.johndcook.com/blog/2016/02/17/analyzing-an-fm-signal/
+137,on-this-day,"On Feb 18: “Trapezoid rule and Romberg integration” (1225 words, 2020).",https://www.johndcook.com/blog/2020/02/18/trapezoid-romberg/
+138,on-this-day,"On Feb 19: “Addition on Curve1174” (1054 words, 2019).",https://www.johndcook.com/blog/2019/02/19/addition-on-curve1174/
+139,on-this-day,"On Feb 20: “Microsoft replacing SHA-1” (733 words, 2019).",https://www.johndcook.com/blog/2019/02/20/microsoft-replacing-sha-1/
+140,on-this-day,"On Feb 21: “What is an elliptic curve?” (788 words, 2019).",https://www.johndcook.com/blog/2019/02/21/what-is-an-elliptic-curve/
+141,on-this-day,"On Feb 22: “ADFGVX cipher and Morse code separation” (1087 words, 2020).",https://www.johndcook.com/blog/2020/02/22/adfgvx/
+142,on-this-day,"On Feb 23: “Graphs and square roots modulo a prime” (747 words, 2016).",https://www.johndcook.com/blog/2016/02/23/graphs-and-square-roots-modulo-a-prime/
+143,on-this-day,"On Feb 24: “Writing down an unwritten language” (1601 words, 2014).",https://www.johndcook.com/blog/2014/02/24/creating-a-writing-system/
+144,on-this-day,"On Feb 25: “Testing for primes less than a quintillion” (770 words, 2019).",https://www.johndcook.com/blog/2019/02/25/prime-test/
+145,on-this-day,"On Feb 26: “Applications of (1−z)/(1+z)” (736 words, 2021).",https://www.johndcook.com/blog/2021/02/26/smith-transform/
+146,on-this-day,"On Feb 27: “Playfair cipher” (983 words, 2023).",https://www.johndcook.com/blog/2023/02/27/playfair-cipher/
+147,on-this-day,"On Feb 28: “Sharing secrets using polynomials” (694 words, 2019).",https://www.johndcook.com/blog/2019/02/28/secret-sharing/
+148,on-this-day,"On Mar 01: “Varicode” (739 words, 2022).",https://www.johndcook.com/blog/2022/03/01/varicode/
+149,on-this-day,"On Mar 02: “Bits of information in age, birthday, and birthdate” (590 words, 2018).",https://www.johndcook.com/blog/2018/03/02/bits-of-information-in-age-birthday-and-birthdate/
+150,on-this-day,"On Mar 03: “John Conway&#8217;s mental factoring method and friends” (980 words, 2023).",https://www.johndcook.com/blog/2023/03/03/conway-factoring/
+151,on-this-day,"On Mar 03: “Archiving data on paper” (772 words, 2024).",https://www.johndcook.com/blog/2024/03/03/archiving-data-on-paper/
+152,on-this-day,"On Mar 04: “Approximating Earth as a sphere” (786 words, 2012).",https://www.johndcook.com/blog/2012/03/04/approximating-earth-as-a-sphere/
+153,on-this-day,"On Mar 06: “Public key encryption based on squares and non squares” (1017 words, 2019).",https://www.johndcook.com/blog/2019/03/06/goldwasser-micali/
+154,on-this-day,"On Mar 07: “The difference between tokens and words” (535 words, 2025).",https://www.johndcook.com/blog/2025/03/07/tokens-and-words/
+155,on-this-day,"On Mar 07: “MDS codes” (912 words, 2020).",https://www.johndcook.com/blog/2020/03/07/mds-codes/
+156,on-this-day,"On Mar 09: “How areas of math are connected” (845 words, 2017).",https://www.johndcook.com/blog/2017/03/09/how-areas-of-math-are-connected/
+157,on-this-day,"On Mar 10: “Colossus versus El Capitan: A Tale of Two Supercomputers” (781 words, 2025).",https://www.johndcook.com/blog/2025/03/10/colossus-versus-el-capitan/
+158,on-this-day,"On Mar 11: “All elliptic curves over fields of order 2 and 3” (1305 words, 2019).",https://www.johndcook.com/blog/2019/03/11/elliptic-curves-gf2-gf3/
+159,on-this-day,"On Mar 12: “The coupon collector problem and π” (526 words, 2023).",https://www.johndcook.com/blog/2023/03/12/coupon-collector/
+160,on-this-day,"On Mar 13: “Frequency shift keying (FSK) spectrum” (728 words, 2022).",https://www.johndcook.com/blog/2022/03/13/fsk-spectrum/
+161,on-this-day,"On Mar 14: “Computing the nth digit of π directly” (895 words, 2025).",https://www.johndcook.com/blog/2025/03/14/bbp/
+162,on-this-day,"On Mar 15: “Typesetting music with LilyPond” (612 words, 2009).",https://www.johndcook.com/blog/2009/03/15/typesetting-music-in-latex-and-lilypond/
+163,on-this-day,"On Mar 16: “Emacs” (794 words, 2010).",https://www.johndcook.com/blog/2010/03/16/emacs/
+164,on-this-day,"On Mar 17: “Lessons Learned With the Z3 SAT/SMT Solver” (876 words, 2025).",https://www.johndcook.com/blog/2025/03/17/lessons-learned-with-the-z3-sat-smt-solver/
+165,on-this-day,"On Mar 18: “Support of a signal and its FFT” (693 words, 2021).",https://www.johndcook.com/blog/2021/03/18/support-of-a-signal-and-its-fft/
+166,on-this-day,"On Mar 19: “Interview with Sacha Chua” (1243 words, 2013).",https://www.johndcook.com/blog/2013/03/19/interview-with-sacha-chua/
+167,on-this-day,"On Mar 20: “Computing Fourier series coefficients with the FFT” (890 words, 2021).",https://www.johndcook.com/blog/2021/03/20/fourier-series-fft/
+168,on-this-day,"On Mar 21: “Simple trig function approximations” (498 words, 2021).",https://www.johndcook.com/blog/2021/03/21/simple-trig-approx/
+169,symbol,Posts with “π”: 9.,
+170,symbol,Posts with “φ”: 0.,
+171,symbol,Posts with “Φ”: 0.,
+172,symbol,Posts with “∞”: 0.,
+173,milestone,"First post: “Moore&#8217;s law and software bloat” on Jan 09, 2008.",https://www.johndcook.com/blog/2008/01/09/moores-law-and-software-bloat/
+174,milestone,"Latest post: “Equal things that don&#8217;t look equal” on Nov 27, 2025.",https://www.johndcook.com/blog/2025/11/27/hyperbolic-metric-formulas/
+175,feature,"Heavyweight: “Interview with Sir Michael Atiyah” (1926 words, Sep 24, 2013).",https://www.johndcook.com/blog/2013/09/24/interview-with-sir-michael-atiyah/
+176,feature,"Heavyweight: “Applied topology and Dante: an interview with Robert Ghrist” (1814 words, Sep 13, 2010).",https://www.johndcook.com/blog/2010/09/13/applied-topology-and-dante-an-interview-with-robert-ghrist/
+177,feature,"Heavyweight: “Hallucinations of AI Science Models” (1710 words, Mar 26, 2024).",https://www.johndcook.com/blog/2024/03/26/hallucinations-of-ai-science-models/
+178,feature,"Heavyweight: “Field of order 9” (1695 words, Sep 21, 2022).",https://www.johndcook.com/blog/2022/09/21/field-of-order-9/
+179,feature,"Heavyweight: “Writing down an unwritten language” (1601 words, Feb 24, 2014).",https://www.johndcook.com/blog/2014/02/24/creating-a-writing-system/
+180,feature,"Heavyweight: “Interview with author Cliff Pickover” (1594 words, Aug 30, 2009).",https://www.johndcook.com/blog/2009/08/30/interview-with-author-cliff-pickover/
+181,feature,"Heavyweight: “Anatomy of a posit number” (1575 words, Apr 11, 2018).",https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/
+182,feature,"Heavyweight: “Solving for Möbius transformation coefficients” (1456 words, Mar 28, 2021).",https://www.johndcook.com/blog/2021/03/28/mobius-coefficients/
+183,feature,"Heavyweight: “Two-sample t-test and robustness” (1429 words, May 11, 2018).",https://www.johndcook.com/blog/2018/05/11/two-sample-t-test/
+184,feature,"Heavyweight: “Probability that a number is prime” (1390 words, Oct 06, 2010).",https://www.johndcook.com/blog/2010/10/06/probability-a-number-is-prime/
+185,feature,"Heavyweight: “Orders of finite simple groups” (1377 words, Sep 02, 2018).",https://www.johndcook.com/blog/2018/09/02/orders-of-finite-simple-groups/
+186,feature,"Heavyweight: “A gentle introduction to Hamming codes” (1376 words, Feb 24, 2020).",https://www.johndcook.com/blog/2020/02/24/hamming-codes/
+187,feature,"Heavyweight: “Hom functors and a glimpse of Yoneda” (1309 words, Aug 06, 2018).",https://www.johndcook.com/blog/2018/08/06/hom-functors/
+188,feature,"Heavyweight: “All elliptic curves over fields of order 2 and 3” (1305 words, Mar 11, 2019).",https://www.johndcook.com/blog/2019/03/11/elliptic-curves-gf2-gf3/
+189,feature,"Heavyweight: “Anthony Scopatz on xonsh and shells in general” (1282 words, Nov 15, 2015).",https://www.johndcook.com/blog/2015/11/15/xonsh/
+190,feature,"Heavyweight: “Solving Kepler&#8217;s equation with Newton&#8217;s method” (1277 words, Nov 01, 2022).",https://www.johndcook.com/blog/2022/11/01/kepler-newton/
+191,feature,"Heavyweight: “Comparing trig functions and Jacobi functions” (1252 words, Oct 13, 2018).",https://www.johndcook.com/blog/2018/10/13/jacobi-trig-functions/
+192,feature,"Heavyweight: “Categorical products” (1244 words, Mar 22, 2016).",https://www.johndcook.com/blog/2016/03/22/categorical-products/
+193,feature,"Heavyweight: “Functional folds and conjugate models” (1243 words, Jun 01, 2016).",https://www.johndcook.com/blog/2016/06/01/functional-folds-and-conjugate-models/
+194,feature,"Heavyweight: “Interview with Sacha Chua” (1243 words, Mar 19, 2013).",https://www.johndcook.com/blog/2013/03/19/interview-with-sacha-chua/
+195,feature,"Heavyweight: “Evaluating weather forecast accuracy: an interview with Eric Floehr” (1241 words, Apr 12, 2011).",https://www.johndcook.com/blog/2011/04/12/weather-forecast-accuracy/
+196,feature,"Heavyweight: “Finite simple group example: PSL(q)” (1227 words, Sep 08, 2018).",https://www.johndcook.com/blog/2018/09/08/projective-special-linear/
+197,feature,"Heavyweight: “Four views of multisets” (1225 words, Oct 26, 2022).",https://www.johndcook.com/blog/2022/10/26/multisets/
+198,feature,"Heavyweight: “Trapezoid rule and Romberg integration” (1225 words, Feb 18, 2020).",https://www.johndcook.com/blog/2020/02/18/trapezoid-romberg/
+199,feature,"Heavyweight: “When a cubic or quartic has a double root” (1210 words, Nov 16, 2022).",https://www.johndcook.com/blog/2022/11/16/cubic-quartic-double-root/
+200,feature,"Heavyweight: “Why do LLMs have emergent properties?” (1207 words, May 08, 2025).",https://www.johndcook.com/blog/2025/05/08/why-do-llms-have-emergent-properties/
+201,feature,"Heavyweight: “Prime remainders too evenly distributed” (1206 words, Jun 08, 2016).",https://www.johndcook.com/blog/2016/06/08/prime-remainders-too-evenly-distributed/
+202,feature,"Heavyweight: “Trig functions across programming languages” (1203 words, Feb 11, 2021).",https://www.johndcook.com/blog/2021/02/11/trig-across-languages/
+203,feature,"Heavyweight: “Maidenhead geocode system” (1190 words, May 30, 2021).",https://www.johndcook.com/blog/2021/05/30/maidenhead-geocode-system/
+204,feature,"Heavyweight: “Transpose and Adjoint” (1183 words, Apr 27, 2025).",https://www.johndcook.com/blog/2025/04/27/transpose-vs-adjoint/
+205,feature,"Heavyweight: “How many ways to make rock, paper, scissors, lizard, Spock?” (1172 words, Aug 07, 2018).",https://www.johndcook.com/blog/2018/08/07/rock-paper-scissors-lizard-spock/
+206,feature,"Heavyweight: “Finite projective planes” (1164 words, Apr 25, 2022).",https://www.johndcook.com/blog/2022/04/25/finite-projective-planes/
+207,feature,"Heavyweight: “Kronecker sum” (1150 words, Oct 11, 2020).",https://www.johndcook.com/blog/2020/10/11/kronecker-sum/
+208,feature,"Heavyweight: “Riemann hypothesis, the fine structure constant, and the Todd function” (1138 words, Sep 24, 2018).",https://www.johndcook.com/blog/2018/09/24/riemann-hypothesis-the-fine-structure-constant-and-the-todd-function/
+209,feature,"Heavyweight: “Data-driven charity” (1132 words, Feb 05, 2017).",https://www.johndcook.com/blog/2017/02/05/data-driven-charity/
+210,feature,"Heavyweight: “Why are CUDA kernels hard to optimize?” (1126 words, Aug 27, 2025).",https://www.johndcook.com/blog/2025/08/27/why-are-cuda-kernels-hard-to-optimize/
+211,feature,"Heavyweight: “Chi-square goodness of fit test example with primes” (1126 words, Jun 07, 2016).",https://www.johndcook.com/blog/2016/06/07/chi-square-goodness-of-fit-test-example-with-primes/
+212,feature,"Heavyweight: “Fibonacci numbers and hyperbolic sine” (1114 words, Feb 03, 2021).",https://www.johndcook.com/blog/2021/02/03/askey-fibonacci/
+213,feature,"Heavyweight: “Estimating vocabulary size with Heaps&#8217; law” (1102 words, Aug 27, 2019).",https://www.johndcook.com/blog/2019/08/27/heaps-law/
+214,feature,"Heavyweight: “Comparing range and precision of IEEE and posit” (1101 words, Apr 14, 2018).",https://www.johndcook.com/blog/2018/04/14/ieee-vs-posit/
+215,feature,"Heavyweight: “Interview with Michael Hammel, author of The Artist&#8217;s Guide to GIMP” (1100 words, Jul 30, 2012).",https://www.johndcook.com/blog/2012/07/30/interview-michael-hammel/
+216,feature,"Heavyweight: “Interview with Chris Toomey of Upcase” (1095 words, Jun 10, 2016).",https://www.johndcook.com/blog/2016/06/10/chris-toomey/
+217,feature,"Heavyweight: “Pareto&#8217;s 80-20 rule” (1094 words, Aug 27, 2018).",https://www.johndcook.com/blog/2018/08/27/pareto-80-20-rule/
+218,feature,"Heavyweight: “Equation of an ellipse or hyperbola through five points” (1092 words, Jun 19, 2023).",https://www.johndcook.com/blog/2023/06/19/conic-through-five-points/
+219,feature,"Heavyweight: “Why is an empty sum 0 and an empty product 1?” (1091 words, Apr 14, 2015).",https://www.johndcook.com/blog/2015/04/14/empty-sum-product/
+220,feature,"Heavyweight: “Vibrating circular membranes” (1088 words, Jun 12, 2021).",https://www.johndcook.com/blog/2021/06/12/vibrating-circular-membranes/
+221,feature,"Heavyweight: “ADFGVX cipher and Morse code separation” (1087 words, Feb 22, 2020).",https://www.johndcook.com/blog/2020/02/22/adfgvx/
+222,feature,"Heavyweight: “Effective Computation in Physics” (1076 words, Aug 08, 2015).",https://www.johndcook.com/blog/2015/08/08/effective-computation-in-physics/
+223,feature,"Heavyweight: “Exact sequences” (1073 words, Dec 04, 2021).",https://www.johndcook.com/blog/2021/12/04/exact-sequences/
+224,feature,"Heavyweight: “Stiff differential equations” (1066 words, Feb 02, 2020).",https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/
+225,feature,"Heavyweight: “Mathematics of medical plastics” (1066 words, Feb 03, 2016).",https://www.johndcook.com/blog/2016/02/03/mathematics-of-medical-plastics/
+226,feature,"Heavyweight: “Addition on Curve1174” (1054 words, Feb 19, 2019).",https://www.johndcook.com/blog/2019/02/19/addition-on-curve1174/
+227,feature,"Heavyweight: “Two meanings of distribution” (1050 words, Dec 21, 2015).",https://www.johndcook.com/blog/2015/12/21/distributions/
+228,feature,"Heavyweight: “Lobatto integration” (1045 words, Feb 15, 2020).",https://www.johndcook.com/blog/2020/02/15/gauss-lobatto-quadrature/
+229,feature,"Heavyweight: “The Soviet license plate game and Kolmogorov complexity” (1043 words, Feb 02, 2019).",https://www.johndcook.com/blog/2019/02/02/landau-kolmogorov/
+230,feature,"Heavyweight: “Literate programming: presenting code in human order” (1041 words, Jul 06, 2016).",https://www.johndcook.com/blog/2016/07/06/literate-programming-presenting-code-in-human-order/
+231,feature,"Heavyweight: “Using cryptography broken 50 years ago” (1029 words, Aug 19, 2021).",https://www.johndcook.com/blog/2021/08/19/vigenere/
+232,feature,"Heavyweight: “Non-associative multiplication” (1028 words, Feb 01, 2022).",https://www.johndcook.com/blog/2022/02/01/non-associative/
+233,feature,"Heavyweight: “Dan Bricklin interview” (1028 words, Jun 22, 2009).",https://www.johndcook.com/blog/2009/06/22/dan-bricklin-interview/
+234,feature,"Heavyweight: “Hashing names does not protect privacy” (1025 words, Jul 20, 2019).",https://www.johndcook.com/blog/2019/07/20/hashing-pii-does-not-protect-privacy/
+235,feature,"Heavyweight: “Three applications of Euler&#8217;s theorem” (1020 words, Sep 23, 2018).",https://www.johndcook.com/blog/2018/09/23/eulers-theorem/
+236,feature,"Heavyweight: “Public key encryption based on squares and non squares” (1017 words, Mar 06, 2019).",https://www.johndcook.com/blog/2019/03/06/goldwasser-micali/
+237,feature,"Heavyweight: “Runge-Kutta methods and Butcher tableau” (1010 words, Feb 13, 2020).",https://www.johndcook.com/blog/2020/02/13/runge-kutta-methods/
+238,feature,"Heavyweight: “Operator calculus” (1007 words, Oct 12, 2022).",https://www.johndcook.com/blog/2022/10/12/operational-calculus/
+239,feature,"Heavyweight: “Double roots and ODEs” (1006 words, Jun 13, 2022).",https://www.johndcook.com/blog/2022/06/13/double-roots-and-odes/
+240,feature,"Heavyweight: “Computing SVD and pseudoinverse” (1000 words, May 05, 2018).",https://www.johndcook.com/blog/2018/05/05/svd/
+241,feature,"Heavyweight: “Stacking positive and negative cannonballs” (999 words, May 30, 2025).",https://www.johndcook.com/blog/2025/05/30/stacking-cannonballs/
+242,feature,"Heavyweight: “Efficiently testing a black box” (997 words, Oct 10, 2022).",https://www.johndcook.com/blog/2022/10/10/fractional-factorial/
+243,feature,"Heavyweight: “Notes on computing hash functions” (996 words, Jul 01, 2019).",https://www.johndcook.com/blog/2019/07/01/notes-on-computing-hash-functions/
+244,feature,"Heavyweight: “Rate of natural cubic spline convergence” (992 words, Jul 12, 2021).",https://www.johndcook.com/blog/2021/07/12/spline-convergence-rate/
+245,feature,"Heavyweight: “Getting some (algorithmic) SAT-isfaction” (986 words, Jun 25, 2024).",https://www.johndcook.com/blog/2024/06/25/getting-some-algorithmic-sat-isfaction/
+246,feature,"Heavyweight: “Playfair cipher” (983 words, Feb 27, 2023).",https://www.johndcook.com/blog/2023/02/27/playfair-cipher/
+247,feature,"Heavyweight: “Partitions and Pentagons” (983 words, Nov 10, 2021).",https://www.johndcook.com/blog/2021/11/10/partitions-and-pentagons/
+248,feature,"Heavyweight: “Tridiagonal systems, determinants, and natural cubic splines” (983 words, Apr 30, 2018).",https://www.johndcook.com/blog/2018/04/30/tridiagonal-systems/
+249,feature,"Heavyweight: “John Conway&#8217;s mental factoring method and friends” (980 words, Mar 03, 2023).",https://www.johndcook.com/blog/2023/03/03/conway-factoring/
+250,feature,"Heavyweight: “Nicholas Higham on Mathematics in Color” (977 words, Sep 15, 2015).",https://www.johndcook.com/blog/2015/09/15/nicholas-higham-on-mathematics-in-color/
+251,feature,"Heavyweight: “Computing functions of roots without computing roots” (975 words, Apr 04, 2022).",https://www.johndcook.com/blog/2022/04/04/vieta/
+252,feature,"Heavyweight: “Converting between quaternions and rotation matrices” (973 words, May 07, 2025).",https://www.johndcook.com/blog/2025/05/07/quaternions-and-rotation-matrices/
+253,feature,"Heavyweight: “Probability of secure hash collisions” (972 words, Jan 10, 2017).",https://www.johndcook.com/blog/2017/01/10/probability-of-secure-hash-collisions/
+254,feature,"Heavyweight: “Career advice regarding tools” (970 words, Nov 21, 2011).",https://www.johndcook.com/blog/2011/11/21/career-advice-regarding-tools/
+255,feature,"Heavyweight: “Approximate minimal bounding sphere” (965 words, Aug 08, 2021).",https://www.johndcook.com/blog/2021/08/08/bounding-sphere/
+256,feature,"Heavyweight: “Morse code and the limits of human perception” (963 words, Apr 23, 2025).",https://www.johndcook.com/blog/2025/04/23/qrq/
+257,feature,"Heavyweight: “Galois connections and Galois theory” (963 words, Jul 24, 2022).",https://www.johndcook.com/blog/2022/07/24/galois/
+258,feature,"Heavyweight: “Swish, mish, and serf” (962 words, Aug 06, 2023).",https://www.johndcook.com/blog/2023/08/06/swish-mish-and-serf/
+259,feature,"Heavyweight: “Inverse Gray code” (959 words, Sep 08, 2020).",https://www.johndcook.com/blog/2020/09/08/inverse-gray-code/
+260,feature,"Heavyweight: “Fourier-Bessel series and Gibbs phenomena” (955 words, Nov 04, 2017).",https://www.johndcook.com/blog/2017/11/04/fourier-bessel-series-and-gibbs-phenomena/
+261,feature,"Heavyweight: “Large language models and mnemonics” (950 words, Jul 14, 2023).",https://www.johndcook.com/blog/2023/07/14/major-llm/
+262,feature,"Heavyweight: “Calling C++ from R” (950 words, Jun 30, 2011).",https://www.johndcook.com/blog/2011/06/30/calling-cpp-from-r/
+263,feature,"Heavyweight: “Why and how Bitcoin uses Merkle trees” (949 words, Oct 28, 2025).",https://www.johndcook.com/blog/2025/10/28/bitcoin-merkle-trees/
+264,feature,"Heavyweight: “Attribution based on tail probabilities” (949 words, Jul 17, 2018).",https://www.johndcook.com/blog/2018/07/17/attribution/
+265,feature,"Heavyweight: “Branch cuts and Common Lisp” (949 words, Dec 17, 2016).",https://www.johndcook.com/blog/2016/12/17/branch-cuts-and-common-lisp/
+266,feature,"Heavyweight: “Probability distributions and object oriented programming” (947 words, Jan 23, 2009).",https://www.johndcook.com/blog/2009/01/23/probability-distributions-and-object-oriented-programming/
+267,feature,"Heavyweight: “ASCII art diagrams in Emacs org-mode” (944 words, Jun 15, 2016).",https://www.johndcook.com/blog/2016/06/15/ascii-art-diagrams-in-emacs-org-mode/
+268,feature,"Heavyweight: “Cracking pass codes with De Bruijn sequences” (939 words, Oct 22, 2019).",https://www.johndcook.com/blog/2019/10/22/hacking-with-de-bruijn/
+269,feature,"Heavyweight: “The impossible puzzle” (938 words, Nov 04, 2024).",https://www.johndcook.com/blog/2024/11/04/the-impossible-puzzle/
+270,feature,"Heavyweight: “RSA with Pseudoprimes” (938 words, Dec 13, 2018).",https://www.johndcook.com/blog/2018/12/13/rsa-with-pseudoprimes/
+271,feature,"Heavyweight: “Choosing a Computer Language for a Project” (937 words, Apr 23, 2024).",https://www.johndcook.com/blog/2024/04/23/choosing-a-computer-language-for-a-project/
+272,feature,"Heavyweight: “How to make a Smith chart” (934 words, Oct 23, 2025).",https://www.johndcook.com/blog/2025/10/23/smith-chart/
+273,feature,"Heavyweight: “A closer look at zero spacing” (930 words, Feb 04, 2022).",https://www.johndcook.com/blog/2022/02/04/zero-spacing/
+274,feature,"Heavyweight: “Generating De Bruijn cycles with primitive polynomials” (930 words, Oct 28, 2019).",https://www.johndcook.com/blog/2019/10/28/generating-de-bruijn/
+275,feature,"Heavyweight: “News regarding ABC conjecture and Riemann Hypothesis” (929 words, Sep 20, 2018).",https://www.johndcook.com/blog/2018/09/20/abc-conjecture-riemann-hypothesis/
+276,feature,"Heavyweight: “Clearing up the confusion around Jacobi functions” (928 words, Oct 12, 2018).",https://www.johndcook.com/blog/2018/10/12/jacobi-function-nomenclature/
+277,feature,"Heavyweight: “Pratt Primality Certificates” (927 words, Jan 03, 2023).",https://www.johndcook.com/blog/2023/01/03/pratt-certificate/
+278,feature,"Heavyweight: “How many possible Unicode characters there are and why” (927 words, Sep 02, 2019).",https://www.johndcook.com/blog/2019/09/02/number-of-possible-unicode-characters/
+279,feature,"Heavyweight: “Power laws and the generalized CLT” (926 words, Aug 19, 2009).",https://www.johndcook.com/blog/2009/08/19/generalized-central-limit-theorem/
+280,feature,"Heavyweight: “Practical continuity” (925 words, Aug 01, 2016).",https://www.johndcook.com/blog/2016/08/01/practical-continuity/
+281,feature,"Heavyweight: “Multi-arm adaptively randomized clinical trials” (924 words, Dec 21, 2018).",https://www.johndcook.com/blog/2018/12/21/multi-arm/
+282,feature,"Heavyweight: “Random samples from a tetrahedron” (923 words, Oct 11, 2025).",https://www.johndcook.com/blog/2025/10/11/random-samples-from-a-tetrahedron/
+283,feature,"Heavyweight: “Normal and non-normal subgroups” (923 words, Sep 26, 2023).",https://www.johndcook.com/blog/2023/09/26/normal-and-non-normal-subgroups/
+284,feature,"Heavyweight: “Mean anomaly, true anomaly, and eccentric anomaly” (923 words, Oct 22, 2022).",https://www.johndcook.com/blog/2022/10/22/orbital-anomalies/
+285,feature,"Heavyweight: “Expected length of longest common DNA substrings” (921 words, Apr 18, 2020).",https://www.johndcook.com/blog/2020/04/18/expected-length-of-longest-common-dna-substrings/
+286,feature,"Heavyweight: “Stone-Weierstrass on a disk” (921 words, Aug 22, 2019).",https://www.johndcook.com/blog/2019/08/22/stone-weierstrass-on-a-disk/
+287,feature,"Heavyweight: “Factoring Stencils” (917 words, Aug 17, 2025).",https://www.johndcook.com/blog/2025/08/17/factoring-stencils/
+288,feature,"Heavyweight: “Redundant Residue Number Systems” (915 words, Dec 05, 2020).",https://www.johndcook.com/blog/2020/12/05/rrns/
+289,feature,"Heavyweight: “MDS codes” (912 words, Mar 07, 2020).",https://www.johndcook.com/blog/2020/03/07/mds-codes/
+290,feature,"Heavyweight: “Solar Day vs Sidereal Day” (911 words, Dec 25, 2022).",https://www.johndcook.com/blog/2022/12/25/solar-vs-sidereal/
+291,feature,"Heavyweight: “Modal axioms and rules for interplanetary travel” (908 words, Jan 22, 2022).",https://www.johndcook.com/blog/2022/01/22/modal-axiom-cube/
+292,feature,"Heavyweight: “Using Python as a statistical calculator” (907 words, Oct 15, 2022).",https://www.johndcook.com/blog/2022/10/15/python-as-stat-calculator/
+293,feature,"Heavyweight: “Sine of a googol” (905 words, Dec 05, 2018).",https://www.johndcook.com/blog/2018/12/05/sine-of-a-googol/
+294,feature,"Heavyweight: “The permutation symbol” (903 words, Sep 16, 2018).",https://www.johndcook.com/blog/2018/09/16/permutation-tensor/
+295,feature,"Heavyweight: “The Dirac comb or Sha function” (901 words, Dec 22, 2015).",https://www.johndcook.com/blog/2015/12/22/the-dirac-comb-or-sha-function/
+296,feature,"Heavyweight: “Munging CSV files with standard Unix tools” (900 words, Aug 30, 2019).",https://www.johndcook.com/blog/2019/08/30/cut-sort-awk/
+297,feature,"Heavyweight: “Perfectly nonlinear functions” (899 words, Oct 09, 2020).",https://www.johndcook.com/blog/2020/10/09/perfectly-nonlinear-functions/
+298,feature,"Heavyweight: “Distribution of quadratic residues” (898 words, Jul 12, 2019).",https://www.johndcook.com/blog/2019/07/12/distribution-of-quadratic-residues/
+299,feature,"Heavyweight: “Is Low Precision Arithmetic Safe?” (897 words, Feb 06, 2024).",https://www.johndcook.com/blog/2024/02/06/is-low-precision-arithmetic-safe/
+300,feature,"Heavyweight: “The quadratic formula and low-precision arithmetic” (897 words, Apr 28, 2018).",https://www.johndcook.com/blog/2018/04/28/quadratic-formula/
+301,feature,"Heavyweight: “Canonical examples from robust statistics” (897 words, Mar 11, 2009).",https://www.johndcook.com/blog/2009/03/11/robust-statistics/
+302,feature,"Heavyweight: “Luhn checksum algorithm” (896 words, Apr 18, 2023).",https://www.johndcook.com/blog/2023/04/18/luhn-checksum/
+303,feature,"Heavyweight: “Passwords and power laws” (896 words, Sep 25, 2018).",https://www.johndcook.com/blog/2018/09/25/passwords-and-power-laws/
+304,feature,"Heavyweight: “How blocks are chained in a blockchain” (895 words, Oct 27, 2025).",https://www.johndcook.com/blog/2025/10/27/blockchain/
+305,feature,"Heavyweight: “Computing the nth digit of π directly” (895 words, Mar 14, 2025).",https://www.johndcook.com/blog/2025/03/14/bbp/
+306,feature,"Heavyweight: “Searching Greek and Hebrew with regular expressions” (895 words, Sep 20, 2020).",https://www.johndcook.com/blog/2020/09/20/unicode-regex/
+307,feature,"Heavyweight: “The hard part in becoming a command line wizard” (894 words, Feb 18, 2019).",https://www.johndcook.com/blog/2019/02/18/command-line-wizard/
+308,feature,"Heavyweight: “Testing RNGs with PractRand” (894 words, Aug 14, 2017).",https://www.johndcook.com/blog/2017/08/14/testing-rngs-with-practrand/
+309,feature,"Heavyweight: “Natural one-liners” (893 words, Feb 22, 2024).",https://www.johndcook.com/blog/2024/02/22/natural-one-liners/
+310,feature,"Heavyweight: “Linear ODEs with periodic solutions” (893 words, Sep 29, 2021).",https://www.johndcook.com/blog/2021/09/29/linear-ode-periodic/
+311,feature,"Heavyweight: “Proving that a choice was made in good faith” (893 words, Aug 14, 2019).",https://www.johndcook.com/blog/2019/08/14/good-faith/
+312,feature,"Heavyweight: “Circular, hyperbolic, and elliptic functions” (892 words, Jul 09, 2023).",https://www.johndcook.com/blog/2023/07/09/jacobi-trig/
+313,feature,"Heavyweight: “Regular expressions and special characters” (892 words, Aug 31, 2019).",https://www.johndcook.com/blog/2019/08/31/regex-special-characters/
+314,feature,"Heavyweight: “Finding numbers in pi” (891 words, Oct 23, 2017).",https://www.johndcook.com/blog/2017/10/23/finding-numbers-in-pi/
+315,feature,"Heavyweight: “Computing Fourier series coefficients with the FFT” (890 words, Mar 20, 2021).",https://www.johndcook.com/blog/2021/03/20/fourier-series-fft/
+316,feature,"Heavyweight: “Enumerating monotone Boolean functions” (889 words, Jun 27, 2023).",https://www.johndcook.com/blog/2023/06/27/dedekind/
+317,feature,"Heavyweight: “Spherical coordinate Rosetta Stone” (887 words, Aug 12, 2023).",https://www.johndcook.com/blog/2023/08/12/spherical-coordinate-rosetta-stone/
+318,feature,"Heavyweight: “How many errors are left to find?” (887 words, Jul 13, 2010).",https://www.johndcook.com/blog/2010/07/13/lincoln-index/
+319,feature,"Heavyweight: “Mentally calculating the day of the week” (884 words, May 07, 2022).",https://www.johndcook.com/blog/2022/05/07/day-of-the-week/
+320,feature,"Heavyweight: “Gauss&#8217; golden theorem: quadratic reciprocity” (883 words, Jun 30, 2018).",https://www.johndcook.com/blog/2018/06/30/quadratic-reciprocity/
+321,feature,"Heavyweight: “Partial functions and total functions” (881 words, Dec 06, 2021).",https://www.johndcook.com/blog/2021/12/06/partial-functions/
+322,feature,"Heavyweight: “Silent Payments” (879 words, Sep 25, 2025).",https://www.johndcook.com/blog/2025/09/25/silent-payments/
+323,feature,"Heavyweight: “How UTF-8 works” (879 words, Sep 09, 2019).",https://www.johndcook.com/blog/2019/09/09/how-utf-8-works/
+324,feature,"Heavyweight: “Lessons Learned With the Z3 SAT/SMT Solver” (876 words, Mar 17, 2025).",https://www.johndcook.com/blog/2025/03/17/lessons-learned-with-the-z3-sat-smt-solver/
+325,feature,"Heavyweight: “Numerical integral with a singularity” (875 words, Nov 26, 2023).",https://www.johndcook.com/blog/2023/11/26/numerical-integral-with-a-singularity/
+326,feature,"Heavyweight: “Nephroids and evolutes” (873 words, Nov 04, 2022).",https://www.johndcook.com/blog/2022/11/04/nephroids-and-evolutes/
+327,feature,"Heavyweight: “Frequently asked questions” (872 words, Oct 10, 2013).",https://www.johndcook.com/blog/2013/10/10/faq/
+328,feature,"Heavyweight: “Kernel and Cokernel” (870 words, Apr 19, 2025).",https://www.johndcook.com/blog/2025/04/19/kernel-and-cokernel/
+329,feature,"Heavyweight: “Direction between two cities” (870 words, Aug 24, 2022).",https://www.johndcook.com/blog/2022/08/24/direction-between-two-cities/
+330,feature,"Heavyweight: “How to estimate ODE solver error” (870 words, Feb 19, 2020).",https://www.johndcook.com/blog/2020/02/19/fehlberg/
+331,feature,"Heavyweight: “Why Food for the Hungry runs Ubuntu” (868 words, Feb 08, 2011).",https://www.johndcook.com/blog/2011/02/08/why-food-for-the-hungry-runs-ubuntu/
+332,feature,"Heavyweight: “Python triple quote strings and regular expressions” (867 words, Jan 30, 2021).",https://www.johndcook.com/blog/2021/01/30/python-triple-quote-regex/
+333,feature,"Heavyweight: “From tape measures to tensors” (867 words, Sep 26, 2020).",https://www.johndcook.com/blog/2020/09/26/tape-measures-and-tensors/
+334,feature,"Heavyweight: “Logistic counterexamples” (865 words, Oct 27, 2021).",https://www.johndcook.com/blog/2021/10/27/logistic-counterexamples/
+335,feature,"Heavyweight: “Turning the Golay problem sideways” (864 words, Jan 01, 2022).",https://www.johndcook.com/blog/2022/01/01/turning-the-golay-problem-sideways/
+336,feature,"Heavyweight: “Fourier uncertainty principle” (864 words, Mar 17, 2021).",https://www.johndcook.com/blog/2021/03/17/fourier-uncertainty-principle/
+337,feature,"Heavyweight: “Push versus Pull” (864 words, Sep 05, 2018).",https://www.johndcook.com/blog/2018/09/05/push-versus-pull/
+338,feature,"Heavyweight: “How to compute log factorial” (864 words, Aug 16, 2010).",https://www.johndcook.com/blog/2010/08/16/how-to-compute-log-factorial/
+339,feature,"Heavyweight: “Unit speed curve parameterization” (863 words, Jul 15, 2018).",https://www.johndcook.com/blog/2018/07/15/unit-speed-curve/
+340,feature,"Heavyweight: “A connected topology for the integers” (861 words, Dec 20, 2020).",https://www.johndcook.com/blog/2020/12/20/a-connected-topology-for-the-integers/
+341,feature,"Heavyweight: “Alphabets and Unicode” (861 words, Sep 27, 2020).",https://www.johndcook.com/blog/2020/09/27/alphabets-and-unicode/
+342,feature,"Heavyweight: “How to memorize a Bitcoin address” (860 words, Nov 13, 2023).",https://www.johndcook.com/blog/2023/11/13/memorize-bitcoin/
+343,feature,"Heavyweight: “How to memorize the ASCII table” (860 words, May 28, 2022).",https://www.johndcook.com/blog/2022/05/28/how-to-memorize-the-ascii-table/
+344,feature,"Heavyweight: “Calculating where projective lines intersect” (860 words, Apr 27, 2022).",https://www.johndcook.com/blog/2022/04/27/projective-intersect/
+345,feature,"Heavyweight: “Visualizing complex functions” (860 words, Nov 09, 2017).",https://www.johndcook.com/blog/2017/11/09/visualizing-complex-functions/
+346,feature,"Heavyweight: “Daily tip Twitter account FAQ” (860 words, Sep 23, 2010).",https://www.johndcook.com/blog/2010/09/23/daily-tip-twitter-account-faq/
+347,feature,"Heavyweight: “Set theory at the command line” (858 words, Nov 24, 2019).",https://www.johndcook.com/blog/2019/11/24/comm-set-theory/
+348,feature,"Heavyweight: “Equation of a circle through three points” (856 words, Jun 18, 2023).",https://www.johndcook.com/blog/2023/06/18/circle-through-three-points/
+349,feature,"Heavyweight: “Making an invertible function out of non-invertible parts” (855 words, Apr 04, 2020).",https://www.johndcook.com/blog/2020/04/04/feistel-networks/
+350,feature,"Heavyweight: “Inside the AES S-box” (854 words, May 25, 2019).",https://www.johndcook.com/blog/2019/05/25/aes-s-box/
+351,feature,"Heavyweight: “Unified theory of Fourier transforms” (853 words, Aug 26, 2017).",https://www.johndcook.com/blog/2017/08/26/unified-theory-of-fourier-transforms/
+352,feature,"Heavyweight: “Running the Gregorian calendar backwards” (852 words, Apr 21, 2025).",https://www.johndcook.com/blog/2025/04/21/gregorian-backwards/
+353,feature,"Heavyweight: “Logistic bifurcation diagram in detail” (852 words, Jan 11, 2020).",https://www.johndcook.com/blog/2020/01/11/logistic-bifurcation-diagram/
+354,feature,"Heavyweight: “On greedy algorithms and rodeo clowns” (851 words, Apr 22, 2024).",https://www.johndcook.com/blog/2024/04/22/on-greedy-algorithms-and-rodeo-clowns/
+355,feature,"Heavyweight: “Homomorphic encryption” (849 words, Jul 04, 2019).",https://www.johndcook.com/blog/2019/07/04/homomorphic-encryption/
+356,feature,"Heavyweight: “Bitcoin key mechanism and elliptic curves over finite fields” (849 words, Aug 14, 2018).",https://www.johndcook.com/blog/2018/08/14/bitcoin-elliptic-curves/
+357,feature,"Heavyweight: “Eigenvector centrality” (848 words, Jun 08, 2024).",https://www.johndcook.com/blog/2024/06/08/eigenvector-centrality/
+358,feature,"Heavyweight: “Using a table of logarithms” (848 words, Jun 03, 2024).",https://www.johndcook.com/blog/2024/06/03/using-a-table-of-logarithms/
+359,feature,"Heavyweight: “{div, grad, curl} of a {div, grad, curl}” (847 words, Dec 03, 2022).",https://www.johndcook.com/blog/2022/12/03/div-grad-curl/
+360,feature,"Heavyweight: “Why care about spherical trig?” (846 words, Sep 07, 2009).",https://www.johndcook.com/blog/2009/09/07/why-spherical-trigonometry/
+361,feature,"Heavyweight: “How areas of math are connected” (845 words, Mar 09, 2017).",https://www.johndcook.com/blog/2017/03/09/how-areas-of-math-are-connected/
+362,feature,"Heavyweight: “Probability that a study result is true” (845 words, Nov 24, 2008).",https://www.johndcook.com/blog/2008/11/24/probability-that-a-study-result-is-true/
+363,feature,"Heavyweight: “Random illustrations of Pascal&#8217;s theorem” (844 words, Oct 29, 2022).",https://www.johndcook.com/blog/2022/10/29/pascals-theorem/
+364,feature,"Heavyweight: “Can you have confidence in a confidence interval?” (843 words, Apr 23, 2023).",https://www.johndcook.com/blog/2023/04/23/confidence-interval/
+365,feature,"Heavyweight: “Confidence interval widths” (843 words, May 06, 2021).",https://www.johndcook.com/blog/2021/05/06/confidence-interval-widths/
