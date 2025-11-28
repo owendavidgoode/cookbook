@@ -1,14 +1,126 @@
-# Cookbook Workspace
+# Cookbook: johndcook.com Data Projects
 
-Utilities for extracting content from the downloaded `johndcook.com` site into reusable datasets for books, calendars, or other compilations.
+Utilities and datasets for extracting, analyzing, and repurposing content from johndcook.com/blog — 17 years and 5,233 posts of mathematical blogging.
+
+## Projects
+
+### 1. Calendar Facts (Primary)
+A curated 365-day calendar of facts about the blog, suitable for a daily desk calendar or similar product.
+
+**Status**: 365 facts curated from 9,000+ candidates across 21 categories.
+
+**Key Files**:
+- `data/johndcook_calendar_365.csv` — Final curated 365 facts
+- `data/johndcook_calendar_candidates_filtered.csv` — 1,599 filtered candidates
+- `data/johndcook_calendar_candidates_v3.csv` — 5,090 original candidates
+- `data/new_deep_analysis_facts.csv` — 42 PhD-level analysis facts (twitter, scholar, code evolution, mathematicians)
+- `data/new_analysis_facts.csv` — 37 GSC/crypto/tone/stats facts
+- `data/hn_facts.csv` — 10 Hacker News impact facts
+
+**Categories**:
+- `otd` — On-this-day historical facts
+- `stats` — PhD-level statistical analysis (Zipf's law, Heaps' law, autocorrelation, entropy)
+- `gsc` — Google Search Console insights (traffic, CTR, geographic reach)
+- `hn` — Hacker News impact (1,266 submissions, 25K+ upvotes, 4 posts with 500+ points)
+- `code` — Programming language evolution (Perl→Python trajectory, Mathematica constant)
+- `mathematician` — Most-referenced mathematicians (Euler 124, Fourier 65, Gauss 55)
+- `crypto` — Cryptocurrency coverage (elliptic curves, Monero, Bitcoin)
+- `twitter` — John's 20+ topic-specific Twitter accounts
+- `scholar` — Academic impact (5,881 citations, 32 publications)
+- `tools` — Standalone calculators (interpolation calculator drives 83.7% of search traffic)
+- `tone` — Semantic analysis (86.4% first-person, explanatory style)
+- `rarity`, `quirk`, `density`, `constant`, `span`, `evergreen`, `engagement`, `meta`
+
+**To rebuild calendar with latest facts**:
+```bash
+cd data && python3 rebuild.py
+```
+
+### 2. Twitter Bot (Live)
+Autonomous bot posting facts to [@jdc_facts](https://x.com/jdc_facts).
+
+**Status**: Live and running. Posts at 8am + 6pm UTC (2x daily).
+
+**Facts**: 427 facts from calendar, HN, GSC, and analysis sources (~7 months runway).
+
+**How it works**: GitHub Actions runs `bot/post_fact.py` on schedule, picks random unposted fact, posts to X, tracks state.
+
+**See**: `bot/README.md` for full documentation.
+
+### 3. Book: "The Endeavour by the Numbers" (Planned)
+A technical companion book celebrating the blog through data-driven exploration.
+
+**See**: `BOOK_PLAN.md` for full outline.
+
+**Structure**:
+- Part I: The Shape of the Blog (macro view)
+- Part II: Threads Through Time (Bayesian, crypto, math+music)
+- Part III: Curiosities & Outliers (rare words, visual posts)
+- Part IV: The Constants (π, special functions, mathematicians)
+
+**Target**: ~150-200 pages, data visualizations, gift for the blog author.
+
+## Data Sources
+
+### Blog Content
+- `data/johndcook_posts_enriched.jsonl` — 5,233 posts with full content, categories, tags, word counts
+- `data/johndcook_posts.jsonl` — Basic post extraction
+- `data/johndcook_text_index.jsonl` — Text analysis index
+- `data/posts_metadata.csv` — Post metadata
+
+### External Data
+- `data/gsc_exports/` — 16 months of Google Search Console data (queries, pages, countries, Discover)
+- `data/wp_taxonomies/` — WordPress category and tag definitions
+
+## Key Findings
+
+### Traffic & Reach
+- Interpolation calculator: 538,000+ clicks (83.7% of all search traffic)
+- 244 countries reached; Romania has mysterious 9.98% CTR (2x global average)
+- Tools drive 98% of search traffic; blog posts drive 59%
+
+### Hacker News Impact
+- 1,266 submissions over 17 years
+- 25,486 total upvotes, 10,757 comments
+- 4 posts exceeded 500 points (likely #1): "Organizing complexity" (742), "Software reuse" (667), "987654321/123456789" (637), "Rule of succession" (575)
+- ColinWright submitted 112 posts — a superfan since 2009
+
+### Academic Impact
+- 5,881 Google Scholar citations
+- 32 peer-reviewed publications + 13 MD Anderson working papers
+- 13 years at MD Anderson Cancer Center (2000-2013) before independent consulting
+
+### Code Language Evolution
+- Python: 731 posts (lingua franca since ~2015)
+- Mathematica: 782 posts (steady since 2008)
+- Perl: 147 posts (2008-2014, now legacy)
+- LaTeX: 783 posts (nearly every math post)
+- 2015 was the Python inflection point (3x jump from 2014)
+
+### Publication Consistency
+- 17 years continuous publication
+- Longest gap: 12 days (Feb 13-26, 2025)
+- Peak: 26 consecutive days (Nov 13 - Dec 8, 2022)
 
 ## Quick Start
-- Requirement: `python3` (stdlib only; no extra packages needed).
-- Run extraction from this folder:
-  - `python3 src/extract_johndcook.py --source ../johndcook/app/public --output data/johndcook_posts.jsonl`
-- Output: JSONL with `slug`, `canonical_url`, `title`, `heading`, `summary`, `word_count`, `blocks` (tag + text), and combined `content`.
+
+```bash
+# Extract posts from downloaded site
+python3 src/extract_johndcook.py --source ../johndcook/app/public --output data/johndcook_posts.jsonl
+
+# Generate calendar fact candidates
+python3 scripts/generate_calendar_facts_opus.py
+
+# Rebuild curated 365 with latest analysis facts
+cd data && python3 rebuild.py
+```
+
+## Requirements
+- Python 3.x (stdlib only for extraction)
+- No external packages required for core functionality
 
 ## Notes
-- Treat `../johndcook` as read-only; this folder is the workspace for generated artifacts.
-- Adjust `--limit` to preview a subset while testing.
-- Content includes Unicode symbols from the original posts (e.g., Greek letters) to preserve fidelity.
+- Treat source blog data as read-only
+- All generated artifacts go in `data/`
+- Content preserves Unicode (Greek letters, math symbols)
+- Calendar facts designed to be nerdy and technical — gift for a mathematician
