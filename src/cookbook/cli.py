@@ -223,6 +223,31 @@ def bot_build(
     typer.secho(f"Wrote {len(facts)} facts to {output_path}", fg=typer.colors.GREEN)
 
 
+@bot_app.command("status", help="Show how many facts remain to post.")
+def bot_status(
+    facts_path: Path = typer.Option(
+        paths.BOT_DIR / "facts.json",
+        "--facts",
+        "-f",
+        exists=True,
+        readable=True,
+        help="facts.json to draw from.",
+    ),
+    state_path: Path = typer.Option(
+        paths.BOT_DIR / "state.json",
+        "--state",
+        "-s",
+        help="State file tracking posted IDs.",
+    ),
+) -> None:
+    facts = bot_utils.load_facts_json(facts_path)
+    posted = bot_utils.load_state(state_path)
+    remaining = len(facts) - len(posted)
+    days_left = remaining // 2  # 2 posts per day
+    typer.echo(f"Posted: {len(posted)}/{len(facts)}")
+    typer.echo(f"Remaining: {remaining} (~{days_left} days at 2/day)")
+
+
 @bot_app.command("post", help="Post a random fact to X.")
 def bot_post(
     facts_path: Path = typer.Option(

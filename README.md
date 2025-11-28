@@ -136,6 +136,9 @@ cd data && python3 rebuild.py
 - Fetch/enrich/index data: `python -m cookbook.cli ingest wp-api|taxonomies|enrich|index`
 - Bot: rebuild facts (`python -m cookbook.cli bot build`), validate (`python -m cookbook.cli bot validate`), post (`python -m cookbook.cli bot post --dry-run`)
 
+## Legacy Scripts
+- Older scripts in `data/` (e.g., `rebuild.py`, `rebuild_calendar.py`, `REBUILD_PLAN.md`) remain for reference but are deprecated. Use the CLI commands above instead. See `docs/legacy-scripts.md` for details.
+
 ## Requirements
 - Python 3.x
 - Optional but recommended: install repo deps with `make setup` (Typer/Tweepy for CLI/bot, pytest/ruff for validation)
