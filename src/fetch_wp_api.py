@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 import ssl
 from pathlib import Path
 from typing import Iterable
@@ -31,7 +30,6 @@ def fetch_page(base_url: str, page: int, per_page: int, verify_ssl: bool) -> tup
 def iter_posts(base_url: str, verify_ssl: bool) -> Iterable[dict]:
     per_page = 100
     first_page, headers = fetch_page(base_url, 1, per_page, verify_ssl)
-    total = int(headers.get("x-wp-total", "0"))
     total_pages = int(headers.get("x-wp-totalpages", "1"))
     yield from first_page
     for page in range(2, total_pages + 1):

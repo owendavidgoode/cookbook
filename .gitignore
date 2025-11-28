@@ -9,5 +9,8 @@ secrets.json
 __pycache__/
 *.pyc
 
+# Packaging artifacts
+src/*.egg-info/
+
 # State tracking (optional - could commit this)
 # state.json

@@ -15,7 +15,7 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Set
 
 TEXT_INDEX = Path("data/johndcook_text_index.jsonl")
 POSTS_ENRICHED = Path("data/johndcook_posts_enriched.jsonl")
@@ -365,4 +365,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

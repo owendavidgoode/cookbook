@@ -5,8 +5,6 @@ from __future__ import annotations
 
 import csv
 import json
-import math
-import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import datetime

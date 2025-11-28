@@ -102,6 +102,18 @@ A technical companion book celebrating the blog through data-driven exploration.
 - Longest gap: 12 days (Feb 13-26, 2025)
 - Peak: 26 consecutive days (Nov 13 - Dec 8, 2022)
 
+### Mathematician References
+- Euler: 124 posts (most-referenced)
+- Fourier: 65 posts
+- Gauss: 55 posts
+- Riemann: 47 posts
+- Ramanujan: 34 posts
+- Living mathematicians: Terence Tao (15+), Donald Knuth (12+)
+
+### Google Discover
+- "Dungeons, Dragons, and Numbers" went viral: 3,282 clicks, 53,563 impressions
+- "TV tuned to a dead channel" hit 5.04% CTR — literary references outperform
+
 ## Quick Start
 
 ```bash
@@ -115,12 +127,33 @@ python3 scripts/generate_calendar_facts_opus.py
 cd data && python3 rebuild.py
 ```
 
+## Tooling
+- Install dev deps: `make setup`
+- Lint/test: `make lint` / `make test`
+- Validate the canonical 365 set stays unchanged: `python -m cookbook.cli calendar validate`
+- Snapshot the 365 for print/export: `python -m cookbook.cli calendar snapshot`
+- Run candidate generators: `python -m cookbook.cli calendar candidates --version v4`
+- Fetch/enrich/index data: `python -m cookbook.cli ingest wp-api|taxonomies|enrich|index`
+- Bot: rebuild facts (`python -m cookbook.cli bot build`), validate (`python -m cookbook.cli bot validate`), post (`python -m cookbook.cli bot post --dry-run`)
+
 ## Requirements
-- Python 3.x (stdlib only for extraction)
-- No external packages required for core functionality
+- Python 3.x
+- Optional but recommended: install repo deps with `make setup` (Typer/Tweepy for CLI/bot, pytest/ruff for validation)
 
 ## Notes
 - Treat source blog data as read-only
 - All generated artifacts go in `data/`
 - Content preserves Unicode (Greek letters, math symbols)
 - Calendar facts designed to be nerdy and technical — gift for a mathematician
+
+## Session History
+
+**2025-11-28**: Major analysis pass
+- Integrated 16 months of Google Search Console data
+- Scraped Hacker News API (1,266 submissions, 25K+ upvotes)
+- Google Scholar citations (5,881)
+- Deep code language evolution analysis (Perl→Python trajectory)
+- Mathematician reference counts
+- Twitter account network mapping (20+ topic accounts)
+- Rebuilt calendar from 13 to 21 categories with 42 new PhD-level facts
+- Twitter bot launched at @jdc_facts
