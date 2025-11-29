@@ -1,6 +1,9 @@
 # Deploy key (NEVER commit)
 .ssh/
 
+# macOS
+.DS_Store
+
 # Environment/secrets
 .env
 secrets.json
