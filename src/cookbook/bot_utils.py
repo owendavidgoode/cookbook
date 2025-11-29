@@ -1,4 +1,4 @@
-"""Shared helpers for bot fact building and posting."""
+"""Shared helpers for bot posting."""
 
 from __future__ import annotations
 
@@ -11,97 +11,61 @@ from typing import Iterable
 
 import tweepy
 
-from . import paths
-
-
-DEFAULT_FACT_FILES = [
-    "johndcook_calendar_365.csv",
-    "hn_facts.csv",
-    "new_analysis_facts.csv",
-    "additional_phd_facts.csv",
-]
-
-
-def load_csv_facts(csv_path: Path) -> list[dict]:
-    """Load facts from a CSV file; expects header with 'fact' and optional columns."""
-    import csv  # Lazy import to keep top-level light
-
-    facts: list[dict] = []
-    with csv_path.open(encoding="utf-8") as fh:
-        reader = csv.DictReader(fh)
-        for row in reader:
-            fact_text = row.get("fact", "").strip()
-            if not fact_text:
-                continue
-            source_url = (row.get("source_link") or "").strip() or None
-            fact_type = (row.get("type") or "general").strip()
-            slug = (row.get("slug") or "").strip() or None
-            facts.append(
-                {
-                    "text": fact_text,
-                    "source_url": source_url,
-                    "type": fact_type,
-                    "slug": slug,
-                    "source_file": csv_path.name,
-                }
-            )
-    return facts
-
-
-def build_facts(data_dir: Path | None = None, max_length: int = 260) -> list[dict]:
-    """Aggregate facts from the default CSV sources, assigning IDs and enforcing length."""
-    base = data_dir or paths.DATA_ROOT
-    all_facts: list[dict] = []
-    for filename in DEFAULT_FACT_FILES:
-        path = base / filename
-        if not path.exists():
-            continue
-        facts = load_csv_facts(path)
-        all_facts.extend(facts)
-
-    # Assign IDs
-    for idx, fact in enumerate(all_facts, start=1):
-        fact["id"] = idx
-
-    # Filter for tweetable length (room for link)
-    valid = [f for f in all_facts if len(f.get("text", "")) <= max_length]
-    return valid
-
 
 def write_facts_json(facts: Iterable[dict], output_path: Path) -> None:
+    """Write facts list to JSON file."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as fh:
         json.dump(list(facts), fh, indent=2, ensure_ascii=False)
 
 
 def load_facts_json(path: Path) -> list[dict]:
+    """Load facts from JSON, ensuring each fact has an ID."""
     with path.open(encoding="utf-8") as fh:
-        return json.load(fh)
+        facts = json.load(fh)
+    # Ensure all facts have IDs (assign if missing)
+    for idx, fact in enumerate(facts, start=1):
+        if not fact.get("id"):
+            fact["id"] = idx
+    return facts
 
 
-def load_state(path: Path) -> set[int]:
+RECENCY_WINDOW = 50  # Don't repeat a fact within this many days
+
+
+def load_state(path: Path) -> list[int]:
+    """Load ordered list of recently-posted fact IDs (most recent last)."""
     if not path.exists():
-        return set()
+        return []
     with path.open(encoding="utf-8") as fh:
-        return set(json.load(fh).get("posted_ids", []))
+        data = json.load(fh)
+        # Support both old format (posted_ids set) and new format (recent_ids list)
+        if "recent_ids" in data:
+            return data["recent_ids"]
+        # Migrate from old format - treat all as recent
+        return data.get("posted_ids", [])
 
 
-def save_state(path: Path, posted_ids: set[int]) -> None:
+def save_state(path: Path, recent_ids: list[int]) -> None:
+    """Save recently-posted fact IDs to state file."""
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as fh:
-        json.dump({"posted_ids": sorted(posted_ids)}, fh, indent=2)
+        json.dump({"recent_ids": recent_ids}, fh, indent=2)
 
 
-def pick_fact(facts: list[dict], posted_ids: set[int]) -> dict | None:
-    unposted = [f for f in facts if f.get("id") not in posted_ids]
-    if not unposted:
+def pick_fact(facts: list[dict], recent_ids: list[int]) -> dict | None:
+    """Pick a random fact not posted in the last RECENCY_WINDOW days."""
+    excluded = set(recent_ids[-RECENCY_WINDOW:])
+    eligible = [f for f in facts if f.get("id") not in excluded]
+    if not eligible:
         return None
-    return random.choice(unposted)
+    return random.choice(eligible)
 
 
 def format_tweet(fact: dict) -> str:
+    """Format fact as tweet text, optionally appending source link."""
     text = fact.get("text", "")
-    link = fact.get("source_url")
+    link = fact.get("source_url") or fact.get("source_link")
     if link:
         candidate = f"{text}\n\n{link}"
         if len(candidate) <= 280:
@@ -110,6 +74,7 @@ def format_tweet(fact: dict) -> str:
 
 
 def get_client() -> tweepy.Client:
+    """Create authenticated Twitter/X client from environment variables."""
     return tweepy.Client(
         consumer_key=os.environ["X_API_KEY"],
         consumer_secret=os.environ["X_API_SECRET"],
@@ -128,16 +93,12 @@ def post_random_fact(
 ) -> dict:
     """Pick and post a fact; returns metadata about the attempt."""
     facts = load_facts_json(facts_path)
-    posted_ids = load_state(state_path)
+    recent_ids = load_state(state_path)
 
-    picked = pick_fact(facts, posted_ids)
+    picked = pick_fact(facts, recent_ids)
     if picked is None:
-        if not reset_when_empty:
-            return {"status": "empty", "message": "All facts posted; reset prohibited."}
-        posted_ids = set()
-        picked = pick_fact(facts, posted_ids)
-        if picked is None:
-            return {"status": "empty", "message": "No facts available after reset."}
+        # With sliding window, this shouldn't happen unless pool < RECENCY_WINDOW
+        return {"status": "empty", "message": "No eligible facts available."}
 
     tweet_text = format_tweet(picked)
     meta: dict[str, object] = {"status": "posted", "fact_id": picked.get("id"), "tweet": tweet_text}
@@ -161,9 +122,11 @@ def post_random_fact(
                 return meta
             time.sleep(backoff_seconds * attempt)
 
-    posted_ids.add(picked["id"])
-    save_state(state_path, posted_ids)
-    meta["posted_count"] = len(posted_ids)
+    # Append to recent list (sliding window maintained by pick_fact)
+    recent_ids.append(picked["id"])
+    save_state(state_path, recent_ids)
+    meta["recent_count"] = len(recent_ids)
+    meta["window_size"] = RECENCY_WINDOW
     if last_exc:
         meta["warning"] = f"succeeded after retry: {last_exc}"
     return meta

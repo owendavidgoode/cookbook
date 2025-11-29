@@ -10,7 +10,7 @@ from pathlib import Path
 import typer
 
 from . import paths
-from . import bot_utils, calendar_utils, ingest_utils
+from . import bot_utils, calendar_utils, calendar_export, ingest_utils
 
 app = typer.Typer(help="Cookbook utilities for calendar, bot, and book workflows.")
 calendar_app = typer.Typer(help="Calendar validation and curation utilities.")
@@ -144,6 +144,50 @@ def calendar_candidates(
         typer.secho(str(exc), fg=typer.colors.RED, err=True)
         raise typer.Exit(code=1)
     typer.secho(f"Candidate facts written to {out}", fg=typer.colors.GREEN)
+
+
+@calendar_app.command("export-images", help="Export calendar cards as PNG images.")
+def calendar_export_images(
+    output: Path = typer.Option(
+        Path("out/calendar"),
+        "--output",
+        "-o",
+        help="Output directory for card images.",
+    ),
+    facts_path: Path = typer.Option(
+        paths.BOT_DIR / "facts.json",
+        "--facts",
+        "-f",
+        exists=True,
+        readable=True,
+        help="Path to the 365 facts JSON (or CSV).",
+    ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        "-l",
+        help="Limit number of cards to render (for testing).",
+    ),
+) -> None:
+    typer.echo(f"Exporting calendar cards to {output}...")
+
+    count = 0
+    for card_path in calendar_export.export_cards(
+        facts_path=facts_path,
+        output_dir=output,
+        limit=limit,
+    ):
+        count += 1
+        if count % 50 == 0 or count <= 5:
+            typer.echo(f"  Rendered {card_path.name}")
+
+    typer.secho(f"Exported {count} cards to {output}", fg=typer.colors.GREEN)
+
+    # Validate
+    errors = calendar_export.validate_export(output, expected_count=limit or 365)
+    if errors:
+        for err in errors:
+            typer.secho(f"WARNING: {err}", fg=typer.colors.YELLOW, err=True)
 
 
 def _format_tweet_text(fact: dict) -> str:
