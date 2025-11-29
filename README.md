@@ -47,18 +47,27 @@ Autonomous bot posting facts to [@jdc_facts](https://x.com/jdc_facts).
 
 **See**: `bot/README.md` for full documentation.
 
-### 3. Book: "The Endeavour by the Numbers" (Planned)
-A technical companion book celebrating the blog through data-driven exploration.
+### 3. Book: *Methodical* (Planned)
+A data-driven companion book celebrating johndcook.com/blog as a long-running, quietly influential institution.
 
-**See**: `BOOK_PLAN.md` for full outline.
+**Title**: **Methodical: One Blog, Seventeen Years, 1.8 Million Words**  
+**Subtitle**: A Data Portrait of John D. Cook's Blog
 
-**Structure**:
-- Part I: The Shape of the Blog (macro view)
-- Part II: Threads Through Time (Bayesian, crypto, math+music)
-- Part III: Curiosities & Outliers (rare words, visual posts)
-- Part IV: The Constants (π, special functions, mathematicians)
+**See**:
+- `book/OUTLINE_V4.md` — canonical content outline
+- `book/PRODUCTION_SPEC.md` — audience, style, and production details
+- `book/README.md` — start-here guide for drafting agents
 
-**Target**: ~150-200 pages, data visualizations, gift for the blog author.
+**Structure (high level)**:
+- **Front Matter** — Foreword, Prologue
+- **Part I: The Architecture** — scale, categories, rhythm
+- **Part II: The Obsessions** — constants, special functions, mathematicians
+- **Part III: The Bridge** — programming languages and cryptography
+- **Part IV: The Unexpected** — music, typography, Unicode, clinical trials, interviews
+- **Part V: The Long View** — evolution over eras and what the numbers miss
+- **Back Matter** — reference tables and a curated reading list
+
+**Target**: ~175 pages, narrative-first with supporting visualizations; gift for Cook, readable by his audience and data-viz/blogging enthusiasts.
 
 ## Data Sources
 

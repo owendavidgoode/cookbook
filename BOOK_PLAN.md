@@ -1,45 +1,42 @@
-# Book Plan: "The Endeavour by the Numbers"
+# Book Plan: "You Can Just Do Things"
 
-A technical companion book celebrating johndcook.com/blog through data-driven exploration.
+> **Subtitle**: How to Become Internet Famous
+>
+> **Status**: Active working document. See `book/` for chapter drafts and figures.
+
+A data-driven companion book celebrating johndcook.com/blog through 17 years of posts.
 
 ## Concept
 
-A nerdy, data-rich book that uses calendar facts as entry points into deeper analysis of the blog's 17+ years and 5,000+ posts. Gift for the author - should feel like a love letter from someone who read the data carefully.
+A nerdy, data-rich book that explores the blog's 5,000+ posts through careful analysis. Gift for the author - should feel like a love letter from someone who read the data carefully.
 
 ## Source Materials
 
 All in `/data/`:
-- `johndcook_calendar_candidates_filtered.csv` - 1,599 curated facts (starting points)
+- `posts_metadata.csv` - Post metadata (dates, word counts, categories)
 - `johndcook_posts_enriched.jsonl` - Full post content with categories/tags
 - `johndcook_text_index.jsonl` - Text analysis index
-- `posts_metadata.csv` - Post metadata (dates, word counts, categories)
 - `wp_taxonomies/` - Category and tag definitions
 
-## Proposed Structure
+## Chapter Structure
 
-### Part I: The Shape of the Blog (macro view)
-- **Chapter 1: 17 Years in Numbers** - Timeline visualization, posting patterns, evolution of topics
-- **Chapter 2: The Category Landscape** - How Math (2,378 posts) relates to Music (85), Clinical Trials (55), Typography (50)
-- **Chapter 3: The Long Tail** - Tags used exactly once, posts that stand alone
+1. **The Shape of Seventeen Years** - Timeline, posting patterns, volume over time
+2. **The Topography of Interest** - Category landscape, Math's dominance, the long tail
+3. **The Rhythm of a Working Mind** - Weekly patterns, productivity cycles
+4. **The Numbers That Keep Appearing** - Pi, primes, mathematical constants
+5. **A Bestiary of Functions** - Gamma, Bessel, Fourier, special functions
+6. **The Mathematicians Behind the Theorems** - Euler, Gauss, Ramanujan mentions
+7. **Languages as Thinking Tools** - Python's rise, PowerShell's fall, Mathematica
+8. **Cryptography's Moment** - The 2019 spike, RSA to elliptic curves
+9. **The Edges of the Map** - Music, typography, clinical trials - the outlier categories
+10. **On Consulting** - The business thread woven through technical content
+11. **The Evolution of a Blog** - Three eras: high volume → quiet → depth
+12. **What Makes a Post Endure** - Analyzing the most-referenced posts
 
-### Part II: Threads Through Time (longitudinal stories)
-- **Chapter 4: The Bayesian Thread** - From "Musicians, drunks, and Oliver Cromwell" (2008) to "You can't have everything you want" (2025)
-- **Chapter 5: Crypto's Arc** - First mention of Bitcoin (2018) through Monero stealth addresses (2025)
-- **Chapter 6: Where Math Meets Music** - 30 posts exploring the intersection
-- **Chapter 7: The Interview Collection** - Atiyah, Ghrist, Pickover, Chua, and others
+**Appendix A**: By the Numbers - Key statistics
+**Appendix B**: A Reading List - Notable posts by category
 
-### Part III: Curiosities & Outliers (micro view)
-- **Chapter 8: The Longest and Shortest** - 1,926-word interview vs 15-word "Oil on a parking lot"
-- **Chapter 9: Rare Words** - Terms appearing exactly once (pickle, freelance, doofenschmertz)
-- **Chapter 10: The Visual Posts** - 23 images in flag comparison, 19 in cellular automata
-- **Chapter 11: Link Forests** - Posts with 20+ outbound links
-
-### Part IV: The Constants (mathematical themes)
-- **Chapter 12: Pi's 404 Appearances** - How the constant weaves through the blog
-- **Chapter 13: Special Functions** - Bessel, Gamma, Zeta across the years
-- **Chapter 14: The Mathematicians** - Euler (124 mentions), Gauss (55), Ramanujan (34)
-
-### Appendix
+## Appendix
 - Full timeline of first/last mentions for key terms
 - Category/tag frequency tables
 - Methodology notes

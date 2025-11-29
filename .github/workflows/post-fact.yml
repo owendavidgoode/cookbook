@@ -2,8 +2,9 @@ name: Post Fact to X
 
 on:
   schedule:
-    # Runs at 8am and 6pm UTC (adjust as needed)
-    - cron: '0 8,18 * * *'
+    # Single daily trigger at midnight UTC
+    # Random delay (0-23 hrs) makes actual post time unpredictable within 24hr window
+    - cron: '0 0 * * *'
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
@@ -13,6 +14,19 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
+      - name: Random delay (0-23 hours)
+        run: |
+          # Add random delay to spread posts across 24hr window
+          # Skip delay for manual triggers
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            # Random delay 0-82800 seconds (0-23 hours)
+            DELAY=$((RANDOM * RANDOM % 82800))
+            HOURS=$((DELAY / 3600))
+            MINS=$(((DELAY % 3600) / 60))
+            echo "Sleeping for ${HOURS}h ${MINS}m"
+            sleep $DELAY
+          fi
+
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
