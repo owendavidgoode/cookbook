@@ -22,15 +22,12 @@ def parse_args() -> argparse.Namespace:
         help="Path to state.json",
     )
     parser.add_argument(
-        "--reset-when-empty",
-        action="store_true",
-        help="Allow reset when all facts have been posted.",
-    )
-    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Do not post; print the tweet instead.",
     )
+    # Legacy flag, no longer used (sliding window handles repeats)
+    parser.add_argument("--reset-when-empty", action="store_true", help=argparse.SUPPRESS)
     return parser.parse_args()
 
 
@@ -46,7 +43,6 @@ def main() -> int:
     meta = bot_utils.post_random_fact(
         facts_path=facts_path,
         state_path=state_path,
-        reset_when_empty=args.reset_when_empty,
         dry_run=args.dry_run,
     )
 
@@ -55,15 +51,14 @@ def main() -> int:
         print(f"DRY RUN: {meta.get('tweet')}")
         return 0
     if status == "empty":
-        print(meta.get("message", "All facts posted; no reset allowed."))
+        print(meta.get("message", "No eligible facts available."))
         return 1
     if status == "failed":
         print(f"Failed to post fact: {meta.get('error')}")
         return 1
 
     print(f"Posted fact #{meta.get('fact_id')} (tweet id {meta.get('tweet_id')})")
-    if meta.get("posted_count") is not None:
-        print(f"State updated: {meta.get('posted_count')} facts posted")
+    print(f"History: {meta.get('recent_count')} total posts, {meta.get('window_size')}-day no-repeat window")
     if meta.get("warning"):
         print(f"Warning: {meta.get('warning')}")
     return 0
