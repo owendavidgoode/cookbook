@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """
-Generate all 19 figures for the Methodical book.
+Generate figures for the Methodical book (Revised Structure).
 
 Output: SVG files in book/figures/
-Data sources: data/posts_metadata.csv, data/johndcook_text_index.jsonl
+Data sources: data/posts_metadata.csv
 
 Usage:
     python scripts/generate_book_figures.py
     python scripts/generate_book_figures.py --chapter 1
 """
 
+# Force non-interactive backend BEFORE importing pyplot
+import matplotlib
+matplotlib.use('Agg')
+
 import argparse
-import json
 from pathlib import Path
 from collections import Counter
 from datetime import datetime
@@ -73,12 +76,8 @@ def fig_01_activity_heatmap(df):
     fig, ax = plt.subplots(figsize=(12, 3))
 
     # Create date range and count posts per day
-    date_range = pd.date_range(start='2008-01-01', end='2025-12-31', freq='D')
     daily_counts = df.groupby(df['date'].dt.date).size()
-
-    # Create matrix: rows = day of week (0-6), cols = week number across all years
-    # We'll create a simpler year-by-year heatmap instead
-
+    
     years = range(2008, 2026)
     data = np.zeros((7, len(years) * 53))  # 7 days x ~53 weeks per year
 
@@ -175,8 +174,8 @@ def fig_02_category_treemap(df):
             if cat:
                 cat_counts[cat] += 1
 
-    # Get top categories
-    top_cats = cat_counts.most_common(15)
+    # Get top categories (10 to avoid cramped labels for small categories)
+    top_cats = cat_counts.most_common(10)
     labels = [f"{cat}\n({count})" for cat, count in top_cats]
     sizes = [count for _, count in top_cats]
 
@@ -237,17 +236,17 @@ def fig_02_category_packing(df):
                         if distance < radius + pr + 0.15:  # Gap between circles
                             overlap = True
                             break
-
+                    
                     if not overlap:
                         placed = True
                         break
                 if placed:
                     break
-
+        
         positions.append(((x, y), radius))
 
         # Draw circle
-        circle = plt.Circle((x, y), radius, alpha=0.7,
+        circle = plt.Circle((x, y), radius, alpha=0.7, 
                            color=plt.cm.Blues(0.3 + 0.5 * count / max_count),
                            edgecolor=COLORS['primary'], linewidth=1.5)
         ax.add_patch(circle)
@@ -301,7 +300,7 @@ def fig_03_weekday_radial(df):
 
     # Highlight Tuesday
     tuesday_idx = weekday_order.index('Tuesday')
-    ax.plot(angles[tuesday_idx], values[tuesday_idx], 'o', markersize=15,
+    ax.plot(angles[tuesday_idx], values[tuesday_idx], 'o', markersize=15, 
             color=COLORS['accent'], zorder=5)
 
     ax.set_title('Posting by Day of Week\n(Tuesday Peaks)', fontweight='bold', pad=20)
@@ -313,94 +312,18 @@ def fig_03_weekday_radial(df):
     print("  Created: ch03_weekday_radial.svg")
 
 
-def fig_03_connected_scatterplot(df):
-    """Connected scatterplot: posts vs average length by year."""
-    yearly = df.groupby('year').agg({
-        'word_count': ['count', 'mean']
-    })
-    yearly.columns = ['posts', 'avg_words']
-
-    fig, ax = plt.subplots(figsize=(10, 8))
-
-    years = yearly.index.tolist()
-    x = yearly['posts'].tolist()
-    y = yearly['avg_words'].tolist()
-
-    # Plot line connecting points
-    ax.plot(x, y, '-', color=COLORS['secondary'], linewidth=1, alpha=0.5, zorder=1)
-
-    # Plot points with year labels
-    scatter = ax.scatter(x, y, c=years, cmap='viridis', s=100, zorder=2)
-
-    # Add year labels
-    for i, year in enumerate(years):
-        offset = (5, 5) if i % 2 == 0 else (-15, -15)
-        ax.annotate(str(year), (x[i], y[i]), textcoords="offset points",
-                   xytext=offset, fontsize=8)
-
-    ax.set_xlabel('Posts per Year')
-    ax.set_ylabel('Average Words per Post')
-    ax.set_title('The Trajectory: High Volume/Short → Moderate Volume/Long', fontweight='bold')
-
-    # Add colorbar for years
-    cbar = plt.colorbar(scatter, ax=ax, shrink=0.8)
-    cbar.set_label('Year')
-
-    plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch03_connected_scatterplot.svg')
-    plt.savefig(FIGURES_DIR / 'ch03_connected_scatterplot.png')
-    plt.close()
-    print("  Created: ch03_connected_scatterplot.svg")
-
-
 # =============================================================================
-# Chapter 4: The Numbers That Keep Appearing
+# Chapter 4: The Connectors
 # =============================================================================
-
-def fig_04_pi_timeline(df):
-    """Timeline of pi-related posts."""
-    # Find pi posts - broader search to capture more pi-related content
-    # Match: pi, π, 3.14, "pi day", "digits of pi", etc.
-    pi_pattern = r'\bpi\b|π|3\.14|circumference|pi day|digits of'
-    pi_posts = df[df['title'].str.contains(pi_pattern, case=False, na=False, regex=True)].copy()
-
-    # Also check tags for pi-related content
-    tag_pi = df[df['tags'].str.contains(r'\bpi\b|π', case=False, na=False, regex=True)]
-    pi_posts = pd.concat([pi_posts, tag_pi]).drop_duplicates()
-    pi_posts = pi_posts.sort_values('date')
-
-    fig, ax = plt.subplots(figsize=(12, 4))
-
-    # Plot timeline
-    years = pi_posts['date'].dt.year
-    ax.scatter(pi_posts['date'], [1] * len(pi_posts), c=years, cmap='viridis',
-               s=50, alpha=0.7)
-
-    ax.axhline(y=1, color=COLORS['secondary'], linestyle='-', alpha=0.3)
-    ax.set_ylim(0.5, 1.5)
-    ax.set_yticks([])
-    ax.set_xlabel('Year')
-    ax.set_title(f'Pi-Related Posts Over Time (n={len(pi_posts)})', fontweight='bold')
-
-    # Format x-axis
-    ax.xaxis.set_major_locator(mdates.YearLocator(2))
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
-
-    plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch04_pi_timeline.svg')
-    plt.savefig(FIGURES_DIR / 'ch04_pi_timeline.png')
-    plt.close()
-    print("  Created: ch04_pi_timeline.svg")
-
 
 def fig_04_constants_dumbbell(df):
     """Dumbbell chart: first/last appearance of mathematical constants."""
     constants = {
-        'Pi': r'\bpi\b',
+        'Pi': r'\\bpi\\b',
         'Prime': r'prime',
         'Random': r'random',
         'Fibonacci': r'fibonacci',
-        'e (Euler)': r'\be\b|euler',
+        'e (Euler)': r'\\be\\b|euler',
         'Golden ratio': r'golden|phi',
     }
 
@@ -417,8 +340,6 @@ def fig_04_constants_dumbbell(df):
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
-    y_positions = range(len(results))
-
     for i, r in enumerate(results):
         # Draw line from first to last
         ax.plot([r['first'], r['last']], [i, i], 'o-', color=COLORS['primary'],
@@ -429,8 +350,9 @@ def fig_04_constants_dumbbell(df):
     ax.set_xlim(2006, 2026)
     ax.set_ylim(-0.5, len(results) - 0.5)
     ax.set_yticks([])
+    ax.spines['left'].set_visible(False)  # Remove left spine to avoid label overlap
     ax.set_xlabel('Year')
-    ax.set_title('First and Last Appearance of Mathematical Constants', fontweight='bold')
+    ax.set_title('First and Last Appearance of Constants', fontweight='bold')
 
     plt.tight_layout()
     plt.savefig(FIGURES_DIR / 'ch04_constants_dumbbell.svg')
@@ -439,165 +361,38 @@ def fig_04_constants_dumbbell(df):
     print("  Created: ch04_constants_dumbbell.svg")
 
 
-# =============================================================================
-# Chapter 5: A Bestiary of Functions
-# =============================================================================
-
-def fig_05_functions_stacked_area(df):
-    """Stacked area chart of special function mentions over time."""
+def fig_04_functions_timeline(df):
+    """Timeline of when special functions appeared."""
     functions = ['gamma', 'Fourier', 'Bessel', 'Laplace', 'zeta']
-
-    yearly_counts = {f: [] for f in functions}
-    years = range(2008, 2026)
-
-    for year in years:
-        year_df = df[df['year'] == year]
-        for func in functions:
-            count = len(year_df[year_df['title'].str.contains(func, case=False, na=False)])
-            yearly_counts[func].append(count)
-
+    
     fig, ax = plt.subplots(figsize=(12, 6))
-
-    ax.stackplot(years, *[yearly_counts[f] for f in functions],
-                 labels=functions, alpha=0.8)
-
-    ax.set_xlabel('Year')
-    ax.set_ylabel('Posts')
-    ax.set_title('Special Functions in Post Titles Over Time', fontweight='bold')
-    ax.legend(loc='upper left')
-
-    plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch05_functions_stacked.svg')
-    plt.savefig(FIGURES_DIR / 'ch05_functions_stacked.png')
-    plt.close()
-    print("  Created: ch05_functions_stacked.svg")
-
-
-def fig_05_functions_bump(df):
-    """Bump chart showing which function dominated which era."""
-    functions = ['gamma', 'Fourier', 'Bessel', 'Laplace', 'zeta']
-    eras = [('Early', 2008, 2012), ('Middle', 2013, 2017), ('Recent', 2018, 2025)]
-
-    era_ranks = {era[0]: {} for era in eras}
-
-    for era_name, start, end in eras:
-        era_df = df[(df['year'] >= start) & (df['year'] <= end)]
-        counts = {}
-        for func in functions:
-            counts[func] = len(era_df[era_df['title'].str.contains(func, case=False, na=False)])
-
-        # Rank
-        sorted_funcs = sorted(counts.keys(), key=lambda x: -counts[x])
-        for rank, func in enumerate(sorted_funcs, 1):
-            era_ranks[era_name][func] = rank
-
-    fig, ax = plt.subplots(figsize=(10, 6))
-
-    era_positions = [0, 1, 2]
-    era_labels = [e[0] for e in eras]
-
-    for func in functions:
-        ranks = [era_ranks[era][func] for era in era_labels]
-        ax.plot(era_positions, ranks, 'o-', label=func, linewidth=2, markersize=10)
-
-    ax.set_xticks(era_positions)
-    ax.set_xticklabels(era_labels)
-    ax.set_ylabel('Rank (1 = most frequent)')
-    ax.set_ylim(5.5, 0.5)  # Invert so rank 1 is at top
-    ax.set_title('Function Prominence by Era', fontweight='bold')
-    ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
-
-    plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch05_functions_bump.svg')
-    plt.savefig(FIGURES_DIR / 'ch05_functions_bump.png')
-    plt.close()
-    print("  Created: ch05_functions_bump.svg")
-
-
-# =============================================================================
-# Chapter 6: The Mathematicians Behind the Theorems
-# =============================================================================
-
-def fig_06_mathematicians_timeline(df):
-    """Timeline of mathematician mentions."""
-    mathematicians = ['Gauss', 'Euler', 'Ramanujan', 'Newton', 'Fourier', 'Riemann']
-
-    fig, ax = plt.subplots(figsize=(12, 6))
-
-    for i, math_name in enumerate(mathematicians):
-        matches = df[df['title'].str.contains(math_name, case=False, na=False)]
+    
+    for i, func in enumerate(functions):
+        matches = df[df['title'].str.contains(func, case=False, na=False)]
         if len(matches) > 0:
             dates = matches['date']
-            ax.scatter(dates, [i] * len(dates), label=math_name, s=50, alpha=0.7)
-
-    ax.set_yticks(range(len(mathematicians)))
-    ax.set_yticklabels(mathematicians)
+            ax.scatter(dates, [i] * len(dates), label=func, s=50, alpha=0.7)
+            
+    ax.set_yticks(range(len(functions)))
+    ax.set_yticklabels(functions)
     ax.set_xlabel('Year')
-    ax.set_title('Mathematician Mentions Over Time', fontweight='bold')
-
+    ax.set_title('Special Function Appearances Over Time', fontweight='bold')
+    
     ax.xaxis.set_major_locator(mdates.YearLocator(2))
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
-
+    
     plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch06_mathematicians_timeline.svg')
-    plt.savefig(FIGURES_DIR / 'ch06_mathematicians_timeline.png')
+    plt.savefig(FIGURES_DIR / 'ch04_functions_timeline.svg')
+    plt.savefig(FIGURES_DIR / 'ch04_functions_timeline.png')
     plt.close()
-    print("  Created: ch06_mathematicians_timeline.svg")
-
-
-def fig_06_mathematicians_lollipop(df):
-    """Lollipop chart of total mentions per mathematician."""
-    mathematicians = {
-        'Fourier': 'Fourier',
-        'Gauss': 'Gauss',
-        'Laplace': 'Laplace',
-        'Bessel': 'Bessel',
-        'Newton': 'Newton',
-        'Euler': 'Euler',
-        'Ramanujan': 'Ramanujan',
-        'Fermat': 'Fermat',
-        'Riemann': 'Riemann',
-        'Knuth': 'Knuth',
-        'Cauchy': 'Cauchy',
-        'Hilbert': 'Hilbert',
-    }
-
-    counts = {}
-    for display_name, search_term in mathematicians.items():
-        counts[display_name] = len(df[df['title'].str.contains(search_term, case=False, na=False)])
-
-    # Sort by count
-    sorted_items = sorted(counts.items(), key=lambda x: x[1])
-    names = [x[0] for x in sorted_items]
-    values = [x[1] for x in sorted_items]
-
-    fig, ax = plt.subplots(figsize=(8, 8))
-
-    y_pos = range(len(names))
-    ax.hlines(y=y_pos, xmin=0, xmax=values, color=COLORS['primary'], linewidth=2)
-    ax.scatter(values, y_pos, color=COLORS['accent'], s=100, zorder=3)
-
-    ax.set_yticks(y_pos)
-    ax.set_yticklabels(names)
-    ax.set_xlabel('Posts Mentioning Name in Title')
-    ax.set_title('Mathematicians by Frequency of Mention', fontweight='bold')
-
-    # Add count labels
-    for i, v in enumerate(values):
-        ax.text(v + 0.5, i, str(v), va='center')
-
-    plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch06_mathematicians_lollipop.svg')
-    plt.savefig(FIGURES_DIR / 'ch06_mathematicians_lollipop.png')
-    plt.close()
-    print("  Created: ch06_mathematicians_lollipop.svg")
+    print("  Created: ch04_functions_timeline.svg")
 
 
 # =============================================================================
-# Chapter 7: Languages as Thinking Tools
+# Chapter 5: The Translation Layer
 # =============================================================================
 
-def fig_07_languages_stacked(df):
+def fig_05_languages_stacked(df):
     """Stacked area chart of programming language mentions."""
     languages = ['Python', 'Mathematica', 'PowerShell', 'C++', 'Perl', 'Haskell']
 
@@ -625,15 +420,15 @@ def fig_07_languages_stacked(df):
     ax.legend(loc='upper right')
 
     plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch07_languages_stacked.svg')
-    plt.savefig(FIGURES_DIR / 'ch07_languages_stacked.png')
+    plt.savefig(FIGURES_DIR / 'ch05_languages_stacked.svg')
+    plt.savefig(FIGURES_DIR / 'ch05_languages_stacked.png')
     plt.close()
-    print("  Created: ch07_languages_stacked.svg")
+    print("  Created: ch05_languages_stacked.svg")
 
 
-def fig_07_languages_bar(df):
+def fig_05_languages_bar(df):
     """Bar chart of total posts per language."""
-    languages = ['Python', 'SciPy', 'Mathematica', 'PowerShell', 'C++', 'Perl',
+    languages = ['Python', 'SciPy', 'Mathematica', 'PowerShell', 'C++', 'Perl', 
                  'Haskell', 'SymPy', 'Emacs']
 
     counts = {}
@@ -661,17 +456,17 @@ def fig_07_languages_bar(df):
         ax.text(val + 2, bar.get_y() + bar.get_height()/2, str(val), va='center')
 
     plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch07_languages_bar.svg')
-    plt.savefig(FIGURES_DIR / 'ch07_languages_bar.png')
+    plt.savefig(FIGURES_DIR / 'ch05_languages_bar.svg')
+    plt.savefig(FIGURES_DIR / 'ch05_languages_bar.png')
     plt.close()
-    print("  Created: ch07_languages_bar.svg")
+    print("  Created: ch05_languages_bar.svg")
 
 
 # =============================================================================
-# Chapter 8: Cryptography's Moment
+# Chapter 6: Cryptography's Moment
 # =============================================================================
 
-def fig_08_crypto_line(df):
+def fig_06_crypto_line(df):
     """Line chart of crypto and privacy posts over time."""
     years = range(2008, 2026)
     crypto_counts = []
@@ -691,9 +486,9 @@ def fig_08_crypto_line(df):
 
     fig, ax = plt.subplots(figsize=(12, 6))
 
-    ax.plot(years, crypto_counts, 'o-', label='Cryptography', linewidth=2,
+    ax.plot(years, crypto_counts, 'o-', label='Cryptography', linewidth=2, 
             color=COLORS['primary'], markersize=8)
-    ax.plot(years, privacy_counts, 's-', label='Privacy', linewidth=2,
+    ax.plot(years, privacy_counts, 's-', label='Privacy', linewidth=2, 
             color=COLORS['accent'], markersize=8)
 
     # Annotate 2019 spike
@@ -711,13 +506,13 @@ def fig_08_crypto_line(df):
     ax.legend()
 
     plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch08_crypto_line.svg')
-    plt.savefig(FIGURES_DIR / 'ch08_crypto_line.png')
+    plt.savefig(FIGURES_DIR / 'ch06_crypto_line.svg')
+    plt.savefig(FIGURES_DIR / 'ch06_crypto_line.png')
     plt.close()
-    print("  Created: ch08_crypto_line.svg")
+    print("  Created: ch06_crypto_line.svg")
 
 
-def fig_08_crypto_dumbbell(df):
+def fig_06_crypto_dumbbell(df):
     """Dumbbell chart for crypto topics."""
     topics = {
         'RSA': 'RSA',
@@ -749,26 +544,27 @@ def fig_08_crypto_dumbbell(df):
     ax.set_xlim(2006, 2026)
     ax.set_ylim(-0.5, len(results) - 0.5)
     ax.set_yticks([])
+    ax.spines['left'].set_visible(False)  # Remove left spine to avoid label overlap
     ax.set_xlabel('Year')
     ax.set_title('Cryptography Topics: First to Last Appearance', fontweight='bold')
 
     plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch08_crypto_dumbbell.svg')
-    plt.savefig(FIGURES_DIR / 'ch08_crypto_dumbbell.png')
+    plt.savefig(FIGURES_DIR / 'ch06_crypto_dumbbell.svg')
+    plt.savefig(FIGURES_DIR / 'ch06_crypto_dumbbell.png')
     plt.close()
-    print("  Created: ch08_crypto_dumbbell.svg")
+    print("  Created: ch06_crypto_dumbbell.svg")
 
 
 # =============================================================================
-# Chapter 9: The Edges of the Map
+# Chapter 7: The Edges of the Map
 # =============================================================================
 
-def fig_09_category_network(df):
+def fig_07_category_network(df):
     """Network diagram of category co-occurrence."""
     try:
         import networkx as nx
     except ImportError:
-        print("  SKIPPED: ch09_category_network.svg (networkx not installed)")
+        print("  SKIPPED: ch07_category_network.svg (networkx not installed)")
         return
 
     # Count co-occurrences
@@ -803,11 +599,11 @@ def fig_09_category_network(df):
 
     # Node sizes based on count
     node_sizes = [G.nodes[n].get('size', 100) * 2 for n in G.nodes()]
-
+    
     # Edge widths based on weight
     edge_weights = [G[u][v].get('weight', 1) / 5 for u, v in G.edges()]
 
-    nx.draw_networkx_nodes(G, pos, node_size=node_sizes, node_color=COLORS['math'],
+    nx.draw_networkx_nodes(G, pos, node_size=node_sizes, node_color=COLORS['math'], 
                           alpha=0.7, ax=ax)
     nx.draw_networkx_edges(G, pos, width=edge_weights, alpha=0.4, ax=ax)
     nx.draw_networkx_labels(G, pos, font_size=9, ax=ax)
@@ -816,20 +612,20 @@ def fig_09_category_network(df):
     ax.axis('off')
 
     plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch09_category_network.svg')
-    plt.savefig(FIGURES_DIR / 'ch09_category_network.png')
+    plt.savefig(FIGURES_DIR / 'ch07_category_network.svg')
+    plt.savefig(FIGURES_DIR / 'ch07_category_network.png')
     plt.close()
-    print("  Created: ch09_category_network.svg")
+    print("  Created: ch07_category_network.svg")
 
 
 # =============================================================================
-# Chapter 11: The Evolution of a Blog
+# Chapter 9: The Evolution of a Blog
 # =============================================================================
 
-def fig_11_small_multiples(df):
+def fig_09_small_multiples(df):
     """Small multiples showing topic evolution across eras."""
     topics = ['Math', 'Computing', 'Statistics', 'Software development']
-    eras = [('Early\n2008-12', 2008, 2012), ('Middle\n2013-17', 2013, 2017),
+    eras = [('Early\n2008-12', 2008, 2012), ('Middle\n2013-17', 2013, 2017), 
             ('Recent\n2018-25', 2018, 2025)]
 
     fig, axes = plt.subplots(1, len(topics), figsize=(14, 5), sharey=False)
@@ -851,47 +647,47 @@ def fig_11_small_multiples(df):
         bars = ax.bar([e[0] for e in eras], counts, color=COLORS['primary'], alpha=0.8)
         ax.set_title(topic, fontweight='bold', pad=10)
         ax.set_ylim(0, max(counts) * 1.15 if max(counts) > 0 else 100)
-
+        
         # Add value labels with proper positioning
         for bar, val in zip(bars, counts):
             ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(counts) * 0.02,
                    str(val), ha='center', va='bottom', fontsize=9)
 
     axes[0].set_ylabel('Posts')
-
+    
     # Add overall title with proper positioning (inside figure bounds)
     fig.suptitle('Topic Evolution Across Eras', fontweight='bold', fontsize=14, y=0.98)
-
+    
     plt.tight_layout(rect=[0, 0, 1, 0.93])  # Leave room for suptitle
-    plt.savefig(FIGURES_DIR / 'ch11_small_multiples.svg')
-    plt.savefig(FIGURES_DIR / 'ch11_small_multiples.png')
+    plt.savefig(FIGURES_DIR / 'ch09_small_multiples.svg')
+    plt.savefig(FIGURES_DIR / 'ch09_small_multiples.png')
     plt.close()
-    print("  Created: ch11_small_multiples.svg")
+    print("  Created: ch09_small_multiples.svg")
 
 
-def fig_11_scatterplot_eras(df):
+def fig_09_scatterplot_eras(df):
     """Connected scatterplot with era annotations."""
     yearly = df.groupby('year').agg({
         'word_count': ['count', 'mean']
     })
     yearly.columns = ['posts', 'avg_words']
-
+    
     fig, ax = plt.subplots(figsize=(10, 8))
-
+    
     years = yearly.index.tolist()
     x = yearly['posts'].tolist()
     y = yearly['avg_words'].tolist()
-
+    
     # Define eras
     era_colors = {
         'Early (2008-2012)': '#3498db',
         'Middle (2013-2017)': '#f39c12',
         'Recent (2018-2025)': '#2ecc71',
     }
-
+    
     # Plot connecting line
     ax.plot(x, y, '-', color=COLORS['secondary'], linewidth=1, alpha=0.5, zorder=1)
-
+    
     # Plot points colored by era
     for i, year in enumerate(years):
         if year <= 2012:
@@ -900,33 +696,33 @@ def fig_11_scatterplot_eras(df):
             color = era_colors['Middle (2013-2017)']
         else:
             color = era_colors['Recent (2018-2025)']
-
+            
         ax.scatter(x[i], y[i], c=color, s=100, zorder=2, edgecolors='white', linewidth=1)
-
+        
         # Label select years
         if year in [2008, 2012, 2014, 2017, 2019, 2022, 2025]:
             offset = (8, 8) if year % 2 == 0 else (-20, -15)
-            ax.annotate(str(year), (x[i], y[i]), textcoords="offset points",
+            ax.annotate(str(year), (x[i], y[i]), textcoords="offset points", 
                        xytext=offset, fontsize=9)
 
     # Legend for eras
     for era, color in era_colors.items():
         ax.scatter([], [], c=color, s=100, label=era)
     ax.legend(loc='upper right')
-
+    
     ax.set_xlabel('Posts per Year')
     ax.set_ylabel('Average Words per Post')
     ax.set_title('The Three Eras: Evolution of Output', fontweight='bold')
-
+    
     # Add trajectory annotation
     ax.annotate('', xy=(x[-1], y[-1]), xytext=(x[0], y[0]),
                 arrowprops=dict(arrowstyle='->', color='gray', alpha=0.3, lw=2))
 
     plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'ch11_scatterplot_eras.svg')
-    plt.savefig(FIGURES_DIR / 'ch11_scatterplot_eras.png')
+    plt.savefig(FIGURES_DIR / 'ch09_scatterplot_eras.svg')
+    plt.savefig(FIGURES_DIR / 'ch09_scatterplot_eras.png')
     plt.close()
-    print("  Created: ch11_scatterplot_eras.svg")
+    print("  Created: ch09_scatterplot_eras.svg")
 
 
 # =============================================================================
@@ -947,14 +743,12 @@ def main():
     chapters = {
         1: [fig_01_activity_heatmap, fig_01_posts_and_wordcount],
         2: [fig_02_category_treemap, fig_02_category_packing],
-        3: [fig_03_weekday_radial, fig_03_connected_scatterplot],
-        4: [fig_04_pi_timeline, fig_04_constants_dumbbell],
-        5: [fig_05_functions_stacked_area, fig_05_functions_bump],
-        6: [fig_06_mathematicians_timeline, fig_06_mathematicians_lollipop],
-        7: [fig_07_languages_stacked, fig_07_languages_bar],
-        8: [fig_08_crypto_line, fig_08_crypto_dumbbell],
-        9: [fig_09_category_network],
-        11: [fig_11_small_multiples, fig_11_scatterplot_eras],
+        3: [fig_03_weekday_radial],
+        4: [fig_04_constants_dumbbell, fig_04_functions_timeline],
+        5: [fig_05_languages_stacked, fig_05_languages_bar],
+        6: [fig_06_crypto_line, fig_06_crypto_dumbbell],
+        7: [fig_07_category_network],
+        9: [fig_09_small_multiples, fig_09_scatterplot_eras],
     }
 
     if args.chapter:

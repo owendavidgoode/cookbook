@@ -1,0 +1,50 @@
+[
+  {
+    "query": "\"johndcook.com/blog\"",
+    "url": "https://github.com/search?q=\"johndcook.com/blog\"&type=code"
+  },
+  {
+    "query": "\"www.johndcook.com\"",
+    "url": "https://github.com/search?q=\"www.johndcook.com\"&type=code"
+  },
+  {
+    "query": "\"dont-invert-that-matrix\"",
+    "url": "https://github.com/search?q=\"dont-invert-that-matrix\"&type=code"
+  },
+  {
+    "query": "\"gamma-function\"",
+    "url": "https://github.com/search?q=\"gamma-function\"&type=code"
+  },
+  {
+    "query": "\"gamma_function\"",
+    "url": "https://github.com/search?q=\"gamma_function\"&type=code"
+  },
+  {
+    "query": "\"johndcook\" gamma",
+    "url": "https://github.com/search?q=\"johndcook\" gamma&type=code"
+  },
+  {
+    "query": "\"johndcook\" interpolation",
+    "url": "https://github.com/search?q=\"johndcook\" interpolation&type=code"
+  },
+  {
+    "query": "\"johndcook\" random",
+    "url": "https://github.com/search?q=\"johndcook\" random&type=code"
+  },
+  {
+    "query": "\"johndcook\" scipy",
+    "url": "https://github.com/search?q=\"johndcook\" scipy&type=code"
+  },
+  {
+    "query": "\"johndcook\" python statistics",
+    "url": "https://github.com/search?q=\"johndcook\" python statistics&type=code"
+  },
+  {
+    "query": "\"John D. Cook\" reference",
+    "url": "https://github.com/search?q=\"John D. Cook\" reference&type=code"
+  },
+  {
+    "query": "\"John Cook\" blog math",
+    "url": "https://github.com/search?q=\"John Cook\" blog math&type=code"
+  }
+]

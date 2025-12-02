@@ -1,0 +1,227 @@
+% You Can Just Do Things
+% A Data Portrait of John D. Cook's Blog
+% LaTeX source for print-ready PDF (7" x 10", full color, hardcover)
+
+\documentclass[10pt,openany]{memoir}
+
+% Page geometry for 7" x 10" trim size (KDP compatible)
+\setstocksize{10in}{7in}
+\settrimmedsize{10in}{7in}{*}
+\settrims{0pt}{0pt}
+\settypeblocksize{8in}{5in}{*}
+\setlrmargins{*}{*}{1.2}
+\setulmargins{*}{*}{1.2}
+\checkandfixthelayout
+
+% Fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Montserrat for body/headings
+\usepackage[defaultfam,tabular,lining]{montserrat}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+% Latin Modern for monospace only
+\usepackage{lmodern}
+\renewcommand{\ttdefault}{lmtt}
+% Restore Montserrat as default after lmodern
+\renewcommand{\sfdefault}{Montserrat-TLF}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Graphics and color
+\usepackage{graphicx}
+\graphicspath{{../figures/}}
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+
+% Math (for lambda symbol etc.)
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Code listings
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  frame=single,
+  framesep=3pt,
+  backgroundcolor=\color{gray!10},
+  xleftmargin=0pt,
+  framexleftmargin=0pt,
+  columns=fullflexible,
+  keepspaces=true
+}
+
+% Hyperlinks (off for print, but useful for PDF navigation)
+\usepackage[hidelinks]{hyperref}
+
+% Epigraphs
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.8\textwidth}
+\setlength{\epigraphrule}{0pt}
+
+% Chapter style
+\makechapterstyle{cookstyle}{
+  \chapterstyle{default}
+  \renewcommand*{\chapnamefont}{\large\bfseries}
+  \renewcommand*{\chapnumfont}{\large\bfseries}
+  \renewcommand*{\chaptitlefont}{\LARGE\bfseries}
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\chapternamenum}{}
+  \renewcommand*{\printchapternum}{\chapnumfont Chapter \thechapter}
+  \renewcommand*{\afterchapternum}{\par\vskip 0.5\baselineskip}
+  \renewcommand*{\printchaptertitle}[1]{\chaptitlefont ##1}
+}
+\chapterstyle{cookstyle}
+
+% Section formatting
+\setsecheadstyle{\large\bfseries}
+\setsubsecheadstyle{\normalsize\bfseries}
+
+% Paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+% Pull quotes
+\newenvironment{pullquote}{%
+  \begin{center}
+  \begin{minipage}{0.85\textwidth}
+  \itshape\large
+}{%
+  \end{minipage}
+  \end{center}
+  \vspace{0.5\baselineskip}
+}
+
+% Figure placement
+\newcommand{\bookfigure}[3][1.0]{%
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=#1\textwidth]{#2}
+    \caption{#3}
+  \end{figure}
+}
+
+\newcommand{\bookfigurefull}[2]{%
+  \begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth,height=0.85\textheight,keepaspectratio]{#1}
+    \caption{#2}
+  \end{figure}
+}
+
+% Document info
+\title{You Can Just Do Things}
+\author{Owen D. Goode}
+\date{2025}
+
+\begin{document}
+
+% Front matter
+\frontmatter
+\pagestyle{empty}
+
+% Half title
+\begin{center}
+\vspace*{3in}
+{\LARGE\bfseries You Can Just Do Things}
+\vfill
+\end{center}
+\clearpage
+
+% Title page
+\begin{center}
+\vspace*{2in}
+{\Huge\bfseries You Can Just Do Things}
+
+\vspace{0.5in}
+{\large\itshape A Data Portrait of John D. Cook's Blog}
+
+\vspace{2in}
+{\large Owen D. Goode}
+
+\vfill
+{\small 2025}
+\end{center}
+\clearpage
+
+% Copyright page
+\vspace*{\fill}
+\begin{flushleft}
+\small
+\textcopyright\ 2025 Owen D. Goode. All rights reserved.
+
+\vspace{1em}
+All statistics in this book reflect the blog as of November 27, 2025.
+
+\vspace{1em}
+This book was not authorized or commissioned by John D. Cook.\\
+It is a gift, made from public data, offered in appreciation.
+
+\vspace{1em}
+Cover design: [TBD]\\
+Interior design and visualizations: Owen D. Goode
+
+\vspace{1em}
+First edition, December 2025
+\end{flushleft}
+\clearpage
+
+% Dedication
+\vspace*{3in}
+\begin{center}
+\itshape
+For John
+\end{center}
+\clearpage
+
+% Foreword (greeked placeholder)
+\chapter*{Foreword}
+\addcontentsline{toc}{chapter}{Foreword}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+
+\vspace{2em}
+\begin{flushright}
+\textit{[Author Name]}\\
+\textit{[Location], [Month] 2025}
+\end{flushright}
+\clearpage
+
+% Table of contents
+\tableofcontents*
+\clearpage
+
+% Main matter
+\mainmatter
+\pagestyle{headings}
+
+% Include chapters
+\include{chapters/00-prologue}
+\include{chapters/01-shape-of-seventeen-years}
+\include{chapters/02-topography-of-interest}
+\include{chapters/03-rhythm-of-a-working-mind}
+\include{chapters/04-mathematical-obsessions}
+\include{chapters/05-languages-as-thinking-tools}
+\include{chapters/06-cryptographys-moment}
+\include{chapters/07-edges-of-the-map}
+\include{chapters/08-interviews}
+\include{chapters/09-evolution-of-a-blog}
+\include{chapters/10-what-the-numbers-miss}
+
+% Back matter
+\backmatter
+
+\include{chapters/appendix-a}
+\include{chapters/appendix-b}
+\include{chapters/99-epilogue}
+
+\end{document}

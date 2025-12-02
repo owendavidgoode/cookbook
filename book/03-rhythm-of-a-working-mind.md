@@ -95,26 +95,6 @@ This flatness is remarkable. It suggests either extreme discipline (posting rega
 
 ---
 
-## The Trajectory
-
-Combine quantity and depth into a single picture: plot posts per year against average word count per year, and trace the path from 2008 to 2025.
-
-[FIGURE: Connected scatterplot showing posts vs. average length by year, with years labeled, showing trajectory from high-volume/short to moderate-volume/longer]
-
-The story this tells is not simple.
-
-2008 begins in the upper-left corner: 410 posts, average length 206 words. Many short posts. The blog is establishing itself, finding its voice, casting about.
-
-The trajectory then moves roughly down and to the right through 2014—fewer posts, but not necessarily longer ones. The 2014 point is the nadir: only 147 posts, average length just 188 words. Whatever happened that year, it produced less of everything.
-
-Then the path turns. From 2015 onward, the trajectory moves up and to the right: more posts *and* longer posts. By 2022, the blog publishes 362 posts averaging 476 words—the high point for average length.
-
-The most recent years (2023-2025) cluster near 350-400 posts with averages around 435 words. The blog has found its mature rhythm: roughly one post per day, roughly 400-450 words per post.
-
-The shape of the trajectory—down-and-right, then up-and-right—suggests not a trade-off but an evolution. The early years were finding the form. The middle years were a transition. The recent years represent a practiced capacity to produce more, at higher quality, without apparent strain.
-
----
-
 ## Consistency Within Years
 
 How steady is the monthly rhythm within each year?
@@ -139,26 +119,32 @@ But these are exceptions. The baseline pattern is consistency: month after month
 
 ---
 
+## The Invisible Schedule
+
+Cook wrote in 2024: "I've never had a schedule for this blog: I write when I feel like writing."
+
+The data contradicts him.
+
+He has no *calendar* in the sense of "I will publish every Tuesday and Thursday at 9:00 AM." But he has a *metabolism*.
+
+The timestamps reveal a biological rhythm: write in the morning, publish most often on Tuesday, never stop for more than eleven days. The pattern is internal—habitual rather than calendared, felt rather than planned.
+
+This is the difference between a schedule and a practice. A schedule is imposed from without; a practice grows from within. Cook doesn't experience himself as following a rule. But from the outside, the numbers trace one of the most consistent creative metabolisms documented on the internet.
+
+---
+
 ## Reading the Rhythm
 
 Three patterns emerge from the temporal data.
 
-**First: professional schedule.** The weekday dominance and morning concentration suggest that blogging is not carved out of personal time but integrated into work time. It's not "I write when I get home from my real job"; it's "writing is part of my real job."
+**First: professional schedule.** The weekday dominance and morning concentration suggest that blogging is integrated into work time. It's not "I write when I get home from my real job"; it's "writing is part of my real job."
 
 **Second: internal rhythm.** The flat seasonal distribution suggests the blog runs on an internal clock, not an external calendar. Academic years don't shape it. Holidays don't disrupt it. The practice is autonomous.
 
 **Third: evolved capacity.** The trajectory from 2008 to 2025 shows not a trade-off between quantity and quality but a growth in both. More posts *and* longer posts. The mature blog outproduces the young blog on both axes.
 
----
-
-## The Anti-Pattern
-
-Cook wrote in 2024: "I've never had a schedule for this blog: I write when I feel like writing."
-
-This statement, in light of the data, requires careful interpretation. He has no schedule in the sense of "I will publish every Tuesday and Thursday at 9:00 AM." The timestamps vary; the specific days vary; there's no visible automation.
-
-But he has a profound rhythm in the sense of "I write most mornings, most weeks, most months, year after year." The absence of an external schedule doesn't mean the absence of a pattern. It means the pattern is internal—habitual rather than calendared, felt rather than planned.
-
 The data reveals a mind that shows up. Not every day, but most days. Not at the same minute, but in the same window. Not according to seasons or semesters or news cycles, but according to its own steady pulse.
 
 Seven o'clock in the morning, usually Tuesday, regardless of month: that's when the writing happens.
+
+*The rhythm is steady. But what does that rhythm carry? The next chapters explore the content itself—the mathematical obsessions that fill those Tuesday morning hours.*

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "YouhuaLi/expsum",
+    "stars": 2,
+    "description": "a python practice of https://www.johndcook.com/blog/2017/10/07/exponential-sums-make-pretty-pictures/",
+    "url": "https://github.com/YouhuaLi/expsum"
+  },
+  {
+    "name": "purnatag/online-skew-kurtosis",
+    "stars": 1,
+    "description": "Implementing the online algorithm used here:https://www.johndcook.com/blog/2013/06/11/computing-skewness-and-kurtosis-in-one-pass/ to compute skewness, kurtosis and bimodality of a dataset represented here by an array.",
+    "url": "https://github.com/purnatag/online-skew-kurtosis"
+  },
+  {
+    "name": "stemblab/mystery-curve",
+    "stars": 0,
+    "description": "http://www.johndcook.com/blog/2015/06/03/mystery-curve/",
+    "url": "https://github.com/stemblab/mystery-curve"
+  },
+  {
+    "name": "its-kos/sphere-gen",
+    "stars": 0,
+    "description": "https://www.johndcook.com/blog/2025/05/06/random-points-on-a-sphere/",
+    "url": "https://github.com/its-kos/sphere-gen"
+  },
+  {
+    "name": "jmcastagnetto/spanish-anagrams-list",
+    "stars": 0,
+    "description": "Based on the post: https://www.johndcook.com/blog/2019/11/13/anagram-frequency/",
+    "url": "https://github.com/jmcastagnetto/spanish-anagrams-list"
+  },
+  {
+    "name": "watmough/Running-Stats-Optimized",
+    "stars": 0,
+    "description": "Optimized version of John D. Cook's article https://www.johndcook.com/skewness_kurtosis.html",
+    "url": "https://github.com/watmough/Running-Stats-Optimized"
+  }
+]

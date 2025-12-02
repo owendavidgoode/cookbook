@@ -1,6 +1,6 @@
 # Appendix A: By the Numbers
 
-This appendix provides complete reference tables for the statistics discussed throughout the book. Data was extracted from johndcook.com/blog in November 2025.
+This appendix is the canonical reference for all statistics in the book. Every number cited in the main text can be traced here. Data reflects the blog as of November 27, 2025; the archive continues to grow.
 
 ---
 
@@ -34,8 +34,8 @@ This appendix provides complete reference tables for the statistics discussed th
 | 2014 | 147 | 27,607 | 188 | 158 |
 | 2015 | 168 | 49,277 | 293 | 238 |
 | 2016 | 209 | 80,767 | 386 | 341 |
-| 2017 | 184 | 70,425 | 383 | 340 |
-| 2018 | 266 | 125,938 | 473 | 412 |
+| 2017 | 184 | 70,425 | 383 | 339 |
+| 2018 | 266 | 125,938 | 473 | 411 |
 | 2019 | 288 | 128,358 | 446 | 414 |
 | 2020 | 288 | 129,913 | 451 | 426 |
 | 2021 | 341 | 153,769 | 451 | 433 |

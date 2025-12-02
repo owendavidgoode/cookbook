@@ -1,7 +1,6 @@
 # Chapter 2: The Topography of Interest
 
-> "Cohomology does not itself solve hard problems... It clears away tangled multitudes of individually trivial problems. It puts the hard problems in clear relief and makes their solution possible."
-> — Colin McLarty, quoted in "How category theory is applied" (2019)
+> "The blog's twenty-six categories are the closest thing Cook has to a table of contents for his own mind."
 
 ---
 
@@ -21,9 +20,9 @@ To visualize the proportions: if the blog were a country, Math would be the terr
 
 [FIGURE: Treemap of all categories showing Math's visual dominance at 45.4%]
 
-The second-largest category is "Uncategorized" at 996 posts (19%). We'll return to this mystery. For now, note that the largest *named* category after Math is Computing at 520 posts (9.9%)—less than a quarter of Math's size.
+The second-largest category is "Uncategorized" at 996 posts (19%). We'll return to this mystery. But the named categories reveal a steep power law: Math dominates everything, while the practical categories—Computing, Software Development, Statistics—form a second tier that serves the first.
 
-Here is the full breakdown:
+Here is the breakdown:
 
 | Category | Posts | % of Total |
 |----------|-------|------------|
@@ -67,9 +66,9 @@ The top ten tags in Math posts:
 9. Integration (57)
 10. Linear algebra (55)
 
-Number theory leads—the study of integers, primes, divisibility, the atoms of arithmetic. This is the purest of pure mathematics, the branch G. H. Hardy famously defended as having "no practical applications" (a claim now disproven by cryptography). That it leads the tags suggests Cook's heart lies with fundamentals.
+Number theory leads—the study of integers, primes, divisibility, the atoms of arithmetic. This is the purest of pure mathematics, the branch G. H. Hardy famously defended as having "no practical applications." That it leads the tags suggests Cook's heart lies with fundamentals.
 
-But look at the mix that follows: probability, differential equations, numerical analysis. It is not the pure mathematician's curriculum; it's the applied mathematician's toolkit—the math that solves problems, that runs in code, that makes predictions. The blog sits at the intersection of rigor and utility.
+But look at the mix that follows: probability, differential equations, numerical analysis. It is not the pure mathematician's curriculum; it's the applied mathematician's toolkit. The blog sits at the intersection of rigor and utility.
 
 ---
 
@@ -83,8 +82,6 @@ Below Math in the hierarchy sits a cluster of practical categories:
 
 Together these constitute more than a quarter of the blog. They overlap with Math frequently—91 posts carry both Computing and Math categories, 56 share Math and Statistics—but they signal a distinct audience: people who write code, build systems, analyze data.
 
-The Computing category covers implementation: how to make computers do things. The Software development category covers practice: how to organize the making. The Statistics category covers inference: how to extract knowledge from data.
-
 Notice what's absent from this practical layer: trendy buzzwords. "Machine learning" has only 24 posts. "AI" has only 16. The blog predates the 2012 deep learning revolution, and while it occasionally touches on neural networks and language models, it doesn't chase the hype cycle. The practical layer is timeless practical—shell scripting and probability distributions, not prompt engineering.
 
 ---
@@ -93,11 +90,11 @@ Notice what's absent from this practical layer: trendy buzzwords. "Machine learn
 
 The small categories reveal more than the large ones.
 
-**Music** (85 posts, 1.6%): A mathematician writing about music is not unusual—the fields share a fascination with pattern and structure. But 85 posts is significant. These aren't casual mentions; they're sustained investigations. "Circle of fifths and number theory." "The acoustics of kettledrums." "How many musical scales are there?" Nineteen of the Music posts also carry the Math category. When Cook writes about music, he's doing mathematics.
+**Music** (85 posts, 1.6%): A mathematician writing about music is not unusual. But 85 posts is significant. These aren't casual mentions; they're sustained investigations. "Circle of fifths and number theory." "The acoustics of kettledrums." "How many musical scales are there?" Nineteen of the Music posts also carry the Math category. When Cook writes about music, he's doing mathematics.
 
-**Typography** (50 posts, 1.0%): An unexpected obsession. Posts about accented letters in HTML, typesetting music notation, LaTeX commands for obscure symbols, the rendering of double-struck capital letters. These are not mathematical topics by any standard definition. But they reveal something about the author: a care for how symbols appear on the page, a precision that extends beyond content to presentation.
+**Typography** (50 posts, 1.0%): An unexpected obsession. Posts about accented letters in HTML, typesetting music notation, LaTeX commands for obscure symbols, the rendering of double-struck capital letters. These are not mathematical topics. But they reveal something about the author: a care for how symbols appear on the page, a precision that extends beyond content to presentation.
 
-**Clinical trials** (55 posts, 1.1%): This category has a strange shape. The posts span 2008-2018, then stop. Completely. Not a gradual fade—a hard cut. Something happened in 2018. A career shift? A change in professional focus? The data doesn't say. But the pattern is visible: ten years of writing about clinical trial design, Bayesian adaptive methods, cohort assignments—and then nothing. A closed chapter.
+**Clinical trials** (55 posts, 1.1%): This category has a strange shape. The posts span 2008-2018, then stop. Completely. Not a gradual fade—a hard cut. Something happened in 2018. The data doesn't say what. But the pattern is visible: ten years of writing about clinical trial design, Bayesian adaptive methods, cohort assignments—and then nothing. A closed chapter.
 
 **Geography** (30 posts, 0.6%): Small but persistent. "Zip codes, geocodes, and Hilbert curves." "State abbreviations as a random walk." The spatial imagination of a mathematician applied to maps and territories.
 
@@ -115,9 +112,11 @@ What are they? A sample reveals the pattern: they're not any one thing. They're 
 - "Example of memorizing a 256-bit private key" — cryptography crossed with memory techniques
 - "Impulse response" — differential equations, but not quite Math
 
-The Uncategorized category is a miscellany bin. It holds 464 posts with no tags at all—thoughts that arrived without classification. It holds cross-disciplinary observations that span boundaries. It holds brief pointers and links.
+The Uncategorized category is a miscellany bin. It holds 470 posts with no tags at all—thoughts that arrived without classification. It holds cross-disciplinary observations that span boundaries. It holds brief pointers and links.
 
-But its size suggests something deeper: the limits of any taxonomy. Twenty-six categories cannot capture the full range of a working mind. When the thoughts don't fit, Cook publishes them anyway. The "Uncategorized" posts are evidence of intellectual activity that resists sorting—the overflow of curiosity.
+Consider "The acoustics of your desk" (2019), filed under Uncategorized. The post explains how a desk's resonant frequency affects what you hear when you knock on it—physics, yes, but also acoustics, also woodworking, also the mathematics of vibration. Where does it belong? Nowhere exactly. Everywhere loosely. So: Uncategorized.
+
+The category's size suggests something deeper: the limits of any taxonomy. Twenty-six categories cannot capture the full range of a working mind. When the thoughts don't fit, Cook publishes them anyway. The "Uncategorized" posts are evidence of intellectual activity that resists sorting—the overflow of curiosity.
 
 ---
 
@@ -136,7 +135,7 @@ Math is the hub. Almost every significant combination includes it. The blog's ne
 
 But some combinations are unexpected:
 
-- **Math + Music** (19 posts): Where scales become ratios and harmonics become Fourier series. "The opening chord of 'A Hard Day's Night'" analyzed mathematically. "Mathematics and piano tuning."
+- **Math + Music** (19 posts): Where scales become ratios and harmonics become Fourier series. "The opening chord of 'A Hard Day's Night'" analyzed mathematically.
 
 - **Clinical trials + Statistics** (22 posts): The professional overlap, where Bayesian methods meet drug development.
 
@@ -181,11 +180,11 @@ The Python category peaked in the early 2010s and declined—not because Python 
 
 ## Reading the Categories
 
-A taxonomy is a theory of what matters. When Cook created twenty-six categories, he made twenty-six claims about the structure of his own interests. When he assigned posts to those categories, he made thousands of small judgments about what goes where.
+A taxonomy is a theory of what matters. When Cook created twenty-six categories, he made twenty-six claims about the structure of his own interests.
 
 The resulting map has features:
 
-**A single dominant territory.** Math is not first among equals; it's an empire. Everything else exists in relation to it. The blog could almost be called "Math and its applications to everything."
+**A single dominant territory.** Math is not first among equals; it's an empire. Everything else exists in relation to it.
 
 **A practical belt around the center.** Computing, Software development, Statistics—these surround Math and connect it to the working world. They're not peripheral; they're infrastructure.
 
@@ -199,13 +198,11 @@ This is what a mathematician's mind looks like when laid out in categories: one 
 
 ## Beneath the Map
 
-The outline for this chapter posed a question: "What does a mathematician's mind organize itself around?"
+The category data offers an answer to what a mathematician's mind organizes itself around: mathematics, but not only mathematics. Around the intersection of rigor and application. Around sustained curiosities that persist for decades. Around the willingness to write about whatever proves interesting, whether or not it fits.
 
-The category data offers an answer: around mathematics, but not only mathematics. Around the intersection of rigor and application. Around sustained curiosities that persist for decades. Around the willingness to write about whatever proves interesting, whether or not it fits.
+The topography is not neat. It's not the curriculum of an academic department. It is one person's working map of what matters, updated over seventeen years, with all the irregularity that implies.
 
-The topography is not neat. It's not the curriculum of an academic department or the hierarchy of a library's Dewey Decimal system. It is one person's working map of what matters, updated over seventeen years, with all the irregularity that implies.
-
-Cook once quoted a passage about category theory in mathematics: it "clears away tangled multitudes of individually trivial problems" and "puts the hard problems in clear relief." The blog's own categories do something similar. They clear away the question of what this blog is *about* and put the real structure in relief.
+Cook once quoted a passage about category theory in mathematics: it "clears away tangled multitudes of individually trivial problems" and "puts the hard problems in clear relief." The blog's own categories do something similar.
 
 It's about math. It's about making math work. It's about everything that touches math when you're not being too careful about boundaries.
 

@@ -1,0 +1,15 @@
+\contentsline {chapter}{Foreword}{v}{chapter*.2}%
+\contentsline {chapter}{You Can Just Do Things}{1}{chapter*.5}%
+\contentsline {chapter}{\chapternumberline {1}The Shape of Seventeen Years}{4}{chapter.1}%
+\contentsline {chapter}{\chapternumberline {2}The Topography of Interest}{10}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}The Rhythm of a Working Mind}{18}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}The Connectors}{24}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {5}The Translation Layer}{28}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {6}Cryptography's Moment}{32}{chapter.6}%
+\contentsline {chapter}{\chapternumberline {7}The Edges of the Map}{36}{chapter.7}%
+\contentsline {chapter}{\chapternumberline {8}Input Mechanisms}{42}{chapter.8}%
+\contentsline {chapter}{\chapternumberline {9}The Evolution of a Blog}{44}{chapter.9}%
+\contentsline {chapter}{\chapternumberline {10}The Dark Matter}{49}{chapter.10}%
+\contentsline {chapter}{By the Numbers}{54}{chapter*.76}%
+\contentsline {chapter}{A Reading List}{62}{chapter*.94}%
+\contentsline {chapter}{How This Book Was Made}{68}{chapter*.111}%

@@ -1,0 +1,188 @@
+# Proposed Revisions: You Can Just Do Things
+
+These diffs represent targeted improvements to sharpen the manuscript, reduce redundancy, and eliminate the "hushed narrator" voice.
+
+---
+
+## book/00-prologue.md
+
+**Goal:** Remove the cliché "let that sink in" phrasing and the slightly defensive tone about the blog's quietness.
+
+```markdown:book/00-prologue.md
+<<<<<<< ORIGINAL
+3|5,233 posts.
+4|
+5|Let that number sit for a moment. 5,233 posts over more than seventeen years—roughly one every 1.25 days, from January 2008 through November 2025. No breaks. No sabbaticals. No pivots to video, no podcast spinoffs, no Substack migration. Just a mathematician writing about what interested him, day after day, for nearly two decades.
+6|
+7|This is a book about what that looks like.
+=======
+3|5,233 posts.
+4|
+5|Roughly one every 1.25 days, from January 2008 through November 2025. No breaks. No sabbaticals. No pivots to video, no podcast spinoffs, no Substack migration. Just a mathematician writing about what interested him, day after day, for nearly two decades.
+6|
+7|This book visualizes that endurance.
+>>>>>>> REVISED
+```
+
+---
+
+## book/01-shape-of-seventeen-years.md
+
+**Goal:** Remove the "Pandemic Non-Event" section's defensive tone and frame it as "sanctuary."
+
+```markdown:book/01-shape-of-seventeen-years.md
+<<<<<<< ORIGINAL
+110|This flatness is extraordinary. For a blog that exists on the internet, written by a person who presumably lives in the world, the near absence of pandemic disruption suggests either remarkable discipline or a practice so deeply ingrained that external circumstances barely register.
+111|
+112|The blog rarely comments on the pandemic directly. Aside from a handful of posts that use COVID-19 data as statistical examples, it simply continues—another post about probability, another post about Python, another post about number theory. The world outside the blog may have changed. The blog barely acknowledges it.
+=======
+110|This flatness is extraordinary. It suggests that the practice serves as a sanctuary—a place where the chaos of the world is ordered into logic.
+111|
+112|The blog rarely comments on the pandemic directly. Aside from a handful of posts that use COVID-19 data as statistical examples, it simply continues—another post about probability, another post about Python, another post about number theory. The world outside the blog changed. The blog's function did not.
+>>>>>>> REVISED
+```
+
+---
+
+## book/02-topography-of-interest.md
+
+**Goal:** Remove the "text listing the table" pattern. The text should narrate insights, not repeat data.
+
+```markdown:book/02-topography-of-interest.md
+<<<<<<< ORIGINAL
+23|The second-largest category is "Uncategorized" at 996 posts (19%). We'll return to this mystery. For now, note that the largest *named* category after Math is Computing at 520 posts (9.9%)—less than a quarter of Math's size.
+24|
+25|Here is the full breakdown:
+26|
+27|| Category | Posts | % of Total |
+=======
+23|The second-largest category is "Uncategorized" at 996 posts (19%). We'll return to this mystery. But the named categories reveal a steep power law: Math dominates everything, while the practical categories—Computing, Software Development, Statistics—form a second tier that serves the first.
+24|
+25|Here is the breakdown:
+26|
+27|| Category | Posts | % of Total |
+>>>>>>> REVISED
+```
+
+---
+
+## book/03-rhythm-of-a-working-mind.md
+
+**Goal:** Strengthen the insight about the "invisible schedule."
+
+```markdown:book/03-rhythm-of-a-working-mind.md
+<<<<<<< ORIGINAL
+122|## The Anti-Pattern
+123|
+124|Cook wrote in 2024: "I've never had a schedule for this blog: I write when I feel like writing."
+125|
+126|This statement, in light of the data, requires careful interpretation.
+127|
+128|He has no schedule in the sense of "I will publish every Tuesday and Thursday at 9:00 AM." The timestamps vary; the specific days vary; there's no visible automation.
+129|
+130|But he has a profound rhythm in the sense of "I write most mornings, most weeks, most months, year after year." The absence of an external schedule doesn't mean the absence of a pattern. It means the pattern is internal—habitual rather than calendared, felt rather than planned.
+131|
+132|This is the gap between what someone says about their work and what the data shows. Cook doesn't experience himself as following a schedule. But from the outside, the numbers trace one of the most consistent creative practices documented on the internet.
+=======
+122|## The Invisible Schedule
+123|
+124|Cook wrote in 2024: "I've never had a schedule for this blog: I write when I feel like writing."
+125|
+126|The data contradicts him.
+127|
+128|He has no *calendar* in the sense of "I will publish every Tuesday and Thursday at 9:00 AM." But he has a *metabolism*.
+129|
+130|The timestamps reveal a biological rhythm: write in the morning, publish most often on Tuesday, never stop for more than eleven days. The pattern is internal—habitual rather than calendared, felt rather than planned.
+131|
+132|This is the difference between a schedule and a practice. A schedule is imposed from without; a practice grows from within. Cook doesn't experience himself as following a rule. But from the outside, the numbers trace one of the most consistent creative metabolisms documented on the internet.
+>>>>>>> REVISED
+```
+
+---
+
+## book/07-edges-of-the-map.md
+
+**Goal:** Reduce the dramatic tone around the Clinical Trials "mystery."
+
+```markdown:book/07-edges-of-the-map.md
+<<<<<<< ORIGINAL
+171|The blog doesn't explain the break. There's no farewell post, no "I'm moving on from clinical work." The topic simply stops appearing. The silence is more eloquent than any explanation.
+172|
+173|What happened? The possibilities multiply. A career transition—biostatistics consulting to data privacy consulting, perhaps. A change in what can be discussed publicly, as healthcare data regulations tightened. The closure of a professional relationship. The numbers can't say. They can only show the shape of a door closing.
+=======
+171|The blog doesn't explain the break. There's no farewell post, no "I'm moving on from clinical work." The topic simply stops appearing.
+172|
+173|This is a career transition visible in data. The shift from biostatistics to data privacy consulting left a clean break in the archive. One professional chapter closed; another opened.
+>>>>>>> REVISED
+```
+
+---
+
+## book/09-evolution-of-a-blog.md
+
+**Goal:** Differentiate this clearly from Chapter 1 by focusing on *Voice/Authority* rather than *Eras/Time*.
+
+```markdown:book/09-evolution-of-a-blog.md
+<<<<<<< ORIGINAL
+14|## Three Eras, One Arc
+15|
+16|The evolution has three distinct phases:
+17|
+18|**Early (2008-2012):** High volume, short posts. A working consultant's notebook—software development tips alongside mathematical observations. Math accounted for only 21% of posts. The blog was figuring out what it wanted to be.
+19|
+20|**Middle (2013-2017):** Volume dropped sharply (147 posts in 2014, the quietest year), but depth increased. Math rose to 35%, then 65%. PowerShell disappeared. Clinical trials faded. The professional context was being shed.
+21|
+22|**Recent (2018-2025):** Volume recovered while depth remained. Math now dominates at 60-70%. Posts average 450 words—double the early era. The voice is confident, the focus clear.
+=======
+14|## From Notebook to Institution
+15|
+16|The change isn't just about volume; it's about authority.
+17|
+18|**The Notebook Phase (2008-2012):** The early blog reads like a consultant's scratchpad. "Here's a fix for a PowerShell bug." "Here's a link to an article." The voice is helpful but tentative. It's a professional sharing notes.
+19|
+20|**The Clarification (2013-2017):** As the professional focus shifted, the voice tightened. The "tips and tricks" vanished. The mathematical explanations grew longer. The author stopped pointing at other people's work and started synthesizing his own.
+21|
+22|**The Authority (2018-2025):** The modern blog doesn't just explain topics; it connects them. A post about the gamma function references a post about statistical mechanics which references a post about Python code. The voice is no longer just helpful; it is authoritative. The blog has become a reference work.
+>>>>>>> REVISED
+```
+
+---
+
+## book/10-what-the-numbers-miss.md
+
+**Goal:** Rename to "The Dark Matter" and remove the apologetic tone.
+
+```markdown:book/10-what-the-numbers-miss.md
+<<<<<<< ORIGINAL
+1|# Chapter 10: What the Numbers Miss
+2|
+3|> "The map is not the territory."
+4|> — Alfred Korzybski
+5|
+6|---
+7|
+8|This book is built on counting.
+...
+132|## Why This Book Exists Anyway
+133|
+134|If the numbers miss so much, why count at all?
+135|
+136|Because patterns suggest stories. Because stories suggest a person. Because even incomplete maps are useful.
+=======
+1|# Chapter 10: The Dark Matter
+2|
+3|> "The map is not the territory."
+4|> — Alfred Korzybski
+5|
+6|---
+7|
+8|The numbers form the visible structure of the blog. But like dark matter in a galaxy, the invisible mass holds the system together.
+...
+132|## The Gravity of Influence
+133|
+134|The data captures the output, but not the outcome.
+135|
+136|The outcome is the student who understands. The engineer who ships the code. The connection made between two fields that had never touched before.
+>>>>>>> REVISED
+```
+

@@ -1,6 +1,6 @@
 # Print Export Spec for the 365 Facts
 
-Goal: hand the curated 365 facts to a print vendor as a finished, intentional design—one card per day. Use this spec to build the exporter/PDF; keep the canonical CSV intact.
+Goal: hand the curated 365 facts to a print vendor as a finished, intentional design—one card per day—for the **Metastats: 365 Days of Facts about JohnDCook.com** calendar. Use this spec to build or regenerate the exporter/PDF; keep the canonical CSV intact.
 
 ## Physical Format
 - Size: 4.25" x 6.25" (includes 0.125" bleed on all sides for a 4" x 6" trim). If the vendor differs, adjust artboard + bleed but keep proportions.

@@ -69,21 +69,22 @@ All in `/data/`:
 
 ## Next Steps for Book Agent
 
-1. Read this plan and `CALENDAR_FACTS_BRIEF.md` for context
-2. Explore data files to understand available information
-3. Start with Part I (macro view) - most straightforward data work
-4. Draft Chapter 1 as proof of concept
-5. Generate key visualizations
-6. Iterate based on feedback
+1. Read this plan (book only) and skim `CALENDAR_FACTS_BRIEF.md` as historical background if needed.
+2. Explore data files to understand available information.
+3. Start with Part I (macro view) - most straightforward data work.
+4. Draft Chapter 1 as proof of concept.
+5. Generate key visualizations.
+6. Iterate based on feedback.
 
 ## Files to Preserve
 
-The calendar facts work is ongoing. Key files:
-- `johndcook_calendar_candidates_filtered.csv` - Current curated set (1,599 facts)
-- `johndcook_calendar_candidates_merged.csv` - Pre-filtering merged set
-- `johndcook_calendar_candidates_v3.csv` - Original large candidate pool
+The 365‑day calendar (*Metastats: 365 Days of Facts about JohnDCook.com*) is now delivered. Treat the following as canonical inputs or historical source material:
+- `data/johndcook_calendar_365.csv` - Final curated set of 365 facts (canonical; do not edit in place).
+- `data/johndcook_calendar_candidates_filtered.csv` - Curated candidate set (1,599 facts) used to build the calendar.
+- `data/johndcook_calendar_candidates_merged.csv` - Pre-filtering merged set.
+- `data/johndcook_calendar_candidates_v3.csv` - Original large candidate pool.
 
-Do not modify these files. Create new files for book-specific analysis.
+For book-specific analysis, create new files that read from these sources instead of modifying them.
 
 ## Timeline
 

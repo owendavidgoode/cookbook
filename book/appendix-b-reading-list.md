@@ -8,6 +8,25 @@ All posts are available at johndcook.com/blog.
 
 ---
 
+## Start Here: 10 Essential Posts
+
+New to the blog? Start with these ten posts, chosen to represent the range and character of seventeen years of writing.
+
+| Date | Title | Why It's Essential |
+|------|-------|-------------------|
+| 2013-09-24 | Interview with Sir Michael Atiyah | The longest post; a Fields Medalist on mathematical intuition |
+| 2010-10-06 | Probability that a number is prime | Deep dive into prime distribution—signature topic, signature depth |
+| 2009-10-02 | Circle of fifths and number theory | Math meets music; shows how everything becomes a math problem |
+| 2018-09-04 | Pi primes | Playful exploration of the most-mentioned constant |
+| 2023-03-17 | Fixed points of the Fourier transform | Technical but clear; exemplifies the "translation layer" |
+| 2025-11-16 | Elliptic curve pairings in cryptography | The 2019 spike's legacy; number theory made urgent |
+| 2016-02-20 | The empty middle: why no one is average | Statistics with insight; accessible to non-specialists |
+| 2020-04-19 | LaTeX command frequencies | Meta-analysis of tooling; characteristic data-driven curiosity |
+| 2011-04-12 | Evaluating weather forecast accuracy: an interview with Eric Floehr | Entrepreneurship from curiosity; shows range beyond pure math |
+| 2008-01-09 | Moore's law and software bloat | The very first post—182 words that started 17 years |
+
+---
+
 ## The Interviews
 
 The blog's conversations with remarkable people. These are often the longest posts in the archive.
@@ -155,7 +174,7 @@ Posts spanning multiple categories—the connections between fields.
 |------|-------|------------|
 | 2025-08-27 | Why are CUDA kernels hard to optimize? | AI, Computing, HPC, ML, Performance |
 | 2025-07-09 | Experiences with Nvidia | AI, Computing, HPC, Parallel, Software |
-| 2025-06-05 | Scientific papers: innovation or imitation? | AI, Creativity, Productivity, Science |
+| 2025-06-05 | Scientific papers: innovation … or imitation? | AI, Creativity, Productivity, Science |
 | 2008-11-17 | Fast way to test whether a number is a square | Computing, Math, Science, Software |
 
 ---

@@ -5,17 +5,23 @@ Utilities and datasets for extracting, analyzing, and repurposing content from j
 ## Projects
 
 ### 1. Calendar Facts (Primary)
-A curated 365-day calendar of facts about the blog, suitable for a daily desk calendar or similar product.
+A curated 365‑day calendar of facts about the blog, shipped as a physical desk calendar / card deck.
 
-**Status**: 365 facts curated from 9,000+ candidates across 21 categories.
+**Status**: **Delivered.** 365 facts curated from 9,000+ candidates across 21 categories; final print assets and cover spec are frozen for the first edition (*Metastats: 365 Days of Facts about JohnDCook.com*).
 
 **Key Files**:
-- `data/johndcook_calendar_365.csv` — Final curated 365 facts
+- `data/johndcook_calendar_365.csv` — Final curated 365 facts (canonical)
 - `data/johndcook_calendar_candidates_filtered.csv` — 1,599 filtered candidates
 - `data/johndcook_calendar_candidates_v3.csv` — 5,090 original candidates
 - `data/new_deep_analysis_facts.csv` — 42 PhD-level analysis facts (twitter, scholar, code evolution, mathematicians)
 - `data/new_analysis_facts.csv` — 37 GSC/crypto/tone/stats facts
 - `data/hn_facts.csv` — 10 Hacker News impact facts
+- `out/calendar-final/` — Final 365 card images for print
+- `out/metastats_cover.png` — Working cover art for the deck
+
+**Print & Design Docs**:
+- `docs/calendar-print-spec.md` — print/export spec for the 365 cards
+- `docs/metastats-cover-spec.md` — spec for generating/updating the Metastats cover
 
 **Categories**:
 - `otd` — On-this-day historical facts
@@ -31,10 +37,7 @@ A curated 365-day calendar of facts about the blog, suitable for a daily desk ca
 - `tone` — Semantic analysis (86.4% first-person, explanatory style)
 - `rarity`, `quirk`, `density`, `constant`, `span`, `evergreen`, `engagement`, `meta`
 
-**To rebuild calendar with latest facts**:
-```bash
-cd data && python3 rebuild.py
-```
+The candidate-generation pipeline and analysis scripts remain in the repo for future editions, but the CSV and images above define the shipped 365‑day Metastats calendar.
 
 ### 2. Twitter Bot (Live)
 Autonomous bot posting facts to [@jdc_facts](https://x.com/jdc_facts).
@@ -123,19 +126,6 @@ A data-driven companion book celebrating johndcook.com/blog as a long-running, q
 - "Dungeons, Dragons, and Numbers" went viral: 3,282 clicks, 53,563 impressions
 - "TV tuned to a dead channel" hit 5.04% CTR — literary references outperform
 
-## Quick Start
-
-```bash
-# Extract posts from downloaded site
-python3 src/extract_johndcook.py --source ../johndcook/app/public --output data/johndcook_posts.jsonl
-
-# Generate calendar fact candidates
-python3 scripts/generate_calendar_facts_opus.py
-
-# Rebuild curated 365 with latest analysis facts
-cd data && python3 rebuild.py
-```
-
 ## Tooling
 - Install dev deps: `make setup`
 - Lint/test: `make lint` / `make test`
@@ -169,3 +159,8 @@ cd data && python3 rebuild.py
 - Twitter account network mapping (20+ topic accounts)
 - Rebuilt calendar from 13 to 21 categories with 42 new PhD-level facts
 - Twitter bot launched at @jdc_facts
+
+**2025-11-30**: Metastats calendar delivery
+- Finalized canonical 365‑fact CSV and exported print-ready card images to `out/calendar-final/`.
+- Defined Metastats cover and card print specs under `docs/`.
+- Marked legacy calendar exploration scripts as deprecated and archived the original calendar brief.
