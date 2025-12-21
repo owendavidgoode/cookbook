@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: setup lint test calendar bot book
+.PHONY: setup lint test calendar bot book factcheck
 
 setup:
 	$(PYTHON) -m pip install --upgrade pip
@@ -20,3 +20,6 @@ bot:
 
 book:
 	@echo "Book prep placeholder; hook up chapter dataset generation here."
+
+factcheck:
+	$(PYTHON) scripts/factcheck_pdf.py

@@ -5,12 +5,18 @@
 \documentclass[10pt,openany]{memoir}
 
 % Page geometry for 7" x 10" trim size (KDP compatible)
+% Conservative margins for comfortable reading
 \setstocksize{10in}{7in}
 \settrimmedsize{10in}{7in}{*}
 \settrims{0pt}{0pt}
-\settypeblocksize{8in}{5in}{*}
-\setlrmargins{*}{*}{1.2}
-\setulmargins{*}{*}{1.2}
+% Text block: 7.5in tall × 4.5in wide (better proportions, more room)
+\settypeblocksize{7.5in}{4.5in}{*}
+% Use ratio for margins - 1.15 means slightly wider outer margin for binding
+\setlrmargins{*}{*}{1.15}
+% Top/bottom: ratio 1.3 means more space at bottom for page numbers
+\setulmargins{*}{*}{1.3}
+\setheadfoot{\baselineskip}{2\baselineskip}
+\setheaderspaces{*}{\baselineskip}{*}
 \checkandfixthelayout
 
 % Fonts
@@ -33,38 +39,126 @@
 \graphicspath{{../figures/}}
 \usepackage[dvipsnames,svgnames,table]{xcolor}
 
-% Tables
+% Tables - IMPROVED: Add tabularx for flexible columns
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% Define column types for wrapped text
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 
 % Math (for lambda symbol etc.)
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-% Code listings
+% Code listings - IMPROVED: Add syntax highlighting
 \usepackage{listings}
+
+% Define colors for syntax highlighting (enhanced color scheme)
+\definecolor{codegreen}{rgb}{0.0,0.5,0.0}        % Comments - darker green
+\definecolor{codegray}{rgb}{0.45,0.45,0.45}     % Line numbers, frame
+\definecolor{codepurple}{rgb}{0.5,0.0,0.5}      % Reserved words (secondary)
+\definecolor{codeblue}{rgb}{0.0,0.3,0.6}        % Keywords - strong blue
+\definecolor{codebg}{rgb}{0.96,0.96,0.96}       % Background - subtle gray
+\definecolor{codered}{rgb}{0.6,0.1,0.0}         % Strings - dark red
+\definecolor{codeorange}{rgb}{0.8,0.4,0.0}      % Numbers, special identifiers
+
 \lstset{
   basicstyle=\small\ttfamily,
   breaklines=true,
   frame=single,
-  framesep=3pt,
-  backgroundcolor=\color{gray!10},
-  xleftmargin=0pt,
-  framexleftmargin=0pt,
+  framesep=6pt,
+  rulecolor=\color{codegray},
+  backgroundcolor=\color{codebg},
+  xleftmargin=6pt,
+  xrightmargin=6pt,
+  framexleftmargin=3pt,
+  framexrightmargin=3pt,
   columns=fullflexible,
-  keepspaces=true
+  keepspaces=true,
+  % Syntax highlighting with enhanced styles
+  keywordstyle=\color{codeblue}\bfseries,
+  keywordstyle={[2]\color{codepurple}\bfseries},
+  commentstyle=\color{codegreen}\itshape,
+  stringstyle=\color{codered},
+  numberstyle=\tiny\color{codegray},
+  identifierstyle=\color{black},
+  % Line numbers (disabled by default for cleaner look)
+  numbers=none,
+  numbersep=8pt,
+  % Better line breaking to prevent overflow
+  breakatwhitespace=false,
+  showstringspaces=false,
+  tabsize=2,
+  prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow\space}},
+  % Additional highlighting
+  morecomment=[l][\color{codegreen}\itshape]{//},
+  morecomment=[s][\color{codegreen}\itshape]{/*}{*/},
+  literate=
+    {0}{{{\color{codeorange}0}}}1
+    {1}{{{\color{codeorange}1}}}1
+    {2}{{{\color{codeorange}2}}}1
+    {3}{{{\color{codeorange}3}}}1
+    {4}{{{\color{codeorange}4}}}1
+    {5}{{{\color{codeorange}5}}}1
+    {6}{{{\color{codeorange}6}}}1
+    {7}{{{\color{codeorange}7}}}1
+    {8}{{{\color{codeorange}8}}}1
+    {9}{{{\color{codeorange}9}}}1
+}
+
+% Python language configuration with enhanced keywords
+\lstdefinestyle{python}{
+  language=Python,
+  morekeywords={self,True,False,None,as,with,yield,async,await},
+  keywordstyle=\color{codeblue}\bfseries,
+  keywordstyle={[2]\color{codepurple}\bfseries},
+  keywords={[2]range,len,str,int,float,list,dict,set,tuple,enumerate,zip},
+  emph={import,from,def,class,return,lambda,if,elif,else,for,while,in,not,and,or,is,try,except,finally,raise,with,as},
+  emphstyle=\color{codeblue}\bfseries
+}
+
+% R language configuration
+\lstdefinestyle{r}{
+  language=R,
+  morekeywords={function,library,data.frame,c,matrix,vector,factor},
+  keywordstyle=\color{codeblue}\bfseries,
+  keywordstyle={[2]\color{codepurple}\bfseries},
+  keywords={[2]mean,median,sd,var,summary,plot,ggplot,lm,glm}
+}
+
+% Java language configuration with enhanced keywords
+\lstdefinestyle{java}{
+  language=Java,
+  morekeywords={var,record,sealed,permits},
+  keywordstyle=\color{codeblue}\bfseries,
+  keywordstyle={[2]\color{codepurple}\bfseries},
+  keywords={[2]String,Integer,Double,Boolean,List,ArrayList,HashMap,Set},
+  emph={public,private,protected,static,final,abstract,interface,implements,extends},
+  emphstyle=\color{codeblue}\bfseries
 }
 
 % Hyperlinks (off for print, but useful for PDF navigation)
 \usepackage[hidelinks]{hyperref}
 
-% Epigraphs
-\usepackage{epigraph}
-\setlength{\epigraphwidth}{0.8\textwidth}
-\setlength{\epigraphrule}{0pt}
+% Better text wrapping and overflow handling
+\usepackage{microtype}  % Improved typography and line breaking
+\sloppy  % Allow LaTeX more flexibility in line breaking to prevent overflow
 
-% Chapter style
+% Epigraphs - Better positioning and spacing, prevent overflow
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.65\textwidth}
+\setlength{\epigraphrule}{0pt}
+\setlength{\beforeepigraphskip}{1\baselineskip}
+\setlength{\afterepigraphskip}{2\baselineskip}
+
+% For adjustwidth environment in blogquote
+\usepackage{changepage}
+
+% Chapter style - generous vertical spacing for chapter openings
 \makechapterstyle{cookstyle}{
   \chapterstyle{default}
   \renewcommand*{\chapnamefont}{\large\bfseries}
@@ -73,8 +167,10 @@
   \renewcommand*{\printchaptername}{}
   \renewcommand*{\chapternamenum}{}
   \renewcommand*{\printchapternum}{\chapnumfont Chapter \thechapter}
-  \renewcommand*{\afterchapternum}{\par\vskip 0.5\baselineskip}
+  \renewcommand*{\afterchapternum}{\par\vskip 1.5\baselineskip}
   \renewcommand*{\printchaptertitle}[1]{\chaptitlefont ##1}
+  \setlength{\beforechapskip}{3\baselineskip}
+  \setlength{\afterchapskip}{2.5\baselineskip}
 }
 \chapterstyle{cookstyle}
 
@@ -82,26 +178,68 @@
 \setsecheadstyle{\large\bfseries}
 \setsubsecheadstyle{\normalsize\bfseries}
 
-% Paragraph spacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.5\baselineskip}
+% TOC formatting - generous spacing for chapter numbers and sections
+\setlength{\cftchapternumwidth}{3em}
+\setlength{\cftsectionindent}{3em}
+\setlength{\cftsectionnumwidth}{2em}
+% Add vertical spacing between TOC entries
+\setlength{\cftbeforechapterskip}{0.5em}
+\setlength{\cftbeforesectionskip}{0.2em}
 
-% Pull quotes
+% Paragraph spacing - increased for better readability
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.0\baselineskip plus 0.2\baselineskip minus 0.1\baselineskip}
+
+% Line spacing - open 1.25 for comfortable reading
+\setSingleSpace{1.25}
+\SingleSpacing
+
+% Section spacing - generous room around headings
+\setbeforesecskip{2\baselineskip}
+\setaftersecskip{1\baselineskip}
+\setbeforesubsecskip{1.5\baselineskip}
+\setaftersubsecskip{0.75\baselineskip}
+
+% Pull quotes - centered emphasis quotes with proper containment
 \newenvironment{pullquote}{%
+  \par\vspace{1.25\baselineskip}
   \begin{center}
-  \begin{minipage}{0.85\textwidth}
-  \itshape\large
+  \begin{minipage}{0.65\textwidth}
+  \centering\itshape\large
 }{%
   \end{minipage}
   \end{center}
-  \vspace{0.5\baselineskip}
+  \par\vspace{1.25\baselineskip}
 }
 
-% Figure placement
-\newcommand{\bookfigure}[3][1.0]{%
+% Block quotes for blog excerpts - balanced indentation to prevent overflow
+\newenvironment{blogquote}{%
+  \par\vspace{0.75\baselineskip}
+  \begin{adjustwidth}{2em}{2em}
+  \small
+  \setlength{\parskip}{0.4\baselineskip}
+}{%
+  \end{adjustwidth}
+  \par\vspace{0.75\baselineskip}
+}
+
+% Standard quote environment override for memoir
+\renewenvironment{quote}{%
+  \par\vspace{0.75\baselineskip}
+  \begin{adjustwidth}{2em}{2em}
+  \small
+}{%
+  \end{adjustwidth}
+  \par\vspace{0.75\baselineskip}
+}
+
+% Figure placement - IMPROVED: Better float control
+\usepackage{placeins}  % For \FloatBarrier
+
+\newcommand{\bookfigure}[3][0.85]{%
   \begin{figure}[htbp]
     \centering
-    \includegraphics[width=#1\textwidth]{#2}
+    \includegraphics[width=#1\textwidth,keepaspectratio]{#2}
     \caption{#3}
   \end{figure}
 }
@@ -109,10 +247,31 @@
 \newcommand{\bookfigurefull}[2]{%
   \begin{figure}[p]
     \centering
-    \includegraphics[width=\textwidth,height=0.85\textheight,keepaspectratio]{#1}
+    \includegraphics[width=0.9\textwidth,height=0.85\textheight,keepaspectratio]{#1}
     \caption{#2}
   \end{figure}
 }
+
+% Reduce figure caption font size
+\captionnamefont{\small\bfseries}
+\captiontitlefont{\small}
+
+% Float parameters - IMPROVED: Allow more floats per page
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{6}
+
+% Widow and orphan control
+\widowpenalty=10000
+\clubpenalty=10000
+
+% Prevent page overflow - allow some flexibility in page height
+\raggedbottom  % Allow varying bottom margins to prevent overflow
+\setlength{\emergencystretch}{3em}  % Allow extra stretching to prevent overflow
 
 % Document info
 \title{You Can Just Do Things}
@@ -163,7 +322,6 @@ This book was not authorized or commissioned by John D. Cook.\\
 It is a gift, made from public data, offered in appreciation.
 
 \vspace{1em}
-Cover design: [TBD]\\
 Interior design and visualizations: Owen D. Goode
 
 \vspace{1em}
@@ -179,22 +337,11 @@ For John
 \end{center}
 \clearpage
 
-% Foreword (greeked placeholder)
-\chapter*{Foreword}
-\addcontentsline{toc}{chapter}{Foreword}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-
-\vspace{2em}
-\begin{flushright}
-\textit{[Author Name]}\\
-\textit{[Location], [Month] 2025}
-\end{flushright}
-\clearpage
+% Foreword - TODO: Add real foreword content
+% \chapter*{Foreword}
+% \addcontentsline{toc}{chapter}{Foreword}
+% [Foreword content to be written]
+% \clearpage
 
 % Table of contents
 \tableofcontents*
@@ -206,16 +353,17 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 % Include chapters
 \include{chapters/00-prologue}
-\include{chapters/01-shape-of-seventeen-years}
-\include{chapters/02-topography-of-interest}
-\include{chapters/03-rhythm-of-a-working-mind}
-\include{chapters/04-mathematical-obsessions}
-\include{chapters/05-languages-as-thinking-tools}
-\include{chapters/06-cryptographys-moment}
-\include{chapters/07-edges-of-the-map}
-\include{chapters/08-interviews}
-\include{chapters/09-evolution-of-a-blog}
-\include{chapters/10-what-the-numbers-miss}
+\include{chapters/01-the-shape-of-the-start}
+\include{chapters/02-the-consultants-toolkit}
+\include{chapters/03-finding-the-rhythm}
+\include{chapters/04-the-quiet-year}
+\include{chapters/05-the-deepening}
+\include{chapters/06-the-shedding}
+\include{chapters/07-the-mathematical-core}
+\include{chapters/08-adaptation-and-urgency}
+\include{chapters/09-the-modern-translation-layer}
+\include{chapters/10-the-shape-of-persistence}
+\include{chapters/11-the-dark-matter}
 
 % Back matter
 \backmatter

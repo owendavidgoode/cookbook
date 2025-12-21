@@ -1,8 +1,8 @@
 # Appendix B: A Reading List
 
-Fifty posts worth reading, curated from 5,233.
+Fifty-five posts worth reading, curated from 5,233.
 
-This list draws from the longest posts, the most cross-disciplinary, the signature topics, and the interviews. It is not comprehensive—nothing could be—but it provides entry points across the blog's seventeen-year range.
+This list draws from the longest posts, the most cross-disciplinary, the signature topics, and the interviews. It is not comprehensive (nothing could be), but it provides entry points across the blog's seventeen-year range.
 
 All posts are available at johndcook.com/blog.
 
@@ -14,16 +14,16 @@ New to the blog? Start with these ten posts, chosen to represent the range and c
 
 | Date | Title | Why It's Essential |
 |------|-------|-------------------|
-| 2013-09-24 | Interview with Sir Michael Atiyah | The longest post; a Fields Medalist on mathematical intuition |
-| 2010-10-06 | Probability that a number is prime | Deep dive into prime distribution—signature topic, signature depth |
+| 2013-09-24 | Interview with Sir Michael Atiyah | The longest post: a Fields Medalist on mathematical intuition |
+| 2010-10-06 | Probability that a number is prime | Deep dive into prime distribution: signature topic, signature depth |
 | 2009-10-02 | Circle of fifths and number theory | Math meets music; shows how everything becomes a math problem |
 | 2018-09-04 | Pi primes | Playful exploration of the most-mentioned constant |
 | 2023-03-17 | Fixed points of the Fourier transform | Technical but clear; exemplifies the "translation layer" |
-| 2025-11-16 | Elliptic curve pairings in cryptography | The 2019 spike's legacy; number theory made urgent |
+| 2025-11-16 | Elliptic curve pairings in cryptography | The 2019 spike's legacy: number theory made urgent |
 | 2016-02-20 | The empty middle: why no one is average | Statistics with insight; accessible to non-specialists |
 | 2020-04-19 | LaTeX command frequencies | Meta-analysis of tooling; characteristic data-driven curiosity |
 | 2011-04-12 | Evaluating weather forecast accuracy: an interview with Eric Floehr | Entrepreneurship from curiosity; shows range beyond pure math |
-| 2008-01-09 | Moore's law and software bloat | The very first post—182 words that started 17 years |
+| 2008-01-09 | Moore's law and software bloat | The very first post: 182 words that started 17 years |
 
 ---
 
@@ -78,7 +78,7 @@ The most-mentioned number in the archive, explored from multiple angles.
 
 ## Primes: The Building Blocks
 
-The integers that divide only by themselves and one—explored for seventeen years.
+The integers that divide only by themselves and one, explored for seventeen years.
 
 | Date | Title | Words |
 |------|-------|-------|
@@ -105,7 +105,7 @@ The most important function not on a calculator.
 
 ## Fourier Analysis
 
-Decomposing signals into frequencies—the workhorse of modern engineering.
+Decomposing signals into frequencies: the workhorse of modern engineering.
 
 | Date | Title | Words |
 |------|-------|-------|
@@ -118,7 +118,7 @@ Decomposing signals into frequencies—the workhorse of modern engineering.
 
 ## Cryptography
 
-The 2019 spike and beyond—number theory made urgent.
+The 2019 spike and beyond: number theory made urgent.
 
 | Date | Title | Words |
 |------|-------|-------|
@@ -132,7 +132,7 @@ The 2019 spike and beyond—number theory made urgent.
 
 ## Statistics
 
-Probability and inference—the second-largest domain.
+Probability and inference: the second-largest domain.
 
 | Date | Title | Words |
 |------|-------|-------|
@@ -168,7 +168,7 @@ The bridge between mathematics and machines.
 
 ## Cross-Disciplinary Posts
 
-Posts spanning multiple categories—the connections between fields.
+Posts spanning multiple categories: the connections between fields.
 
 | Date | Title | Categories |
 |------|-------|------------|
@@ -197,7 +197,7 @@ This list represents roughly 1% of the archive. It favors longer posts, which te
 
 For any specific topic—quaternions, continued fractions, Unicode, orbital mechanics—search the blog directly. The archive is searchable at johndcook.com/blog, and seventeen years of posts mean that most mathematical and computational topics have been touched at least once.
 
-The interviews are particularly recommended as entry points. They reveal both the subjects' thinking and the interviewer's interests—what he chose to ask, where he pushed for detail, what connections he noticed.
+The interviews are particularly recommended as entry points. They reveal both the subjects' thinking and the interviewer's interests: what he chose to ask, where he pushed for detail, what connections he noticed.
 
 For readers who want to follow the blog's evolution, reading chronologically from 2008 is illuminating. The early posts are shorter and more scattered; the recent posts are longer and more focused. Watching the transformation unfold gives a sense of intellectual development that no single post can provide.
 
@@ -205,7 +205,7 @@ For readers who want to follow the blog's evolution, reading chronologically fro
 
 ## A Note on Selection
 
-Any list of fifty posts from 5,233 involves judgment calls. These selections favor:
+Any list of fifty-five posts from 5,233 involves judgment calls. These selections favor:
 
 - Length (longer posts generally contain more developed arguments)
 - Cross-disciplinarity (posts spanning categories are rarer and often more interesting)

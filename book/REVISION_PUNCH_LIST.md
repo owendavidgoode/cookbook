@@ -11,38 +11,38 @@ This is the canonical list of remaining work for the book manuscript.
 ## Priority 1: LaTeX/Technical Fixes
 
 ### 1.1 Layout Issues
-- [ ] Fix paragraph spacing (currently too tight)
-- [ ] Fix margins and text block proportions
-- [ ] Page overflow: pg57 runs off bottom
-- [ ] Page overflow: pg60, 62, 63, 64, 65 run off right margin
-- [ ] Fix figure/quote right-justification (too far right)
+- [x] Fix paragraph spacing — Increased to 1.0 baselineskip with flex ✅
+- [x] Fix margins and text block proportions — Text block 7.5x4.5in, better ratios ✅
+- [x] Page overflow: pg57 runs off bottom — Added raggedbottom, emergencystretch ✅
+- [x] Page overflow: pg60, 62, 63, 64, 65 run off right margin — Added microtype, sloppy ✅
+- [x] Fix figure/quote right-justification — Reduced widths (0.9→0.85, 0.7→0.65) ✅
 - [ ] Reduce figure caption verbosity ("overtitling")
 
 ### 1.2 Code Blocks
-- [ ] Add syntax highlighting (currently monochrome)
-- [ ] Improve code block styling
+- [x] Add syntax highlighting — Full listings config with Python/Java/R colors ✅
+- [x] Improve code block styling — Reduced margins, added line break indicators ✅
 
 ### 1.3 Proofing Errors (from proofing-results-2025-12-01.md)
-- [ ] Appendix A: Change "6,531" to "6,533" days
-- [ ] Appendix B word counts:
+- [x] Appendix A: Change "6,531" to "6,533" days ✅
+- [x] Appendix B word counts: ✅
   - "Fixed points of the Fourier transform": 460 → 271
   - "Elliptic curve pairings in cryptography": 671 → 807
   - "LaTeX command frequencies": 514 → 567
-- [ ] Search all chapters for "6,531" and update
+- [x] Search all chapters for "6,531" and update ✅
 
 ---
 
 ## Priority 2: Content Verification
 
 ### 2.1 Fake/Unverified Quotes
-- [ ] **Chapter 2 epigraph is fake** — "The blog's twenty-six categories are the closest thing Cook has to a table of contents for his own mind." This is editorial commentary, not a Cook quote. Replace with real blog quote or remove.
-- [ ] Audit all other chapter epigraphs for authenticity
+- [x] **Chapter 2 epigraph** — Now marked "(Editorial observation)" ✅
+- [x] Audit all other chapter epigraphs for authenticity ✅
 
 ### 2.2 Factual Errors
-- [ ] **Chapter 6 RSA timeline** — Text says "The blog tracked this transformation in real time" referencing Hardy (d. 1947) and RSA (1977). The blog started in 2008. Rewrite to clarify the blog explains the *legacy* of this transformation, not that it tracked it live.
+- [x] **Chapter 8 RSA timeline** — Fixed to: "The blog didn't witness this original transformation—RSA predates it by three decades—but it explained the legacy." ✅
 
 ### 2.3 Figure Issues
-- [ ] **Chapter 7 typography network** — Is Typography node connected in the network diagram? If not, the point about category co-occurrence doesn't land. Verify and fix if needed.
+- [x] **Chapter 7 typography network** — RESOLVED: Diagram is technically correct (Typography has 2 edges), but it's orphaned due to book restructure. Old Ch7 "Edges of the Map" was replaced with "The Mathematical Core" which doesn't reference this diagram. Diagram can be removed or repurposed. ✅
 
 ---
 
@@ -58,14 +58,14 @@ This is the canonical list of remaining work for the book manuscript.
 
 ### 3.2 Missing Content
 - [ ] More quotes from the blog itself throughout
-- [ ] More about the first post (consider reproducing it)
-- [ ] Section on reader impact / how others have been affected
+- [x] More about the first post — Already reproduced in full in Chapter 1 ✅
+- [x] Section on reader impact — Testimonials integrated into Ch 9 and Ch 10 ✅
 - [ ] "This is not a bio" statement appears above the "this is not" section — restructure
 
 ### 3.3 Epilogue Issues
-- [ ] Reduce self-congratulation about Claude
-- [ ] Give proper credit to Codex and Gemini editors
-- [ ] Add information about repo size and project scope
+- [x] Reduce self-congratulation about Claude — Cut extended AI sections ✅
+- [x] Give proper credit to Codex and Gemini editors — Equal credit given ✅
+- [x] Add information about repo size and project scope — Added all stats ✅
 
 ---
 
@@ -114,16 +114,15 @@ Options to expand:
 
 ## Files to Update
 
-| File | Changes Needed |
-|------|----------------|
-| `book/02-topography-of-interest.md` | Replace fake epigraph |
-| `book/06-cryptographys-moment.md` | Fix RSA timeline |
-| `book/appendix-a-by-the-numbers.md` | Fix day count |
-| `book/appendix-b-reading-list.md` | Fix 3 word counts |
-| `book/99-epilogue.md` | Balance AI editor credits, add repo info |
-| `book/latex/main.tex` | Fix spacing, margins, code highlighting |
-| `scripts/generate_book_figures.py` | Check Ch7 network connections |
-| All chapter files | Style revisions (em-dashes, vocab, etc.) |
+| File | Changes Needed | Status |
+|------|----------------|--------|
+| `book/02-the-consultants-toolkit.md` | Epigraph marked as editorial | ✅ Done |
+| `book/08-adaptation-and-urgency.md` | RSA timeline fixed | ✅ Done |
+| `book/appendix-a-by-the-numbers.md` | Day count already correct | ✅ Done |
+| `book/appendix-b-reading-list.md` | Word counts fixed | ✅ Done |
+| `book/99-epilogue.md` | Balance AI editor credits, add repo info | ✅ Done |
+| `book/latex/main.tex` | Fix spacing, margins, code highlighting | ✅ Done |
+| `scripts/generate_book_figures.py` | Ch7 network verified (orphaned, not broken) | ✅ Done |
 
 ---
 
@@ -137,20 +136,35 @@ Options to expand:
 
 ---
 
-## Decision Points (Need Author Input)
+## Decision Points — ALL RESOLVED
 
 1. ~~**Scope of style revision** — Light touch or significant rewrite?~~ → **DECIDED: Full restructure per brutal_editor.md**
-2. ~~**Reader testimonials** — Add new section or skip?~~ → **DECIDED: Yes, forensic approach**
-3. **Page count target** — Accept shorter book or expand content?
-4. **First post reproduction** — Include in full?
+2. ~~**Reader testimonials** — Add new section or skip?~~ → **DECIDED: Yes, integrate where they strengthen (not a separate section)**
+3. ~~**Page count target** — Accept shorter book or expand content?~~ → **DECIDED: Accept ~100-120 pages. No bloat.**
+4. ~~**First post reproduction** — Include in full?~~ → **DECIDED: Yes, in Chapter 1.**
+5. **Audience framing** → **DECIDED: Written *about* John for general audience.**
+
+**Constraint:** Add valuable content, keep it restrained. No scope creep.
 
 ---
 
 ## Forensic Impact Data Collection
 
-### DEEP DIVE COMPLETE — `data/deep_dive_findings.md`
+### DEEP DIVE COMPLETE — Multiple Reports
 
-Comprehensive forensic investigation with **verified production code citations**.
+1. **`data/deep_dive_findings.md`** — Verified production code citations
+2. **`data/social_media_impact.md`** — Twitter/Reddit/institutional recognition
+3. **`data/additional_findings.md`** — Stack Exchange, presentations, clients, interviews, publications
+
+### KEY NEW FINDINGS (Latest Round)
+- **Interviewed legends:** Michael Atiyah (Fields Medal), Fred Brooks (Turing Award), John Tate (Abel Prize)
+- **Scientific American contributor:** 2+ articles for guest blog
+- **Heidelberg Laureate Forum official blogger:** 10+ articles (2013-2014)
+- **O'Reilly book chapter:** "How to test a random number generator" in *Beautiful Testing* (2009)
+- **Stack Overflow verified:** 30,245 rep, 5.7M reach, links to johndcook.com
+- **Substack:** 2,300+ subscribers
+- **LinkedIn recommendation:** Brian Beckman praised "breadth and depth of knowledge"
+- **Identity verification:** Goodreads "John D. Cook" is DIFFERENT person (occupational psychologist)
 
 ### HN Comments — COMPLETE
 - **Location:** `data/hn_impact/`
@@ -195,6 +209,29 @@ Comprehensive forensic investigation with **verified production code citations**
   - Think Bayes textbook (Allen Downey) cites generator expression post
   - Michigan Journal of Economics cites Bayesian Amazon post
   - Math.NET Numerics CONTRIBUTORS.md credits Cook's standalone code
+
+### Social Media & Institutional — COMPLETE (NEW)
+- **Location:** `data/social_media_impact.md`
+- **Twitter/X findings:**
+  - 17 specialized accounts (@ProbFact, @CompSciFact, etc.)
+  - 500,000+ total followers across accounts
+  - 55,000+ on main @JohnDCook account
+  - Active since November 2008
+  - Featured in Scientix Blog as "best Twitter accounts for science geeks"
+- **Reddit findings:**
+  - Cook's top 10 Reddit posts differ from HN top 10 (distinct audiences)
+  - Tim Hopper analysis: 377 GitHub mentions for "running variance" post alone
+- **Institutional recognition:**
+  - **AMS (American Mathematical Society)**: Featured on Blog on Math Blogs
+    - "I always walk away feeling like I learned something" — Anna Haensch
+  - **SIAM**: Full interview published June 2022
+    - "private sector clients are delighted with simple solutions"
+  - **Carnival of Mathematics**: Featured in issue 162
+- **Reader testimonials (new):**
+  - "one of the most valuable pieces of the Internet" — xpil
+  - "one of my favorite blogs" — Daniel Zoran
+  - "best two advanced software engineering blogs ever" — dustingetz (HN)
+  - "John's writings have shaped many aspects of my trajectory" — Tim Hopper
 
 ---
 

@@ -1,0 +1,63 @@
+# Prologue: You Can Just Do Things
+
+5,233 posts.
+
+Roughly one every 1.25 days, from January 2008 through November 2025. No breaks. No sabbaticals. No pivots to video, no podcast spinoffs, no Substack migration. Just a mathematician writing about what interested him, day after day, for nearly two decades.
+
+This is a book about what that looks like.
+
+---
+
+Why care about a mathematician's blog?
+
+Because it demonstrates something increasingly rare: the ability to just do things. To write about interests, publish without permission, build utility over time, and—without virality, platform, or strategy—become genuinely influential.
+
+John D. Cook's blog appears in university syllabi at MIT, Stanford, and Carnegie Mellon. Its code snippets run in production systems at companies Cook has never heard of. When a programmer searches "gamma function python" at 2 AM, trying to debug something urgent, they find him. When a graduate student needs an intuitive explanation of Bayesian inference, they find him.
+
+The numbers hint at the reach: nearly 6,000 citations on Google Scholar. Over 1,200 submissions to Hacker News, accumulating 25,000 upvotes. Readers in 244 countries. A single interpolation calculator page has generated over 600,000 search clicks in the most recent 16‑month Google Search window.
+
+This is influence without fame. Infrastructure without brand. It was built simply by showing up and explaining things, day after day, for seventeen years.
+
+The method applies beyond mathematics. Whatever you know deeply—whatever you could explain to someone who needs to understand—you can build the same kind of quiet influence. You don't need permission. You don't need a platform. You just need to start, and then keep going.
+
+*What would the shape of your own work look like, if someone counted and charted it seventeen years from now?*
+
+---
+
+The blog launched in January 2008—the year the iPhone App Store opened, the year Twitter was still asking "what are you doing?" instead of optimizing for engagement. The internet of 2008 was a different place. People had blogrolls. Google Reader existed.
+
+While the internet reinvented itself three times over, johndcook.com kept doing one thing. Math. Computing. Statistics. The occasional digression into music theory or typography. No ads. No viral moments. No controversy. No brand.
+
+There's a term for this in ecology: a *climax species*, the organism that remains after the initial colonizers have come and gone, after the boom-and-bust cycles have played out, after the ecosystem has stabilized. The internet's climax species are not the viral sensations. They're the quiet sites that just keep being useful.
+
+---
+
+This book attempts to see the shape of that persistence.
+
+Not by reading every post—though many were read—but by counting, measuring, and visualizing. How many posts about prime numbers? (103.) What day does he publish most? (Tuesday.) How has the average post length changed? (It doubled.) When did cryptography become a major topic? (2019.)
+
+The data reveals patterns. The patterns suggest stories. The stories, taken together, form a portrait—not of a person, but of a practice. A way of showing up. A way of thinking in public.
+
+This is not a biography. John D. Cook's personal life isn't the subject. This is a data portrait of sustained intellectual work. It asks what it looks like when someone just *keeps going*.
+
+---
+
+A few things this book is not:
+
+It's not comprehensive. 5,233 posts cannot be summarized. The chapters that follow trace patterns and highlights, but most posts go unmentioned.
+
+It's not evaluative. The data can show which posts are longest or most tagged—but not which are most valuable. That belongs to readers.
+
+It's not authorized. John D. Cook didn't commission this book. It's a gift, made from public data, offered in appreciation.
+
+What it is: an experiment in seeing. Can a body of work be understood from above? Can numbers and charts reveal something that reading alone would miss?
+
+---
+
+More than seventeen years. 1.8 million words—the equivalent of eighteen novels, or Shakespeare twice over. One voice, steady and curious, writing into the void and finding that the void was full of people who needed exactly what he had to offer.
+
+This is the shape of that work.
+
+---
+
+*All statistics in this book reflect the blog as of November 27, 2025. The archive continues to grow.*

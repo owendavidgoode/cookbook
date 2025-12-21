@@ -11,7 +11,7 @@ This appendix is the canonical reference for all statistics in the book. Every n
 | Total posts | 5,233 |
 | Total words | 1,823,200 |
 | Date range | January 9, 2008 – November 27, 2025 |
-| Total days | 6,531 |
+| Total days | 6,533 |
 | Mean words per post | 348 |
 | Median words per post | 312 |
 | Longest post | 1,926 words |
@@ -65,19 +65,27 @@ This appendix is the canonical reference for all statistics in the book. Every n
 | Computing | 520 |
 | Software development | 446 |
 | Statistics | 418 |
-| Business | 206 |
 | Science | 231 |
-| Creativity | 161 |
+| Business | 206 |
 | Python | 177 |
+| Creativity | 161 |
 | Music | 85 |
-| PowerShell | 47 |
-| Typography | 50 |
 | Clinical trials | 55 |
+| Typography | 50 |
+| PowerShell | 47 |
 | Graphics | 43 |
 | Geography | 30 |
 | Machine learning | 24 |
 | AI | 16 |
+| Algorithms | 15 |
 | Artificial Intelligence | 13 |
+| Productivity | 9 |
+| High Performance Computing | 5 |
+| Parallel computing | 4 |
+| Performance engineering | 3 |
+| Data | 3 |
+| Computational Complexity | 1 |
+| Games | 1 |
 
 *Note: Posts may have multiple categories. Compound categories (e.g., "Math;Python") are counted separately in the source data.*
 

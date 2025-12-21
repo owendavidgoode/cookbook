@@ -17,16 +17,17 @@
 | File | Content |
 |------|---------|
 | `00-prologue.md` | Prologue: You Can Just Do Things |
-| `01-shape-of-seventeen-years.md` | Chapter 1: The Shape of Seventeen Years |
-| `02-topography-of-interest.md` | Chapter 2: The Topography of Interest |
-| `03-rhythm-of-a-working-mind.md` | Chapter 3: The Rhythm of a Working Mind |
-| `04-mathematical-obsessions.md` | Chapter 4: The Mathematical Obsessions |
-| `05-languages-as-thinking-tools.md` | Chapter 5: Languages as Thinking Tools |
-| `06-cryptographys-moment.md` | Chapter 6: Cryptography's Moment |
-| `07-edges-of-the-map.md` | Chapter 7: The Edges of the Map |
-| `08-interviews.md` | Chapter 8: The Interviews |
-| `09-evolution-of-a-blog.md` | Chapter 9: The Evolution of a Blog |
-| `10-what-the-numbers-miss.md` | Chapter 10: What the Numbers Miss |
+| `01-the-shape-of-the-start.md` | Chapter 1: The Shape of the Start (ACT I) |
+| `02-the-consultants-toolkit.md` | Chapter 2: The Consultant's Toolkit |
+| `03-finding-the-rhythm.md` | Chapter 3: Finding the Rhythm |
+| `04-the-quiet-year.md` | Chapter 4: The Quiet Year (ACT II) |
+| `05-the-deepening.md` | Chapter 5: The Deepening |
+| `06-the-shedding.md` | Chapter 6: The Shedding |
+| `07-the-mathematical-core.md` | Chapter 7: The Mathematical Core (ACT III) |
+| `08-adaptation-and-urgency.md` | Chapter 8: Adaptation and Urgency |
+| `09-the-modern-translation-layer.md` | Chapter 9: The Translation Layer |
+| `10-the-shape-of-persistence.md` | Chapter 10: The Shape of Persistence |
+| `11-the-dark-matter.md` | Chapter 11: The Dark Matter |
 | `appendix-a-by-the-numbers.md` | Appendix A: By the Numbers |
 | `appendix-b-reading-list.md` | Appendix B: A Reading List |
 | `99-epilogue.md` | Epilogue: How This Book Was Made |

@@ -589,8 +589,9 @@ def fig_07_category_network(df):
         G.add_node(cat, size=cat_counts[cat])
 
     # Add edges for co-occurrences
-    for (c1, c2), count in cooccur.most_common(30):
-        if c1 in top_cats and c2 in top_cats and count > 5:
+    # Check top 100 pairs to ensure peripheral categories (like Typography) get connected
+    for (c1, c2), count in cooccur.most_common(100):
+        if c1 in top_cats and c2 in top_cats and count >= 2:
             G.add_edge(c1, c2, weight=count)
 
     fig, ax = plt.subplots(figsize=(12, 10))
@@ -616,6 +617,124 @@ def fig_07_category_network(df):
     plt.savefig(FIGURES_DIR / 'ch07_category_network.png')
     plt.close()
     print("  Created: ch07_category_network.svg")
+
+
+# =============================================================================
+# Chapter 2: Topic Migration (Alluvial/Streamgraph)
+# =============================================================================
+
+def fig_02_topic_migration(df):
+    """Streamgraph showing topic migration from 2008 to 2025.
+
+    This is the "centerpiece visualization" requested by the editor (rough_editor_pass_2.md).
+    It visually proves the book's central argument about intellectual evolution:
+    "The Shedding and The Deepening."
+
+    Shows the rise and fall of major categories over time:
+    - Decline: Business, Software Development (professional obligations fade)
+    - Rise: Math dominates by 2018+ (personal fascination wins)
+    - Persistence: Statistics stays relatively steady throughout
+
+    Technical notes:
+    - Uses 'wiggle' baseline for classic streamgraph aesthetic
+    - 3-point moving average smoothing for visual clarity
+    - Era boundaries at 2013 (end of Notebook Phase) and 2018 (start of Institution)
+
+    Output: ch02_topic_migration.svg, ch02_topic_migration.png
+    """
+    # Define the key categories to track (the narrative ones)
+    categories_to_track = [
+        'Math',
+        'Statistics',
+        'Computing',
+        'Software development',
+        'Business',
+        'Science',
+    ]
+
+    years = list(range(2008, 2026))
+
+    # Count posts per category per year
+    data = {cat: [] for cat in categories_to_track}
+
+    for year in years:
+        year_df = df[df['year'] == year]
+        for cat in categories_to_track:
+            count = 0
+            for cats in year_df['categories'].dropna():
+                if cat.lower() in cats.lower():
+                    count += 1
+            data[cat].append(count)
+
+    # Simple moving average smoothing (no scipy needed)
+    def smooth(arr, window=3):
+        arr = np.array(arr, dtype=float)
+        result = np.copy(arr)
+        for i in range(len(arr)):
+            start = max(0, i - window // 2)
+            end = min(len(arr), i + window // 2 + 1)
+            result[i] = np.mean(arr[start:end])
+        return result
+
+    smoothed_data = {}
+    for cat, counts in data.items():
+        smoothed_data[cat] = smooth(counts, window=3)
+
+    # Create streamgraph (centered stacked area)
+    fig, ax = plt.subplots(figsize=(14, 7))
+
+    # Stack the data
+    y_stack = np.row_stack([smoothed_data[cat] for cat in categories_to_track])
+
+    # Color palette - distinct but harmonious
+    stream_colors = [
+        '#3498db',  # Math - blue (dominant)
+        '#9b59b6',  # Statistics - purple
+        '#2ecc71',  # Computing - green
+        '#e67e22',  # Software dev - orange
+        '#e74c3c',  # Business - red
+        '#1abc9c',  # Science - teal
+    ]
+
+    # Create baseline-centered streamgraph
+    baseline = np.zeros(len(years))
+
+    ax.stackplot(years, y_stack, labels=categories_to_track,
+                 colors=stream_colors, alpha=0.85, baseline='wiggle')
+
+    # Styling
+    ax.set_xlim(2008, 2025)
+    ax.set_xlabel('Year', fontsize=11)
+    ax.set_ylabel('')  # No y-label for streamgraph
+    ax.set_title('Topic Migration: The Shedding and The Deepening\n2008–2025',
+                 fontweight='bold', fontsize=14)
+
+    # Add era annotations
+    ax.axvline(x=2013, color='gray', linestyle='--', alpha=0.4, linewidth=1)
+    ax.axvline(x=2018, color='gray', linestyle='--', alpha=0.4, linewidth=1)
+
+    # Era labels at top
+    ax.text(2010.5, ax.get_ylim()[1] * 0.9, 'Notebook\nPhase', ha='center',
+            fontsize=9, alpha=0.7, style='italic')
+    ax.text(2015.5, ax.get_ylim()[1] * 0.9, 'Crucible', ha='center',
+            fontsize=9, alpha=0.7, style='italic')
+    ax.text(2021.5, ax.get_ylim()[1] * 0.9, 'Institution', ha='center',
+            fontsize=9, alpha=0.7, style='italic')
+
+    # Legend outside
+    ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), frameon=False)
+
+    # Clean up spines
+    ax.spines['left'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.set_yticks([])
+
+    plt.tight_layout()
+    plt.savefig(FIGURES_DIR / 'ch02_topic_migration.svg', bbox_inches='tight')
+    plt.savefig(FIGURES_DIR / 'ch02_topic_migration.png', bbox_inches='tight')
+    plt.close()
+    print("  Created: ch02_topic_migration.svg")
 
 
 # =============================================================================
@@ -742,7 +861,7 @@ def main():
 
     chapters = {
         1: [fig_01_activity_heatmap, fig_01_posts_and_wordcount],
-        2: [fig_02_category_treemap, fig_02_category_packing],
+        2: [fig_02_category_treemap, fig_02_category_packing, fig_02_topic_migration],
         3: [fig_03_weekday_radial],
         4: [fig_04_constants_dumbbell, fig_04_functions_timeline],
         5: [fig_05_languages_stacked, fig_05_languages_bar],

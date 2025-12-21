@@ -15,5 +15,22 @@ __pycache__/
 # Packaging artifacts
 src/*.egg-info/
 
+# Generated outputs
+out/
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+
+# LaTeX build artifacts
+book/latex/section_*_pages_*.pdf
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
 # State tracking (optional - could commit this)
 # state.json

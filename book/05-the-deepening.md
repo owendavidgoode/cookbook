@@ -1,0 +1,89 @@
+# Chapter 5: The Deepening
+
+> "I write to find out what I think."
+> — (Editorial observation)
+
+The recovery from the quiet year didn't look like a return to the past. It looked like something new.
+
+In 2015 and 2016, the volume began to climb back up. But the shape of the posts had changed. The consultant's notebook—scrappy, reactive, brief—was gone. In its place was a practice of sustained explanation.
+
+The data captures the transformation perfectly.
+
+---
+
+## The Shift in Scale
+
+In the "Notebook" era (2008-2012), the average post was 232 words.
+In the "Institution" era (2018-2025), the average post was 448 words.
+
+The blog literally doubled in density.
+
+The shift happened here, in the years following the 2014 dip. It wasn't a sudden jump; it was a gradual deepening.
+
+| Year | Average Words |
+|------|---------------|
+| 2014 | 188 |
+| 2015 | 293 |
+| 2016 | 386 |
+| 2017 | 383 |
+
+By 2016, the new standard was set. A typical post was no longer a paragraph; it was an essay. It was substantial enough to contain code, a derivation, and a conclusion.
+
+This change broke the "blogger's trade-off." The conventional wisdom says you can have high frequency or high depth, but not both. If you write every day, you write fluff. If you write essays, you publish once a month.
+
+Cook found a way to do both. By 2018, he was publishing 266 times a year—nearly every weekday—and maintaining that 450-word average. He wasn't choosing between quantity and quality. He was using quantity to *refine* quality.
+
+---
+
+## The Gamma Function Test
+
+We can see the deepening by looking at how Cook treats a single topic over time.
+
+Consider the Gamma function, $\Gamma(z)$. It's a generalization of the factorial function to complex numbers. It's notoriously tricky to implement numerically because it grows so fast—$\Gamma(100)$ has 156 digits.
+
+Cook wrote about Gamma in the early years. In 2010, he posted "Diagram of gamma function identities." It was 114 words. It listed a few formulas, provided a link to a reference, and stopped. It was a note to self. *Useful*, but thin.
+
+Compare that to the Gamma posts from the deepening era.
+
+In 2017, he wrote "Approximate inverse of the gamma function"—481 words. This wasn't a list of formulas. It was a full exploration. He explained the approximation method, provided Python code to implement it, and tested the accuracy across different ranges. He didn't just point to the math; he inhabited it. He translated it.
+
+The pattern repeated across the gamma function posts of this era. Each one deeper than a reference manual, each one building working code, each one explaining not just *what* but *why*.
+
+The 2010 post was a signpost: "This math exists."
+The 2017 posts were infrastructure: "Here is how to build with this math."
+
+---
+
+## The End of the Linklog
+
+The early internet was built on "linklogs"—blogs that primarily pointed to other things. "Check this out." "Read this article."
+
+In 2008, a significant portion of Cook's posts were essentially links.
+By 2017, the links were gone.
+
+The blog stopped being a curator of other people's work and became a primary source. This is a critical threshold for any intellectual project. Are you filtering the stream, or are you adding to it?
+
+The deepening meant Cook was no longer relying on external novelty to drive the blog. He was generating the novelty himself, from the inexhaustible mine of mathematics. You don't need to link to the news when you have the Riemann Zeta function. It hasn't changed in 160 years, and it's still more interesting than today's tech headlines.
+
+---
+
+## Quality Through Repetition
+
+How do you double your output while doubling your depth?
+
+The answer lies in the subject matter. Mathematics rewards repetition.
+
+> "Every post about probability makes the next post about probability easier to write. The ideas compound."
+> — (Editorial observation)
+
+If you write about politics, yesterday's post is trash today. If you write about software frameworks, your tutorial from 2015 is broken by 2017.
+
+But if you write about probability distributions, the work compounds. A post about the Beta distribution written in 2015 helps you write a post about the Dirichlet distribution in 2016. The code you wrote for numerical integration in 2014 becomes the library you import in 2017.
+
+The deepening was possible because the blog found its true subject. Cook moved away from the ephemeral (tech news, business advice) and anchored himself in the permanent.
+
+He wasn't just writing more. He was building a cathedral, brick by brick. The foundation laid in the quiet year supported the weight of the structure to come.
+
+---
+
+*The depth was established. The focus was found. But finding focus requires a sacrifice. You have to decide what you will not do.*

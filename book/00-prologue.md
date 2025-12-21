@@ -1,62 +1,81 @@
 # Prologue: You Can Just Do Things
 
-5,233 posts.
+In the source code of pandas—the Python library used by millions of data scientists—there's a comment in `groupby.pyx`:
 
-Roughly one every 1.25 days, from January 2008 through November 2025. No breaks. No sabbaticals. No pivots to video, no podcast spinoffs, no Substack migration. Just a mathematician writing about what interested him, day after day, for nearly two decades.
+```python
+# Running stats update based on RunningStats::Push from
+# https://www.johndcook.com/blog/skewness_kurtosis/
+```
 
-This is a book about what that looks like.
+In OpenTSDB, the time-series database that powers monitoring at scale, there's a Java comment:
 
----
+```java
+/**
+ * This implementation is based upon a paper by John D. Cook,
+ * which itself is based upon a method that goes back to a 1962
+ * paper by B. P. Welford
+ */
+```
 
-Why care about a mathematician's blog?
+In the official TensorFlow documentation, there's a note in the autodiff guide:
 
-Because it demonstrates something increasingly rare: the ability to just do things. To write about interests, publish without permission, build utility over time, and—without virality, platform, or strategy—become genuinely influential.
+> Note: [Don't actually invert the matrix](https://www.johndcook.com/blog/2010/01/19/dont-invert-that-matrix/).
 
-John D. Cook's blog appears in university syllabi at MIT, Stanford, and Carnegie Mellon. Its code snippets run in production systems at companies Cook has never heard of. When a programmer searches "gamma function python" at 2 AM, trying to debug something urgent, they find him. When a graduate student needs an intuitive explanation of Bayesian inference, they find him.
+These citations: buried in production code. Embedded in official documentation—trace back to a WordPress blog that has been publishing since January 2008. One mathematician, writing about what interested him, day after day, for seventeen years.
 
-The numbers hint at the reach: nearly 6,000 citations on Google Scholar. Over 1,200 submissions to Hacker News, accumulating 25,000 upvotes. Readers in 244 countries. A single interpolation calculator page has generated over 600,000 search clicks in the most recent 16‑month Google Search window.
-
-This is influence without fame. Infrastructure without brand. It was built simply by showing up and explaining things, day after day, for seventeen years.
-
-The method applies beyond mathematics. Whatever you know deeply—whatever you could explain to someone who needs to understand—you can build the same kind of quiet influence. You don't need permission. You don't need a platform. You just need to start, and then keep going.
-
-*What would the shape of your own work look like, if someone counted and charted it seventeen years from now?*
-
----
-
-The blog launched in January 2008—the year the iPhone App Store opened, the year Twitter was still asking "what are you doing?" instead of optimizing for engagement. The internet of 2008 was a different place. People had blogrolls. Google Reader existed.
-
-While the internet reinvented itself three times over, johndcook.com kept doing one thing. Math. Computing. Statistics. The occasional digression into music theory or typography. No ads. No viral moments. No controversy. No brand.
-
-There's a term for this in ecology: a *climax species*, the organism that remains after the initial colonizers have come and gone, after the boom-and-bust cycles have played out, after the ecosystem has stabilized. The internet's climax species are not the viral sensations. They're the quiet sites that just keep being useful.
+This book is about what that looks like.
 
 ---
 
-This book attempts to see the shape of that persistence.
+Simple numbers: 5,233 posts. 6,533 days. An average of one post every 1.25 days. No breaks longer than eleven days. No sabbaticals, no pivots to video, no platform migrations. Just writing.
 
-Not by reading every post—though many were read—but by counting, measuring, and visualizing. How many posts about prime numbers? (103.) What day does he publish most? (Tuesday.) How has the average post length changed? (It doubled.) When did cryptography become a major topic? (2019.)
+But numbers don't capture influence. Cook's gamma function implementation has been ported to ten programming languages. His explanation of "don't invert that matrix" became the canonical reference that TensorFlow links to. His running statistics algorithm powers skewness and kurtosis calculations in pandas groupby operations—meaning data scientists computing higher moments on grouped DataFrames are running code that traces back to his blog.
 
-The data reveals patterns. The patterns suggest stories. The stories, taken together, form a portrait—not of a person, but of a practice. A way of showing up. A way of thinking in public.
-
-This is not a biography. John D. Cook's personal life isn't the subject. This is a data portrait of sustained intellectual work. It asks what it looks like when someone just *keeps going*.
+Infrastructure, not fame or brand.
 
 ---
 
-A few things this book is not:
+Why does this matter?
 
-It's not comprehensive. 5,233 posts cannot be summarized. The chapters that follow trace patterns and highlights, but most posts go unmentioned.
+Because it demonstrates something rare: the ability to just do things. Write about what interests you. Publish without permission. Build utility over time. Become genuinely useful without virality, platform, or strategy.
 
-It's not evaluative. The data can show which posts are longest or most tagged—but not which are most valuable. That belongs to readers.
+Cook's blog appears in university syllabi at MIT, Stanford, and Carnegie Mellon. When a programmer searches "gamma function python" at 2 AM, trying to debug something urgent, they find his explanation. When a graduate student needs an intuitive explanation of Bayesian inference, they find his post. When an engineer needs to understand why naive variance computation is numerically unstable, they find his running statistics tutorial. And then that algorithm ends up in their production code.
 
-It's not authorized. John D. Cook didn't commission this book. It's a gift, made from public data, offered in appreciation.
+Some reach can be measured: 5,881 citations on Google Scholar. Stack Overflow answers that have reached 5.7 million users. Over 1,200 submissions to Hacker News, accumulating 25,000 upvotes. Seventeen specialized Twitter accounts with 500,000 combined followers. A single interpolation calculator page—one of more than eighty standalone tools—has generated over 600,000 search clicks in sixteen months.
 
-What it is: an experiment in seeing. Can a body of work be understood from above? Can numbers and charts reveal something that reading alone would miss?
+Real influence, though, can't be counted. It lives in code comments, in understanding that went uncited, in problems solved at 2 AM that never got recorded.
 
 ---
 
-More than seventeen years. 1.8 million words—the equivalent of eighteen novels, or Shakespeare twice over. One voice, steady and curious, writing into the void and finding that the void was full of people who needed exactly what he had to offer.
+Not a biography. Cook's personal life isn't the subject.
 
-This is the shape of that work.
+A data portrait of sustained intellectual work—an attempt to see the shape of that influence through counting, measuring, and visualizing. How many posts about prime numbers? When did cryptography become a major topic? How has the average post length changed?
+
+Data reveals patterns. Patterns suggest a story. An arc emerges from scattered consultant's notebook to mathematical institution: from short posts about PowerShell bugs in 2008 to deep explorations of elliptic curve cryptography in 2025.
+
+It asks what happens when someone just keeps going.
+
+---
+
+When the blog launched in January 2008, people had blogrolls. Google Reader existed. Twitter asked "what are you doing?" instead of optimizing for engagement.
+
+While the internet reinvented itself three times over, johndcook.com kept doing one thing: math, computing, statistics, the occasional digression into music theory or typography. No ads. No viral moments. No controversy.
+
+Ecology has a term for this: climax species—the organism that remains after initial colonizers have come and gone, after boom-and-bust cycles have played out, after the ecosystem has stabilized.
+
+Viral sensations aren't the internet's climax species. Quiet sites that just keep being useful are.
+
+Consider the comparison. Joel Spolsky's *Joel on Software* shaped a generation of developers, then he co-founded Stack Overflow and largely stopped blogging. Jeff Atwood's *Coding Horror* ran for years before the same pivot. Steve Yegge wrote legendary posts at Google, then went quiet. Paul Graham's essays remain influential but arrive sporadically. These are the famous names in technical blogging—and none of them kept going the way Cook has. They built platforms, started companies, moved on. Cook just kept writing. Seventeen years, same site, same format, same focus on being useful. The rarity isn't the quality. It's the duration.
+
+---
+
+Seventeen years in three acts.
+
+First, the beginning: 2008 to 2012, when the blog was a consultant's notebook, scattered, practical, exploratory. Second, the crucible: 2013 to 2017, when practice was tested and voice clarified. Third, the institution: 2018 to 2025, when the blog became infrastructure, cited in documentation, ported across languages, running in production systems worldwide.
+
+Data tells this story. Data also misses things. A final chapter acknowledges what counting can't capture: the reader who finally understood, the code that was never attributed, the influence that left no trace.
+
+A map. The territory is larger.
 
 ---
 
