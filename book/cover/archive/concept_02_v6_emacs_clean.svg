@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 2 v6: Clean Emacs with simple title -->
+
+  <!-- Emacs background -->
+  <rect width="2625" height="3750" fill="#1c1c1c"/>
+
+  <!-- Emacs menu bar -->
+  <rect x="0" y="0" width="2625" height="70" fill="#3a3a3a"/>
+  <text x="40" y="48" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">File</text>
+  <text x="140" y="48" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">Edit</text>
+  <text x="260" y="48" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">Options</text>
+  <text x="430" y="48" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">Buffers</text>
+  <text x="600" y="48" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">Tools</text>
+  <text x="730" y="48" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">Help</text>
+
+  <!-- Title - large, clean, monospace -->
+  <text x="1312" y="280" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="120" font-weight="bold" fill="#87ceeb" text-anchor="middle">
+    YOU CAN
+  </text>
+  <text x="1312" y="450" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="120" font-weight="bold" fill="#87ceeb" text-anchor="middle">
+    JUST DO
+  </text>
+  <text x="1312" y="620" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="120" font-weight="bold" fill="#87ceeb" text-anchor="middle">
+    THINGS
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="780" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="42" fill="#98fb98">;; A Data Portrait of John D. Cook's Blog</text>
+
+  <!-- Divider -->
+  <text x="100" y="860" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#6a6a6a">;; ────────────────────────────────────────────────────────────</text>
+
+  <!-- grep-mode header -->
+  <text x="100" y="980" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">-*- mode: grep; default-directory: "~/code/" -*-</text>
+
+  <text x="100" y="1060" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">grep -rn "johndcook.com" . --include="*.py" --include="*.jl"</text>
+
+  <!-- Grep results -->
+  <g transform="translate(100, 1180)">
+    <!-- Result 1 -->
+    <text x="0" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#add8e6">./pandas/_libs/groupby.pyx</text>
+    <text x="680" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="705" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ff6347">128</text>
+    <text x="775" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="800" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff"># </text>
+    <text x="855" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffff00">johndcook.com</text>
+    <text x="1145" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">/blog/skewness_kurtosis/</text>
+
+    <!-- Result 2 -->
+    <text x="0" y="80" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#add8e6">./OnlineStats.jl/src/stats.jl</text>
+    <text x="750" y="80" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="775" y="80" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ff6347">85</text>
+    <text x="825" y="80" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="850" y="80" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff"># </text>
+    <text x="905" y="80" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffff00">johndcook.com</text>
+    <text x="1195" y="80" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">/blog/standard_deviation/</text>
+
+    <!-- Result 3 -->
+    <text x="0" y="160" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#add8e6">./boost/accumulators/variance.hpp</text>
+    <text x="850" y="160" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="875" y="160" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ff6347">204</text>
+    <text x="945" y="160" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="970" y="160" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">// </text>
+    <text x="1035" y="160" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffff00">johndcook.com</text>
+    <text x="1325" y="160" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">/blog/skewness_kurtosis/</text>
+
+    <!-- Result 4 -->
+    <text x="0" y="240" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#add8e6">./scipy/special/_loggamma.pxd</text>
+    <text x="760" y="240" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="785" y="240" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ff6347">46</text>
+    <text x="835" y="240" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="860" y="240" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff"># </text>
+    <text x="915" y="240" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffff00">johndcook.com</text>
+    <text x="1205" y="240" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">/blog/gamma_function/</text>
+
+    <!-- Result 5 -->
+    <text x="0" y="320" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#add8e6">./numpy/random/_common.pyx</text>
+    <text x="680" y="320" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="705" y="320" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ff6347">313</text>
+    <text x="775" y="320" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="800" y="320" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff"># </text>
+    <text x="855" y="320" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffff00">johndcook.com</text>
+    <text x="1145" y="320" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">/blog/ziggurat/</text>
+
+    <!-- Result 6 -->
+    <text x="0" y="400" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#add8e6">./tensorflow/core/lib/random/dist.cc</text>
+    <text x="920" y="400" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="945" y="400" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ff6347">90</text>
+    <text x="995" y="400" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffa500">:</text>
+    <text x="1020" y="400" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">// </text>
+    <text x="1085" y="400" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffff00">johndcook.com</text>
+    <text x="1375" y="400" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#ffffff">/blog/</text>
+  </g>
+
+  <!-- Match summary -->
+  <text x="100" y="1700" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="34" fill="#98fb98">Grep finished with 847 matches found</text>
+
+  <!-- Divider -->
+  <text x="100" y="1800" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#6a6a6a">;; ────────────────────────────────────────────────────────────</text>
+
+  <!-- Stats as Emacs Lisp -->
+  <g transform="translate(100, 1920)">
+    <text x="0" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffa500">(</text>
+    <text x="25" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#87ceeb">setq</text>
+    <text x="120" y="0" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#98fb98"> blog-stats</text>
+
+    <text x="0" y="60" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffffff">      '((posts . </text>
+    <text x="380" y="60" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ff6347">5233</text>
+    <text x="480" y="60" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffffff">)</text>
+
+    <text x="0" y="120" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffffff">        (years . </text>
+    <text x="380" y="120" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ff6347">17</text>
+    <text x="430" y="120" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffffff">)</text>
+
+    <text x="0" y="180" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffffff">        (words . </text>
+    <text x="380" y="180" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffa500">"1.8M"</text>
+    <text x="520" y="180" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="38" fill="#ffffff">)))</text>
+  </g>
+
+  <!-- Divider -->
+  <text x="100" y="2250" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#6a6a6a">;; ────────────────────────────────────────────────────────────</text>
+
+  <!-- Author -->
+  <text x="100" y="2360" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="44" fill="#98fb98">;; Author: Owen D. Goode</text>
+
+  <!-- Emacs mode line -->
+  <rect x="0" y="2500" width="2625" height="60" fill="#3a3a3a"/>
+  <text x="40" y="2542" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#98fb98">-UUU:%%--</text>
+  <text x="250" y="2542" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">F1</text>
+  <text x="330" y="2542" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#87ceeb">  *grep*</text>
+  <text x="550" y="2542" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">      Bot L847</text>
+  <text x="900" y="2542" font-family="Menlo, DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">(Grep)</text>
+
+</svg>

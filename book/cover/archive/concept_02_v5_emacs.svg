@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 2 v5: Emacs style with ASCII art title -->
+
+  <!-- Emacs background -->
+  <rect width="2625" height="3750" fill="#1c1c1c"/>
+
+  <!-- Emacs menu bar -->
+  <rect x="0" y="0" width="2625" height="60" fill="#3a3a3a"/>
+  <text x="30" y="42" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">File</text>
+  <text x="130" y="42" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">Edit</text>
+  <text x="240" y="42" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">Options</text>
+  <text x="400" y="42" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">Buffers</text>
+  <text x="560" y="42" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">Tools</text>
+  <text x="690" y="42" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">Help</text>
+
+  <!-- ASCII Art Title - figlet style -->
+  <g transform="translate(100, 140)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">__   __                ____                     _           _</text>
+    <text x="0" y="60" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">\ \ / /__  _   _      / ___|__ _ _ __          | |_   _ ___| |_</text>
+    <text x="0" y="120" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb"> \ V / _ \| | | |    | |   / _` | '_ \     _   | | | | / __| __|</text>
+    <text x="0" y="180" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">  | | (_) | |_| |    | |__| (_| | | | |   | |__| | |_| \__ \ |_</text>
+    <text x="0" y="240" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">  |_|\___/ \__,_|     \____\__,_|_| |_|    \____/ \__,_|___/\__|</text>
+  </g>
+
+  <g transform="translate(100, 480)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb"> ____           _____ _     _</text>
+    <text x="0" y="60" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">|  _ \  ___    |_   _| |__ (_)_ __   __ _ ___</text>
+    <text x="0" y="120" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">| | | |/ _ \     | | | '_ \| | '_ \ / _` / __|</text>
+    <text x="0" y="180" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">| |_| | (_) |    | | | | | | | | | | (_| \__ \</text>
+    <text x="0" y="240" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">|____/ \___/     |_| |_| |_|_|_| |_|\__, |___/</text>
+    <text x="0" y="300" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="52" fill="#87ceeb">                                    |___/</text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="100" y="900" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="42" fill="#98fb98">;; A Data Portrait of John D. Cook's Blog</text>
+  <text x="100" y="960" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="42" fill="#6a6a6a">;; ─────────────────────────────────────────────────────</text>
+
+  <!-- grep-mode buffer content -->
+  <text x="100" y="1080" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">-*- mode: grep; default-directory: "~/code/" -*-</text>
+  <text x="100" y="1140" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#98fb98">Grep started at Sat Dec 21 07:00:00</text>
+  <text x="100" y="1200" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">grep -rn "johndcook.com" . --include="*.py" --include="*.jl"</text>
+
+  <!-- Grep results with Emacs highlighting -->
+  <g transform="translate(100, 1320)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./pandas/_libs/groupby.pyx</text>
+    <text x="700" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="730" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">127</text>
+    <text x="810" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="840" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff"># Running stats from</text>
+
+    <text x="0" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./pandas/_libs/groupby.pyx</text>
+    <text x="700" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="730" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">128</text>
+    <text x="810" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="840" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffff00"># johndcook.com</text>
+    <text x="1180" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">/blog/skewness_kurtosis/</text>
+  </g>
+
+  <g transform="translate(100, 1480)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./OnlineStats.jl/src/stats.jl</text>
+    <text x="780" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="810" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">84</text>
+    <text x="870" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="900" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff"># Welford's algorithm</text>
+
+    <text x="0" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./OnlineStats.jl/src/stats.jl</text>
+    <text x="780" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="810" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">85</text>
+    <text x="870" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="900" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffff00"># johndcook.com</text>
+    <text x="1240" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">/blog/standard_deviation/</text>
+  </g>
+
+  <g transform="translate(100, 1640)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./boost/accumulators/variance.hpp</text>
+    <text x="880" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="910" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">203</text>
+    <text x="990" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="1020" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">// Higher moments</text>
+
+    <text x="0" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./boost/accumulators/variance.hpp</text>
+    <text x="880" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="910" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">204</text>
+    <text x="990" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="1020" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffff00">// johndcook.com</text>
+    <text x="1400" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">/blog/skewness_kurtosis/</text>
+  </g>
+
+  <g transform="translate(100, 1800)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./scipy/special/_loggamma.pxd</text>
+    <text x="800" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="830" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">45</text>
+    <text x="890" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="920" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff"># Lanczos approx</text>
+
+    <text x="0" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./scipy/special/_loggamma.pxd</text>
+    <text x="800" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="830" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">46</text>
+    <text x="890" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="920" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffff00"># johndcook.com</text>
+    <text x="1260" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">/blog/gamma_function/</text>
+  </g>
+
+  <g transform="translate(100, 1960)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./numpy/random/_common.pyx</text>
+    <text x="720" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="750" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">312</text>
+    <text x="830" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="860" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff"># Ziggurat method</text>
+
+    <text x="0" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./numpy/random/_common.pyx</text>
+    <text x="720" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="750" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">313</text>
+    <text x="830" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="860" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffff00"># johndcook.com</text>
+    <text x="1200" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">/blog/ziggurat/</text>
+  </g>
+
+  <g transform="translate(100, 2120)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./tensorflow/core/lib/random/</text>
+    <text x="780" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="810" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">89</text>
+    <text x="870" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="900" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">// Random sampling</text>
+
+    <text x="0" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#add8e6">./tensorflow/core/lib/random/</text>
+    <text x="780" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="810" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ff6347">90</text>
+    <text x="870" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffa500">:</text>
+    <text x="900" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffff00">// johndcook.com</text>
+    <text x="1280" y="55" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">/blog/</text>
+  </g>
+
+  <!-- Grep finished message -->
+  <text x="100" y="2320" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#98fb98">Grep finished with 847 matches found at Sat Dec 21 07:00:03</text>
+
+  <!-- Emacs lisp stats -->
+  <g transform="translate(100, 2450)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#6a6a6a">;; ─────────────────────────────────────────────────────</text>
+    <text x="0" y="60" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffa500">(</text>
+    <text x="30" y="60" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#87ceeb">setq</text>
+    <text x="140" y="60" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#98fb98"> blog-stats</text>
+    <text x="0" y="120" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffffff">      '((posts . </text>
+    <text x="430" y="120" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ff6347">5233</text>
+    <text x="540" y="120" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffffff">)</text>
+    <text x="0" y="180" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffffff">        (years . </text>
+    <text x="430" y="180" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ff6347">17</text>
+    <text x="490" y="180" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffffff">)</text>
+    <text x="0" y="240" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffffff">        (words . </text>
+    <text x="430" y="240" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffa500">"1.8M"</text>
+    <text x="580" y="240" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#ffffff">)))</text>
+  </g>
+
+  <!-- Author -->
+  <g transform="translate(100, 2850)">
+    <text x="0" y="0" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#6a6a6a">;; ─────────────────────────────────────────────────────</text>
+    <text x="0" y="70" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="44" fill="#98fb98">;; Author: Owen D. Goode</text>
+    <text x="0" y="140" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="40" fill="#6a6a6a">;; ─────────────────────────────────────────────────────</text>
+  </g>
+
+  <!-- Emacs mode line -->
+  <rect x="0" y="3150" width="2625" height="60" fill="#3a3a3a"/>
+  <text x="30" y="3192" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#98fb98">-UUU:%%--</text>
+  <text x="250" y="3192" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">F1</text>
+  <text x="330" y="3192" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#87ceeb">  *grep*</text>
+  <text x="550" y="3192" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">     Bot L847</text>
+  <text x="850" y="3192" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">(Grep)</text>
+  <text x="2200" y="3192" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="32" fill="#ffffff">────────</text>
+
+  <!-- Minibuffer -->
+  <rect x="0" y="3210" width="2625" height="50" fill="#1c1c1c"/>
+  <text x="30" y="3248" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" fill="#ffffff">M-x describe-blog RET</text>
+
+  <!-- Cursor in minibuffer -->
+  <rect x="620" y="3218" width="20" height="38" fill="#ffffff" opacity="0.8"/>
+
+</svg>

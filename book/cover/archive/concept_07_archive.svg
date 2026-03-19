@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 7: The Archive - endless index cards/folders -->
+
+  <defs>
+    <linearGradient id="archiveBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1510"/>
+      <stop offset="100%" style="stop-color:#0d0a05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2625" height="3750" fill="url(#archiveBg)"/>
+
+  <!-- Rows of index cards receding into perspective -->
+  <!-- Back rows (smaller, more faded) -->
+  <g opacity="0.3" transform="translate(0, 400)">
+    <rect x="200" y="0" width="180" height="120" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="400" y="0" width="180" height="120" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="600" y="0" width="180" height="120" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="800" y="0" width="180" height="120" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="1000" y="0" width="180" height="120" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="1200" y="0" width="180" height="120" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="1400" y="0" width="180" height="120" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="1600" y="0" width="180" height="120" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="1800" y="0" width="180" height="120" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="2000" y="0" width="180" height="120" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="2200" y="0" width="180" height="120" fill="#d4c4a8" transform="skewY(-2)"/>
+  </g>
+
+  <g opacity="0.4" transform="translate(0, 550)">
+    <rect x="150" y="0" width="200" height="140" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="370" y="0" width="200" height="140" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="590" y="0" width="200" height="140" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="810" y="0" width="200" height="140" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="1030" y="0" width="200" height="140" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="1250" y="0" width="200" height="140" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="1470" y="0" width="200" height="140" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="1690" y="0" width="200" height="140" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="1910" y="0" width="200" height="140" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="2130" y="0" width="200" height="140" fill="#d4c4a8" transform="skewY(-2)"/>
+  </g>
+
+  <g opacity="0.5" transform="translate(0, 720)">
+    <rect x="100" y="0" width="220" height="160" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="340" y="0" width="220" height="160" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="580" y="0" width="220" height="160" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="820" y="0" width="220" height="160" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="1060" y="0" width="220" height="160" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="1300" y="0" width="220" height="160" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="1540" y="0" width="220" height="160" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="1780" y="0" width="220" height="160" fill="#e8dcc8" transform="skewY(-2)"/>
+    <rect x="2020" y="0" width="220" height="160" fill="#d4c4a8" transform="skewY(-2)"/>
+    <rect x="2260" y="0" width="220" height="160" fill="#e8dcc8" transform="skewY(-2)"/>
+  </g>
+
+  <g opacity="0.65" transform="translate(0, 920)">
+    <rect x="50" y="0" width="240" height="180" fill="#e8dcc8" transform="skewY(-1)"/>
+    <rect x="310" y="0" width="240" height="180" fill="#d4c4a8" transform="skewY(-1)"/>
+    <rect x="570" y="0" width="240" height="180" fill="#e8dcc8" transform="skewY(-1)"/>
+    <rect x="830" y="0" width="240" height="180" fill="#d4c4a8" transform="skewY(-1)"/>
+    <rect x="1090" y="0" width="240" height="180" fill="#e8dcc8" transform="skewY(-1)"/>
+    <rect x="1350" y="0" width="240" height="180" fill="#d4c4a8" transform="skewY(-1)"/>
+    <rect x="1610" y="0" width="240" height="180" fill="#e8dcc8" transform="skewY(-1)"/>
+    <rect x="1870" y="0" width="240" height="180" fill="#d4c4a8" transform="skewY(-1)"/>
+    <rect x="2130" y="0" width="240" height="180" fill="#e8dcc8" transform="skewY(-1)"/>
+  </g>
+
+  <g opacity="0.8" transform="translate(0, 1140)">
+    <rect x="0" y="0" width="260" height="200" fill="#d4c4a8"/>
+    <rect x="280" y="0" width="260" height="200" fill="#e8dcc8"/>
+    <rect x="560" y="0" width="260" height="200" fill="#d4c4a8"/>
+    <rect x="840" y="0" width="260" height="200" fill="#e8dcc8"/>
+    <rect x="1120" y="0" width="260" height="200" fill="#d4c4a8"/>
+    <rect x="1400" y="0" width="260" height="200" fill="#e8dcc8"/>
+    <rect x="1680" y="0" width="260" height="200" fill="#d4c4a8"/>
+    <rect x="1960" y="0" width="260" height="200" fill="#e8dcc8"/>
+    <rect x="2240" y="0" width="260" height="200" fill="#d4c4a8"/>
+  </g>
+
+  <!-- Front row - full opacity, one card pulled forward -->
+  <g transform="translate(0, 1380)">
+    <rect x="0" y="0" width="280" height="220" fill="#e8dcc8"/>
+    <rect x="300" y="0" width="280" height="220" fill="#d4c4a8"/>
+    <rect x="600" y="0" width="280" height="220" fill="#e8dcc8"/>
+
+    <!-- Pulled forward card - highlighted -->
+    <g transform="translate(900, -100)">
+      <rect x="0" y="0" width="320" height="280" fill="#f5f0e6" stroke="#8b7355" stroke-width="3"/>
+      <!-- Card content -->
+      <text x="20" y="50" font-family="Courier, monospace" font-size="28" fill="#2d2015">2008-01-09</text>
+      <line x1="20" y1="70" x2="300" y2="70" stroke="#ccc" stroke-width="1"/>
+      <text x="20" y="110" font-family="Georgia, serif" font-size="32" fill="#1a1510">First Post</text>
+      <line x1="20" y1="130" x2="300" y2="130" stroke="#ccc" stroke-width="1"/>
+      <text x="20" y="165" font-family="Georgia, serif" font-size="24" fill="#4a4035">The beginning of</text>
+      <text x="20" y="195" font-family="Georgia, serif" font-size="24" fill="#4a4035">seventeen years...</text>
+      <line x1="20" y1="220" x2="300" y2="220" stroke="#ccc" stroke-width="1"/>
+      <text x="20" y="255" font-family="Courier, monospace" font-size="22" fill="#8b7355">1 of 5,233</text>
+    </g>
+
+    <rect x="1240" y="0" width="280" height="220" fill="#d4c4a8"/>
+    <rect x="1540" y="0" width="280" height="220" fill="#e8dcc8"/>
+    <rect x="1840" y="0" width="280" height="220" fill="#d4c4a8"/>
+    <rect x="2140" y="0" width="280" height="220" fill="#e8dcc8"/>
+    <rect x="2440" y="0" width="280" height="220" fill="#d4c4a8"/>
+  </g>
+
+  <!-- Fog/depth fade at top -->
+  <rect x="0" y="0" width="2625" height="500" fill="url(#archiveBg)" opacity="0.7"/>
+
+  <!-- Title -->
+  <text x="1312" y="2400" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#f5f0e6" text-anchor="middle">
+    You Can Just
+  </text>
+  <text x="1312" y="2600" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#f5f0e6" text-anchor="middle">
+    Do Things
+  </text>
+
+  <!-- Subtitle -->
+  <text x="1312" y="2800" font-family="Georgia, serif" font-size="56" fill="#a89880" text-anchor="middle" font-style="italic">
+    A Data Portrait of John D. Cook's Blog
+  </text>
+
+  <!-- Stats -->
+  <text x="1312" y="2950" font-family="Courier, monospace" font-size="48" fill="#d4c4a8" text-anchor="middle">
+    5,233 cards · 17 years · one archive
+  </text>
+
+  <!-- Author -->
+  <text x="1312" y="3500" font-family="Georgia, serif" font-size="64" fill="#f5f0e6" text-anchor="middle">
+    Owen D. Goode
+  </text>
+
+</svg>

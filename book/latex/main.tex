@@ -2,7 +2,7 @@
 % A Data Portrait of John D. Cook's Blog
 % LaTeX source for print-ready PDF (7" x 10", full color, hardcover)
 
-\documentclass[10pt,openany]{memoir}
+\documentclass[10pt,openright]{memoir}
 
 % Page geometry for 7" x 10" trim size (KDP compatible)
 % Conservative margins for comfortable reading
@@ -174,6 +174,17 @@
 }
 \chapterstyle{cookstyle}
 
+% Make blank pages before chapters truly empty (no headers)
+\aliaspagestyle{cleared}{empty}
+
+% Force a blank verso (left) page before each chapter
+% This ensures every chapter opens as: [blank left | chapter title right]
+\newcommand{\blankverso}{%
+  \cleartoverso               % ensure we're on a verso (even/left) page
+  \thispagestyle{empty}\mbox{}% this is the blank left page
+  \clearpage                  % now on recto where chapter starts
+}
+
 % Section formatting
 \setsecheadstyle{\large\bfseries}
 \setsubsecheadstyle{\normalsize\bfseries}
@@ -284,7 +295,7 @@
 \frontmatter
 \pagestyle{empty}
 
-% Half title
+% Half title (page 1 - recto)
 \begin{center}
 \vspace*{3in}
 {\LARGE\bfseries You Can Just Do Things}
@@ -292,7 +303,11 @@
 \end{center}
 \clearpage
 
-% Title page
+% Blank page (page 2 - verso)
+\thispagestyle{empty}\mbox{}
+\clearpage
+
+% Title page (page 3 - recto)
 \begin{center}
 \vspace*{2in}
 {\Huge\bfseries You Can Just Do Things}
@@ -329,11 +344,11 @@ First edition, December 2025
 \end{flushleft}
 \clearpage
 
-% Dedication
+% Dedication (page 5 - recto, directly after copyright on page 4 verso)
 \vspace*{3in}
 \begin{center}
 \itshape
-For John
+For John, For Everything
 \end{center}
 \clearpage
 
@@ -351,25 +366,37 @@ For John
 \mainmatter
 \pagestyle{headings}
 
-% Include chapters
-\include{chapters/00-prologue}
-\include{chapters/01-the-shape-of-the-start}
-\include{chapters/02-the-consultants-toolkit}
-\include{chapters/03-finding-the-rhythm}
-\include{chapters/04-the-quiet-year}
-\include{chapters/05-the-deepening}
-\include{chapters/06-the-shedding}
-\include{chapters/07-the-mathematical-core}
-\include{chapters/08-adaptation-and-urgency}
-\include{chapters/09-the-modern-translation-layer}
-\include{chapters/10-the-shape-of-persistence}
-\include{chapters/11-the-dark-matter}
+% Include chapters (each preceded by blank verso for clean spreads)
+% Note: foreword doesn't need \blankverso since mainmatter transition handles it
+\include{chapters/foreword}
+\blankverso\include{chapters/00-prologue}
+\blankverso\include{chapters/01-the-shape-of-the-start}
+\blankverso\include{chapters/02-the-consultants-toolkit}
+\blankverso\include{chapters/03-finding-the-rhythm}
+\blankverso\include{chapters/04-the-quiet-year}
+\blankverso\include{chapters/05-the-crucible}
+\blankverso\include{chapters/07-the-mathematical-core}
+\blankverso\include{chapters/08-adaptation-and-urgency}
+\blankverso\include{chapters/09-the-modern-translation-layer}
+\blankverso\include{chapters/10-the-shape-of-persistence}
+\blankverso\include{chapters/11-the-dark-matter}
 
 % Back matter
 \backmatter
 
-\include{chapters/appendix-a}
-\include{chapters/appendix-b}
-\include{chapters/99-epilogue}
+\blankverso\include{chapters/appendix-a}
+\blankverso\include{chapters/appendix-b}
+\blankverso\include{chapters/99-epilogue}
+
+% Final title page (on right/recto with blank left before it)
+\cleartoverso                     % ensure we're on a verso (left/even)
+\thispagestyle{empty}\mbox{}      % blank left page
+\clearpage                        % now on recto (right/odd)
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+{\Huge\bfseries You Can Just Do Things}
+\end{center}
+\vspace*{\fill}
 
 \end{document}

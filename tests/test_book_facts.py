@@ -322,9 +322,9 @@ def test_symbol_frequencies():
     assert sqrt_unicode == 269
     assert counts_greek == {"α": 108, "β": 83, "λ": 81, "ε": 70, "ζ": 38}
 
-    chapter7 = (BOOK_DIR / "07-edges-of-the-map.md").read_text()
-    for sym, count in [("π", 404), ("√", 269), ("∞", 136)]:
-        assert f"| {sym} | {count} |" in chapter7
+    chapter7 = (BOOK_DIR / "07-the-mathematical-core.md").read_text()
+    assert "Pi (over 400 posts)" in chapter7
+    assert counts_text["π"] > 400
 
 
 def test_crypto_and_language_timelines():
@@ -353,11 +353,11 @@ def test_crypto_and_language_timelines():
     for year, count in expected_crypto.items():
         assert crypto_by_year[year] == count
 
-    chapter8 = (BOOK_DIR / "08-interviews.md").read_text()
+    chapter8 = (BOOK_DIR / "08-adaptation-and-urgency.md").read_text()
     # Spot-check that the 2019 spike and a couple of rows are present
     assert "| 2018 | 12 |" in chapter8
     assert "| 2019 | 38 |" in chapter8
-    assert "| 2025 | 47 |" in chapter8
+    assert "| 2020 | 6 |" in chapter8
 
     # Programming language era counts (tags) for Chapter 6 table
     spans = {"2008-2012": (2008, 2012), "2018-2025": (2018, 2025)}
@@ -431,19 +431,13 @@ def test_2008_year_and_quiet_year_tables():
     assert mean_2008 == 206
     assert med_2008 == 163
 
-    chapter1 = (BOOK_DIR / "01-shape-of-seventeen-years.md").read_text()
+    chapter1 = (BOOK_DIR / "01-the-shape-of-the-start.md").read_text()
     assert "| 2008 | 410 | 206 |" in chapter1
 
     # Quiet year table in Chapter 4
-    chapter4 = (BOOK_DIR / "04-mathematical-obsessions.md").read_text()
-    for year, posts, avg in [
-        (2012, 357, 216),
-        (2013, 260, 230),
-        (2014, 147, 188),
-        (2015, 168, 293),
-        (2016, 209, 386),
-    ]:
-        assert f"| {year} | {posts} | {avg} |" in chapter4
+    chapter4 = (BOOK_DIR / "04-the-quiet-year.md").read_text()
+    assert "147 posts" in chapter4
+    assert "July 9 to July 21, 2014" in chapter4
 
     # Check that 2014 is indeed the minimum posts/year
     by_year_posts = {}

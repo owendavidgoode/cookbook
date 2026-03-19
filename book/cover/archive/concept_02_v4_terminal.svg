@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 2 v4: Terminal output style -->
+
+  <!-- Terminal background - pure black -->
+  <rect width="2625" height="3750" fill="#0d0d0d"/>
+
+  <!-- Terminal window chrome at top -->
+  <rect x="0" y="0" width="2625" height="80" fill="#2d2d2d"/>
+  <circle cx="60" cy="40" r="20" fill="#ff5f56"/>
+  <circle cx="120" cy="40" r="20" fill="#ffbd2e"/>
+  <circle cx="180" cy="40" r="20" fill="#27ca40"/>
+  <text x="1312" y="55" font-family="SF Mono, Consolas, monospace" font-size="32" fill="#888888" text-anchor="middle">
+    bash — grep -r "johndcook.com" ~/code
+  </text>
+
+  <!-- Command prompt and search -->
+  <g transform="translate(100, 180)">
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#27ca40">$</text>
+    <text x="50" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#ffffff"> grep -r "johndcook.com" ~/code --include="*.py" --include="*.jl" --include="*.hpp"</text>
+  </g>
+
+  <!-- Big title as ASCII banner -->
+  <g transform="translate(100, 320)">
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="36" fill="#27ca40"># ╔═══════════════════════════════════════════════════════════════════════╗</text>
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="36" fill="#27ca40"># ║                                                                       ║</text>
+  </g>
+
+  <!-- Main title - large, bold, white -->
+  <text x="1312" y="560" font-family="SF Mono, Consolas, monospace" font-size="140" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    YOU CAN JUST
+  </text>
+  <text x="1312" y="730" font-family="SF Mono, Consolas, monospace" font-size="140" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    DO THINGS
+  </text>
+
+  <g transform="translate(100, 800)">
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="36" fill="#27ca40"># ║                                                                       ║</text>
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="36" fill="#27ca40"># ║           A Data Portrait of John D. Cook's Blog                      ║</text>
+    <text x="0" y="120" font-family="SF Mono, Consolas, monospace" font-size="36" fill="#27ca40"># ╚═══════════════════════════════════════════════════════════════════════╝</text>
+  </g>
+
+  <!-- Grep results -->
+  <g transform="translate(100, 1100)">
+    <!-- Result 1: pandas -->
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">pandas/_libs/groupby.pyx</text>
+    <text x="680" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="710" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">127</text>
+    <text x="790" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="820" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#f8f8f2"># Based on RunningStats from</text>
+
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">pandas/_libs/groupby.pyx</text>
+    <text x="680" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="710" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">128</text>
+    <text x="790" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="820" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#50fa7b"># johndcook.com/blog/skewness_kurtosis/</text>
+  </g>
+
+  <g transform="translate(100, 1280)">
+    <!-- Result 2: Julia -->
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">OnlineStats.jl/src/stats.jl</text>
+    <text x="750" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="780" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">84</text>
+    <text x="840" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="870" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#f8f8f2"># Welford's algorithm</text>
+
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">OnlineStats.jl/src/stats.jl</text>
+    <text x="750" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="780" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">85</text>
+    <text x="840" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="870" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#50fa7b"># johndcook.com/blog/standard_deviation/</text>
+  </g>
+
+  <g transform="translate(100, 1460)">
+    <!-- Result 3: Boost -->
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">boost/accumulators/variance.hpp</text>
+    <text x="880" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="910" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">203</text>
+    <text x="990" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="1020" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#f8f8f2">// Higher moments</text>
+
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">boost/accumulators/variance.hpp</text>
+    <text x="880" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="910" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">204</text>
+    <text x="990" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="1020" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#50fa7b">// johndcook.com/blog/skewness_kurtosis/</text>
+  </g>
+
+  <g transform="translate(100, 1640)">
+    <!-- Result 4: scipy -->
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">scipy/special/_loggamma.pxd</text>
+    <text x="780" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="810" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">45</text>
+    <text x="870" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="900" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#f8f8f2"># Lanczos approximation</text>
+
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">scipy/special/_loggamma.pxd</text>
+    <text x="780" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="810" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">46</text>
+    <text x="870" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="900" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#50fa7b"># johndcook.com/blog/gamma_function/</text>
+  </g>
+
+  <g transform="translate(100, 1820)">
+    <!-- Result 5: numpy -->
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">numpy/random/_common.pyx</text>
+    <text x="700" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="730" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">312</text>
+    <text x="810" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="840" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#f8f8f2"># Ziggurat method</text>
+
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">numpy/random/_common.pyx</text>
+    <text x="700" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="730" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">313</text>
+    <text x="810" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="840" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#50fa7b"># johndcook.com/blog/ziggurat/</text>
+  </g>
+
+  <g transform="translate(100, 2000)">
+    <!-- Result 6: tensorflow -->
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">tensorflow/core/lib/random/</text>
+    <text x="750" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="780" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">89</text>
+    <text x="840" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="870" y="0" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#f8f8f2">// Random sampling</text>
+
+    <text x="0" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#ff79c6">tensorflow/core/lib/random/</text>
+    <text x="750" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="780" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#bd93f9">90</text>
+    <text x="840" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">:</text>
+    <text x="870" y="60" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#50fa7b">// johndcook.com/blog/</text>
+  </g>
+
+  <!-- More results indicator -->
+  <text x="100" y="2200" font-family="SF Mono, Consolas, monospace" font-size="38" fill="#6272a4">
+    ... 847 more matches ...
+  </text>
+
+  <!-- Summary line -->
+  <g transform="translate(100, 2350)">
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#27ca40">$</text>
+    <text x="50" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#ffffff"> wc -l results.txt</text>
+    <text x="0" y="70" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">847 citations across pandas, scipy, numpy, boost, julia, tensorflow</text>
+  </g>
+
+  <!-- Stats command -->
+  <g transform="translate(100, 2550)">
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#27ca40">$</text>
+    <text x="50" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#ffffff"> cat blog_stats.json | jq</text>
+    <text x="0" y="70" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">{</text>
+    <text x="0" y="140" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#8be9fd">  "posts"</text>
+    <text x="250" y="140" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">:</text>
+    <text x="290" y="140" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#bd93f9"> 5233</text>
+    <text x="420" y="140" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">,</text>
+    <text x="0" y="210" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#8be9fd">  "years"</text>
+    <text x="250" y="210" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">:</text>
+    <text x="290" y="210" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#bd93f9"> 17</text>
+    <text x="360" y="210" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">,</text>
+    <text x="0" y="280" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#8be9fd">  "words"</text>
+    <text x="250" y="280" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">:</text>
+    <text x="290" y="280" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f1fa8c"> "1.8M"</text>
+    <text x="0" y="350" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#f8f8f2">}</text>
+  </g>
+
+  <!-- Author as git log -->
+  <g transform="translate(100, 3100)">
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#27ca40">$</text>
+    <text x="50" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#ffffff"> git log --author</text>
+    <text x="0" y="80" font-family="SF Mono, Consolas, monospace" font-size="48" fill="#ffb86c">Author: Owen D. Goode</text>
+  </g>
+
+  <!-- Blinking cursor -->
+  <g transform="translate(100, 3350)">
+    <text x="0" y="0" font-family="SF Mono, Consolas, monospace" font-size="42" fill="#27ca40">$</text>
+    <rect x="50" y="-30" width="25" height="45" fill="#27ca40" opacity="0.8"/>
+  </g>
+
+</svg>

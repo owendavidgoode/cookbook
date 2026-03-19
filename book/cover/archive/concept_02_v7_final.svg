@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 2 v7: Final clean version -->
+
+  <!-- Pure black background -->
+  <rect width="2625" height="3750" fill="#0d0d0d"/>
+
+  <!-- Menu bar -->
+  <rect x="0" y="0" width="2625" height="80" fill="#2d2d2d"/>
+  <text x="50" y="52" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">File</text>
+  <text x="160" y="52" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">Edit</text>
+  <text x="290" y="52" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">Options</text>
+  <text x="480" y="52" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">Buffers</text>
+  <text x="680" y="52" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">Tools</text>
+  <text x="840" y="52" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">Help</text>
+
+  <!-- TITLE - large, bold, cyan, centered -->
+  <text x="1312" y="380" font-family="Menlo, Monaco, Consolas, monospace" font-size="180" font-weight="bold" fill="#87ceeb" text-anchor="middle">YOU CAN</text>
+  <text x="1312" y="620" font-family="Menlo, Monaco, Consolas, monospace" font-size="180" font-weight="bold" fill="#87ceeb" text-anchor="middle">JUST DO</text>
+  <text x="1312" y="860" font-family="Menlo, Monaco, Consolas, monospace" font-size="180" font-weight="bold" fill="#87ceeb" text-anchor="middle">THINGS</text>
+
+  <!-- Subtitle -->
+  <text x="120" y="1020" font-family="Menlo, Monaco, Consolas, monospace" font-size="48" fill="#98fb98">;; A Data Portrait of John D. Cook's Blog</text>
+
+  <!-- Divider -->
+  <text x="120" y="1120" font-family="Menlo, Monaco, Consolas, monospace" font-size="40" fill="#555555">;; ──────────────────────────────────────────────────────────────</text>
+
+  <!-- Grep header -->
+  <text x="120" y="1240" font-family="Menlo, Monaco, Consolas, monospace" font-size="38" fill="#ffa500">-*- mode: grep; default-directory: "~/code/" -*-</text>
+  <text x="120" y="1320" font-family="Menlo, Monaco, Consolas, monospace" font-size="38" fill="#ffffff">grep -rn "johndcook.com" .</text>
+
+  <!-- Grep results -->
+  <!-- Result 1 -->
+  <text x="120" y="1460" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#add8e6">./pandas/_libs/groupby.pyx</text>
+  <text x="780" y="1460" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:</text>
+  <text x="810" y="1460" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ff6347">128</text>
+  <text x="890" y="1460" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:# </text>
+  <text x="960" y="1460" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffff00">johndcook.com</text>
+  <text x="1280" y="1460" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">/blog/skewness_kurtosis/</text>
+
+  <!-- Result 2 -->
+  <text x="120" y="1560" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#add8e6">./OnlineStats.jl/src/stats.jl</text>
+  <text x="870" y="1560" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:</text>
+  <text x="900" y="1560" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ff6347">85</text>
+  <text x="960" y="1560" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:# </text>
+  <text x="1030" y="1560" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffff00">johndcook.com</text>
+  <text x="1350" y="1560" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">/blog/standard_deviation/</text>
+
+  <!-- Result 3 -->
+  <text x="120" y="1660" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#add8e6">./boost/accumulators/variance.hpp</text>
+  <text x="960" y="1660" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:</text>
+  <text x="990" y="1660" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ff6347">204</text>
+  <text x="1070" y="1660" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:// </text>
+  <text x="1150" y="1660" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffff00">johndcook.com</text>
+  <text x="1470" y="1660" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">/blog/skewness_kurtosis/</text>
+
+  <!-- Result 4 -->
+  <text x="120" y="1760" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#add8e6">./scipy/special/_loggamma.pxd</text>
+  <text x="870" y="1760" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:</text>
+  <text x="900" y="1760" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ff6347">46</text>
+  <text x="960" y="1760" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:# </text>
+  <text x="1030" y="1760" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffff00">johndcook.com</text>
+  <text x="1350" y="1760" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">/blog/gamma_function/</text>
+
+  <!-- Result 5 -->
+  <text x="120" y="1860" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#add8e6">./numpy/random/_common.pyx</text>
+  <text x="780" y="1860" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:</text>
+  <text x="810" y="1860" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ff6347">313</text>
+  <text x="890" y="1860" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:# </text>
+  <text x="960" y="1860" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffff00">johndcook.com</text>
+  <text x="1280" y="1860" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">/blog/ziggurat/</text>
+
+  <!-- Result 6 -->
+  <text x="120" y="1960" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#add8e6">./tensorflow/core/lib/random/dist.cc</text>
+  <text x="1020" y="1960" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:</text>
+  <text x="1050" y="1960" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ff6347">90</text>
+  <text x="1110" y="1960" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">:// </text>
+  <text x="1190" y="1960" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffff00">johndcook.com</text>
+  <text x="1510" y="1960" font-family="Menlo, Monaco, Consolas, monospace" font-size="36" fill="#ffffff">/blog/</text>
+
+  <!-- Match count -->
+  <text x="120" y="2120" font-family="Menlo, Monaco, Consolas, monospace" font-size="40" fill="#98fb98">Grep finished with 847 matches found</text>
+
+  <!-- Divider -->
+  <text x="120" y="2220" font-family="Menlo, Monaco, Consolas, monospace" font-size="40" fill="#555555">;; ──────────────────────────────────────────────────────────────</text>
+
+  <!-- Stats -->
+  <text x="120" y="2340" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffa500">(</text>
+  <text x="155" y="2340" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#87ceeb">setq</text>
+  <text x="270" y="2340" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#98fb98"> blog-stats</text>
+
+  <text x="120" y="2420" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffffff">      '((posts . </text>
+  <text x="540" y="2420" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ff6347">5233</text>
+  <text x="660" y="2420" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffffff">)</text>
+
+  <text x="120" y="2500" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffffff">        (years . </text>
+  <text x="540" y="2500" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ff6347">17</text>
+  <text x="600" y="2500" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffffff">)</text>
+
+  <text x="120" y="2580" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffffff">        (words . </text>
+  <text x="540" y="2580" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffa500">"1.8M"</text>
+  <text x="720" y="2580" font-family="Menlo, Monaco, Consolas, monospace" font-size="42" fill="#ffffff">)))</text>
+
+  <!-- Divider -->
+  <text x="120" y="2720" font-family="Menlo, Monaco, Consolas, monospace" font-size="40" fill="#555555">;; ──────────────────────────────────────────────────────────────</text>
+
+  <!-- Author -->
+  <text x="120" y="2850" font-family="Menlo, Monaco, Consolas, monospace" font-size="48" fill="#98fb98">;; Author: Owen D. Goode</text>
+
+  <!-- Mode line -->
+  <rect x="0" y="3000" width="2625" height="70" fill="#2d2d2d"/>
+  <text x="50" y="3048" font-family="Menlo, Monaco, Consolas, monospace" font-size="34" fill="#98fb98">-UUU:%%--</text>
+  <text x="280" y="3048" font-family="Menlo, Monaco, Consolas, monospace" font-size="34" fill="#ffffff">F1</text>
+  <text x="360" y="3048" font-family="Menlo, Monaco, Consolas, monospace" font-size="34" fill="#87ceeb">  *grep*</text>
+  <text x="600" y="3048" font-family="Menlo, Monaco, Consolas, monospace" font-size="34" fill="#ffffff">      Bot L847</text>
+  <text x="960" y="3048" font-family="Menlo, Monaco, Consolas, monospace" font-size="34" fill="#ffffff">(Grep)</text>
+
+</svg>

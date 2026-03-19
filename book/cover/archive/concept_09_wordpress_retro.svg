@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 9: WordPress Retro - Early 2000s web aesthetic -->
+
+  <!-- Classic WordPress blue background -->
+  <rect width="2625" height="3750" fill="#21759b"/>
+
+  <!-- Header bar - darker blue -->
+  <rect x="0" y="0" width="2625" height="200" fill="#1e4a5e"/>
+
+  <!-- Blog title in header -->
+  <text x="100" y="130" font-family="Georgia, serif" font-size="72" fill="#ffffff">
+    johndcook.com/blog
+  </text>
+
+  <!-- Navigation tabs -->
+  <g transform="translate(1400, 140)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="36" fill="#a0c9db">Home</text>
+    <text x="150" y="0" font-family="Arial, sans-serif" font-size="36" fill="#a0c9db">About</text>
+    <text x="300" y="0" font-family="Arial, sans-serif" font-size="36" fill="#a0c9db">Archive</text>
+  </g>
+
+  <!-- Main content area - white box -->
+  <rect x="150" y="300" width="2325" height="2800" fill="#ffffff" rx="5"/>
+
+  <!-- Blog post preview boxes -->
+  <!-- Post 1 -->
+  <g transform="translate(250, 400)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="56" fill="#21759b" font-weight="bold">
+      First Post
+    </text>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="28" fill="#888888">
+      January 9, 2008 · 1 Comment
+    </text>
+    <text x="0" y="120" font-family="Georgia, serif" font-size="36" fill="#333333">
+      Welcome to my blog about math, computing,
+    </text>
+    <text x="0" y="170" font-family="Georgia, serif" font-size="36" fill="#333333">
+      and everything in between...
+    </text>
+    <text x="0" y="230" font-family="Arial, sans-serif" font-size="32" fill="#21759b">
+      Read more →
+    </text>
+  </g>
+
+  <!-- Post 2 -->
+  <g transform="translate(250, 720)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="56" fill=\"#21759b\" font-weight="bold">
+      The Gamma Function
+    </text>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="28" fill="#888888">
+      March 15, 2010 · 12 Comments
+    </text>
+    <text x="0" y="120" font-family="Georgia, serif" font-size="36" fill="#333333">
+      The gamma function extends the factorial to
+    </text>
+    <text x="0" y="170" font-family="Georgia, serif" font-size="36" fill="#333333">
+      non-integer arguments...
+    </text>
+    <text x="0" y="230" font-family="Arial, sans-serif" font-size="32" fill="#21759b">
+      Read more →
+    </text>
+  </g>
+
+  <!-- Post 3 -->
+  <g transform="translate(250, 1040)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="56" fill="#21759b" font-weight="bold">
+      Why Python?
+    </text>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="28" fill="#888888">
+      July 22, 2012 · 8 Comments
+    </text>
+    <text x="0" y="120" font-family="Georgia, serif" font-size="36" fill="#333333">
+      Python has become my go-to language for
+    </text>
+    <text x="0" y="170" font-family="Georgia, serif" font-size="36" fill="#333333">
+      quick computations...
+    </text>
+    <text x="0" y="230" font-family="Arial, sans-serif" font-size="32" fill="#21759b">
+      Read more →
+    </text>
+  </g>
+
+  <!-- Fade to indicate more posts -->
+  <defs>
+    <linearGradient id="fadeOut" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff; stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#ffffff; stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect x="150" y="1300" width="2325" height="400" fill="url(#fadeOut)"/>
+
+  <!-- "5,233 more posts..." -->
+  <text x="1312" y="1600" font-family="Georgia, serif" font-size="48" fill="#666666" text-anchor="middle" font-style="italic">
+    ...and 5,230 more posts
+  </text>
+
+  <!-- Sidebar elements -->
+  <g transform="translate(1800, 400)">
+    <rect x="0" y="0" width="550" height="300" fill="#f5f5f5" rx="5" stroke="#e0e0e0" stroke-width="2"/>
+    <text x="25" y="50" font-family="Arial, sans-serif" font-size="36" fill="#333333" font-weight="bold">
+      Categories
+    </text>
+    <text x="25" y="100" font-family="Arial, sans-serif" font-size="28" fill="#21759b">Math (1,847)</text>
+    <text x="25" y="140" font-family="Arial, sans-serif" font-size="28" fill="#21759b">Computing (1,234)</text>
+    <text x="25" y="180" font-family="Arial, sans-serif" font-size="28" fill="#21759b">Statistics (892)</text>
+    <text x="25" y="220" font-family="Arial, sans-serif" font-size="28" fill="#21759b">Python (456)</text>
+    <text x="25" y="260" font-family="Arial, sans-serif" font-size="28" fill="#666666">+ 42 more...</text>
+  </g>
+
+  <!-- Book title overlay - semi-transparent black box -->
+  <rect x="0" y="1900" width="2625" height="800" fill="#000000" opacity="0.85"/>
+
+  <!-- Title -->
+  <text x="1312" y="2150" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    You Can Just
+  </text>
+  <text x="1312" y="2350" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Do Things
+  </text>
+
+  <!-- Subtitle -->
+  <text x="1312" y="2550" font-family="Georgia, serif" font-size="56" fill="#a0c9db" text-anchor="middle" font-style="italic">
+    A Data Portrait of John D. Cook's Blog
+  </text>
+
+  <!-- Footer -->
+  <rect x="0" y="3550" width="2625" height="200" fill="#1e4a5e"/>
+  <text x="1312" y="3680" font-family="Georgia, serif" font-size="64" fill="#ffffff" text-anchor="middle">
+    Owen D. Goode
+  </text>
+
+</svg>

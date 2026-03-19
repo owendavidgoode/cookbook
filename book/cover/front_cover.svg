@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 2 v8: Full space, bigger everything -->
+
+  <!-- Pure black background -->
+  <rect width="2625" height="3750" fill="#000000"/>
+
+  <!-- Menu bar -->
+  <rect x="0" y="0" width="2625" height="90" fill="#1a1a1a"/>
+  <text x="60" y="60" font-family="monospace" font-size="40" fill="#e0e0e0">File  Edit  Options  Buffers  Tools  Help</text>
+
+  <!-- TITLE - HUGE -->
+  <text x="1312" y="450" font-family="monospace" font-size="220" font-weight="bold" fill="#5fd7ff" text-anchor="middle">YOU CAN</text>
+  <text x="1312" y="750" font-family="monospace" font-size="220" font-weight="bold" fill="#5fd7ff" text-anchor="middle">JUST DO</text>
+  <text x="1312" y="1050" font-family="monospace" font-size="220" font-weight="bold" fill="#5fd7ff" text-anchor="middle">THINGS</text>
+
+  <!-- Subtitle -->
+  <text x="140" y="1250" font-family="monospace" font-size="52" fill="#87d787">;; A Data Portrait of John D. Cook's Blog</text>
+
+  <!-- Divider -->
+  <text x="140" y="1380" font-family="monospace" font-size="44" fill="#444444">;; ─────────────────────────────────────────────────────────</text>
+
+  <!-- Grep header -->
+  <text x="140" y="1520" font-family="monospace" font-size="44" fill="#ffaf5f">-*- mode: grep; default-directory: "~/code/" -*-</text>
+  <text x="140" y="1620" font-family="monospace" font-size="44" fill="#ffffff">grep -rn "johndcook.com" .</text>
+
+  <!-- Grep results - each on one line, simplified -->
+  <text x="140" y="1780" font-family="monospace" font-size="40">
+    <tspan fill="#87afd7">./pandas/_libs/groupby.pyx</tspan><tspan fill="#ffffff">:</tspan><tspan fill="#ff5f5f">128</tspan><tspan fill="#ffffff">:# </tspan><tspan fill="#ffff00">johndcook.com</tspan><tspan fill="#ffffff">/blog/skewness_kurtosis/</tspan>
+  </text>
+
+  <text x="140" y="1880" font-family="monospace" font-size="40">
+    <tspan fill="#87afd7">./OnlineStats.jl/src/stats.jl</tspan><tspan fill="#ffffff">:</tspan><tspan fill="#ff5f5f">85</tspan><tspan fill="#ffffff">:# </tspan><tspan fill="#ffff00">johndcook.com</tspan><tspan fill="#ffffff">/blog/standard_deviation/</tspan>
+  </text>
+
+  <text x="140" y="1980" font-family="monospace" font-size="40">
+    <tspan fill="#87afd7">./boost/accumulators/variance.hpp</tspan><tspan fill="#ffffff">:</tspan><tspan fill="#ff5f5f">204</tspan><tspan fill="#ffffff">:// </tspan><tspan fill="#ffff00">johndcook.com</tspan><tspan fill="#ffffff">/blog/skewness/</tspan>
+  </text>
+
+  <text x="140" y="2080" font-family="monospace" font-size="40">
+    <tspan fill="#87afd7">./scipy/special/_loggamma.pxd</tspan><tspan fill="#ffffff">:</tspan><tspan fill="#ff5f5f">46</tspan><tspan fill="#ffffff">:# </tspan><tspan fill="#ffff00">johndcook.com</tspan><tspan fill="#ffffff">/blog/gamma_function/</tspan>
+  </text>
+
+  <text x="140" y="2180" font-family="monospace" font-size="40">
+    <tspan fill="#87afd7">./numpy/random/_common.pyx</tspan><tspan fill="#ffffff">:</tspan><tspan fill="#ff5f5f">313</tspan><tspan fill="#ffffff">:# </tspan><tspan fill="#ffff00">johndcook.com</tspan><tspan fill="#ffffff">/blog/ziggurat/</tspan>
+  </text>
+
+  <text x="140" y="2280" font-family="monospace" font-size="40">
+    <tspan fill="#87afd7">./tensorflow/core/lib/random/</tspan><tspan fill="#ffffff">:</tspan><tspan fill="#ff5f5f">90</tspan><tspan fill="#ffffff">:// </tspan><tspan fill="#ffff00">johndcook.com</tspan><tspan fill="#ffffff">/blog/</tspan>
+  </text>
+
+  <!-- Match count -->
+  <text x="140" y="2480" font-family="monospace" font-size="48" fill="#87d787">Grep finished with 847 matches found</text>
+
+  <!-- Divider -->
+  <text x="140" y="2620" font-family="monospace" font-size="44" fill="#444444">;; ─────────────────────────────────────────────────────────</text>
+
+  <!-- Stats -->
+  <text x="140" y="2780" font-family="monospace" font-size="48">
+    <tspan fill="#ffaf5f">(</tspan><tspan fill="#5fd7ff">setq</tspan><tspan fill="#87d787"> blog-stats</tspan>
+  </text>
+  <text x="140" y="2880" font-family="monospace" font-size="48">
+    <tspan fill="#ffffff">      '((posts . </tspan><tspan fill="#ff5f5f">5233</tspan><tspan fill="#ffffff">)</tspan>
+  </text>
+  <text x="140" y="2980" font-family="monospace" font-size="48">
+    <tspan fill="#ffffff">        (years . </tspan><tspan fill="#ff5f5f">17</tspan><tspan fill="#ffffff">)</tspan>
+  </text>
+  <text x="140" y="3080" font-family="monospace" font-size="48">
+    <tspan fill="#ffffff">        (words . </tspan><tspan fill="#ffaf5f">"1.8M"</tspan><tspan fill="#ffffff">)))</tspan>
+  </text>
+
+  <!-- Divider -->
+  <text x="140" y="3220" font-family="monospace" font-size="44" fill="#444444">;; ─────────────────────────────────────────────────────────</text>
+
+  <!-- Author -->
+  <text x="140" y="3380" font-family="monospace" font-size="56" fill="#87d787">;; Author: Owen D. Goode</text>
+
+  <!-- Mode line -->
+  <rect x="0" y="3550" width="2625" height="80" fill="#1a1a1a"/>
+  <text x="60" y="3605" font-family="monospace" font-size="38" fill="#87d787">-UUU:%%--</text>
+  <text x="320" y="3605" font-family="monospace" font-size="38" fill="#e0e0e0">F1  </text>
+  <text x="420" y="3605" font-family="monospace" font-size="38" fill="#5fd7ff">*grep*</text>
+  <text x="650" y="3605" font-family="monospace" font-size="38" fill="#e0e0e0">      Bot L847   (Grep)</text>
+
+</svg>

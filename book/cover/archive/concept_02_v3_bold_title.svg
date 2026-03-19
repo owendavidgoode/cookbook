@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 2 v3: Bold title, layered citations -->
+
+  <!-- Background - VS Code dark theme -->
+  <rect width="2625" height="3750" fill="#1e1e1e"/>
+
+  <!-- Line numbers gutter -->
+  <rect x="0" y="0" width="120" height="3750" fill="#252526"/>
+
+  <!-- BIG Title - styled as ASCII art comment -->
+  <g transform="translate(0, 150)">
+    <text x="60" y="80" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">1</text>
+    <text x="60" y="160" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">2</text>
+    <text x="60" y="240" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">3</text>
+    <text x="60" y="320" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">4</text>
+    <text x="60" y="400" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">5</text>
+    <text x="60" y="480" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">6</text>
+
+    <text x="180" y="80" font-family="Consolas, monospace" font-size="42" fill="#6A9955">/**</text>
+    <text x="180" y="160" font-family="Consolas, monospace" font-size="42" fill="#6A9955"> * ═══════════════════════════════════════════════════════</text>
+    <text x="180" y="240" font-family="Consolas, monospace" font-size="42" fill="#6A9955"> */</text>
+  </g>
+
+  <!-- Main title - large, white, monospace -->
+  <text x="1372" y="620" font-family="Consolas, monospace" font-size="130" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    YOU CAN JUST
+  </text>
+  <text x="1372" y="780" font-family="Consolas, monospace" font-size="130" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    DO THINGS
+  </text>
+
+  <!-- Subtitle line -->
+  <g transform="translate(0, 850)">
+    <text x="60" y="80" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">7</text>
+    <text x="60" y="160" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">8</text>
+    <text x="60" y="240" font-family="Consolas, monospace" font-size="36" fill="#858585" text-anchor="end">9</text>
+
+    <text x="180" y="80" font-family="Consolas, monospace" font-size="42" fill="#6A9955">/**</text>
+    <text x="180" y="160" font-family="Consolas, monospace" font-size="42" fill="#6A9955"> * A Data Portrait of John D. Cook's Blog</text>
+    <text x="180" y="240" font-family="Consolas, monospace" font-size="42" fill="#6A9955"> * ═══════════════════════════════════════════════════════</text>
+  </g>
+
+  <!-- Citation 1: pandas -->
+  <g transform="translate(0, 1250)">
+    <text x="60" y="60" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">127</text>
+    <text x="60" y="120" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">128</text>
+    <text x="60" y="180" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">129</text>
+    <text x="60" y="240" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">130</text>
+    <text x="60" y="300" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">131</text>
+
+    <text x="180" y="-10" font-family="Consolas, monospace" font-size="28" fill="#569cd6">pandas/_libs/groupby.pyx</text>
+
+    <text x="180" y="60" font-family="Consolas, monospace" font-size="36" fill="#6A9955"># Running variance using Welford's method</text>
+    <text x="180" y="120" font-family="Consolas, monospace" font-size="36" fill="#6A9955"># Based on RunningStats::Push from</text>
+    <text x="180" y="180" font-family="Consolas, monospace" font-size="36" fill="#9CDCFE"># johndcook.com/blog/skewness_kurtosis/</text>
+    <text x="180" y="240" font-family="Consolas, monospace" font-size="36" fill="#C586C0">cdef inline void</text>
+    <text x="570" y="240" font-family="Consolas, monospace" font-size="36" fill="#DCDCAA"> add_mean</text>
+    <text x="830" y="240" font-family="Consolas, monospace" font-size="36" fill="#ffffff">(...):</text>
+    <text x="180" y="300" font-family="Consolas, monospace" font-size="36" fill="#9CDCFE">    delta</text>
+    <text x="380" y="300" font-family="Consolas, monospace" font-size="36" fill="#ffffff"> = val - mean</text>
+  </g>
+
+  <!-- Citation 2: Julia OnlineStats -->
+  <g transform="translate(0, 1650)">
+    <text x="60" y="60" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">84</text>
+    <text x="60" y="120" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">85</text>
+    <text x="60" y="180" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">86</text>
+    <text x="60" y="240" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">87</text>
+    <text x="60" y="300" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">88</text>
+
+    <text x="180" y="-10" font-family="Consolas, monospace" font-size="28" fill="#569cd6">OnlineStats.jl/src/stats.jl</text>
+
+    <text x="180" y="60" font-family="Consolas, monospace" font-size="36" fill="#6A9955"># Numerically stable online algorithm</text>
+    <text x="180" y="120" font-family="Consolas, monospace" font-size="36" fill="#6A9955"># Reference:</text>
+    <text x="180" y="180" font-family="Consolas, monospace" font-size="36" fill="#9CDCFE"># johndcook.com/blog/standard_deviation/</text>
+    <text x="180" y="240" font-family="Consolas, monospace" font-size="36" fill="#C586C0">function</text>
+    <text x="400" y="240" font-family="Consolas, monospace" font-size="36" fill="#DCDCAA"> _fit!</text>
+    <text x="560" y="240" font-family="Consolas, monospace" font-size="36" fill="#ffffff">(o::</text>
+    <text x="720" y="240" font-family="Consolas, monospace" font-size="36" fill="#4EC9B0">Variance</text>
+    <text x="940" y="240" font-family="Consolas, monospace" font-size="36" fill="#ffffff">, x)</text>
+    <text x="180" y="300" font-family="Consolas, monospace" font-size="36" fill="#9CDCFE">    o.n</text>
+    <text x="340" y="300" font-family="Consolas, monospace" font-size="36" fill="#ffffff"> += </text>
+    <text x="440" y="300" font-family="Consolas, monospace" font-size="36" fill="#B5CEA8">1</text>
+  </g>
+
+  <!-- Citation 3: Boost C++ -->
+  <g transform="translate(0, 2050)">
+    <text x="60" y="60" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">203</text>
+    <text x="60" y="120" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">204</text>
+    <text x="60" y="180" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">205</text>
+    <text x="60" y="240" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">206</text>
+    <text x="60" y="300" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">207</text>
+
+    <text x="180" y="-10" font-family="Consolas, monospace" font-size="28" fill="#569cd6">boost/accumulators/statistics/variance.hpp</text>
+
+    <text x="180" y="60" font-family="Consolas, monospace" font-size="36" fill="#6A9955">// Higher-order moments via recurrence</text>
+    <text x="180" y="120" font-family="Consolas, monospace" font-size="36" fill="#6A9955">// See:</text>
+    <text x="180" y="180" font-family="Consolas, monospace" font-size="36" fill="#9CDCFE">// johndcook.com/blog/skewness_kurtosis/</text>
+    <text x="180" y="240" font-family="Consolas, monospace" font-size="36" fill="#C586C0">template</text>
+    <text x="400" y="240" font-family="Consolas, monospace" font-size="36" fill="#ffffff">&lt;</text>
+    <text x="430" y="240" font-family="Consolas, monospace" font-size="36" fill="#C586C0">typename</text>
+    <text x="650" y="240" font-family="Consolas, monospace" font-size="36" fill="#4EC9B0"> Sample</text>
+    <text x="800" y="240" font-family="Consolas, monospace" font-size="36" fill="#ffffff">&gt;</text>
+    <text x="180" y="300" font-family="Consolas, monospace" font-size="36" fill="#C586C0">void</text>
+    <text x="300" y="300" font-family="Consolas, monospace" font-size="36" fill="#DCDCAA"> operator()</text>
+    <text x="560" y="300" font-family="Consolas, monospace" font-size="36" fill="#ffffff">(</text>
+    <text x="590" y="300" font-family="Consolas, monospace" font-size="36" fill="#4EC9B0">Sample</text>
+    <text x="740" y="300" font-family="Consolas, monospace" font-size="36" fill="#C586C0"> const</text>
+    <text x="880" y="300" font-family="Consolas, monospace" font-size="36" fill="#ffffff">&amp;</text>
+    <text x="910" y="300" font-family="Consolas, monospace" font-size="36" fill="#9CDCFE">x</text>
+    <text x="940" y="300" font-family="Consolas, monospace" font-size="36" fill="#ffffff">) {</text>
+  </g>
+
+  <!-- Citation 4: scipy -->
+  <g transform="translate(0, 2450)">
+    <text x="60" y="60" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">412</text>
+    <text x="60" y="120" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">413</text>
+    <text x="60" y="180" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">414</text>
+
+    <text x="180" y="-10" font-family="Consolas, monospace" font-size="28" fill="#569cd6">scipy/stats/_stats_py.py</text>
+
+    <text x="180" y="60" font-family="Consolas, monospace" font-size="36" fill="#6A9955"># Gamma function implementation notes:</text>
+    <text x="180" y="120" font-family="Consolas, monospace" font-size="36" fill="#9CDCFE"># johndcook.com/blog/gamma_function/</text>
+    <text x="180" y="180" font-family="Consolas, monospace" font-size="36" fill="#C586C0">def</text>
+    <text x="280" y="180" font-family="Consolas, monospace" font-size="36" fill="#DCDCAA"> _lanczos_gamma</text>
+    <text x="620" y="180" font-family="Consolas, monospace" font-size="36" fill="#ffffff">(z):</text>
+  </g>
+
+  <!-- Fade -->
+  <defs>
+    <linearGradient id="fadeCode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e1e; stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#1e1e1e; stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2600" width="2625" height="250" fill="url(#fadeCode)"/>
+
+  <!-- Ellipsis indicator -->
+  <text x="1372" y="2950" font-family="Consolas, monospace" font-size="40" fill="#858585" text-anchor="middle">
+    // ... cited in pandas, scipy, numpy, boost, julia, tensorflow ...
+  </text>
+
+  <!-- Stats as code -->
+  <text x="1372" y="3100" font-family="Consolas, monospace" font-size="38" fill="#B5CEA8" text-anchor="middle">
+    5233 posts | 17 years | 1.8M words
+  </text>
+
+  <!-- Author block -->
+  <g transform="translate(0, 3250)">
+    <text x="60" y="80" font-family="Consolas, monospace" font-size="34" fill="#858585" text-anchor="end">EOF</text>
+
+    <text x="180" y="80" font-family="Consolas, monospace" font-size="44" fill="#6A9955">/**</text>
+    <text x="180" y="150" font-family="Consolas, monospace" font-size="44" fill="#6A9955"> * @author  Owen D. Goode</text>
+    <text x="180" y="220" font-family="Consolas, monospace" font-size="44" fill="#6A9955"> */</text>
+  </g>
+
+</svg>

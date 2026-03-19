@@ -1,5 +1,5 @@
-\chapter*{You Can Just Do Things}
-\addcontentsline{toc}{chapter}{You Can Just Do Things}
+\chapter*{Preface: You Can Just Do Things}
+\addcontentsline{toc}{chapter}{Preface: You Can Just Do Things}
 
 In the source code of pandas---the Python library used by millions of data scientists---there's a comment in \texttt{groupby.pyx}:
 
@@ -12,11 +12,9 @@ In OpenTSDB, the time-series database that powers monitoring at scale, there's a
 
 \begin{lstlisting}[language=java]
 /**
-\begin{itemize}
-\item This implementation is based upon a paper by John D. Cook,
-\item which itself is based upon a method that goes back to a 1962
-\item paper by B. P. Welford
-\end{itemize}
+ * This implementation is based upon a paper by John D. Cook,
+ * which itself is based upon a method that goes back to a 1962
+ * paper by B. P. Welford.
  */
 \end{lstlisting}
 
@@ -26,7 +24,7 @@ In the official TensorFlow documentation, there's a note in the autodiff guide:
 Note: Don't actually invert the matrix.
 \end{blogquote}
 
-These citations: buried in production code. Embedded in official documentation---trace back to a WordPress blog that has been publishing since January 2008. One mathematician, writing about what interested him, day after day, for seventeen years.
+These citations, buried in production code and embedded in official documentation, trace back to a WordPress blog that has been publishing since January 2008. One mathematician, writing about what interested him, day after day, for seventeen years.
 
 This book is about what that looks like.
 
@@ -36,7 +34,7 @@ Simple numbers: 5,233 posts. 6,533 days. An average of one post every 1.25 days.
 
 But numbers don't capture influence. Cook's gamma function implementation has been ported to ten programming languages. His explanation of "don't invert that matrix" became the canonical reference that TensorFlow links to. His running statistics algorithm powers skewness and kurtosis calculations in pandas groupby operations---meaning data scientists computing higher moments on grouped DataFrames are running code that traces back to his blog.
 
-Infrastructure, not fame or brand.
+This influence is infrastructure, not fame or brand.
 
 \bigskip
 
@@ -52,9 +50,7 @@ Real influence, though, can't be counted. It lives in code comments, in understa
 
 \bigskip
 
-Not a biography. Cook's personal life isn't the subject.
-
-A data portrait of sustained intellectual work---an attempt to see the shape of that influence through counting, measuring, and visualizing. How many posts about prime numbers? When did cryptography become a major topic? How has the average post length changed?
+This is not a biography---Cook's personal life isn't the subject. It is a data portrait of sustained intellectual work, an attempt to see the shape of that influence through counting, measuring, and visualizing. How many posts about prime numbers? When did cryptography become a major topic? How has the average post length changed?
 
 Data reveals patterns. Patterns suggest a story. An arc emerges from scattered consultant's notebook to mathematical institution: from short posts about PowerShell bugs in 2008 to deep explorations of elliptic curve cryptography in 2025.
 
@@ -80,7 +76,7 @@ First, the beginning: 2008 to 2012, when the blog was a consultant's notebook, s
 
 Data tells this story. Data also misses things. A final chapter acknowledges what counting can't capture: the reader who finally understood, the code that was never attributed, the influence that left no trace.
 
-A map. The territory is larger.
+This book is a map. The territory is larger.
 
 \bigskip
 

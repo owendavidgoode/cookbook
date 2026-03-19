@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 3: The Morning Window - 7 AM ritual, warm golden light -->
+
+  <defs>
+    <!-- Warm morning gradient -->
+    <linearGradient id="morningGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2"/>
+      <stop offset="40%" style="stop-color:#fcb69f"/>
+      <stop offset="100%" style="stop-color:#ee9ca7"/>
+    </linearGradient>
+
+    <!-- Window light -->
+    <radialGradient id="windowLight" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#fffef0; stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#ffecd2; stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2625" height="3750" fill="url(#morningGrad)"/>
+
+  <!-- Light rays from window -->
+  <ellipse cx="1312" cy="1000" rx="1200" ry="800" fill="url(#windowLight)"/>
+
+  <!-- Simple window frame -->
+  <g transform="translate(600, 400)">
+    <!-- Window outer frame -->
+    <rect x="0" y="0" width="1425" height="1200" fill="none" stroke="#5d4e37" stroke-width="40" rx="20"/>
+    <!-- Window cross -->
+    <line x1="712" y1="0" x2="712" y2="1200" stroke="#5d4e37" stroke-width="25"/>
+    <line x1="0" y1="600" x2="1425" y2="600" stroke="#5d4e37" stroke-width="25"/>
+    <!-- Window panes - light blue sky hint -->
+    <rect x="20" y="20" width="672" height="560" fill="#87CEEB" opacity="0.3"/>
+    <rect x="732" y="20" width="673" height="560" fill="#87CEEB" opacity="0.3"/>
+    <rect x="20" y="620" width="672" height="560" fill="#87CEEB" opacity="0.2"/>
+    <rect x="732" y="620" width="673" height="560" fill="#87CEEB" opacity="0.2"/>
+  </g>
+
+  <!-- Simple desk silhouette -->
+  <rect x="400" y="2200" width="1825" height="40" fill="#3d3225"/>
+  <!-- Desk legs -->
+  <rect x="500" y="2240" width="30" height="400" fill="#3d3225"/>
+  <rect x="2095" y="2240" width="30" height="400" fill="#3d3225"/>
+
+  <!-- Coffee cup -->
+  <ellipse cx="700" cy="2160" rx="80" ry="30" fill="#5d4e37"/>
+  <path d="M 620 2160 L 620 2080 Q 620 2020 700 2020 Q 780 2020 780 2080 L 780 2160" fill="#5d4e37"/>
+  <ellipse cx="700" cy="2080" rx="70" ry="25" fill="#3d2815"/>
+  <!-- Steam -->
+  <path d="M 680 2000 Q 660 1950 680 1900" stroke="#ffffff" stroke-width="8" fill="none" opacity="0.5"/>
+  <path d="M 720 2010 Q 740 1960 720 1910" stroke="#ffffff" stroke-width="8" fill="none" opacity="0.5"/>
+
+  <!-- Notebook -->
+  <rect x="900" y="2050" width="400" height="300" fill="#f5f5dc" transform="rotate(-5, 1100, 2200)"/>
+  <line x1="940" y1="2100" x2="1260" y2="2080" stroke="#cccccc" stroke-width="2"/>
+  <line x1="945" y1="2140" x2="1265" y2="2120" stroke="#cccccc" stroke-width="2"/>
+  <line x1="950" y1="2180" x2="1270" y2="2160" stroke="#cccccc" stroke-width="2"/>
+  <line x1="955" y1="2220" x2="1275" y2="2200" stroke="#cccccc" stroke-width="2"/>
+
+  <!-- Time display -->
+  <text x="1312" y="300" font-family="Georgia, serif" font-size="120" fill="#3d3225" text-anchor="middle" opacity="0.6">
+    7:00 AM
+  </text>
+
+  <!-- Title -->
+  <text x="1312" y="2800" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#3d3225" text-anchor="middle">
+    You Can Just
+  </text>
+  <text x="1312" y="3000" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#3d3225" text-anchor="middle">
+    Do Things
+  </text>
+
+  <!-- Subtitle -->
+  <text x="1312" y="3200" font-family="Georgia, serif" font-size="56" fill="#5d4e37" text-anchor="middle" font-style="italic">
+    A Data Portrait of John D. Cook's Blog
+  </text>
+
+  <!-- Author -->
+  <text x="1312" y="3550" font-family="Georgia, serif" font-size="64" fill="#3d3225" text-anchor="middle">
+    Owen D. Goode
+  </text>
+
+</svg>

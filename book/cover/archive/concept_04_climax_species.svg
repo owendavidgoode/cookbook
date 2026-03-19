@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 4: The Climax Species - lone tree standing -->
+
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="60%" style="stop-color:#2d3561"/>
+      <stop offset="100%" style="stop-color:#4a5568"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="2625" height="3750" fill="url(#skyGrad)"/>
+
+  <!-- Ground -->
+  <ellipse cx="1312" cy="3200" rx="2000" ry="400" fill="#1a1a1a"/>
+
+  <!-- Tree trunk -->
+  <path d="M 1250 3100
+           L 1220 2400
+           Q 1200 2200 1250 2000
+           L 1280 1800
+           Q 1312 1700 1344 1800
+           L 1374 2000
+           Q 1424 2200 1404 2400
+           L 1374 3100
+           Z" fill="#2d2015"/>
+
+  <!-- Main branches -->
+  <g fill="none" stroke="#2d2015" stroke-width="40" stroke-linecap="round">
+    <!-- Left branches -->
+    <path d="M 1250 2200 Q 1000 2000 800 1900"/>
+    <path d="M 1230 2400 Q 950 2300 700 2400"/>
+    <path d="M 1220 2000 Q 1100 1800 900 1600"/>
+    <path d="M 900 1600 Q 800 1500 650 1450"/>
+    <path d="M 900 1600 Q 850 1400 750 1250"/>
+    <path d="M 800 1900 Q 650 1750 500 1700"/>
+    <path d="M 800 1900 Q 700 1850 550 1900"/>
+
+    <!-- Right branches -->
+    <path d="M 1374 2200 Q 1624 2000 1824 1900"/>
+    <path d="M 1394 2400 Q 1674 2300 1924 2400"/>
+    <path d="M 1404 2000 Q 1524 1800 1724 1600"/>
+    <path d="M 1724 1600 Q 1824 1500 1974 1450"/>
+    <path d="M 1724 1600 Q 1774 1400 1874 1250"/>
+    <path d="M 1824 1900 Q 1974 1750 2124 1700"/>
+    <path d="M 1824 1900 Q 1924 1850 2074 1900"/>
+
+    <!-- Top branches -->
+    <path d="M 1280 1800 Q 1200 1500 1100 1300"/>
+    <path d="M 1100 1300 Q 1000 1100 950 900"/>
+    <path d="M 1100 1300 Q 1050 1150 1000 1000"/>
+    <path d="M 1344 1800 Q 1424 1500 1524 1300"/>
+    <path d="M 1524 1300 Q 1624 1100 1674 900"/>
+    <path d="M 1524 1300 Q 1574 1150 1624 1000"/>
+    <path d="M 1312 1700 Q 1312 1400 1312 1100"/>
+    <path d="M 1312 1100 Q 1250 900 1200 750"/>
+    <path d="M 1312 1100 Q 1374 900 1424 750"/>
+  </g>
+
+  <!-- Smaller branches -->
+  <g fill="none" stroke="#2d2015" stroke-width="15" stroke-linecap="round">
+    <path d="M 650 1450 Q 550 1350 450 1300"/>
+    <path d="M 750 1250 Q 700 1100 650 950"/>
+    <path d="M 1974 1450 Q 2074 1350 2174 1300"/>
+    <path d="M 1874 1250 Q 1924 1100 1974 950"/>
+    <path d="M 950 900 Q 850 750 800 600"/>
+    <path d="M 1674 900 Q 1774 750 1824 600"/>
+    <path d="M 1200 750 Q 1150 600 1100 500"/>
+    <path d="M 1424 750 Q 1474 600 1524 500"/>
+  </g>
+
+  <!-- Subtle fog at base -->
+  <ellipse cx="1312" cy="3000" rx="1500" ry="200" fill="#4a5568" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="1312" y="3400" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    You Can Just
+  </text>
+  <text x="1312" y="3580" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Do Things
+  </text>
+
+  <!-- Subtitle at top -->
+  <text x="1312" y="200" font-family="Georgia, serif" font-size="56" fill="#a0aec0" text-anchor="middle" font-style="italic">
+    A Data Portrait of John D. Cook's Blog
+  </text>
+
+  <!-- Author -->
+  <text x="1312" y="320" font-family="Georgia, serif" font-size="52" fill="#e2e8f0" text-anchor="middle">
+    Owen D. Goode
+  </text>
+
+</svg>

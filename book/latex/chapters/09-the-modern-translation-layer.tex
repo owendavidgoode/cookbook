@@ -1,6 +1,8 @@
 \chapter{The Translation Layer}
 
+\nopagebreak
 \epigraph{"Clients often need to have a conversation with someone who thinks like a mathematician: carefully defining terms; making implicit assumptions explicit, and knowing when an approximation is or is not good enough."}{SIAM News interview (2022)}
+\nopagebreak
 
 Influence isn't in pageviews. It's in production code.
 
@@ -31,11 +33,9 @@ OpenTSDB is a time-series database used for monitoring and metrics at scale (5,0
 
 \begin{lstlisting}[language=java]
 /**
-\begin{itemize}
-\item This implementation is based upon a paper by John D. Cook,
-\item which itself is based upon a method that goes back to a 1962
-\item paper by B. P. Welford
-\end{itemize}
+ * This implementation is based upon a paper by John D. Cook,
+ * which itself is based upon a method that goes back to a 1962
+ * paper by B. P. Welford.
  */
 \end{lstlisting}
 
@@ -116,16 +116,7 @@ Not a third-party library. Python itself. The \texttt{statistics} module that sh
 
 How explanations become infrastructure:
 
-Textbooks often present opaque formulations. The naive variance formula, the integral definition of the Gamma function:
-
-\begin{itemize}
-\item   \textbf{Welford Naive Variance:}
-\end{itemize}
-    `$$s\textasciicircum{}2 = \frac{\sum (x\_i - \bar{x})\textasciicircum{}2}{N-1}$$`
-\begin{itemize}
-\item   \textbf{Gamma Function Integral:}
-\end{itemize}
-    `$$\\Gamma(z) = \int\_0\textasciicircum{}\\infty x\textasciicircum{}{z-1} e\textasciicircum{}{-x} dx$$`
+Textbooks often present opaque formulations---the naive variance formula, the integral definition of the Gamma function. Mathematically correct. Computationally useless.
 
 Cook translates these into clarity and working code.
 
@@ -139,17 +130,60 @@ Now in TensorFlow documentation. QuantEcon lectures. 25+ GitHub repositories.
 
 \textbf{2. Gamma Function Approximation}
 
-$\Gamma(z)$ defined as an improper integral---useless for computation. Textbooks don't explain implementation.
+\textit{The Problem:} The textbook definition describes the shape but is useless for computation. You cannot code an infinite integral:
+$$\Gamma(z) = \int_0^\infty t^{z-1} e^{-t} dt$$
 
-Cook provides Lanczos approximation code, explains when to use log-gamma, handles edge cases.
+\textit{The Translation:} Cook implements the Lanczos approximation, mapping the abstract integral to a computable array of coefficients:
+
+\needspace{22\baselineskip}
+\begin{lstlisting}[style=python]
+def gamma(z):
+    # Lanczos coefficients (g=7)
+    p = [0.99999999999980993, 676.5203681218851,
+         -1259.1392167224028, 771.32342877765313,
+         -176.61502916214059, 12.507343278686905,
+         -0.13857109526572012, 9.9843695780195716e-6,
+         1.5056327351493116e-7]
+
+    if z < 0.5:
+        return math.pi / (math.sin(math.pi*z) * gamma(1-z))
+
+    z -= 1
+    x = p[0]
+    for i in range(1, len(p)):
+        x += p[i] / (z + i)
+
+    t = z + 7.5
+    return math.sqrt(2*math.pi) * (t**(z+0.5)) * math.exp(-t) * x
+\end{lstlisting}
 
 Now in pandas core. Ten language implementations. Microsoft Azure libraries.
 
 \textbf{3. Running Statistics (Welford's Algorithm)}
 
-Naive variance formula fails numerically. Welford's 1962 paper behind a paywall and dense.
+\textit{The Problem:} The standard textbook formula for variance requires two passes over the data. The naive one-pass formula risks catastrophic cancellation when numbers are large and variance is small:
+$$s^2 = \frac{\sum x^2 - (\sum x)^2/N}{N-1}$$
 
-Cook explains the algorithm, provides code, shows why naive formula fails.
+\textit{The Translation:} Cook translates Welford's 1962 algorithm into a stable, single-pass implementation:
+
+\needspace{18\baselineskip}
+\begin{lstlisting}[style=python]
+class RunningStats:
+    def push(self, x):
+        self.n += 1
+        if self.n == 1:
+            self.old_m = self.new_m = x
+            self.old_s = 0.0
+        else:
+            self.new_m = self.old_m + (x - self.old_m) / self.n
+            self.new_s = self.old_s + (x - self.old_m) * (x - self.new_m)
+
+            self.old_m = self.new_m
+            self.old_s = self.new_s
+
+    def variance(self):
+        return self.new_s / (self.n - 1) if self.n > 1 else 0.0
+\end{lstlisting}
 
 Now in pandas groupby. OpenTSDB. Multiple time-series libraries.
 
@@ -181,14 +215,14 @@ Cook didn't invent Welford's algorithm or the Lanczos approximation. He translat
 
 \section*{The Quantified Impact}
 
-\begin{longtable}{l p{6.5cm}}
+\begin{longtable}{l r}
 \toprule
 \textbf{Metric} & \textbf{Value} \tabularnewline
 \midrule
 GitHub repos citing johndcook.com & 160+ \tabularnewline
 Combined stars of citing repos & 500,000+ \tabularnewline
-Languages with gamma implementation & 10+ \tabularnewline
-Official documentation citations & 3 (TensorFlow, Julia, PEP 450) \tabularnewline
+Languages with gamma ports & 10+ \tabularnewline
+Official docs citations (TensorFlow, Julia, PEP 450) & 3 \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -200,13 +234,13 @@ These numbers undercount. Only explicit citations. Many codebases adapt without 
 
 Cook occupies a rare position: PhD-level mathematical knowledge, decades of programming experience, and the ability to explain clearly.
 
-\begin{longtable}{l p{6.5cm}}
+\begin{longtable}{l p{6cm}}
 \toprule
 \textbf{Credential} & \textbf{Evidence} \tabularnewline
 \midrule
-Academic depth & PhD mathematics, 5,881 Google Scholar citations \tabularnewline
-Industry experience & 30+ years; clients include Google, Amazon, Microsoft, Facebook, AMD \tabularnewline
-Communication skill & 5,233 posts, 500,000+ Twitter followers \tabularnewline
+Academic depth & PhD mathematics, 5,881 citations \tabularnewline
+Industry experience & 30+ years; Google, Amazon, Microsoft \tabularnewline
+Communication skill & 5,233 posts, 500K Twitter followers \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -218,12 +252,12 @@ This intersection is the translation layer: academic mathematics into production
 
 \section*{What Readers Say}
 
-\textbf{abhgh on Hacker News:}
+\textbf{abhgh (Hacker News):}
 \begin{blogquote}
 "I have personally benefited from it; I was looking for ways to sample quickly from a mixture of Beta distributions when I stumbled upon his post on the Kumaraswamy distribution."
 \end{blogquote}
 
-\textbf{Tim Hopper (data scientist):}
+\textbf{Tim Hopper (MLOps engineer, contributor to pandas and datamicroscopes):}
 \begin{blogquote}
 "John's writings have shaped many aspects of my trajectory from being an operations research grad student to a practicing data scientist."
 \end{blogquote}
@@ -233,7 +267,7 @@ This intersection is the translation layer: academic mathematics into production
 "I always walk away feeling like I learned something."
 \end{blogquote}
 
-\textbf{xpil:}
+\textbf{xpil (Hacker News):}
 \begin{blogquote}
 "Your blog is one of the most valuable pieces of the Internet."
 \end{blogquote}
@@ -250,7 +284,4 @@ Infrastructural influence. Living in code comments, production systems, the unde
 
 Quiet influence. Not followers. Not fame. Usefulness, compounded over seventeen years.
 
-\bigskip
-
-\textit{The evidence is in production code. The impact is infrastructural. But what about everything the data can't capture?}
 

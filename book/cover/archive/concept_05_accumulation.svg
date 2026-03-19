@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 5: The Accumulation - dots forming gamma symbol -->
+
+  <defs>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6; stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#1e3a5f; stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="2625" height="3750" fill="#0a0a0f"/>
+
+  <!-- Subtle glow behind gamma -->
+  <ellipse cx="1312" cy="1800" rx="800" ry="900" fill="url(#glowGrad)"/>
+
+  <!-- Gamma symbol made of dots - Γ -->
+  <!-- Each dot represents a blog post, accumulating into meaning -->
+  <g fill="#3b82f6">
+    <!-- Top horizontal bar of Γ -->
+    <circle cx="800" cy="900" r="12"/><circle cx="830" cy="905" r="10"/><circle cx="860" cy="895" r="14"/>
+    <circle cx="895" cy="902" r="11"/><circle cx="930" cy="898" r="13"/><circle cx="965" cy="904" r="10"/>
+    <circle cx="1000" cy="896" r="12"/><circle cx="1035" cy="903" r="14"/><circle cx="1070" cy="899" r="11"/>
+    <circle cx="1105" cy="905" r="10"/><circle cx="1140" cy="897" r="13"/><circle cx="1175" cy="902" r="12"/>
+    <circle cx="1210" cy="898" r="14"/><circle cx="1245" cy="904" r="11"/><circle cx="1280" cy="896" r="10"/>
+    <circle cx="1315" cy="903" r="13"/><circle cx="1350" cy="899" r="12"/><circle cx="1385" cy="905" r="14"/>
+    <circle cx="1420" cy="897" r="11"/><circle cx="1455" cy="902" r="10"/><circle cx="1490" cy="898" r="13"/>
+    <circle cx="1525" cy="904" r="12"/><circle cx="1560" cy="896" r="14"/><circle cx="1595" cy="903" r="11"/>
+    <circle cx="1630" cy="899" r="10"/><circle cx="1665" cy="905" r="13"/><circle cx="1700" cy="897" r="12"/>
+    <circle cx="1735" cy="902" r="14"/><circle cx="1770" cy="898" r="11"/><circle cx="1805" cy="904" r="10"/>
+
+    <!-- Vertical stem of Γ -->
+    <circle cx="805" cy="940" r="13"/><circle cx="798" cy="980" r="11"/><circle cx="810" cy="1020" r="14"/>
+    <circle cx="802" cy="1060" r="12"/><circle cx="815" cy="1100" r="10"/><circle cx="800" cy="1140" r="13"/>
+    <circle cx="808" cy="1180" r="11"/><circle cx="795" cy="1220" r="14"/><circle cx="812" cy="1260" r="12"/>
+    <circle cx="803" cy="1300" r="10"/><circle cx="818" cy="1340" r="13"/><circle cx="797" cy="1380" r="11"/>
+    <circle cx="810" cy="1420" r="14"/><circle cx="800" cy="1460" r="12"/><circle cx="815" cy="1500" r="10"/>
+    <circle cx="805" cy="1540" r="13"/><circle cx="798" cy="1580" r="11"/><circle cx="812" cy="1620" r="14"/>
+    <circle cx="802" cy="1660" r="12"/><circle cx="820" cy="1700" r="10"/><circle cx="795" cy="1740" r="13"/>
+    <circle cx="808" cy="1780" r="11"/><circle cx="800" cy="1820" r="14"/><circle cx="815" cy="1860" r="12"/>
+    <circle cx="803" cy="1900" r="10"/><circle cx="818" cy="1940" r="13"/><circle cx="797" cy="1980" r="11"/>
+    <circle cx="810" cy="2020" r="14"/><circle cx="805" cy="2060" r="12"/><circle cx="798" cy="2100" r="10"/>
+    <circle cx="815" cy="2140" r="13"/><circle cx="802" cy="2180" r="11"/><circle cx="820" cy="2220" r="14"/>
+    <circle cx="800" cy="2260" r="12"/><circle cx="808" cy="2300" r="10"/><circle cx="795" cy="2340" r="13"/>
+    <circle cx="812" cy="2380" r="11"/><circle cx="803" cy="2420" r="14"/><circle cx="818" cy="2460" r="12"/>
+    <circle cx="805" cy="2500" r="10"/>
+
+    <!-- Scattered dots - posts accumulating, more density toward gamma -->
+    <!-- Sparse outer region -->
+    <circle cx="300" cy="500" r="6" opacity="0.3"/><circle cx="2300" cy="600" r="5" opacity="0.25"/>
+    <circle cx="450" cy="1200" r="7" opacity="0.35"/><circle cx="2200" cy="1100" r="6" opacity="0.3"/>
+    <circle cx="350" cy="1800" r="5" opacity="0.25"/><circle cx="2350" cy="1700" r="7" opacity="0.35"/>
+    <circle cx="400" cy="2400" r="6" opacity="0.3"/><circle cx="2250" cy="2300" r="5" opacity="0.25"/>
+
+    <!-- Medium density region -->
+    <circle cx="500" cy="700" r="8" opacity="0.4"/><circle cx="550" cy="750" r="7" opacity="0.45"/>
+    <circle cx="2100" cy="750" r="8" opacity="0.4"/><circle cx="2050" cy="800" r="7" opacity="0.45"/>
+    <circle cx="520" cy="1400" r="9" opacity="0.5"/><circle cx="580" cy="1450" r="8" opacity="0.45"/>
+    <circle cx="2080" cy="1380" r="9" opacity="0.5"/><circle cx="2020" cy="1420" r="8" opacity="0.45"/>
+    <circle cx="540" cy="2000" r="8" opacity="0.4"/><circle cx="600" cy="2050" r="9" opacity="0.5"/>
+    <circle cx="2060" cy="1980" r="8" opacity="0.4"/><circle cx="2000" cy="2040" r="9" opacity="0.5"/>
+
+    <!-- Denser region near gamma -->
+    <circle cx="650" cy="850" r="10" opacity="0.6"/><circle cx="700" cy="820" r="9" opacity="0.55"/>
+    <circle cx="720" cy="880" r="11" opacity="0.65"/><circle cx="680" cy="950" r="10" opacity="0.6"/>
+    <circle cx="1900" cy="870" r="10" opacity="0.6"/><circle cx="1850" cy="830" r="9" opacity="0.55"/>
+    <circle cx="1920" cy="920" r="11" opacity="0.65"/><circle cx="1870" cy="960" r="10" opacity="0.6"/>
+
+    <circle cx="620" cy="1200" r="11" opacity="0.7"/><circle cx="670" cy="1250" r="10" opacity="0.65"/>
+    <circle cx="640" cy="1320" r="12" opacity="0.75"/><circle cx="690" cy="1380" r="11" opacity="0.7"/>
+    <circle cx="660" cy="1450" r="10" opacity="0.65"/><circle cx="630" cy="1520" r="11" opacity="0.7"/>
+
+    <circle cx="650" cy="1800" r="12" opacity="0.75"/><circle cx="700" cy="1850" r="11" opacity="0.7"/>
+    <circle cx="680" cy="1920" r="10" opacity="0.65"/><circle cx="640" cy="1980" r="12" opacity="0.75"/>
+    <circle cx="720" cy="2050" r="11" opacity="0.7"/><circle cx="660" cy="2120" r="10" opacity="0.65"/>
+    <circle cx="690" cy="2200" r="12" opacity="0.75"/><circle cx="630" cy="2280" r="11" opacity="0.7"/>
+  </g>
+
+  <!-- Title -->
+  <text x="1312" y="2900" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    You Can Just
+  </text>
+  <text x="1312" y="3100" font-family="Georgia, serif" font-size="156" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Do Things
+  </text>
+
+  <!-- Subtitle -->
+  <text x="1312" y="3300" font-family="Georgia, serif" font-size="56" fill="#64748b" text-anchor="middle" font-style="italic">
+    A Data Portrait of John D. Cook's Blog
+  </text>
+
+  <!-- Stats -->
+  <text x="1312" y="3420" font-family="Georgia, serif" font-size="42" fill="#3b82f6" text-anchor="middle">
+    5,233 posts becoming something larger
+  </text>
+
+  <!-- Author -->
+  <text x="1312" y="3600" font-family="Georgia, serif" font-size="64" fill="#ffffff" text-anchor="middle">
+    Owen D. Goode
+  </text>
+
+</svg>

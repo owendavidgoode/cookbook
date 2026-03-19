@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2625" height="3750" viewBox="0 0 2625 3750">
+  <!-- Concept 2 v2: Layered citations, title as comment -->
+
+  <!-- Background - VS Code dark theme -->
+  <rect width="2625" height="3750" fill="#1e1e1e"/>
+
+  <!-- Line numbers gutter -->
+  <rect x="0" y="0" width="120" height="3750" fill="#252526"/>
+
+  <!-- Title as large comment block -->
+  <g transform="translate(0, 200)">
+    <text x="60" y="100" font-family="Consolas, monospace" font-size="42" fill="#858585" text-anchor="end">1</text>
+    <text x="60" y="200" font-family="Consolas, monospace" font-size="42" fill="#858585" text-anchor="end">2</text>
+    <text x="60" y="300" font-family="Consolas, monospace" font-size="42" fill="#858585" text-anchor="end">3</text>
+    <text x="60" y="400" font-family="Consolas, monospace" font-size="42" fill="#858585" text-anchor="end">4</text>
+    <text x="60" y="500" font-family="Consolas, monospace" font-size="42" fill="#858585" text-anchor="end">5</text>
+    <text x="60" y="600" font-family="Consolas, monospace" font-size="42" fill="#858585" text-anchor="end">6</text>
+
+    <text x="180" y="100" font-family="Consolas, monospace" font-size="56" fill="#6A9955">/*</text>
+    <text x="180" y="200" font-family="Consolas, monospace" font-size="56" fill="#6A9955"> *  YOU CAN JUST DO THINGS</text>
+    <text x="180" y="300" font-family="Consolas, monospace" font-size="56" fill="#6A9955"> *</text>
+    <text x="180" y="400" font-family="Consolas, monospace" font-size="56" fill="#6A9955"> *  A Data Portrait of John D. Cook's Blog</text>
+    <text x="180" y="500" font-family="Consolas, monospace" font-size="56" fill="#6A9955"> *  5,233 posts · 17 years · 1.8M words</text>
+    <text x="180" y="600" font-family="Consolas, monospace" font-size="56" fill="#6A9955"> */</text>
+  </g>
+
+  <!-- Citation 1: pandas -->
+  <g transform="translate(0, 1000)">
+    <text x="60" y="80" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">127</text>
+    <text x="60" y="150" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">128</text>
+    <text x="60" y="220" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">129</text>
+    <text x="60" y="290" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">130</text>
+    <text x="60" y="360" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">131</text>
+
+    <!-- File tab indicator -->
+    <text x="180" y="0" font-family="Consolas, monospace" font-size="32" fill="#569cd6">pandas/core/groupby.pyx</text>
+
+    <text x="180" y="80" font-family="Consolas, monospace" font-size="40" fill="#6A9955"># Running stats update based on</text>
+    <text x="180" y="150" font-family="Consolas, monospace" font-size="40" fill="#6A9955"># RunningStats::Push from</text>
+    <text x="180" y="220" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE"># johndcook.com/blog/skewness_kurtosis/</text>
+    <text x="180" y="290" font-family="Consolas, monospace" font-size="40" fill="#C586C0">cdef</text>
+    <text x="330" y="290" font-family="Consolas, monospace" font-size="40" fill="#DCDCAA"> _update_mean</text>
+    <text x="660" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">(</text>
+    <text x="690" y="290" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE">self</text>
+    <text x="810" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">,</text>
+    <text x="850" y="290" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE"> val</text>
+    <text x="970" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">):</text>
+    <text x="180" y="360" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE">    self</text>
+    <text x="370" y="360" font-family="Consolas, monospace" font-size="40" fill="#ffffff">.n += </text>
+    <text x="560" y="360" font-family="Consolas, monospace" font-size="40" fill="#B5CEA8">1</text>
+  </g>
+
+  <!-- Citation 2: Julia -->
+  <g transform="translate(0, 1550)">
+    <text x="60" y="80" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">84</text>
+    <text x="60" y="150" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">85</text>
+    <text x="60" y="220" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">86</text>
+    <text x="60" y="290" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">87</text>
+    <text x="60" y="360" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">88</text>
+
+    <text x="180" y="0" font-family="Consolas, monospace" font-size="32" fill="#569cd6">OnlineStats.jl/src/stats.jl</text>
+
+    <text x="180" y="80" font-family="Consolas, monospace" font-size="40" fill="#6A9955"># Welford's algorithm for variance</text>
+    <text x="180" y="150" font-family="Consolas, monospace" font-size="40" fill="#6A9955"># See:</text>
+    <text x="180" y="220" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE"># johndcook.com/blog/standard_deviation/</text>
+    <text x="180" y="290" font-family="Consolas, monospace" font-size="40" fill="#C586C0">function</text>
+    <text x="420" y="290" font-family="Consolas, monospace" font-size="40" fill="#DCDCAA"> fit!</text>
+    <text x="580" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">(</text>
+    <text x="610" y="290" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE">o</text>
+    <text x="650" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">::</text>
+    <text x="710" y="290" font-family="Consolas, monospace" font-size="40" fill="#4EC9B0">Variance</text>
+    <text x="920" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">,</text>
+    <text x="960" y="290" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE"> x</text>
+    <text x="1000" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">)</text>
+    <text x="180" y="360" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE">    o</text>
+    <text x="250" y="360" font-family="Consolas, monospace" font-size="40" fill="#ffffff">.n += </text>
+    <text x="430" y="360" font-family="Consolas, monospace" font-size="40" fill="#B5CEA8">1</text>
+  </g>
+
+  <!-- Citation 3: TensorFlow / C++ -->
+  <g transform="translate(0, 2100)">
+    <text x="60" y="80" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">203</text>
+    <text x="60" y="150" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">204</text>
+    <text x="60" y="220" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">205</text>
+    <text x="60" y="290" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">206</text>
+    <text x="60" y="360" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">207</text>
+
+    <text x="180" y="0" font-family="Consolas, monospace" font-size="32" fill="#569cd6">boost/accumulators/statistics/variance.hpp</text>
+
+    <text x="180" y="80" font-family="Consolas, monospace" font-size="40" fill="#6A9955">// Online algorithm for higher moments</text>
+    <text x="180" y="150" font-family="Consolas, monospace" font-size="40" fill="#6A9955">// Reference:</text>
+    <text x="180" y="220" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE">// johndcook.com/blog/skewness_kurtosis/</text>
+    <text x="180" y="290" font-family="Consolas, monospace" font-size="40" fill="#C586C0">template</text>
+    <text x="420" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">&lt;</text>
+    <text x="460" y="290" font-family="Consolas, monospace" font-size="40" fill="#C586C0">typename</text>
+    <text x="700" y="290" font-family="Consolas, monospace" font-size="40" fill="#4EC9B0"> T</text>
+    <text x="760" y="290" font-family="Consolas, monospace" font-size="40" fill="#ffffff">&gt;</text>
+    <text x="180" y="360" font-family="Consolas, monospace" font-size="40" fill="#C586C0">void</text>
+    <text x="320" y="360" font-family="Consolas, monospace" font-size="40" fill="#DCDCAA"> push</text>
+    <text x="450" y="360" font-family="Consolas, monospace" font-size="40" fill="#ffffff">(</text>
+    <text x="480" y="360" font-family="Consolas, monospace" font-size="40" fill="#4EC9B0">T</text>
+    <text x="520" y="360" font-family="Consolas, monospace" font-size="40" fill="#9CDCFE"> x</text>
+    <text x="570" y="360" font-family="Consolas, monospace" font-size="40" fill="#ffffff">) {</text>
+  </g>
+
+  <!-- Fade effect at bottom of code -->
+  <defs>
+    <linearGradient id="fadeCode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e1e; stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#1e1e1e; stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2400" width="2625" height="300" fill="url(#fadeCode)"/>
+
+  <!-- More citations indicator -->
+  <text x="1312" y="2850" font-family="Consolas, monospace" font-size="44" fill="#858585" text-anchor="middle">
+    // ... and hundreds more across pandas, numpy, scipy, boost, julia ...
+  </text>
+
+  <!-- Author as git signature -->
+  <g transform="translate(0, 3100)">
+    <text x="60" y="100" font-family="Consolas, monospace" font-size="38" fill="#858585" text-anchor="end">∞</text>
+    <text x="180" y="100" font-family="Consolas, monospace" font-size="48" fill="#6A9955">/**</text>
+    <text x="180" y="180" font-family="Consolas, monospace" font-size="48" fill="#6A9955"> * @author  Owen D. Goode</text>
+    <text x="180" y="260" font-family="Consolas, monospace" font-size="48" fill="#6A9955"> */</text>
+  </g>
+
+</svg>

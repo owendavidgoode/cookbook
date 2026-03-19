@@ -13,10 +13,10 @@ test:
 	$(PYTHON) -m pytest
 
 calendar:
-	$(PYTHON) -m cookbook.cli calendar-validate
+	$(PYTHON) -m cookbook.cli calendar validate
 
 bot:
-	$(PYTHON) -m cookbook.cli bot-validate
+	$(PYTHON) -m cookbook.cli bot validate
 
 book:
 	@echo "Book prep placeholder; hook up chapter dataset generation here."

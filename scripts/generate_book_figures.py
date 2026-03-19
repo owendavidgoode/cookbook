@@ -388,6 +388,47 @@ def fig_04_functions_timeline(df):
     print("  Created: ch04_functions_timeline.svg")
 
 
+def fig_04_2014_dip(df):
+    """Annotated timeline showing the 2014 crisis point."""
+    fig, ax = plt.subplots(figsize=(10, 5))
+
+    # Posts per year
+    yearly = df.groupby('year').size()
+    years = yearly.index.tolist()
+    counts = yearly.values.tolist()
+
+    # Plot with 2014 highlighted
+    colors = [COLORS['accent'] if y == 2014 else COLORS['primary'] for y in years]
+    bars = ax.bar(years, counts, color=colors, alpha=0.8)
+
+    # Annotate 2014
+    idx_2014 = years.index(2014)
+    ax.annotate('147 posts\nThe Quiet Year',
+                xy=(2014, counts[idx_2014]),
+                xytext=(2014, counts[idx_2014] + 80),
+                ha='center', fontsize=10, fontweight='bold',
+                arrowprops=dict(arrowstyle='->', color=COLORS['accent'], lw=1.5))
+
+    # Annotate recovery
+    if 2015 in years:
+        idx_2015 = years.index(2015)
+        ax.annotate('Recovery\nbegins',
+                    xy=(2015, counts[idx_2015]),
+                    xytext=(2016.5, counts[idx_2015] + 60),
+                    ha='center', fontsize=9,
+                    arrowprops=dict(arrowstyle='->', color=COLORS['computing'], lw=1.5))
+
+    ax.set_xlabel('Year')
+    ax.set_ylabel('Posts')
+    ax.set_title('The 2014 Dip: Lowest Point in 17 Years', fontweight='bold')
+
+    plt.tight_layout()
+    plt.savefig(FIGURES_DIR / 'ch04_2014_dip.svg')
+    plt.savefig(FIGURES_DIR / 'ch04_2014_dip.png')
+    plt.close()
+    print("  Created: ch04_2014_dip.svg")
+
+
 # =============================================================================
 # Chapter 5: The Translation Layer
 # =============================================================================
@@ -863,7 +904,7 @@ def main():
         1: [fig_01_activity_heatmap, fig_01_posts_and_wordcount],
         2: [fig_02_category_treemap, fig_02_category_packing, fig_02_topic_migration],
         3: [fig_03_weekday_radial],
-        4: [fig_04_constants_dumbbell, fig_04_functions_timeline],
+        4: [fig_04_constants_dumbbell, fig_04_functions_timeline, fig_04_2014_dip],
         5: [fig_05_languages_stacked, fig_05_languages_bar],
         6: [fig_06_crypto_line, fig_06_crypto_dumbbell],
         7: [fig_07_category_network],

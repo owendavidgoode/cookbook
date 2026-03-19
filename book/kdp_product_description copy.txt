@@ -1,0 +1,6 @@
+;; CNAME Records
+vtktjoh5bkv75dwg2edgem422duxzd7e._domainkey.jbweb.com.	1	IN	CNAME	vtktjoh5bkv75dwg2edgem422duxzd7e.dkim.jbweb.com.intake.linear.app.
+qkgyp5sydzd4gdnk7qdcrbp6sgkpmdmu._domainkey.jbweb.com.	1	IN	CNAME	qkgyp5sydzd4gdnk7qdcrbp6sgkpmdmu.dkim.jbweb.com.intake.linear.app.
+urvpqtz63vbyytjay74oholtxorcappp._domainkey.jbweb.com.	1	IN	CNAME	urvpqtz63vbyytjay74oholtxorcappp.dkim.jbweb.com.intake.linear.app.
+envelope.linear.jbweb.com.	1	IN	CNAME	spf.jbweb.com.intake.linear.app.
+b8f8f461-c218-41af-97c4-16a0f798b47c.linear.jbweb.com.	1	IN	CNAME	b8f8f461-c218-41af-97c4-16a0f798b47c.workspace.jbweb.com.intake.linear.app.
