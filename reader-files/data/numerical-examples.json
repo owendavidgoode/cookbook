@@ -1,0 +1,196 @@
+{
+  "kumaraswamy": [
+    {
+      "label": "Cook U-shaped example",
+      "beta_parameters": [
+        0.5,
+        0.5
+      ],
+      "kumaraswamy_parameters": [
+        0.5,
+        0.585786437626905
+      ],
+      "stationary_kind": "minimum",
+      "kumaraswamy_stationary_x": 0.5000000000000001,
+      "retained_refined_cdf_gap": 0.029261879016251154,
+      "retained_cdf_extremum_x": 0.8938867828773771,
+      "density_crossings": [
+        0.056295391977942304,
+        0.8938867828773771
+      ],
+      "retained_total_variation": 0.03505271422475452,
+      "numerical_search_limit": "20,001 interior linear grid points plus 1,002 log-tail points locate sign changes; roots refined at 60 decimal digits. CDF extrema and TV use these crossings. This is not a formal proof of exhaustive roots."
+    },
+    {
+      "label": "Cook unimodal example",
+      "beta_parameters": [
+        5.0,
+        3.0
+      ],
+      "kumaraswamy_parameters": [
+        5.0,
+        6.275
+      ],
+      "stationary_kind": "mode",
+      "kumaraswamy_stationary_x": 0.6666666666666666,
+      "retained_refined_cdf_gap": 0.06627757378239207,
+      "retained_cdf_extremum_x": 0.7848375966724899,
+      "density_crossings": [
+        0.49529929744173934,
+        0.7848375966724899
+      ],
+      "retained_total_variation": 0.11224905323340256,
+      "numerical_search_limit": "20,001 interior linear grid points plus 1,002 log-tail points locate sign changes; roots refined at 60 decimal digits. CDF extrema and TV use these crossings. This is not a formal proof of exhaustive roots."
+    },
+    {
+      "label": "kp U-shaped suggested alternative",
+      "beta_parameters": [
+        0.5,
+        0.5
+      ],
+      "kumaraswamy_parameters": [
+        0.43604471,
+        0.51398941
+      ],
+      "stationary_kind": "minimum",
+      "kumaraswamy_stationary_x": 0.48112802791629683,
+      "retained_refined_cdf_gap": 0.007684757545144786,
+      "retained_cdf_extremum_x": 0.012864270278968125,
+      "density_crossings": [
+        0.012864270278968125,
+        0.4993871010238784,
+        0.9730984860494333
+      ],
+      "retained_total_variation": 0.011612364036647312,
+      "numerical_search_limit": "20,001 interior linear grid points plus 1,002 log-tail points locate sign changes; roots refined at 60 decimal digits. CDF extrema and TV use these crossings. This is not a formal proof of exhaustive roots."
+    },
+    {
+      "label": "kp unimodal suggested alternative",
+      "beta_parameters": [
+        5.0,
+        3.0
+      ],
+      "kumaraswamy_parameters": [
+        3.7355497,
+        3.4185949
+      ],
+      "stationary_kind": "mode",
+      "kumaraswamy_stationary_x": 0.6766246895928539,
+      "retained_refined_cdf_gap": 0.010960282741761113,
+      "retained_cdf_extremum_x": 0.3892800498042766,
+      "density_crossings": [
+        0.3892800498042766,
+        0.6579548295286819,
+        0.8352331145402059
+      ],
+      "retained_total_variation": 0.015601018930773624,
+      "numerical_search_limit": "20,001 interior linear grid points plus 1,002 log-tail points locate sign changes; roots refined at 60 decimal digits. CDF extrema and TV use these crossings. This is not a formal proof of exhaustive roots."
+    }
+  ],
+  "kumaraswamy_small_u": {
+    "u": 1e-15,
+    "a": 5.0,
+    "b": 6.275,
+    "naive_quantile": 0.000644290972057077,
+    "log1p_expm1_quantile": 0.0006925916542273795,
+    "high_precision_reference": "0.000692591654227379743189238826367",
+    "naive_relative_error": "0.0697390473527789112862990950559",
+    "log1p_expm1_relative_error": "3.28699237286630924338514485964e-16",
+    "limit": "One deterministic example, not a full numerical-stability audit or speed benchmark; endpoints need explicit handling in code."
+  },
+  "variance": {
+    "inputs": [
+      100000001.0,
+      100000002.0,
+      100000003.0
+    ],
+    "exact_sum_squares": "30000001200000014",
+    "float_sum_squares": 3.0000001200000012e+16,
+    "naive_sample_variance": 0.0,
+    "welford_states": [
+      [
+        1,
+        100000001.0,
+        0.0
+      ],
+      [
+        2,
+        100000001.5,
+        0.5
+      ],
+      [
+        3,
+        100000002.0,
+        2.0
+      ]
+    ],
+    "welford_sample_variance": 1.0
+  },
+  "normal_inverse": {
+    "purpose": "Probability to cutoff; one input, not a sampler or accuracy certification",
+    "p": 0.25,
+    "normal_mean": 0,
+    "normal_standard_deviation": 1,
+    "t": 1.6651092223153954,
+    "numerator": 3.8809902307868747,
+    "denominator": 3.916552202563256,
+    "upper_tail_approximation": 0.6741891400433162,
+    "lower_tail_approximation": -0.6741891400433162,
+    "reference_lower_cutoff": -0.6744897501960817,
+    "erfc_bisection_lower_cutoff": -0.6744897501960818,
+    "absolute_cutoff_error_at_this_input": 0.0003006101527655014,
+    "reference_cdf_at_reference_cutoff": 0.25,
+    "reference_cdf_at_approximate_lower_cutoff": 0.2500955365477158,
+    "reference_cdf_if_wrong_positive_sign_kept": 0.7499044634522842,
+    "implementation": "Python double-precision transcription of the stated formula; not C++/C#/Unity execution"
+  },
+  "normal_inverse_coefficients": {
+    "c": [
+      2.515517,
+      0.802853,
+      0.010328
+    ],
+    "d": [
+      1.432788,
+      0.189269,
+      0.001308
+    ]
+  },
+  "limits": [
+    "CDF gaps at retained numerical candidates are checked, not global-optimality proofs.",
+    "Binary64 evaluation order is explicit; no external C#/Java/Unity runtime is run.",
+    "The normal and small-u calculations are single-input checks, not uniform error bounds."
+  ],
+  "exponential_sum": {
+    "post_id": 28835,
+    "phase": "f(n)=n/10+n^2/7+n^3/17=(119n+170n^2+70n^3)/1190",
+    "sample_range": {
+      "n_first": 3,
+      "n_last": 12002,
+      "count": 12000
+    },
+    "exact_minimal_phase_period": 1190,
+    "shift": 119,
+    "exact_shift_phase_mod_one": "9/10",
+    "closure_argument": "Shifting n by 119 fixes n mod 7 and mod 17 and adds 9/10 to the phase modulo one. Each orbit of ten steps multiplies by successive powers of a nontrivial tenth root of unity and sums to zero. Thus each block of 1190 consecutive terms sums to zero exactly.",
+    "block_1190_float_residual": 3.187228549261858e-14,
+    "affine_block_relation": "P(j+119)=P(119)+exp(2*pi*i*9/10)*P(j), P(0)=0",
+    "affine_block_relation_max_float_residual": 2.088031716946725e-13,
+    "rotation_center": [
+      -12.884875771548499,
+      6.094398278079773
+    ],
+    "source_direct_vs_reduced_phase_max_path_difference": 0.002569066886105038,
+    "step_integer_numerator_coefficients": [
+      119,
+      170,
+      70
+    ],
+    "phase_denominator": 1190,
+    "scope": "Only the October 7, 2017 polynomial and n=3..12002; exact modular reduction before floating trigonometry. No general date rule or winding-number claim.",
+    "end_of_12000_steps": [
+      -10.694462702081122,
+      -4.510596927304911
+    ]
+  }
+}

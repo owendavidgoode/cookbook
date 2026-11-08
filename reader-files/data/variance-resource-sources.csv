@@ -1,0 +1,16 @@
+source_id,publication_timestamp,source_url,running_variance,higher_moments
+408,2008-09-23T14:29:46,https://www.johndcook.com/blog/2008/09/23/how-to-compute-standard-deviation-accurately/,1,0
+449,2008-09-26T06:17:04,https://www.johndcook.com/blog/2008/09/26/comparing-three-methods-of-computing-standard-deviation/,1,0
+455,2008-09-28T14:19:00,https://www.johndcook.com/blog/2008/09/28/theoretical-explanation-for-numerical-results/,1,0
+850,2008-11-12T14:54:01,https://www.johndcook.com/blog/2008/11/12/normal-approximation-for-student-t-distribution-isnt-good-enough/,1,0
+1082,2008-12-11T14:39:53,https://www.johndcook.com/blog/2008/12/11/syntax-coloring-for-code-samples-in-html/,1,0
+12596,2012-12-12T22:00:19,https://www.johndcook.com/blog/2012/12/12/most-popular-pages/,1,0
+13542,2013-06-11T06:52:06,https://www.johndcook.com/blog/2013/06/11/computing-skewness-and-kurtosis-in-one-pass/,1,1
+14196,2013-12-21T06:02:55,https://www.johndcook.com/blog/2013/12/21/most-popular-tech-notes-for-2013/,1,1
+15338,2015-01-21T07:00:38,https://www.johndcook.com/blog/2015/01/21/numerical-computing-resources/,1,0
+22756,2016-06-08T07:00:13,https://www.johndcook.com/blog/2016/06/08/computing-higher-moments-with-a-fold/,0,1
+30733,2018-03-30T07:47:27,https://www.johndcook.com/blog/2018/03/30/generalized-normal-kurtosis/,0,1
+177678,2023-03-24T06:23:14,https://www.johndcook.com/blog/2023/03/24/gumbel-distribution/,0,1
+198554,2023-07-17T13:16:15,https://www.johndcook.com/blog/2023/07/17/tukey-g-and-h/,0,1
+245760,2024-10-09T08:04:04,https://www.johndcook.com/blog/2024/10/09/average-number-of-divisors/,1,0
+247047,2026-05-29T07:24:30,https://www.johndcook.com/blog/2026/05/29/online-one-pass-algorithms/,1,1

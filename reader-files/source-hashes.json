@@ -1,0 +1,12 @@
+{
+  "outputs": {
+    "data/archive-link-pairs.csv": "64e80fee46f0b7ba72d08cec680d63cba2c4668416d854716a862e55927289f9",
+    "data/archive-post-measures.csv": "0f11b5c4eedb9121077d7ab9e349f0924d970126fb095e38a3751fb4bf7aecbd",
+    "data/archive-summary.json": "86f9eff67befbdf0c8317e1615b1f06f276270454a1467d359f8083eba66af45",
+    "data/changed-records.csv": "c272120ac56255dcbd06c46faa134f3dff5832682074f3cd2749db78d4959fad",
+    "data/name-reference-posts.csv": "fbe3f9b2f728ed6472640894f13dec2b92a81d49a9c43ffded5bc63d68c3060c",
+    "data/numerical-examples.json": "5c6ef3fd2c181b78d62dc21efb4de5e241eb5cbdf5e04a582688e411f1ddb02b",
+    "data/variance-resource-sources.csv": "2e1c8fb97a838e8198d085935863c7c544c698581c26ded32160502e5a40c47e",
+    "data/version-examples.json": "ddf9c50471edf20c94cce86b71409c9aca21b21456e18dfad909432df906fd5c"
+  }
+}

@@ -1,0 +1,104 @@
+query,post_id,publication_timestamp,resolved_person,source_url
+Knuth,6,2008-04-07T17:51:35,Donald Knuth,https://www.johndcook.com/blog/2008/04/07/tricky-code/
+Knuth,17,2008-01-10T09:42:00,Donald Knuth,https://www.johndcook.com/blog/2008/01/10/complementary-validation/
+Knuth,27,2008-01-15T09:01:11,Donald Knuth,https://www.johndcook.com/blog/2008/01/15/literate-programming-and-statistics/
+Knuth,94,2008-04-03T06:41:17,Donald Knuth,https://www.johndcook.com/blog/2008/04/03/microsoft-word-and-latex/
+Knuth,174,2008-05-03T06:04:49,Donald Knuth,https://www.johndcook.com/blog/2008/05/03/reusable-code-vs-re-editable-code/
+Knuth,257,2008-07-15T04:56:18,Donald Knuth,https://www.johndcook.com/blog/2008/07/15/getting-to-the-bottom-of-things/
+Knuth,449,2008-09-26T06:17:04,Donald Knuth,https://www.johndcook.com/blog/2008/09/26/comparing-three-methods-of-computing-standard-deviation/
+Knuth,843,2008-11-11T05:19:35,Donald Knuth,https://www.johndcook.com/blog/2008/11/11/errors-in-math-papers-not-a-big-deal/
+Knuth,1057,2008-12-11T10:54:24,Donald Knuth,https://www.johndcook.com/blog/2008/12/11/constructive-proof-chinese-remainder-theorem/
+Knuth,3402,2009-10-14T07:54:52,Donald Knuth,https://www.johndcook.com/blog/2009/10/14/opening-black-boxes/
+Knuth,5621,2010-06-14T09:13:24,Donald Knuth,https://www.johndcook.com/blog/2010/06/14/generating-poisson-random-values/
+Knuth,6703,2010-10-04T09:00:41,Donald Knuth,https://www.johndcook.com/blog/2010/10/04/serious-lessons-from-knuths-joke/
+Knuth,7078,2010-11-16T05:18:03,Donald Knuth,https://www.johndcook.com/blog/2010/11/16/perpendicular-and-relatively-prime/
+Knuth,8380,2011-04-26T05:50:08,Donald Knuth,https://www.johndcook.com/blog/2011/04/26/the-myth-of-the-lisp-genius/
+Knuth,8511,2011-05-17T06:00:03,Donald Knuth,https://www.johndcook.com/blog/2011/05/17/writing-software-is-harder-than-writing-books/
+Knuth,8517,2011-05-13T06:18:28,Donald Knuth,https://www.johndcook.com/blog/2011/05/13/theory-and-practice/
+Knuth,8520,2011-05-16T06:56:52,Donald Knuth,https://www.johndcook.com/blog/2011/05/16/bumblebee-software/
+Knuth,8528,2011-05-26T06:24:21,Donald Knuth,https://www.johndcook.com/blog/2011/05/26/software-architecture-and-trust/
+Knuth,8851,2011-07-04T14:25:45,Donald Knuth,https://www.johndcook.com/blog/2011/07/04/sorting/
+Knuth,9047,2011-07-31T21:05:07,Donald Knuth,https://www.johndcook.com/blog/2011/07/31/enjoyment-of-ones-tools/
+Knuth,10148,2011-12-08T07:49:40,Donald Knuth,https://www.johndcook.com/blog/2011/12/08/selective-use-of-technology-2/
+Knuth,10171,2011-12-08T22:12:17,Donald Knuth,https://www.johndcook.com/blog/2011/12/08/avoidance-of-distraction/
+Knuth,12519,2012-11-24T13:25:18,Donald Knuth,https://www.johndcook.com/blog/2012/11/24/approximation-relating-lg-ln-and-log/
+Knuth,13762,2013-07-31T10:02:39,Donald Knuth,https://www.johndcook.com/blog/2013/07/31/smiths-determinant/
+Knuth,14671,2014-08-12T20:17:07,Donald Knuth,https://www.johndcook.com/blog/2014/08/12/what-would-dondald-knuth-do/
+Knuth,17768,2014-12-28T20:19:40,Donald Knuth,https://www.johndcook.com/blog/2014/12/28/most-popular-posts-of-2014/
+Knuth,18733,2015-08-14T08:20:46,Donald Knuth,https://www.johndcook.com/blog/2015/08/14/deserted-island-books/
+Knuth,22925,2016-07-06T11:41:20,Donald Knuth,https://www.johndcook.com/blog/2016/07/06/literate-programming-presenting-code-in-human-order/
+Knuth,27477,2017-06-27T07:00:41,Donald Knuth,https://www.johndcook.com/blog/2017/06/27/quicksort-and-prime-numbers/
+Knuth,30862,2018-04-10T09:29:32,Donald Knuth,https://www.johndcook.com/blog/2018/04/10/up-arrow-and-down-arrow-notation/
+Knuth,31667,2018-05-22T15:12:06,Donald Knuth,https://www.johndcook.com/blog/2018/05/22/combinatorics/
+Knuth,40087,2019-02-18T10:39:57,Donald Knuth,https://www.johndcook.com/blog/2019/02/18/command-line-wizard/
+Knuth,40288,2019-02-27T08:51:45,Donald Knuth,https://www.johndcook.com/blog/2019/02/27/miscellaneous/
+Knuth,41060,2019-04-14T17:27:58,Donald Knuth,https://www.johndcook.com/blog/2019/04/14/randu/
+Knuth,42887,2019-08-10T11:15:22,Donald Knuth,https://www.johndcook.com/blog/2019/08/10/learning-vs-relearning/
+Knuth,44841,2019-10-28T09:51:05,Donald Knuth,https://www.johndcook.com/blog/2019/10/28/generating-de-bruijn/
+Knuth,49232,2020-02-06T15:02:50,Donald Knuth,https://www.johndcook.com/blog/2020/02/06/testu01-small-crush-test-suite/
+Knuth,51809,2020-03-27T10:28:27,Donald Knuth,https://www.johndcook.com/blog/2020/03/27/conditional-independence-notation/
+Knuth,71372,2021-03-10T19:57:36,Donald Knuth,https://www.johndcook.com/blog/2021/03/10/iii/
+Knuth,74406,2021-04-24T09:51:55,Donald Knuth,https://www.johndcook.com/blog/2021/04/24/tower-of-powers-and-convergence/
+Knuth,81867,2021-08-16T08:17:26,Donald Knuth,https://www.johndcook.com/blog/2021/08/16/lake-wobegon-dice/
+Knuth,85851,2021-10-06T20:21:30,Donald Knuth,https://www.johndcook.com/blog/2021/10/06/sawtooth-and-replicative-functions/
+Knuth,86247,2021-10-11T08:39:15,Donald Knuth,https://www.johndcook.com/blog/2021/10/11/multiplication-theorem-rabbit-hole/
+Knuth,86269,2021-10-11T11:05:04,Donald Knuth,https://www.johndcook.com/blog/2021/10/11/multiple-angle-cotangent/
+Knuth,89409,2021-11-17T14:03:41,Donald Knuth,https://www.johndcook.com/blog/2021/11/17/theory-practice-and-integration/
+Knuth,144930,2022-10-21T11:15:07,Donald Knuth,https://www.johndcook.com/blog/2022/10/21/math-origins/
+Knuth,242847,2024-02-10T16:32:03,Donald Knuth,https://www.johndcook.com/blog/2024/02/10/this-way-up-and-knuth-arrows/
+Knuth,245785,2024-10-23T19:57:30,Donald Knuth,https://www.johndcook.com/blog/2024/10/23/sawtooth-waves-2/
+Knuth,245960,2025-01-23T10:47:20,Donald Knuth,https://www.johndcook.com/blog/2025/01/23/radix-conversion/
+Knuth,246115,2025-04-14T09:05:16,Donald Knuth,https://www.johndcook.com/blog/2025/04/14/miscellaneous-mathematical-symbols/
+Knuth,246152,2025-04-29T06:52:19,Donald Knuth,https://www.johndcook.com/blog/2025/04/29/knuths-chisq/
+Knuth,246198,2025-05-13T14:34:01,Donald Knuth,https://www.johndcook.com/blog/2025/05/13/alternative-exp-and-log-notation/
+Knuth,246243,2025-07-24T19:18:52,Donald Knuth,https://www.johndcook.com/blog/2025/07/24/analogs-of-binomial-coefficients/
+Knuth,246266,2025-06-08T11:31:11,Donald Knuth,https://www.johndcook.com/blog/2025/06/08/phinary/
+Knuth,246423,2025-08-16T08:52:42,Donald Knuth,https://www.johndcook.com/blog/2025/08/16/randomly-generated-dragon/
+Knuth,246439,2025-08-23T07:15:51,Donald Knuth,https://www.johndcook.com/blog/2025/08/23/knuths-twindragon/
+Knuth,246448,2025-08-25T12:42:03,Donald Knuth,https://www.johndcook.com/blog/2025/08/25/variations-on-knuths-twindragon/
+Knuth,246457,2025-08-29T07:19:48,Donald Knuth,https://www.johndcook.com/blog/2025/08/29/an-uncrossed-knights-tour/
+Knuth,246774,2025-12-31T07:48:24,Donald Knuth,https://www.johndcook.com/blog/2025/12/31/knights-tour-minimum-obtuse/
+Knuth,247605,2026-08-10T09:34:21,Donald Knuth,https://www.johndcook.com/blog/2026/08/10/learning-from-historical-mistakes/
+Knuth,247924,2026-09-17T11:48:14,Donald Knuth,https://www.johndcook.com/blog/2026/09/17/empirical-fractal/
+Lewis,20,2008-01-12T07:58:13,C. S. Lewis,https://www.johndcook.com/blog/2008/01/12/three-quotes-on-originality/
+Lewis,240,2008-07-02T07:01:02,Meriwether Lewis / Lewis and Clark,https://www.johndcook.com/blog/2008/07/02/team-moon/
+Lewis,1288,2009-02-14T09:15:56,C. S. Lewis,https://www.johndcook.com/blog/2009/02/14/old-math-books/
+Lewis,1290,2009-01-19T13:55:31,C. S. Lewis,https://www.johndcook.com/blog/2009/01/19/c-s-lewis-on-reading-old-books/
+Lewis,3676,2009-11-17T19:06:21,C. S. Lewis,https://www.johndcook.com/blog/2009/11/17/subnatural-and-supernatural/
+Lewis,5235,2010-04-30T04:09:30,C. S. Lewis,https://www.johndcook.com/blog/2010/04/30/definition-of-faith/
+Lewis,6164,2010-08-16T10:28:14,C. S. Lewis,https://www.johndcook.com/blog/2010/08/16/contrasting-tolkien-and-lewis/
+Lewis,6419,2010-09-13T07:30:00,C. S. Lewis,https://www.johndcook.com/blog/2010/09/13/applied-topology-and-dante-an-interview-with-robert-ghrist/
+Lewis,6539,2010-09-20T09:00:48,C. S. Lewis,https://www.johndcook.com/blog/2010/09/20/honor-and-shame/
+Lewis,7054,2010-11-13T14:01:23,C. S. Lewis,https://www.johndcook.com/blog/2010/11/13/why-the-horse-in-magicians-nephew-is-named-fledge/
+Lewis,8154,2011-03-27T17:36:12,C. S. Lewis,https://www.johndcook.com/blog/2011/03/27/suspicious-definitions/
+Lewis,9316,2011-09-04T19:09:02,C. S. Lewis,https://www.johndcook.com/blog/2011/09/04/loving-your-literal-neighbor/
+Lewis,9866,2011-11-06T15:37:56,C. S. Lewis,https://www.johndcook.com/blog/2011/11/06/firsthand-knowledge/
+Lewis,10338,2011-12-31T09:50:47,C. S. Lewis,https://www.johndcook.com/blog/2011/12/31/contentment/
+Lewis,11475,2012-06-05T06:00:42,C. S. Lewis,https://www.johndcook.com/blog/2012/06/05/c-s-lewis-on-modelling/
+Lewis,11728,2012-07-16T07:17:02,C. S. Lewis,https://www.johndcook.com/blog/2012/07/16/reading-the-masters/
+Lewis,12096,2012-09-15T10:21:01,C. S. Lewis,https://www.johndcook.com/blog/2012/09/15/working-to-change-the-world/
+Lewis,14098,2013-11-04T15:11:03,C. S. Lewis,https://www.johndcook.com/blog/2013/11/04/hard-working-lazy-people/
+Lewis,14211,2013-12-22T04:05:44,C. S. Lewis,https://www.johndcook.com/blog/2013/12/22/hum-drum-fairy-tales/
+Lewis,14466,2014-05-08T13:56:07,C. S. Lewis,https://www.johndcook.com/blog/2014/05/08/love-of-form/
+Lewis,14488,2014-06-04T06:38:24,C. S. Lewis,https://www.johndcook.com/blog/2014/06/04/the-door-was-unlocked/
+Lewis,29707,2017-12-16T09:32:46,C. S. Lewis,https://www.johndcook.com/blog/2017/12/16/scholarship-versus-research/
+Lewis,30693,2018-03-26T09:56:35,Lewis Baxter,https://www.johndcook.com/blog/2018/03/26/sums-of-palindromes/
+Lewis,83933,2021-09-08T09:13:22,C. S. Lewis,https://www.johndcook.com/blog/2021/09/08/dunbars-number/
+Lewis,85490,2021-10-06T04:04:30,C. S. Lewis,https://www.johndcook.com/blog/2021/10/06/aquinas-on-epicycles/
+Lewis,93062,2021-12-30T13:49:32,C. I. Lewis,https://www.johndcook.com/blog/2021/12/30/modal-axioms/
+Lewis,93920,2022-01-08T04:48:27,D. J. Lewis,https://www.johndcook.com/blog/2022/01/08/diophantine/
+Lewis,148402,2022-11-06T14:04:19,T. G. Lewis,https://www.johndcook.com/blog/2022/11/06/gfsr/
+Lewis,197481,2023-07-10T10:53:27,Lewis Carroll,https://www.johndcook.com/blog/2023/07/10/lewis-carroll-determinants/
+Lewis,197547,2023-07-10T14:48:29,Lewis Carroll,https://www.johndcook.com/blog/2023/07/10/visualizing-a-determinant-identity/
+Lewis,199788,2023-07-24T08:50:42,Lewis Carroll,https://www.johndcook.com/blog/2023/07/24/nlp/
+Lewis,209927,2023-09-24T14:50:07,Lewis Carroll,https://www.johndcook.com/blog/2023/09/24/victorian-public-key-cryptography/
+Lewis,228248,2023-12-27T06:30:57,Lewis Carroll,https://www.johndcook.com/blog/2023/12/27/top-twelve-posts-of-2023/
+Lewis,245757,2024-10-08T07:09:29,Barry Lewis,https://www.johndcook.com/blog/2024/10/08/lucas-numbers/
+Lewis,246378,2025-08-01T12:33:28,Lewis Carroll,https://www.johndcook.com/blog/2025/08/01/jubjub/
+Lewis,246381,2025-08-02T07:00:14,Lewis Carroll,https://www.johndcook.com/blog/2025/08/02/pallas-vesta-zcash/
+Lewis,246413,2025-08-13T09:42:01,Lewis Carroll,https://www.johndcook.com/blog/2025/08/13/tiny-jubjub/
+Lewis,246629,2025-10-17T06:58:15,Barry Lewis,https://www.johndcook.com/blog/2025/10/17/trig-fibonacci/
+Lewis,246720,2025-12-01T08:31:47,Meriwether Lewis / Lewis and Clark,https://www.johndcook.com/blog/2025/12/01/lewis-clark-geolocation/
+Lewis,246723,2025-12-04T06:42:34,Meriwether Lewis / Lewis and Clark,https://www.johndcook.com/blog/2025/12/04/line-of-position/
+Lewis,246759,2025-12-23T09:57:34,Meriwether Lewis / Lewis and Clark,https://www.johndcook.com/blog/2025/12/23/mason-dixon-latitude/
+Lewis,247924,2026-09-17T11:48:14,Lewis Fry Richardson,https://www.johndcook.com/blog/2026/09/17/empirical-fractal/

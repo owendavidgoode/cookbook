@@ -1,5 +1,11 @@
 # Cookbook: johndcook.com Data Projects
 
+## Second-Edition Reader Files
+
+The curated data, guides and checker for the second edition are described in the
+[reader companion](reader-data.md). Use its edition-matched release for the book's
+companion files. The project notes below document earlier work.
+
 Utilities and datasets for extracting, analyzing, and repurposing content from johndcook.com/blog — 17 years and 5,233 posts of mathematical blogging.
 
 ## Projects

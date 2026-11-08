@@ -1,0 +1,163 @@
+{
+  "pairs": [
+    {
+      "post_id": 246694,
+      "title": "Closest harmonic number to an integer",
+      "url": "https://www.johndcook.com/blog/2025/11/19/closest-harmonic-number-to-an-integer/",
+      "versions": {
+        "baseline": {
+          "body_sha256": "ddec2dbe384777a4ad8ab0a564702b42b8739a411bfcf07401997e2cc1d7b742",
+          "published_site_local": "2025-11-19T19:03:10",
+          "modified_site_local": "2025-11-19T19:03:10",
+          "author_account": null,
+          "author_account_status": "unknown_not_captured",
+          "retrieval_time": null,
+          "retrieval_limit": "Exact baseline fetch time is not established by this artifact."
+        },
+        "current": {
+          "body_sha256": "10cc8b39bf9af70e63dbf8efb8fb69cea9fe48f8f7e9cc7efff888a54d18dc3f",
+          "published_site_local": "2025-11-19T19:03:10",
+          "modified_site_local": "2025-12-01T06:05:33",
+          "author_account": 1,
+          "author_account_status": "captured_current_assignment",
+          "capture": {
+            "record_line": 5227,
+            "record_line_sha256_without_newline": "8536ff79cf8c700411946cd516d774f1940bed32d2de1582121f96b64e3d497c",
+            "raw_file": "data/second-edition/2026-11-01-cutoff/raw/posts-053.json",
+            "raw_sha256": "b02c2b7a36d794c2df14ea9464aa8994cfa2c328e56aee3fbd3068635e5d4e0e",
+            "retrieved_at_utc": "2026-11-01T06:25:24.982940+00:00"
+          }
+        }
+      }
+    },
+    {
+      "post_id": 22398,
+      "title": "The acoustics of kettledrums",
+      "url": "https://www.johndcook.com/blog/2016/04/28/the-acoustics-of-kettledrums/",
+      "versions": {
+        "baseline": {
+          "body_sha256": "7149f2104bb21eba9b9db3e77a6f078fa7ee0da8d67025d0f7b6481d360e92ab",
+          "published_site_local": "2016-04-28T06:20:57",
+          "modified_site_local": "2024-07-09T22:35:54",
+          "author_account": null,
+          "author_account_status": "unknown_not_captured",
+          "retrieval_time": null,
+          "retrieval_limit": "Exact baseline fetch time is not established by this artifact."
+        },
+        "current": {
+          "body_sha256": "1487df8e69a33041c77cb13a22f9b870610365db3e6776b49da29de09f9b5e50",
+          "published_site_local": "2016-04-28T06:20:57",
+          "modified_site_local": "2024-07-09T22:35:54",
+          "author_account": 1,
+          "author_account_status": "captured_current_assignment",
+          "capture": {
+            "record_line": 2397,
+            "record_line_sha256_without_newline": "cabe8bee4ae95ffded0bfabca0a59b0bc9183e07e7a62d502138bedf662434a1",
+            "raw_file": "data/second-edition/2026-11-01-cutoff/raw/posts-024.json",
+            "raw_sha256": "43076116ac53b75b9a2ff4cc1298e2273dfc9a144f6e53ed3c23a24c7daea62c",
+            "retrieved_at_utc": "2026-11-01T06:24:33.357086+00:00"
+          }
+        }
+      }
+    }
+  ],
+  "harmonic_code_lines": [
+    {
+      "version": "baseline",
+      "pre_index_1_based": 1,
+      "decoded_pre_line_1_based": 10,
+      "exact_line": "        return np.log(n) + gamma + 1/(2*n) - 1/(12*n**3)",
+      "display_line": "return np.log(n) + gamma + 1/(2*n) - 1/(12*n**3)",
+      "character_range_in_decoded_pre": [
+        165,
+        221
+      ]
+    },
+    {
+      "version": "current",
+      "pre_index_1_based": 1,
+      "decoded_pre_line_1_based": 10,
+      "exact_line": "        return np.log(n) + gamma + 1/(2*n) - 1/(12*n**2)",
+      "display_line": "return np.log(n) + gamma + 1/(2*n) - 1/(12*n**2)",
+      "character_range_in_decoded_pre": [
+        165,
+        221
+      ]
+    }
+  ],
+  "audio_counter_spans": {
+    "baseline": [
+      {
+        "kind": "audio_element_id",
+        "exact_html_span": "audio-22398-14",
+        "character_range_in_content": [
+          1432,
+          1446
+        ]
+      },
+      {
+        "kind": "audio_element_id",
+        "exact_html_span": "audio-22398-15",
+        "character_range_in_content": [
+          2147,
+          2161
+        ]
+      },
+      {
+        "kind": "numeric_query_counter",
+        "exact_html_span": "?_=14",
+        "character_range_in_content": [
+          1577,
+          1582
+        ]
+      },
+      {
+        "kind": "numeric_query_counter",
+        "exact_html_span": "?_=15",
+        "character_range_in_content": [
+          2291,
+          2296
+        ]
+      }
+    ],
+    "current": [
+      {
+        "kind": "audio_element_id",
+        "exact_html_span": "audio-22398-11",
+        "character_range_in_content": [
+          1432,
+          1446
+        ]
+      },
+      {
+        "kind": "audio_element_id",
+        "exact_html_span": "audio-22398-12",
+        "character_range_in_content": [
+          2147,
+          2161
+        ]
+      },
+      {
+        "kind": "numeric_query_counter",
+        "exact_html_span": "?_=11",
+        "character_range_in_content": [
+          1577,
+          1582
+        ]
+      },
+      {
+        "kind": "numeric_query_counter",
+        "exact_html_span": "?_=12",
+        "character_range_in_content": [
+          2291,
+          2296
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "Selected Cook code lines and markup counters only; complete source bodies not republished.",
+    "Baseline retrieval time is unknown; publication/modification fields are not exact edit dates.",
+    "The full harmonic program and historical audio files were not executed/compared."
+  ]
+}
